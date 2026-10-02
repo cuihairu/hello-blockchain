@@ -33,7 +33,7 @@ export default defineConfig({
       { text: '简介', link: '/Introduction' },
       { text: '记账模型', link: '/model/Models' },
       { text: '共识算法', link: '/consensus/Consensus' },
-      { text: '隐私安全', link: '/privacy/Privacy' },
+      { text: '隐私安全', link: '/Privacy/Privacy' },
       { text: '黑客攻击', link: '/hacking/Attack' },
       { text: '公链项目', link: '/chains/Chain' }
     ],

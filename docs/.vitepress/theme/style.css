@@ -97,12 +97,16 @@ body {
 .vp-doc h4 {
   font-family: var(--vp-font-display);
 }
+/* VitePress 2.0-alpha 把 hero 的 .name/.text 改名为 .heading/.tagline，两套都写以兼容 */
 .VPHero .name,
-.VPHero .text {
+.VPHero .heading,
+.VPHero .text,
+.VPHero .tagline {
   font-family: var(--vp-font-display);
 }
 /* hero 标题用实色品牌字，不用渐变铺色 */
-.VPHero .name {
+.VPHero .name,
+.VPHero .heading {
   background: none;
   -webkit-background-clip: initial;
   background-clip: initial;
@@ -205,7 +209,9 @@ body {
 }
 
 kbd,
-.VPNavBar .search-keyboard-shortcut kbd {
+/* VitePress 2.0-alpha 把搜索快捷键 kbd 挪进 .VPNavBarSearchButton */
+.VPNavBar .search-keyboard-shortcut kbd,
+.VPNavBarSearchButton kbd {
   font-family: var(--vp-font-mono);
   font-size: 0.78em;
   background: var(--vp-c-bg-soft);
