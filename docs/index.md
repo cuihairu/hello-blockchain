@@ -22,4 +22,7 @@ features:
     details: Bitcoin、Ethereum、Solana、Polkadot 等主流公链的设计选型与权衡，理解链与链的差异。
   - title: 安全隐私
     details: 零知识证明、环签名、同态加密等隐私技术，51% 与跨链桥等攻击面及防御实践。
+  - title: 发展史时间线
+    details: 从 1976 年密码学前史到今天的共识演进，30 个节点五段分期，每条回答为什么是那个时候。
+    link: /timeline
 ---
