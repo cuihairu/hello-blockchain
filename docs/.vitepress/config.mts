@@ -25,7 +25,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/hello-blockchain/logo.svg',
+    logo: '/logo.svg',
     siteTitle: 'Hello Blockchain',
 
     nav: [
