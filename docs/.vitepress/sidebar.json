@@ -1,0 +1,353 @@
+[
+  {
+    "text": "简介",
+    "link": "/Introduction"
+  },
+  {
+    "text": "记账模型",
+    "link": "/model/Models",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "UTXO",
+        "link": "/model/UTXO"
+      },
+      {
+        "text": "Account",
+        "link": "/model/Account"
+      },
+      {
+        "text": "DAG",
+        "link": "/model/DAG"
+      }
+    ]
+  },
+  {
+    "text": "数据结构",
+    "link": "/algo/MerkleTree",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Merkle 树",
+        "link": "/algo/MerkleTree"
+      }
+    ]
+  },
+  {
+    "text": "脚本与操作码",
+    "link": "/opcode/OP_CHECKSIG",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "OP_CHECKSIG",
+        "link": "/opcode/OP_CHECKSIG"
+      }
+    ]
+  },
+  {
+    "text": "比特币机制",
+    "link": "/btc/BIPS",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "BIP 改进提案",
+        "link": "/btc/BIPS"
+      },
+      {
+        "text": "P2PK 交易",
+        "link": "/btc/P2PK"
+      }
+    ]
+  },
+  {
+    "text": "共识算法",
+    "link": "/consensus/Consensus",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "PoW",
+        "link": "/consensus/POW"
+      },
+      {
+        "text": "PoS",
+        "link": "/consensus/POS"
+      },
+      {
+        "text": "ABFT",
+        "link": "/consensus/ABFT"
+      },
+      {
+        "text": "Avalanche",
+        "link": "/consensus/Avalanche"
+      },
+      {
+        "text": "BFT",
+        "link": "/consensus/BFT"
+      },
+      {
+        "text": "DPoS",
+        "link": "/consensus/DPOS"
+      },
+      {
+        "text": "FBA",
+        "link": "/consensus/FBA"
+      },
+      {
+        "text": "HoneyBadgerBFT",
+        "link": "/consensus/HoneyBadgerBFT"
+      },
+      {
+        "text": "MaxBFT",
+        "link": "/consensus/MaxBFT"
+      },
+      {
+        "text": "PBFT",
+        "link": "/consensus/PBFT"
+      },
+      {
+        "text": "PoA",
+        "link": "/consensus/POA"
+      },
+      {
+        "text": "PoC",
+        "link": "/consensus/POC"
+      },
+      {
+        "text": "PoET",
+        "link": "/consensus/PoET"
+      },
+      {
+        "text": "PoH",
+        "link": "/consensus/PoH"
+      },
+      {
+        "text": "PoSpace",
+        "link": "/consensus/PoSpace"
+      },
+      {
+        "text": "PoT",
+        "link": "/consensus/POT"
+      },
+      {
+        "text": "PoST",
+        "link": "/consensus/PoST"
+      },
+      {
+        "text": "RAFT",
+        "link": "/consensus/RAFT"
+      },
+      {
+        "text": "Snowball",
+        "link": "/consensus/Snowball"
+      },
+      {
+        "text": "SOLO",
+        "link": "/consensus/SOLO"
+      },
+      {
+        "text": "TBFT",
+        "link": "/consensus/TBFT"
+      },
+      {
+        "text": "Tendermint",
+        "link": "/consensus/Tendermint"
+      },
+      {
+        "text": "TowerBFT",
+        "link": "/consensus/TowerBFT"
+      }
+    ]
+  },
+  {
+    "text": "隐私安全",
+    "link": "/Privacy/Privacy",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "隐私技术总览",
+        "link": "/Privacy/Privacy"
+      },
+      {
+        "text": "差分隐私",
+        "link": "/Privacy/DifferentialPrivacy"
+      },
+      {
+        "text": "零知识证明",
+        "link": "/Privacy/ZeroKnowledgeProof"
+      },
+      {
+        "text": "Bulletproofs",
+        "link": "/Privacy/Bulletproofs"
+      },
+      {
+        "text": "Paillier",
+        "link": "/Privacy/Paillier"
+      },
+      {
+        "text": "层级身份加密",
+        "link": "/Privacy/HierarchicalIdentityBasedEncryption"
+      },
+      {
+        "text": "同态加密",
+        "link": "/Privacy/HomomorphicEncryption"
+      },
+      {
+        "text": "混币服务",
+        "link": "/Privacy/MixingServices"
+      },
+      {
+        "text": "环签名",
+        "link": "/Privacy/RingSignature"
+      },
+      {
+        "text": "隐匿地址",
+        "link": "/Privacy/StealthAddresses"
+      }
+    ]
+  },
+  {
+    "text": "黑客攻击",
+    "link": "/hacking/Attack",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "攻击面总览",
+        "link": "/hacking/Attack"
+      },
+      {
+        "text": "大算力攻击",
+        "link": "/hacking/51Attack"
+      },
+      {
+        "text": "Finney 攻击",
+        "link": "/hacking/FinneyAttack"
+      },
+      {
+        "text": "双重花费攻击",
+        "link": "/hacking/DoubleSpendAttack"
+      },
+      {
+        "text": "长程攻击",
+        "link": "/hacking/LongRangeAttack"
+      },
+      {
+        "text": "自私挖矿攻击",
+        "link": "/hacking/SelfishMiningAttack"
+      },
+      {
+        "text": "女巫攻击",
+        "link": "/hacking/SybilAttack"
+      },
+      {
+        "text": "共识分叉攻击",
+        "link": "/hacking/ConsensusForkAttack"
+      },
+      {
+        "text": "粉尘攻击",
+        "link": "/hacking/DustingAttack"
+      },
+      {
+        "text": "交易拒绝服务攻击",
+        "link": "/hacking/TransactionDoSAttack"
+      },
+      {
+        "text": "闪电网络攻击",
+        "link": "/hacking/LightningNetworkAttack"
+      },
+      {
+        "text": "智能合约漏洞攻击",
+        "link": "/hacking/SmartContractVulnerabilities"
+      },
+      {
+        "text": "信息泄露攻击",
+        "link": "/hacking/InformationLeakageAttack"
+      },
+      {
+        "text": "跨链桥攻击",
+        "link": "/hacking/CrossChainBridgeAttack"
+      }
+    ]
+  },
+  {
+    "text": "资产发行与 NFT",
+    "link": "/nft/TokenizedProtocol",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "代币化协议",
+        "link": "/nft/TokenizedProtocol"
+      },
+      {
+        "text": "OAP 协议",
+        "link": "/nft/OAP"
+      },
+      {
+        "text": "Colored Coins 彩色币",
+        "link": "/nft/ColoredCoins"
+      }
+    ]
+  },
+  {
+    "text": "有名的区块链项目",
+    "link": "/chains/Chain",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Bitcoin 比特币",
+        "link": "/chains/Bitcoin"
+      },
+      {
+        "text": "Ethereum 以太坊",
+        "link": "/chains/Ethereum"
+      },
+      {
+        "text": "BSC 币安智能链",
+        "link": "/chains/BinanceSmartChain"
+      },
+      {
+        "text": "Polkadot 波卡",
+        "link": "/chains/Polkadot"
+      },
+      {
+        "text": "Monero 门罗币",
+        "link": "/chains/Monero"
+      },
+      {
+        "text": "Cardano 卡尔达诺",
+        "link": "/chains/Cardano"
+      },
+      {
+        "text": "Tether 泰达币",
+        "link": "/chains/Tether"
+      },
+      {
+        "text": "Litecoin 莱特币",
+        "link": "/chains/Litecoin"
+      },
+      {
+        "text": "Bytom 比原链",
+        "link": "/chains/Bytom"
+      },
+      {
+        "text": "Cosmos 跨链枢纽",
+        "link": "/chains/Cosmos"
+      },
+      {
+        "text": "EOS",
+        "link": "/chains/EOS"
+      },
+      {
+        "text": "Stellar 恒星币",
+        "link": "/chains/Stellar"
+      },
+      {
+        "text": "Solana",
+        "link": "/chains/Solana"
+      },
+      {
+        "text": "Chia 奇亚",
+        "link": "/chains/Chia"
+      }
+    ]
+  }
+]

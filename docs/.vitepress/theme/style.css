@@ -1,0 +1,124 @@
+/* ============================================================
+   Hello Blockchain · 主题样式
+   文档阅读型模板（mintlify 阅读优化基调）+ 站点品牌 accent。
+   品牌色由 logo.svg 的 fill/stroke 出现频次取定：
+   #7C3AED ×3（最高频，六边形区块主色）→ 紫罗兰
+   ============================================================ */
+
+:root {
+  --vp-c-brand-1: #7C3AED;
+  --vp-c-brand-2: #6D28D9;
+  --vp-c-brand-3: #5B21B6;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.14);
+}
+.dark {
+  --vp-c-brand-1: #A78BFA;
+  --vp-c-brand-2: #BBA5FB;
+  --vp-c-brand-3: #977BF8;
+  --vp-c-brand-soft: rgba(167, 139, 250, 0.16);
+}
+
+:root {
+  --vp-font-body: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Noto Sans CJK SC', 'Segoe UI', sans-serif;
+  --vp-font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+/* ---------- 基础 ---------- */
+
+body {
+  font-family: var(--vp-font-body);
+  font-size: 16.5px;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 5px;
+  border: 2px solid var(--vp-c-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* ---------- 中文正文排印：段首缩进 · 行距 · 块间距 ---------- */
+
+.vp-doc p {
+  text-indent: 2em;
+  margin: 1.05em 0;
+}
+.vp-doc li p,
+.vp-doc blockquote p,
+.vp-doc th p,
+.vp-doc td p,
+.vp-doc .custom-block p {
+  text-indent: 0;
+}
+
+.vp-doc h1 {
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+.vp-doc h2 {
+  font-size: 1.4rem;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+.vp-doc h3 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.8rem;
+}
+
+.vp-doc table {
+  width: 100%;
+  margin: 1.4rem 0;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.vp-doc th,
+.vp-doc td {
+  line-height: 1.6;
+  padding: 0.6rem 0.9rem;
+}
+.vp-doc li {
+  margin: 0.35rem 0;
+}
+.vp-doc p > img:only-child {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* ---------- 正文链接 ---------- */
+
+.vp-doc :not(h1, h2, h3, h4, h5, h6) a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* ---------- 代码 ---------- */
+
+.vp-doc :not(pre, h1, h2, h3, h4, h5, h6) > code {
+  font-family: var(--vp-font-mono);
+  font-size: 0.85em;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
