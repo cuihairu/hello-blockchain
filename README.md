@@ -44,4 +44,4 @@ docs/                 # VitePress 站点源
 
 ## License
 
-MIT
+Apache-2.0
