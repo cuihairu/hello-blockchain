@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/public/logo.svg" width="64" alt="hello-blockchain logo" />
+<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
 
 # Hello Blockchain
 
