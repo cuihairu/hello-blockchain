@@ -105,13 +105,9 @@ body {
   font-family: var(--vp-font-display);
 }
 /* hero 标题用实色品牌字，不用渐变铺色 */
-.VPHero .name,
-.VPHero .heading {
-  background: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-  -webkit-text-fill-color: currentColor;
-  color: var(--vp-c-brand-1);
+:root {
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+  --vp-home-hero-name-background: transparent;
 }
 /* nav 站名（英文部分）作 mono kicker */
 .VPNavBarTitle .title {
