@@ -1,5 +1,7 @@
 <div align="center">
 
+[English](README.md) | [中文](README.zh.md)
+
 <p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
 
 # Hello Blockchain
@@ -7,39 +9,39 @@
 [![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
 
-区块链知识体系 · [在线阅读](https://cuihairu.github.io/hello-blockchain/)
+A blockchain knowledge base · [Read online](https://cuihairu.github.io/hello-blockchain/)
 
 </div>
 
 ---
 
-从记账模型到共识算法、从隐私技术到攻防实践的区块链知识站点，覆盖 UTXO 与账户模型、24 种共识算法、零知识证明等隐私技术、主流公链设计与 NFT 资产发行。
+A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 24 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance.
 
-## 本地开发
+## Local Development
 
 ```bash
-npm install        # 安装依赖
-npm run docs:dev   # 本地开发
-npm run docs:build # 构建产物
-npm run docs:preview # 本地预览构建结果
+npm install        # Install dependencies
+npm run docs:dev   # Local development
+npm run docs:build # Build output
+npm run docs:preview # Preview the build locally
 ```
 
-## 目录结构
+## Directory Structure
 
 ```
-docs/                 # VitePress 站点源
-├── .vitepress/       # 主题与配置（sidebar.json 由 SUMMARY.md 映射生成）
-├── public/           # 品牌资产（logo.svg / favicon.svg）
-├── SUMMARY.md        # mdbook 目录底稿（sidebar 映射来源）
-├── model/            # 记账模型：UTXO、账户、DAG
-├── algo/             # 数据结构：Merkle 树
-├── opcode/           # 脚本与操作码
-├── btc/              # 比特币机制：BIP、P2PK
-├── consensus/        # 共识算法：PoW、PoS、PBFT、Tendermint 等 24 篇
-├── privacy/          # 隐私技术：零知识证明、环签名、同态加密等
-├── hacking/          # 攻击与防御
-├── nft/              # 资产发行与 NFT
-└── chains/           # 有名的区块链项目
+docs/                 # VitePress site source
+├── .vitepress/       # Theme and configuration (sidebar.json is generated from SUMMARY.md)
+├── public/           # Brand assets (logo.svg / favicon.svg)
+├── SUMMARY.md        # mdbook TOC draft (source for the sidebar mapping)
+├── model/            # Ledger models: UTXO, account, DAG
+├── algo/             # Data structures: Merkle tree
+├── opcode/           # Scripts and opcodes
+├── btc/              # Bitcoin mechanics: BIP, P2PK
+├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 24 articles
+├── privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
+├── hacking/          # Attacks and defenses
+├── nft/              # Asset issuance and NFTs
+└── chains/           # Notable blockchain projects
 ```
 
 ## License
