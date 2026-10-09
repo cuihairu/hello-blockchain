@@ -10,9 +10,20 @@ import { chromium } from 'playwright';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawn } from 'node:child_process';
+import { createServer } from 'node:net';
 
 const DIST = 'docs/.vitepress/dist';
-const PORT = process.env.WALKTHROUGH_PORT || '4174';
+
+// Pick a free port to avoid colliding with preview servers from other
+// sessions/repos (a fixed port once collided with a parallel vitepress run).
+const PORT = process.env.WALKTHROUGH_PORT || String(await new Promise((resolve, reject) => {
+  const srv = createServer();
+  srv.on('error', reject);
+  srv.listen(0, '127.0.0.1', () => {
+    const port = srv.address().port;
+    srv.close(() => resolve(port));   // release the port before preview binds it
+  });
+}));
 const BASE = `http://localhost:${PORT}`;
 
 // 1. Enumerate routes from dist html files
@@ -34,16 +45,19 @@ walk(DIST);
 // reaches the real process (an npx wrapper would leave it orphaned)
 const server = spawn(process.execPath,
   [join('node_modules', 'vitepress', 'bin', 'vitepress.js'), 'preview', 'docs', '--port', PORT],
-  { stdio: 'ignore' });
+  { stdio: ['ignore', 'ignore', 'pipe'] });
+let serverErr = '';
+server.stderr.on('data', d => { serverErr += d; });
 async function waitServer() {
   for (let i = 0; i < 120; i++) {
     try {
-      const r = await fetch(BASE + '/hello-blockchain/');
+      const r = await fetch(BASE + '/hello-blockchain/', { signal: AbortSignal.timeout(2000) });
       if (r.ok) return;
     } catch {}
     await new Promise(r => setTimeout(r, 250));
   }
-  throw new Error('preview server did not start');
+  server.kill();
+  throw new Error('preview server did not start on port ' + PORT + ': ' + serverErr.slice(-500));
 }
 await waitServer();
 
