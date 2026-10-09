@@ -10,7 +10,7 @@
 | 数据结构 | Merkle 树——区块内交易的组织方式与轻节点证明的基础 |
 | 脚本与操作码 | 以比特币 Script 为例，理解 `OP_CHECKSIG` 等验证原语 |
 | 比特币机制 | BIP 改进提案体系与 P2PK 交易脚本 |
-| 共识算法 | PoW、PoS、PBFT、Tendermint、Avalanche 等 21 种共识的原理与取舍 |
+| 共识算法 | PoW、PoS、PBFT、Tendermint、Avalanche 等 23 种共识的原理与取舍 |
 | 隐私安全 | 零知识证明、环签名、同态加密等隐私技术 |
 | 黑客攻击 | 51% 攻击、女巫攻击、跨链桥攻击等攻击面与防御 |
 | 资产发行与 NFT | 彩色币、Open Assets 等代币化协议 |

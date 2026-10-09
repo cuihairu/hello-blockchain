@@ -15,7 +15,7 @@ A blockchain knowledge base · [Read online](https://cuihairu.github.io/hello-bl
 
 ---
 
-A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 21 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain/consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain/knowledge) tie the sections together.
+A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 23 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain/consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain/knowledge) tie the sections together.
 
 ## Local Development
 
@@ -32,14 +32,15 @@ npm run docs:preview # Preview the build locally
 docs/                 # VitePress site source
 ├── .vitepress/       # Theme and configuration (sidebar.json is generated from SUMMARY.md)
 ├── public/           # Brand assets (logo.svg / favicon.svg)
-├── SUMMARY.md        # mdbook TOC draft (source for the sidebar mapping)
+├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
+├── timeline.md           # Development history timeline (30 nodes in five eras)
 ├── consensus-timeline.md  # Consensus algorithm evolution timeline (48 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
 ├── model/            # Ledger models: UTXO, account, DAG
 ├── algo/             # Data structures: Merkle tree
 ├── opcode/           # Scripts and opcodes
 ├── btc/              # Bitcoin mechanics: BIP, P2PK
-├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 21 articles
+├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 23 articles
 ├── privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
 ├── hacking/          # Attacks and defenses
 ├── nft/              # Asset issuance and NFTs
