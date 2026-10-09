@@ -4,7 +4,7 @@ title: 知识点总纲
 
 # 知识点总纲
 
-> 本页把散在各主题页的共识算法知识点收拢成一页：核心概念、依据的论文与白皮书、官方文档、应用场景、常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。演进脉络的完整版本在[共识算法演进时间线](/consensus-timeline)。当前收拢的是共识算法一个主题，其余主题（记账模型、隐私、攻防）随批补齐。
+> 本页把散在各主题页的知识点收拢成一页：核心概念、依据的论文与白皮书、官方文档、应用场景、常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。演进脉络的完整版本在[共识算法演进时间线](/consensus-timeline)。已收拢四个主题：共识算法、记账模型（含数据结构与脚本）、隐私安全、攻防；NFT 与公链主题随批补齐。
 
 ## 核心概念
 
@@ -97,3 +97,114 @@ title: 知识点总纲
 - **TEE 信任根**：[PoET](/consensus/PoET) 的安全寄在 Intel SGX 上，SGX 自 2017 年起被多次侧信道攻破，「等了多久」可以伪造，这类设计要当作教学案例看。
 - **治理攻击**（DPoS）：低投票率下的互投联盟与选票交易，技术手段防不住，只能靠持续问责与声誉。
 - **「HDPoS」「APoS」一类交易所标签**：查无官方定义（HyperCash 白皮书写的是 PoW+PoS 混合，Solana 官方口径是 PoS+[PoH](/consensus/PoH)+[TowerBFT](/consensus/TowerBFT)），引述前先回白皮书核对，见[演进时间线的来源未考一节](/consensus-timeline#来源未考)。
+
+## 主题：记账模型（含数据结构与脚本）
+
+### 核心概念
+
+- 记账模型二选一起步：**UTXO**（一笔钱一个来源一个去向，余额=未花费输出之和，见[UTXO 模型](/model/UTXO)）与**账户**（一地址一余额一状态，见[账户模型](/model/Account)）。UTXO 天然可并行验证、交易图可分析；账户模型是智能合约的地基，状态由全局树集中管理。
+- **[Merkle 树](/algo/MerkleTree)**把整块交易压缩成区块头里 32 字节的根：改任何一笔交易根值就变；轻节点用约 log₂(N) 个哈希的 Merkle 路径证明「某笔交易在块里」，无需下载整块。
+- 比特币 Script 是**栈式、非图灵完备、无循环**的验证语言：[OP_CHECKSIG](/opcode/OP_CHECKSIG) 是所有标准支付方式（P2PK、P2PKH、P2SH、P2WPKH、P2TR）的共同底座，验证失败即交易无效。
+- **[DAG](/model/DAG)** 把「链」换成「图」：新交易确认旧交易，确认与出块并行，换取吞吐与低费用，IOTA Tangle 是典型；共识侧的 DAG 内存池（Narwhal 系）是同一思路在排序层的应用。
+
+### 演进逻辑
+
+- 哈希链、签名、Merkle 树这些零件 1997 年前就齐了，中本聪的贡献是用 UTXO+工作量证明+最长链把它们组装成能活的系统；账户模型是智能合约平台（以太坊系）为合约状态让路的选择。
+- 比特币的协议演化走 **BIP 通道**：BIP-32 分层确定性钱包与 BIP-39 助记词管钥匙，BIP-141 SegWit 迁移见证数据，BIP-340 引入 Schnorr 签名，BIP-341/342 铺 Taproot。
+- Cardano 的 **EUTXO**、Nervos 的 **Cell** 是混合形态：保留 UTXO 的并行与确定性，把脚本与数据挂到输出上换合约表达力。
+
+### 官方文档
+
+| 文档 | 覆盖内容 | 站内出处 |
+| --- | --- | --- |
+| [Bitcoin BIP 仓库](https://github.com/bitcoin/bips) | BIP-32/39/141/340/341/342 原文与状态追踪 | [BIP 改进提案](/btc/BIPS)、[P2PK 交易](/btc/P2PK) |
+
+### 应用场景
+
+- **高并发支付**：UTXO 无共享状态，互不相干的交易可并行验证；账户模型每笔交易都可能改全局状态，并发调度复杂。
+- **可审计**：UTXO 交易图天然可追溯，审计友好——同一特性也是链上分析的盯梢入口。
+- **智能合约平台**：需要图灵完备语义与全局状态，选账户模型，或 EUTXO/Cell 式混合。
+
+### 常见坑
+
+- **找零是隐私漏洞**：UTXO 交易的找零输出常被启发式识别，缩小追踪范围；[粉尘攻击](/hacking/DustingAttack)正是给找零挂标记。
+- **状态爆炸**：UTXO 集合与账户状态树都只会增长不会收缩，费用市场只能延缓不能阻止；轻节点不背状态，全节点要背。
+- **把 Script 当通用语言**：非图灵完备是设计选择——无循环、费用可静态估算；要循环就上 Layer 2 或换平台。
+
+## 主题：隐私安全
+
+### 核心概念
+
+- **零知识证明**：证明者让验证者相信命题为真，却不泄露命题之外的任何信息（见[零知识证明](/Privacy/ZeroKnowledgeProof)）。区块链落地以两类为主：zk-SNARK 证明极小、验证极快，部分方案需可信设置；zk-STARK 无需设置且抗量子，证明更大。
+- **匿名集是一切隐私技术的度量衡**：环签名的混淆范围、混币池的参与人数、隐匿地址的关联难度，本质都是「藏进多人的池子」——池子越小越可穿透。
+- **[隐匿地址](/Privacy/StealthAddresses)**：每次收款生成一次性地址，外部观察者无法把多笔收款归并到同一接收者；门罗把它与环签名、金额隐藏组合才凑出全链路隐私。
+- **[同态加密](/Privacy/HomomorphicEncryption)**：密文上直接计算、解密即结果。Paillier（1999）只做加法同态，全同态（FHE）支持任意计算但开销高；与区块链结合点是密态合约与跨机构数据协作。
+- **[差分隐私](/Privacy/DifferentialPrivacy)**：发布统计结果时注入 ε 参数控制的噪声，让「某个体是否在数据集里」不可判定；与 ZKP 组合可实现「可验证的隐私统计」。
+
+### 演进逻辑
+
+- 环签名 2001 年由 Rivest、Shamir、Tauman 提出；CryptoNote 白皮书（2012）把它与隐匿地址组合成隐私币模板，门罗（2014）是活到今天的主线。
+- 金额隐私靠**承诺+范围证明**：2017 年门罗 RingCT 上线让金额隐藏落地；2018 年 [Bulletproofs](/Privacy/Bulletproofs) 把范围证明体积压掉一个数量级且无需可信设置，门罗当年启用后手续费骤降八成。
+- zk-SNARK 的可信设置是落地障碍，「透明的」（无设置）STARK 与通用设置的 PLONK 系是后来的主线；[层级身份加密](/Privacy/HierarchicalIdentityBasedEncryption)（HIBE）则在联盟链密钥管理侧发展「一次初始化、逐级授权」。
+
+### 权威论文与白皮书
+
+| 论文 | 作者与年份 | 对应知识点 | 站内出处 |
+| --- | --- | --- | --- |
+| 《How to Leak a Secret》 | Rivest、Shamir、Tauman，2001 | 环签名原始定义 | [环签名](/Privacy/RingSignature) |
+| Paillier 公钥加密系统 | Pascal Paillier，1999 | 加法同态 | [Paillier](/Privacy/Paillier) |
+| 《Bulletproofs: Short Proofs for Confidential Transactions and More》 | Bünz、Bootle、Boneh、Poelstra、Wuille、Maxwell，2018 | 范围证明、无设置 ZKP | [Bulletproofs](/Privacy/Bulletproofs)、[门罗](/chains/Monero) |
+
+### 官方文档
+
+| 文档 | 覆盖内容 | 站内出处 |
+| --- | --- | --- |
+| [Monero 研究实验室论文页](https://www.getmonero.org/resources/research-lab/) | CryptoNote、RingCT、门罗隐私组件原始文献 | [隐私技术总览](/Privacy/Privacy)、[门罗](/chains/Monero) |
+
+### 应用场景
+
+- **保密支付**：金额、发送方、接收方三隐藏（门罗、Zcash shielded 交易）。
+- **合规审计**：隐私币的合规路径是给审计员钥匙不是给全网明文——门罗 view key、Zcash viewing key 都支持单向审计。
+- **密态计算**：跨机构数据协作，[同态加密](/Privacy/HomomorphicEncryption)保证「数据可用不可见」；[混币服务](/Privacy/MixingServices)适合个人链上痕迹打断。
+
+### 常见坑
+
+- **隐私是栈不是开关**：只隐地址不管金额明文，链上分析照样聚类；环签名+隐匿地址+金额隐藏三层齐备才算隐私币。
+- **托管式混币是中心化信任**：可卷款、可记黑账；非托管 CoinJoin 也有 coordinator 被传唤的风险。
+- **地址重用是隐私死穴**：一次重用就把所有历史交易串起来，隐匿地址也救不回已暴露的关联。
+- **可信设置的 toxic waste**：需初始仪式的 zk-SNARK 若仪式被作恶，可伪造证明——选无设置方案，或核验仪式多方参与记录。
+
+## 主题：黑客攻击
+
+### 核心概念
+
+- 攻击面分四层：**网络层**（[女巫攻击](/hacking/SybilAttack)、日蚀攻击——把你的节点围进假网络）、**共识层**（[51% 攻击](/hacking/51Attack)、[自私挖矿](/hacking/SelfishMiningAttack)、[长程攻击](/hacking/LongRangeAttack)、[共识分叉攻击](/hacking/ConsensusForkAttack)）、**应用层**（[智能合约漏洞](/hacking/SmartContractVulnerabilities)、[跨链桥攻击](/hacking/CrossChainBridgeAttack)、[闪电网络攻击](/hacking/LightningNetworkAttack)）、**用户层**（[粉尘攻击](/hacking/DustingAttack)、[信息泄露](/hacking/InformationLeakageAttack)——打人比打协议便宜）。
+- **51% 的本钱是钱不是技术**：攻击成本≈租算力的市场价+攻击后链价崩塌的自身损失；小算力链的攻击成本可能低于一次合约漏洞的收益，纯粹是经济账。
+- **[长程攻击](/hacking/LongRangeAttack)打的是 PoS 的历史**：旧密钥从创世重造替代链，新节点无从分辨；检查点与弱主观性是标配解法。
+- **桥是价值锁定的单点**：锁定资产由一组验证人/多签托管，验证人集合的安全≈桥的安全，见[跨链桥攻击](/hacking/CrossChainBridgeAttack)。
+- **交易拒绝服务**：注入大量低价值交易挤占打包空间，拖慢全网确认，见[交易 DoS 攻击](/hacking/TransactionDoSAttack)。
+
+### 演进逻辑
+
+- 2002 年 Douceur 证明无许可网络必有女巫问题——开放网络防御的第一性约束；2013 年 Eyal-Sirer 形式化自私挖矿，共识层从「算力经济」进入博弈论攻防。
+- PoS 普及后长程攻击、研磨攻击成为新面（对应共识侧的 VDF/VRF 解法，见[共识算法演进时间线](/consensus-timeline)）。
+- DeFi 与桥时代，主战场从协议层搬到应用层：预言机操纵、重入、闪电贷放大；闪电网络开辟通道余额证明与 watchtower 缺位的状态勒索面。
+
+### 权威论文与白皮书
+
+| 论文 | 作者与年份 | 对应知识点 | 站内出处 |
+| --- | --- | --- | --- |
+| 《The Sybil Attack》 | Douceur，2002 | 开放网络女巫问题下限 | [女巫攻击](/hacking/SybilAttack) |
+| 《Majority is not Enough: Bitcoin Mining is Vulnerable》 | Eyal、Sirer，2013 | 自私挖矿收益模型 | [自私挖矿攻击](/hacking/SelfishMiningAttack) |
+
+### 应用场景
+
+- **上链前检查单**：女巫成本核算（算力租用价/质押集中度）、桥验证人集合审计、合约审计+赏金计划、预言机多源。
+- **运行期监控**：算力/质押集中度告警、重组钩子、异常大额桥转移熔断。
+
+### 常见坑
+
+- **确认数不是免死金牌**：六确认挡住绝大多数重组，但小算力链六个确认照样可被逆转——确认阈值按链的攻击成本折算，见[大算力攻击](/hacking/51Attack)。
+- **Finney 攻击是预付款陷阱**：矿工预挖区块，等你接受「零确认支付」发货后释放双花链，见[Finney 攻击](/hacking/FinneyAttack)与[双重花费攻击](/hacking/DoubleSpendAttack)。
+- **粉尘不是钱是标记**：尘额 UTXO 本身没有价值，标记价值拉满——收了就等于同意被追踪。
+- **「代码即法律」不设防**：重入、整数溢出、预言机操纵都是部署后才爆的雷；审计+赏金+升级开关是三件套，见[智能合约漏洞攻击](/hacking/SmartContractVulnerabilities)。
