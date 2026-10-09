@@ -10,7 +10,7 @@ title: 知识点总纲
 
 ### 安全模型
 
-- 共识要同时保住两件事：**一致性**（诚实节点认同一份账）与**活性**（新交易能持续上账）。FLP 不可能定理（1985）证明纯异步+确定性系统两者不可兼得，出路只有两条：引入超时假设（部分同步，PBFT 路线）或引入随机（HoneyBadger、Avalanche 路线）。
+- 共识要同时保住两件事（总览见[共识算法](/consensus/Consensus)）：**一致性**（诚实节点认同一份账）与**活性**（新交易能持续上账）。FLP 不可能定理（1985）证明纯异步+确定性系统两者不可兼得，出路只有两条：引入超时假设（部分同步，PBFT 路线）或引入随机（HoneyBadger、Avalanche 路线）。
 - 拜占庭环境下容忍 f 个作恶节点需要 **n ≥ 3f+1**（1982 年拜占庭将军问题论文的结论）；只容忍宕机的 CFT（RAFT）需要 2f+1。这个差价决定了联盟链在信任模型上选 RAFT 还是 BFT。
 - BFT 投票权重的黄金线：作恶 < 1/3 安全且活，1/3~2/3 之间安全但可能停摆，> 2/3 可伪造最终状态。Avalanche 是例外，它的概率安全阈值是 1/2。
 - **最终性分两种**：概率性（PoW+最长链，确认数越多越难回滚）与确定性（BFT 投票 +2/3 即不可逆）。以太坊 Merge 之后，主流公链基本走向了「PoS 选人 + BFT 定最终性」。
@@ -102,7 +102,7 @@ title: 知识点总纲
 
 ### 核心概念
 
-- 记账模型二选一起步：**UTXO**（一笔钱一个来源一个去向，余额=未花费输出之和，见[UTXO 模型](/model/UTXO)）与**账户**（一地址一余额一状态，见[账户模型](/model/Account)）。UTXO 天然可并行验证、交易图可分析；账户模型是智能合约的地基，状态由全局树集中管理。
+- 记账模型二选一起步（见[记账模型总览](/model/Models)）：**UTXO**（一笔钱一个来源一个去向，余额=未花费输出之和，见[UTXO 模型](/model/UTXO)）与**账户**（一地址一余额一状态，见[账户模型](/model/Account)）。UTXO 天然可并行验证、交易图可分析；账户模型是智能合约的地基，状态由全局树集中管理。
 - **[Merkle 树](/algo/MerkleTree)**把整块交易压缩成区块头里 32 字节的根：改任何一笔交易根值就变；轻节点用约 log₂(N) 个哈希的 Merkle 路径证明「某笔交易在块里」，无需下载整块。
 - 比特币 Script 是**栈式、非图灵完备、无循环**的验证语言：[OP_CHECKSIG](/opcode/OP_CHECKSIG) 是所有标准支付方式（P2PK、P2PKH、P2SH、P2WPKH、P2TR）的共同底座，验证失败即交易无效。
 - **[DAG](/model/DAG)** 把「链」换成「图」：新交易确认旧交易，确认与出块并行，换取吞吐与低费用，IOTA Tangle 是典型；共识侧的 DAG 内存池（Narwhal 系）是同一思路在排序层的应用。
@@ -178,7 +178,7 @@ title: 知识点总纲
 
 ### 核心概念
 
-- 攻击面分四层：**网络层**（[女巫攻击](/hacking/SybilAttack)、日蚀攻击——把你的节点围进假网络）、**共识层**（[51% 攻击](/hacking/51Attack)、[自私挖矿](/hacking/SelfishMiningAttack)、[长程攻击](/hacking/LongRangeAttack)、[共识分叉攻击](/hacking/ConsensusForkAttack)）、**应用层**（[智能合约漏洞](/hacking/SmartContractVulnerabilities)、[跨链桥攻击](/hacking/CrossChainBridgeAttack)、[闪电网络攻击](/hacking/LightningNetworkAttack)）、**用户层**（[粉尘攻击](/hacking/DustingAttack)、[信息泄露](/hacking/InformationLeakageAttack)——打人比打协议便宜）。
+- 攻击面分四层（总览见[攻击面总览](/hacking/Attack)）：**网络层**（[女巫攻击](/hacking/SybilAttack)、日蚀攻击——把你的节点围进假网络）、**共识层**（[51% 攻击](/hacking/51Attack)、[自私挖矿](/hacking/SelfishMiningAttack)、[长程攻击](/hacking/LongRangeAttack)、[共识分叉攻击](/hacking/ConsensusForkAttack)）、**应用层**（[智能合约漏洞](/hacking/SmartContractVulnerabilities)、[跨链桥攻击](/hacking/CrossChainBridgeAttack)、[闪电网络攻击](/hacking/LightningNetworkAttack)）、**用户层**（[粉尘攻击](/hacking/DustingAttack)、[信息泄露](/hacking/InformationLeakageAttack)——打人比打协议便宜）。
 - **51% 的本钱是钱不是技术**：攻击成本≈租算力的市场价+攻击后链价崩塌的自身损失；小算力链的攻击成本可能低于一次合约漏洞的收益，纯粹是经济账。
 - **[长程攻击](/hacking/LongRangeAttack)打的是 PoS 的历史**：旧密钥从创世重造替代链，新节点无从分辨；检查点与弱主观性是标配解法。
 - **桥是价值锁定的单点**：锁定资产由一组验证人/多签托管，验证人集合的安全≈桥的安全，见[跨链桥攻击](/hacking/CrossChainBridgeAttack)。
@@ -243,20 +243,20 @@ title: 知识点总纲
 
 ### 核心概念
 
-- 公链按共识分族：PoW 系（[比特币](/chains/Bitcoin)、[莱特币](/chains/Litecoin)、[门罗](/chains/Monero)）、PoS 系（[以太坊](/chains/Ethereum) Gasper、[卡尔达诺](/chains/Cardano) Ouroboros）、DPoS 系（[EOS](/chains/EOS) 21 BP、TRON 27 超级代表）、BFT 系（[Cosmos](/chains/Cosmos) Tendermint、Aptos HotStuff 系）、异构（[波卡](/chains/Polkadot) NPoS 分工、[恒星](/chains/Stellar) SCP/FBA、[Chia](/chains/Chia) PoSpace+PoT、TON Catchain）。
+- 公链按共识分族（完整列举见[有名的区块链项目](/chains/Chain)）：PoW 系（[比特币](/chains/Bitcoin)、[莱特币](/chains/Litecoin)、[门罗](/chains/Monero)）、PoS 系（[以太坊](/chains/Ethereum) Gasper、[卡尔达诺](/chains/Cardano) Ouroboros）、DPoS 系（[EOS](/chains/EOS) 21 BP、[TRON](/chains/TRON) 27 超级代表）、BFT 系（[Cosmos](/chains/Cosmos) Tendermint、Aptos HotStuff 系）、异构（[波卡](/chains/Polkadot) NPoS 分工、[恒星](/chains/Stellar) SCP/FBA、[Chia](/chains/Chia) PoSpace+PoT、[TON](/chains/TON) Catchain）。
 - **稳定币不是链**：[Tether](/chains/Tether) 是发行在多条链上的资产（Omni、ERC-20、TRC-20），发行方、资产、承载轨道三层要分清。
-- **EVM 兼容 ≠ 共识相同**：BSC 用 PoSA（21 验证人）不是以太坊的 Gasper；TRON 的 TVM 字节码级兼容 EVM，共识却是 DPoS——虚拟机与共识是两个独立维度。
+- **EVM 兼容 ≠ 共识相同**：[BSC](/chains/BinanceSmartChain) 用 PoSA（21 验证人）不是以太坊的 Gasper；[TRON](/chains/TRON) 的 TVM 字节码级兼容 EVM，共识却是 DPoS——虚拟机与共识是两个独立维度。
 - 谁在用什么共识变体，35 行主链映射见[共识算法演进时间线](/consensus-timeline)。
 
 ### 演进逻辑
 
-- 2009 比特币开机 → 2011-2014 山寨与隐私分化（莱特币换 Scrypt、门罗走向环签名）→ 2015 以太坊开出智能合约平台范式 → 2017-2019 DPoS 高吞吐与联盟链并行 → 2020 之后分片、模块化与 DAG（波卡、Near、Sui）。
+- 2009 比特币开机 → 2011-2014 山寨与隐私分化（莱特币换 Scrypt、门罗走向环签名）→ 2015 以太坊开出智能合约平台范式 → 2017-2019 DPoS 高吞吐与联盟链并行，国产公链（[比原链](/chains/Bytom)等）也在这一时期起步 → 2020 之后分片、模块化与 DAG（波卡、Near、Sui）。
 - 链的归属看谁在维护客户端，不看当初谁宣布：TON 被 Telegram 放弃后由社区接续，主网 2021 年才上线（见[TON](/chains/TON)）。
 
 ### 应用场景
 
 - **价值储存与支付**：比特币、莱特币；隐私支付找[门罗](/chains/Monero)。
-- **智能合约生态**：以太坊、BSC、Solana、TON（Telegram 分发入口）。
+- **智能合约生态**：以太坊、BSC、[Solana](/chains/Solana)、TON（Telegram 分发入口）。
 - **跨链枢纽**：[波卡](/chains/Polkadot)与[Cosmos](/chains/Cosmos)两条技术路线，共享安全与 IBC 自治各执一端。
 - **存储与环保叙事**：[Chia](/chains/Chia)、Filecoin。
 
