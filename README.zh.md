@@ -35,7 +35,7 @@ docs/                 # VitePress 站点源
 ├── public/           # 品牌资产（logo.svg / favicon.svg）
 ├── SUMMARY.md        # 目录底稿（sidebar 映射来源）
 ├── timeline.md           # 发展史时间线（30 个节点五段分期）
-├── consensus-timeline.md  # 共识算法演进时间线（48 条年表）
+├── consensus-timeline.md  # 共识算法演进时间线（49 条年表）
 ├── knowledge.md           # 知识点总纲（共识算法起步）
 ├── model/            # 记账模型：UTXO、账户、DAG
 ├── algo/             # 数据结构：Merkle 树

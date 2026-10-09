@@ -35,7 +35,7 @@ docs/                 # VitePress site source
 ├── public/           # Brand assets (logo.svg / favicon.svg)
 ├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
 ├── timeline.md           # Development history timeline (30 nodes in five eras)
-├── consensus-timeline.md  # Consensus algorithm evolution timeline (48 entries)
+├── consensus-timeline.md  # Consensus algorithm evolution timeline (49 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
 ├── model/            # Ledger models: UTXO, account, DAG
 ├── algo/             # Data structures: Merkle tree

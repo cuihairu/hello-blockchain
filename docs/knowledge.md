@@ -246,7 +246,7 @@ title: 知识点总纲
 - 公链按共识分族：PoW 系（[比特币](/chains/Bitcoin)、[莱特币](/chains/Litecoin)、[门罗](/chains/Monero)）、PoS 系（[以太坊](/chains/Ethereum) Gasper、[卡尔达诺](/chains/Cardano) Ouroboros）、DPoS 系（[EOS](/chains/EOS) 21 BP、TRON 27 超级代表）、BFT 系（[Cosmos](/chains/Cosmos) Tendermint、Aptos HotStuff 系）、异构（[波卡](/chains/Polkadot) NPoS 分工、[恒星](/chains/Stellar) SCP/FBA、[Chia](/chains/Chia) PoSpace+PoT、TON Catchain）。
 - **稳定币不是链**：[Tether](/chains/Tether) 是发行在多条链上的资产（Omni、ERC-20、TRC-20），发行方、资产、承载轨道三层要分清。
 - **EVM 兼容 ≠ 共识相同**：BSC 用 PoSA（21 验证人）不是以太坊的 Gasper；TRON 的 TVM 字节码级兼容 EVM，共识却是 DPoS——虚拟机与共识是两个独立维度。
-- 谁在用什么共识变体，34 行主链映射见[共识算法演进时间线](/consensus-timeline)。
+- 谁在用什么共识变体，35 行主链映射见[共识算法演进时间线](/consensus-timeline)。
 
 ### 演进逻辑
 

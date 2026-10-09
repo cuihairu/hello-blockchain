@@ -67,13 +67,14 @@ title: 共识算法演进时间线
 | 2020 | Beacon Chain 上线 | 以太坊 | 32 ETH/验证人、罚没制度实跑 |
 | 2021 | Chia 主网（3 月 19 日） | Chia Network | PoSpace+VDF 首次大规模落地，见[Chia](/chains/Chia) |
 | 2021 | 长安链开源 | 北京微芯研究院 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT)、RAFT、SOLO 可插拔 |
+| 2021 | TON 主网（5 月） | TON Foundation（社区接续） | Catchain BFT+PoS，主链+工作链原生分片，见 [TON](/chains/TON) |
 | 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/POS) 上岗，能耗降约 99.95% |
 | 2022 | Aptos 主网 | Aptos Labs | AptosBFT（DiemBFT v4/Jolteon 系） |
 | 2023 | Sui 主网（5 月） | Mysten Labs | Narwhal+Bullshark：DAG 内存池与共识解耦 |
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
 | 2024 | Mysticeti | Sui 团队论文 | 无证书（uncertified）DAG-BFT，延迟再降一轮 |
 
-约四十年，48 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
+约四十年，49 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
 
 ## 逐族详解
 
@@ -122,7 +123,7 @@ Peercoin 开的头，但它是 PoW+PoS 混合：初期靠 PoW 分币，PoS 逐�
 
 - BitShares（2014，Larimer 的首个 DPoS 实现）。
 - EOS（2018，21 个 Block Producer，DPoS+BFT 式不可逆，见[EOS](/chains/EOS)）。
-- TRON（2018，27 个超级代表）。
+- TRON（2018，27 个超级代表，见 [TRON](/chains/TRON)）。
 - Lisk、Ark 等 DPoS 变体（101 代表/51 代表）。
 
 来源：BitShares DPoS 白皮书（Larimer，2014）。
@@ -218,6 +219,15 @@ Slush→Snowflake→Snowball→Snowman 四步演进（见[Snowball](/consensus/S
 
 来源：[Proofs of Space（ePrint 2013/796）](https://eprint.iacr.org/2013/796)；VDF 综述（Boneh、Bünz、Fisch，2018）；[Filecoin 白皮书（存档）](https://web.archive.org/web/2023/https://filecoin.io/filecoin.pdf)（2017；原链已从官网下线）；[Solana 白皮书](https://solana.com/solana-whitepaper.pdf)（2017，PoH 属时间层）。
 
+### 分片链上的 BFT：Catchain（TON）
+
+**一句话机制**：BFT 投票的验证人由 PoS 质押竞选产生，共识跑在「主链管配置、工作链管交易」的原生分片结构上——BFT 负责最终性，分片负责容量，两条腿各自独立。
+
+- TON（2021 主网）：Catchain 协议在验证人之间达成拜占庭容错一致；主链（masterchain）承载网络配置与最终共识，工作链（workchain）可再分片处理交易，见 [TON](/chains/TON)。
+- 与 BFT 复兴期各家的差异：HotStuff 系与 Tendermint 系解决的是「单链上怎么高效投票」，TON 把分片做成一等公民，共识只负责跨分片的一致性锚点。
+
+来源：[TON 文档 · Catchain consensus 纲要](https://docs.ton.org/)；白皮书原文见 [ton-blockchain/ton](https://github.com/ton-blockchain/ton)。
+
 ### CFT 共识与开发模式
 
 RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT 要 3f+1），消息量 O(n)、时延极低。联盟链把它用于排序层（Fabric etcd-Raft、长安链可插拔），分布式存储（etcd、TiKV）把它当主角。SOLO 单节点出块，只配开发测试。见[RAFT](/consensus/RAFT)、[SOLO](/consensus/SOLO)。
@@ -246,7 +256,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 | Cardano | 2017 | Ouroboros（Classic→Praos） | 首个有严格证明的 PoS，[卡尔达诺](/chains/Cardano) |
 | HyperCash | 2017 | PoW+PoS 混合 | 「HDPoS」标注来源未考 |
 | EOS | 2018 | DPoS+BFT 不可逆 | 21 个 BP，[EOS](/chains/EOS) |
-| TRON | 2018 | DPoS | 27 个超级代表 |
+| TRON | 2018 | DPoS | 27 个超级代表，[TRON](/chains/TRON) |
 | Gnosis Chain | 2018 | AuRA PoA→POSDAO | 原 xDai 侧链 |
 | Cosmos Hub | 2019 | Tendermint BFT（今 CometBFT） | 同构链：Osmosis、Kava、IRISnet |
 | Terra Classic | 2019 | Tendermint | 2022-05 崩盘停摆，风险样本 |
@@ -260,6 +270,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 | Filecoin | 2020 | PoRep+PoSt（Expected Consensus） | 存储证明即共识 |
 | Chia | 2021 | PoSpace+PoT（VDF） | [Chia](/chains/Chia) |
 | 长安链 | 2021（开源） | TBFT/MaxBFT/RAFT/SOLO 可插拔 | 联盟链，[ChainMaker 文档](https://docs.chainmaker.org.cn/tech/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95.html) |
+| TON | 2021 | Catchain（BFT+PoS） | 主链+工作链原生分片，[TON](/chains/TON) |
 | Aptos | 2022 | AptosBFT（DiemBFT v4/Jolteon 系 HotStuff） | Diem 血脉 |
 | Sui | 2023 | Narwhal+Bullshark/Mysticeti | DAG 内存池与共识解耦 |
 | Spacemesh | 2023 | PoST（Tortoise+Hare） | PoST 首个生产实现 |
