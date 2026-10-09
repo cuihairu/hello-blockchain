@@ -82,5 +82,7 @@
 	- [Stellar 恒星币](chains/Stellar.md)
 	- [Solana](chains/Solana.md)
 	- [Chia 奇亚](chains/Chia.md)
+	- [TRON 波场](chains/TRON.md)
+	- [TON](chains/TON.md)
 - [发展史时间线](./timeline.md)
 - [知识点总纲](./knowledge.md)

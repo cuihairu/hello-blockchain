@@ -351,6 +351,14 @@
       {
         "text": "Chia 奇亚",
         "link": "/chains/Chia"
+      },
+      {
+        "text": "TRON 波场",
+        "link": "/chains/TRON"
+      },
+      {
+        "text": "TON",
+        "link": "/chains/TON"
       }
     ]
   },

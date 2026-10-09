@@ -38,4 +38,10 @@
 12. **BSC 币安智能链**:
     - **共识算法**: Proof of Staked Authority (PoSA，Parlia)，21 个验证人轮流出块
 
+13. **TRON 波场**:
+    - **共识算法**: Delegated Proof of Stake (DPoS)，27 个超级代表轮流出块，见 [TRON](/chains/TRON)
+
+14. **TON（The Open Network）**:
+    - **共识算法**: Catchain 共识（BFT）+ PoS 质押竞选验证人，主链+工作链分片架构，见 [TON](/chains/TON)
+
 这些项目中的共识算法各不相同，每种算法在处理安全性、可扩展性和去中心化等方面有着不同的优势和特点。
