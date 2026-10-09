@@ -24,6 +24,7 @@ npm install        # Install dependencies
 npm run docs:dev   # Local development
 npm run docs:build # Build output
 npm run docs:preview # Preview the build locally
+npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
 ```
 
 ## Directory Structure

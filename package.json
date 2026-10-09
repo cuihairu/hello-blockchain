@@ -5,7 +5,8 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "docs:walkthrough": "node scripts/walkthrough.mjs"
   },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",

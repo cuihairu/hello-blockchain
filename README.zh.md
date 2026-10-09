@@ -24,6 +24,7 @@ npm install        # 安装依赖
 npm run docs:dev   # 本地开发
 npm run docs:build # 构建产物
 npm run docs:preview # 本地预览构建结果
+npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页检查）
 ```
 
 ## 目录结构
