@@ -17,7 +17,7 @@ title: 知识点总纲
 
 ### 演进逻辑
 
-- 每代共识换的不是投票方式，而是**记账资源**：算力（PoW）→ 代币（PoS）→ 声誉（PoA）→ 硬盘（PoSpace）→ 时间（VDF）。投票协议本身（BFT）反而是最老的部分，1982 年就有理论，1999 年就能落地。
+- 每代共识换的不是投票方式，而是**记账资源**：算力（PoW）→ 代币（PoS）→ 声誉（PoA）→ 硬盘（PoSpace）→ 时间（[PoET](/consensus/PoET)、VDF）。投票协议本身（BFT）反而是最老的部分，1982 年就有理论，1999 年就能落地。
 - PoW 的直系思想源是反垃圾邮件的 Hashcash（1997），比特币的贡献是给哈希预算加了货币与最长链规则；b-money、Bit Gold（1998）是没画完的草图。
 - PoS 的头是 Peercoin（2012-08-19 白皮书）开的，但它是 PoW+PoS 混合；第一个纯 PoS 主网是 Nxt（2013）。有严格安全证明的 PoS 从 Ouroboros（CRYPTO 2017）才开始。
 - DPoS（2014，Larimer）把 PoS 改成代议制：21~101 个代表轮流出块，吞吐上去了，互投联盟与选票交易的担忧也上去了。
@@ -81,9 +81,9 @@ title: 知识点总纲
 ## 应用场景
 
 - **无许可公链**：抗女巫机制是入场券，要么算力（PoW），要么质押（PoS）。概率最终性换开放准入（比特币），或 PoS+BFT 换快确认（以太坊系、Cosmos 系）。选型时先问节点能不能匿名加入。
-- **联盟链/许可链**：身份已知，直接上 PBFT/HotStuff 系换确定性最终性与高吞吐；互信程度高但只要防宕机，用 RAFT（Fabric 排序层）；单机构试点用 SOLO 起步再升级。
+- **联盟链/许可链**：身份已知，直接上 PBFT/HotStuff 系换确定性最终性与高吞吐；互信程度高但只要防宕机，用 RAFT（Fabric 排序层）；单机构试点用 [SOLO](/consensus/SOLO) 起步再升级。
 - **测试网与侧链**：PoA 的主场，验证人身份可追责、零燃料成本、出块快。Kovan/Rinkeby 起的头，BNB Smart Chain 的 Parlia 加上质押演化为 PoSA。
-- **存储与环保叙事**：PoC/PoSpace 用硬盘抽签（Burstcoin、Chia），PoSt 把「持续持有」也计入（Filecoin、Spacemesh）。注意绿色成色要打折：绘图写入量与硬盘军备竞赛都是真实成本。
+- **存储与环保叙事**：[PoC](/consensus/POC)/[PoSpace](/consensus/PoSpace) 用硬盘抽签（Burstcoin、Chia），PoSt 把「持续持有」也计入（Filecoin、Spacemesh）。注意绿色成色要打折：绘图写入量与硬盘军备竞赛都是真实成本。
 - **时间敏感场景**：需要不可预知随机数的（出块抽签、leader 选举）用 VDF/VRF 抗研磨；需要全局时钟的（高吞吐排序）用 PoH 式时间层。
 - **异步网络**：节点分布在跨洲网络、延迟无上界时，异步 BFT（HoneyBadger、Dumbo）是理论正确答案，代价是密码学构件的计算开销，生产落地仍少。
 
@@ -94,6 +94,6 @@ title: 知识点总纲
 - **Long Range Attack**（PoS）：旧密钥从创世区块重造替代链。检查点与弱主观性是标配解法，见[长程攻击](/hacking/LongRangeAttack)。
 - **Grinding（研磨）**：验证人尝试多个分叉挑最有利的。VDF 锁定未来挑战、VRF 秘密抽签都是堵这个洞。
 - **女巫攻击**：任何「一人一票」的共识都会被批量造身份打穿，票必须按算力/质押/身份加权，见[女巫攻击](/hacking/SybilAttack)。
-- **TEE 信任根**：PoET 的安全寄在 Intel SGX 上，SGX 自 2017 年起被多次侧信道攻破，「等了多久」可以伪造，这类设计要当作教学案例看。
+- **TEE 信任根**：[PoET](/consensus/PoET) 的安全寄在 Intel SGX 上，SGX 自 2017 年起被多次侧信道攻破，「等了多久」可以伪造，这类设计要当作教学案例看。
 - **治理攻击**（DPoS）：低投票率下的互投联盟与选票交易，技术手段防不住，只能靠持续问责与声誉。
-- **「HDPoS」「APoS」一类交易所标签**：查无官方定义（HyperCash 白皮书写的是 PoW+PoS 混合，Solana 官方口径是 PoS+PoH+TowerBFT），引述前先回白皮书核对，见[演进时间线的来源未考一节](/consensus-timeline#来源未考)。
+- **「HDPoS」「APoS」一类交易所标签**：查无官方定义（HyperCash 白皮书写的是 PoW+PoS 混合，Solana 官方口径是 PoS+[PoH](/consensus/PoH)+[TowerBFT](/consensus/TowerBFT)），引述前先回白皮书核对，见[演进时间线的来源未考一节](/consensus-timeline#来源未考)。
