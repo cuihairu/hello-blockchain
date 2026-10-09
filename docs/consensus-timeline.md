@@ -216,7 +216,7 @@ Slush→Snowflake→Snowball→Snowman 四步演进（见[Snowball](/consensus/S
 - Filecoin（2020，PoRep+PoSt，存储证明同时充当共识，存储在这里是服务而不是彩票）。
 - Spacemesh（2023 主网，PoST 的 Tortoise+Hare 双层定序）。
 
-来源：[Proofs of Space（ePrint 2013/796）](https://eprint.iacr.org/2013/796)；VDF 综述（Boneh、Bünz、Fisch，2018）；[Filecoin 白皮书](https://filecoin.io/filecoin.pdf)（2017）；[Solana 白皮书](https://solana.com/solana-whitepaper.pdf)（2017，PoH 属时间层）。
+来源：[Proofs of Space（ePrint 2013/796）](https://eprint.iacr.org/2013/796)；VDF 综述（Boneh、Bünz、Fisch，2018）；[Filecoin 白皮书（存档）](https://web.archive.org/web/2023/https://filecoin.io/filecoin.pdf)（2017；原链已从官网下线）；[Solana 白皮书](https://solana.com/solana-whitepaper.pdf)（2017，PoH 属时间层）。
 
 ### CFT 共识与开发模式
 

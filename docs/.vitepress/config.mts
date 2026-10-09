@@ -38,8 +38,7 @@ export default defineConfig({
       { text: '公链项目', link: '/chains/Chain' }
     ],
 
-    // 由 mdbook SUMMARY.md 结构映射而来（scripts: parse_summary.py），
-    // 10 个顶层分组、全部 76 页入目录、无孤儿页
+    // sidebar.json 手工维护，结构与 docs/SUMMARY.md 对齐，新增页面需同步两处
     sidebar: sidebar as never,
 
     socialLinks: [
