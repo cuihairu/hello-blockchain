@@ -4,7 +4,7 @@ title: 知识点总纲
 
 # 知识点总纲
 
-> 本页把散在各主题页的知识点收拢成一页：核心概念、依据的论文与白皮书、官方文档、应用场景、常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。演进脉络的完整版本在[共识算法演进时间线](/consensus-timeline)。已收拢四个主题：共识算法、记账模型（含数据结构与脚本）、隐私安全、攻防；NFT 与公链主题随批补齐。
+> 本页把散在各主题页的知识点收拢成一页：核心概念、依据的论文与白皮书、官方文档、应用场景、常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。演进脉络的完整版本在[共识算法演进时间线](/consensus-timeline)。已收拢六个主题：共识算法、记账模型（含数据结构与脚本）、隐私安全、攻防、NFT 与资产发行、有名的公链。
 
 ## 核心概念
 
@@ -208,3 +208,60 @@ title: 知识点总纲
 - **Finney 攻击是预付款陷阱**：矿工预挖区块，等你接受「零确认支付」发货后释放双花链，见[Finney 攻击](/hacking/FinneyAttack)与[双重花费攻击](/hacking/DoubleSpendAttack)。
 - **粉尘不是钱是标记**：尘额 UTXO 本身没有价值，标记价值拉满——收了就等于同意被追踪。
 - **「代码即法律」不设防**：重入、整数溢出、预言机操纵都是部署后才爆的雷；审计+赏金+升级开关是三件套，见[智能合约漏洞攻击](/hacking/SmartContractVulnerabilities)。
+
+## 主题：NFT 与资产发行
+
+### 核心概念
+
+- NFT 的本质是「让一枚代币不可替代」：同质化代币只记数量，NFT 给每个代币挂唯一 ID 与元数据（名称、内容指针、所有权历史）。
+- 比特币路线是「给聪着色」：[彩色币](/nft/ColoredCoins)把链外资产映射到特定聪；[OAP](/nft/OAP)（2013）用 OP_RETURN 字段存元数据；[Tokenized Protocol](/nft/TokenizedProtocol) 把资产定义、权限与生命周期操作协议化。
+- 以太坊路线是「标准化」：ERC-721（2018 定稿）定义非同质化代币接口，ERC-1155（2019 定稿）把同质化与非同质化统一成半同质化，NFT 从收藏实验变成行业标准。
+- 比特币的回归路线是「铭文」：Ordinals（2023）把内容直接刻进聪的见证数据，不依赖协议层信任，BRC-20 随之把同质化代币也塞回聪。
+
+### 官方文档
+
+| 文档 | 覆盖内容 | 站内出处 |
+| --- | --- | --- |
+| [EIP-721](https://eips.ethereum.org/EIPS/eip-721) | 非同质化代币标准接口 | [代币化协议](/nft/TokenizedProtocol) |
+| [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) | 多代币（半同质化）标准 | [代币化协议](/nft/TokenizedProtocol) |
+| [Ordinals 手册](https://docs.ordinals.com/) | 铭文与聪编号规则 | [彩色币](/nft/ColoredCoins) |
+
+### 应用场景
+
+- **数字收藏与游戏资产**：唯一性+可验证所有权，二级市场版税靠标准里的接口约定。
+- **票务与凭证**：防伪与可转移，一票一 ID。
+- **RWA（现实世界资产）**：链下资产上链映射，考验的是链下法律效力不是链上技术。
+
+### 常见坑
+
+- **元数据链下不等于永久**：IPFS 未 pin 或 HTTP 链接失效，NFT 就只剩链上一个哈希，见[彩色币](/nft/ColoredCoins)的存储讨论。
+- **买 NFT ≠ 买版权**：通常买到的是 token 与转移权，著作权除非明确授予。
+- **索引分歧**：比特币 NFT 依赖链下索引器，「这枚聪算哪个 NFT」可能因索引器实现而不同。
+- **洗售与抢跑**：自买自卖刷成交价、mint 阶段机器人抢跑，都是流动性伪装，不是价值信号。
+
+## 主题：有名的公链
+
+### 核心概念
+
+- 公链按共识分族：PoW 系（[比特币](/chains/Bitcoin)、[莱特币](/chains/Litecoin)、[门罗](/chains/Monero)）、PoS 系（[以太坊](/chains/Ethereum) Gasper、[卡尔达诺](/chains/Cardano) Ouroboros）、DPoS 系（[EOS](/chains/EOS) 21 BP、TRON 27 超级代表）、BFT 系（[Cosmos](/chains/Cosmos) Tendermint、Aptos HotStuff 系）、异构（[波卡](/chains/Polkadot) NPoS 分工、[恒星](/chains/Stellar) SCP/FBA、[Chia](/chains/Chia) PoSpace+PoT、TON Catchain）。
+- **稳定币不是链**：[Tether](/chains/Tether) 是发行在多条链上的资产（Omni、ERC-20、TRC-20），发行方、资产、承载轨道三层要分清。
+- **EVM 兼容 ≠ 共识相同**：BSC 用 PoSA（21 验证人）不是以太坊的 Gasper；TRON 的 TVM 字节码级兼容 EVM，共识却是 DPoS——虚拟机与共识是两个独立维度。
+- 谁在用什么共识变体，34 行主链映射见[共识算法演进时间线](/consensus-timeline)。
+
+### 演进逻辑
+
+- 2009 比特币开机 → 2011-2014 山寨与隐私分化（莱特币换 Scrypt、门罗走向环签名）→ 2015 以太坊开出智能合约平台范式 → 2017-2019 DPoS 高吞吐与联盟链并行 → 2020 之后分片、模块化与 DAG（波卡、Near、Sui）。
+- 链的归属看谁在维护客户端，不看当初谁宣布：TON 被 Telegram 放弃后由社区接续，主网 2021 年才上线（见[TON](/chains/TON)）。
+
+### 应用场景
+
+- **价值储存与支付**：比特币、莱特币；隐私支付找[门罗](/chains/Monero)。
+- **智能合约生态**：以太坊、BSC、Solana、TON（Telegram 分发入口）。
+- **跨链枢纽**：[波卡](/chains/Polkadot)与[Cosmos](/chains/Cosmos)两条技术路线，共享安全与 IBC 自治各执一端。
+- **存储与环保叙事**：[Chia](/chains/Chia)、Filecoin。
+
+### 常见坑
+
+- **把营销 TPS 当真实吞吐**：白皮书数字多是理论极限或理想网络环境，与主网实测差一个数量级是常态。
+- **把「链」当「资产」**：USDT 是资产、Tether 是发行方、Tron 与 Ethereum 是轨道，混用会得出「Tether 转账免费」这类错误结论。
+- **按市值排序理解技术**：链的技术代际与市值排序基本无关，共识选型回[演进时间线](/consensus-timeline)看脉络。
