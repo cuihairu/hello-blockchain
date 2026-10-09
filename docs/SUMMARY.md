@@ -1,6 +1,7 @@
 # Summary
 
 - [简介](./Introduction.md)
+- [共识算法演进时间线](./consensus-timeline.md)
 - [记账模型](model/Models.md)
 	- [UTXO](model/UTXO.md)
 	- [Account](model/Account.md)
@@ -81,3 +82,4 @@
 	- [Stellar 恒星币](chains/Stellar.md)
 	- [Solana](chains/Solana.md)
 	- [Chia 奇亚](chains/Chia.md)
+- [知识点总纲](./knowledge.md)

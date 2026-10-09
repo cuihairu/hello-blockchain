@@ -4,6 +4,10 @@
     "link": "/Introduction"
   },
   {
+    "text": "共识算法演进时间线",
+    "link": "/consensus-timeline"
+  },
+  {
     "text": "记账模型",
     "link": "/model/Models",
     "collapsed": true,
@@ -353,5 +357,9 @@
   {
     "text": "发展史时间线",
     "link": "/timeline"
+  },
+  {
+    "text": "知识点总纲",
+    "link": "/knowledge"
   }
 ]
