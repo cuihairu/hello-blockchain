@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import sidebar from './sidebar.json' with { type: 'json' }
 
+const SITE_URL = 'https://cuihairu.github.io/hello-blockchain'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
@@ -11,11 +13,34 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-blockchain/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-blockchain/favicon.svg' }],
+    ['meta', { property: 'og:site_name', content: 'Hello Blockchain' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }]
   ],
+
+  // 每页的 og/twitter 标签在此按实际标题与描述生成（%t/%d 模板在此版本不可用）
+  transformHead({ pageData, title, description }) {
+    const rel = pageData.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '')
+    const url = rel ? `${SITE_URL}/${rel}` : `${SITE_URL}/`
+    return [
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }]
+    ]
+  },
 
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
   srcExclude: ['**/SUMMARY.md'],
+
+  // 部署在 GitHub Pages 子路径下，hostname 需带 base，生成的 sitemap 才指向线上真实地址
+  sitemap: {
+    hostname: 'https://cuihairu.github.io/hello-blockchain/',
+    lastmodDateOnly: true
+  },
 
   ignoreDeadLinks: false,
 
