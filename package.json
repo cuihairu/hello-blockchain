@@ -8,6 +8,7 @@
     "docs:preview": "vitepress preview docs",
     "docs:check": "node scripts/check-nav.mjs",
     "docs:links": "node scripts/check-links.mjs",
+    "docs:og": "node scripts/make-og-image.mjs",
     "docs:walkthrough": "node scripts/walkthrough.mjs"
   },
   "devDependencies": {

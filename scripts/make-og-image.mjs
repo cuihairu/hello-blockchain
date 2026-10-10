@@ -23,16 +23,16 @@ const html = `<!doctype html>
   }
   .rail { position: absolute; inset: 0 auto 0 0; width: 14px; background: #6d28d9; }
   .panel { position: absolute; top: 0; bottom: 0; left: 1040px; right: 0; background: #ede9fe; }
-  .logo { position: absolute; left: 90px; top: 100px; width: 200px; height: 200px; }
+  .logo { position: absolute; left: 90px; top: 140px; width: 200px; height: 200px; }
   .logo svg { width: 100%; height: 100%; display: block; }
   .title {
-    position: absolute; left: 340px; top: 118px;
+    position: absolute; left: 340px; top: 158px;
     font-family: 'DejaVu Sans', sans-serif; font-weight: 700;
     font-size: 72px; color: #1b1533; letter-spacing: -1px;
   }
-  .tagline { position: absolute; left: 342px; top: 236px; font-size: 46px; font-weight: 700; color: #6d28d9; }
-  .topics { position: absolute; left: 342px; top: 312px; font-size: 30px; color: #4a4360; }
-  .url { position: absolute; left: 342px; top: 396px; font-size: 26px; color: #8a83a3; font-family: 'DejaVu Sans', sans-serif; }
+  .tagline { position: absolute; left: 342px; top: 276px; font-size: 46px; font-weight: 700; color: #6d28d9; }
+  .topics { position: absolute; left: 342px; top: 352px; font-size: 30px; color: #4a4360; }
+  .url { position: absolute; left: 342px; top: 436px; font-size: 26px; color: #8a83a3; font-family: 'DejaVu Sans', sans-serif; }
 </style>
 </head>
 <body>
