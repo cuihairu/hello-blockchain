@@ -38,6 +38,14 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      # Runtime gate: every route must render, internal links must resolve,
+      # sidebar must highlight, and the timeline widget must still work.
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run full-site walkthrough
+        run: npm run docs:walkthrough
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
