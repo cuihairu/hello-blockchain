@@ -26,6 +26,7 @@ npm run docs:build # 构建产物
 npm run docs:preview # 本地预览构建结果
 npm run docs:check   # 校验 sidebar / SUMMARY / 站内链接一致
 npm run docs:links   # 校验站外论文 / 文档链接可达（需要网络）
+npm run docs:og      # 重新生成社交预览图（og-image.png）
 npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页检查）
 ```
 
