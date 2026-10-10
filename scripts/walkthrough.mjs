@@ -110,13 +110,29 @@ for (const route of routes) {
   }
 }
 
-// DevTimeline interactive check on /timeline
-await page.goto(BASE + '/hello-blockchain/timeline', { waitUntil: 'domcontentloaded' });
+// DevTimeline interactive check on /timeline — retry: the preview server can
+// briefly refuse a connection right after the crawl, same class of flake as
+// the per-page goto retries above.
+let timelineNavError = '';
+for (let attempt = 0; attempt < 3; attempt++) {
+  try {
+    await page.goto(BASE + '/hello-blockchain/timeline', { waitUntil: 'domcontentloaded', timeout: 20000 });
+    timelineNavError = '';
+    break;
+  } catch (e) {
+    timelineNavError = e.message.split('\n')[0];
+    await page.waitForTimeout(500);
+  }
+}
+if (timelineNavError) badLinks.push(`PAGE /timeline goto failed: ${timelineNavError}`);
 await page.waitForTimeout(300);
 const chips = await page.locator('.dt-controls .chip').count();
 const periods = await page.locator('.dt .period').count();
-await page.locator('.dt-controls .chip').first().click();
-const filterClickWorks = (await page.locator('.dt-controls .chip.is-active').count()) === 1;
+if (chips > 0) {
+  await page.locator('.dt-controls .chip').first().click();
+}
+const filterClickWorks = chips > 0 && (await page.locator('.dt-controls .chip.is-active').count()) === 1;
+const timelineOk = !timelineNavError && chips > 0 && periods > 0 && filterClickWorks;
 
 const report = {
   pagesVisited,
@@ -125,7 +141,7 @@ const report = {
   pageErrors: pageErrors.length,
   badLinks: badLinks.length,
   sidebarFailures: sidebarFailures.length,
-  timeline: { chips, periods, filterClickWorks },
+  timeline: { chips, periods, filterClickWorks, ok: timelineOk },
   samples: {
     consoleErrors: consoleErrors.slice(0, 5),
     pageErrors: pageErrors.slice(0, 5),
@@ -137,4 +153,4 @@ console.log(JSON.stringify(report, null, 2));
 
 await browser.close();
 server.kill();
-process.exit(badLinks.length || consoleErrors.length || pageErrors.length || sidebarFailures.length ? 1 : 0);
+process.exit(badLinks.length || consoleErrors.length || pageErrors.length || sidebarFailures.length || !timelineOk ? 1 : 0);
