@@ -35,11 +35,14 @@ npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页�
 ```
 docs/                 # VitePress 站点源
 ├── .vitepress/       # 主题与配置（sidebar.json 手工维护，由 docs:check 校验与 SUMMARY.md 对齐）
-├── public/           # 品牌资产（logo.svg / favicon.svg）
+├── public/           # 品牌资产（logo.svg / favicon.svg / og-image.png / robots.txt / badges）
+├── img/              # 正文引用的图片
 ├── SUMMARY.md        # 目录底稿（sidebar 映射来源）
+├── index.md          # 首页：各栏目入口卡片
+├── Introduction.md   # 简介：站点覆盖范围与阅读顺序
 ├── timeline.md           # 发展史时间线（30 个节点五段分期）
 ├── consensus-timeline.md  # 共识算法演进时间线（49 条年表）
-├── knowledge.md           # 知识点总纲（共识算法起步）
+├── knowledge.md           # 知识点总纲：概念、来源、场景、易错点
 ├── model/            # 记账模型：UTXO、账户、DAG
 ├── algo/             # 数据结构：Merkle 树
 ├── opcode/           # 脚本与操作码
@@ -49,6 +52,14 @@ docs/                 # VitePress 站点源
 ├── hacking/          # 攻击与防御
 ├── nft/              # 资产发行与 NFT
 └── chains/           # 有名的区块链项目
+```
+
+```
+scripts/              # 由 npm 脚本与 CI 调用的维护检查
+├── check-nav.mjs     # sidebar / SUMMARY / 站内链接 / 总纲覆盖 / README 数字与目录树一致
+├── check-links.mjs   # 站外论文与文档链接可达
+├── make-og-image.mjs # 重新生成 public/og-image.png
+└── walkthrough.mjs   # 浏览器逐页走查构建产物
 ```
 
 ## License

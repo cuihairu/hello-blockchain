@@ -9,6 +9,8 @@
 //   - an internal link inside any page that resolves to no page
 //   - a content page that the knowledge digest (/knowledge) never cites
 //   - a headline count in README / home page that drifted from the real data
+//   - a README directory tree that misses a real docs/ or scripts/ entry, or
+//     lists one that no longer exists
 // Usage: node scripts/check-nav.mjs
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, posix } from 'node:path';
@@ -219,6 +221,31 @@ for (const [file, re, expect, label] of claims) {
   else if (Number(m[1]) !== expect) failures.push(`${file}: claims ${m[1]} ${label}, actual ${expect}`);
 }
 if (timelinePeriods !== 5) failures.push(`timeline periods: ${timelinePeriods} (home page says five eras)`);
+
+// --- README directory trees must match what is really on disk ---
+// The tree is the map readers use to find the site sources and the checks; an
+// entry that exists on disk but not in the map (or the other way round) is the
+// same class of drift as a sidebar link with no page behind it.
+const treeEntryRe = /^\s*(?:[│|]\s*)*[├└]──\s*(\S+)/;
+const realEntries = new Set([
+  ...readdirSync(ROOT).map((n) => n),
+  ...readdirSync('scripts').map((n) => n)
+]);
+for (const file of ['README.md', 'README.zh.md']) {
+  const abs = join(ROOT, '..', file);
+  if (!existsSync(abs)) { failures.push(`${file}: file missing for directory tree check`); continue; }
+  const listed = new Set();
+  for (const line of readFileSync(abs, 'utf8').split('\n')) {
+    const m = treeEntryRe.exec(line);
+    if (!m) continue;
+    const name = m[1].replace(/\/$/, '');
+    listed.add(name);
+    if (!realEntries.has(name)) failures.push(`${file}: tree lists unknown entry ${m[1]}`);
+  }
+  for (const name of realEntries) {
+    if (!listed.has(name)) failures.push(`${file}: directory tree misses ${name}`);
+  }
+}
 
 
 const unique = [...new Set(failures)];

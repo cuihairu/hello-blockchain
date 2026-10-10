@@ -35,8 +35,11 @@ npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts previe
 ```
 docs/                 # VitePress site source
 ├── .vitepress/       # Theme and configuration (sidebar.json is hand-maintained, checked against SUMMARY.md)
-├── public/           # Brand assets (logo.svg / favicon.svg)
+├── public/           # Brand assets (logo.svg / favicon.svg / og-image.png / robots.txt / badges)
+├── img/              # Images embedded by the pages
 ├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
+├── index.md          # Home page: entry cards for every section
+├── Introduction.md   # Introduction: what the site covers and how to read it
 ├── timeline.md           # Development history timeline (30 nodes in five eras)
 ├── consensus-timeline.md  # Consensus algorithm evolution timeline (49 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
@@ -49,6 +52,14 @@ docs/                 # VitePress site source
 ├── hacking/          # Attacks and defenses
 ├── nft/              # Asset issuance and NFTs
 └── chains/           # Notable blockchain projects
+```
+
+```
+scripts/              # Maintenance checks run by npm scripts and in CI
+├── check-nav.mjs     # Sidebar / SUMMARY / internal links / digest coverage / README numbers and tree
+├── check-links.mjs   # External paper and doc links reachable
+├── make-og-image.mjs # Regenerates public/og-image.png
+└── walkthrough.mjs   # Browser walkthrough over every built route
 ```
 
 ## License
