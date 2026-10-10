@@ -69,10 +69,10 @@ title: 知识点总纲
 
 | 文档 | 覆盖内容 | 站内出处 |
 | --- | --- | --- |
-| [ethereum.org 共识机制](https://ethereum.org/en/developers/docs/consensus-mechanisms/poa/) | Gasper、PoA 口径 | [PoA](/consensus/POA)、[PoS](/consensus/POS) |
+| [ethereum.org 共识机制](https://ethereum.org/developers/docs/consensus-mechanisms/poa/) | Gasper、PoA 口径 | [PoA](/consensus/POA)、[PoS](/consensus/POS) |
 | [长安链共识算法](https://docs.chainmaker.org.cn/tech/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95.html) | TBFT/MaxBFT/Raft/Solo 可插拔 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT) |
 | Hyperledger Fabric 文档 | Raft ordering、SmartBFT（3.x） | [RAFT](/consensus/RAFT)、[PBFT](/consensus/PBFT) |
-| [CometBFT 文档](https://docs.cometbft.com/) | Tendermint 协议现状与参数 | [Tendermint](/consensus/Tendermint) |
+| [CometBFT 文档](https://docs.cosmos.network/cometbft/) | Tendermint 协议现状与参数 | [Tendermint](/consensus/Tendermint) |
 | Aptos、Sui 官方文档 | AptosBFT、Narwhal/Mysticeti | [MaxBFT](/consensus/MaxBFT)（同源 HotStuff） |
 | Chia 官方文档 | PoSpace+PoT 工程细节 | [PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
 | Decred 文档 | 混合共识（PoW 出块+PoS 选票） | [PoS](/consensus/POS) |

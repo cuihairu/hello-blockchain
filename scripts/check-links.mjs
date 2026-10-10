@@ -17,7 +17,7 @@ const opt = (name, dflt) => {
 };
 const TIMEOUT = opt('--timeout', 15000);
 const CONCURRENCY = opt('--concurrency', 8);
-const RETRIES = 2;
+const RETRIES = 3;
 
 // --- collect external URLs from markdown link/image/autolink syntax ---
 const urls = new Map(); // url -> Set(pages)
