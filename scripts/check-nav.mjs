@@ -11,6 +11,7 @@
 //   - a headline count in README / home page that drifted from the real data
 //   - a README directory tree that misses a real docs/ or scripts/ entry, or
 //     lists one that no longer exists
+//   - an npm script that is undocumented in README, or documented but absent
 // Usage: node scripts/check-nav.mjs
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, posix } from 'node:path';
@@ -244,6 +245,24 @@ for (const file of ['README.md', 'README.zh.md']) {
   }
   for (const name of realEntries) {
     if (!listed.has(name)) failures.push(`${file}: directory tree misses ${name}`);
+  }
+}
+
+// --- README command list must match package.json scripts ---
+// Every npm script the repo ships has to be documented (that is how readers
+// find the gates), and every `npm run …` the READMEs advertise must exist.
+const pkgScripts = new Set(Object.keys(JSON.parse(readFileSync('package.json', 'utf8')).scripts || {}));
+for (const file of ['README.md', 'README.zh.md']) {
+  const abs = join(ROOT, '..', file);
+  if (!existsSync(abs)) continue;
+  const documented = new Set(
+    [...readFileSync(abs, 'utf8').matchAll(/npm run ([a-z:]+)/g)].map((m) => m[1])
+  );
+  for (const name of documented) {
+    if (!pkgScripts.has(name)) failures.push(`${file}: documents missing script npm run ${name}`);
+  }
+  for (const name of pkgScripts) {
+    if (!documented.has(name)) failures.push(`${file}: script not documented: ${name}`);
   }
 }
 
