@@ -198,6 +198,18 @@ const claims = [
   ['docs/index.md', /(\d+) 个节点五段分期/, timelineNodes, 'timeline nodes'],
   ['docs/index.md', /(\d+) 条年表从/, timelineEntries, 'timeline entries'],
   ['docs/index.md', /(\d+) 行主链映射/, chainRows, 'chain rows'],
+  ['docs/Introduction.md', /(\d+) 种共识的原理与取舍/, consensusArticles, 'consensus articles'],
+  ['docs/Introduction.md', /(\d+) 个节点五段分期/, timelineNodes, 'timeline nodes'],
+  ['docs/Introduction.md', /（(\d+) 条年表、/, timelineEntries, 'timeline entries'],
+  ['docs/Introduction.md', /、(\d+) 行主链映射）/, chainRows, 'chain rows'],
+  ['docs/timeline.md', /排列 (\d+) 个节点/, timelineNodes, 'timeline nodes'],
+  ['docs/timeline.md', /(\d+) 条年表与此页/, timelineEntries, 'timeline entries'],
+  ['docs/timeline.md', /此页 (\d+) 节点/, timelineNodes, 'timeline nodes'],
+  ['docs/knowledge.md', /(\d+) 行主链映射见/, chainRows, 'chain rows'],
+  ['docs/consensus-timeline.md', /约四十年，(\d+) 个节点/, timelineEntries, 'timeline entries'],
+  ['docs/consensus-timeline.md', /^([0-9]+) 条链，/m, chainRows, 'chain rows'],
+  ['docs/consensus-timeline.md', /(\d+) 篇算法详解/, consensusArticles, 'consensus articles'],
+  ['docs/consensus-timeline.md', /(\d+) 个节点互为补充/, timelineNodes, 'timeline nodes'],
 ];
 for (const [file, re, expect, label] of claims) {
   const abs = join(ROOT, '..', file);
