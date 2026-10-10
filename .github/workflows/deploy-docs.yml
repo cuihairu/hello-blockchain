@@ -35,6 +35,11 @@ jobs:
       - name: Check navigation consistency
         run: npm run docs:check
 
+      # The digest cites papers and official docs; a dead source silently rots
+      # the one thing the site asks readers to trust. Retries transient errors.
+      - name: Check external links
+        run: npm run docs:links
+
       - name: Build with VitePress
         run: npm run docs:build
 
