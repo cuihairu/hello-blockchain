@@ -24,6 +24,7 @@ npm install        # Install dependencies
 npm run docs:dev   # Local development
 npm run docs:build # Build output
 npm run docs:preview # Preview the build locally
+npm run docs:check   # Check sidebar / SUMMARY / internal links stay in sync
 npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
 ```
 
@@ -31,7 +32,7 @@ npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts previe
 
 ```
 docs/                 # VitePress site source
-├── .vitepress/       # Theme and configuration (sidebar.json is generated from SUMMARY.md)
+├── .vitepress/       # Theme and configuration (sidebar.json is hand-maintained, checked against SUMMARY.md)
 ├── public/           # Brand assets (logo.svg / favicon.svg)
 ├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
 ├── timeline.md           # Development history timeline (30 nodes in five eras)
@@ -42,7 +43,7 @@ docs/                 # VitePress site source
 ├── opcode/           # Scripts and opcodes
 ├── btc/              # Bitcoin mechanics: BIP, P2PK
 ├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 23 articles
-├── privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
+├── Privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
 ├── hacking/          # Attacks and defenses
 ├── nft/              # Asset issuance and NFTs
 └── chains/           # Notable blockchain projects

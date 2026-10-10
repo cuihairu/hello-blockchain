@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check navigation consistency
+        run: npm run docs:check
+
       - name: Build with VitePress
         run: npm run docs:build
 

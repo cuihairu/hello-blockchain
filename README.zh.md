@@ -24,6 +24,7 @@ npm install        # 安装依赖
 npm run docs:dev   # 本地开发
 npm run docs:build # 构建产物
 npm run docs:preview # 本地预览构建结果
+npm run docs:check   # 校验 sidebar / SUMMARY / 站内链接一致
 npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页检查）
 ```
 
@@ -31,7 +32,7 @@ npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页�
 
 ```
 docs/                 # VitePress 站点源
-├── .vitepress/       # 主题与配置（sidebar.json 由 SUMMARY.md 映射生成）
+├── .vitepress/       # 主题与配置（sidebar.json 手工维护，由 docs:check 校验与 SUMMARY.md 对齐）
 ├── public/           # 品牌资产（logo.svg / favicon.svg）
 ├── SUMMARY.md        # 目录底稿（sidebar 映射来源）
 ├── timeline.md           # 发展史时间线（30 个节点五段分期）
@@ -42,7 +43,7 @@ docs/                 # VitePress 站点源
 ├── opcode/           # 脚本与操作码
 ├── btc/              # 比特币机制：BIP、P2PK
 ├── consensus/        # 共识算法：PoW、PoS、PBFT、Tendermint 等 23 篇
-├── privacy/          # 隐私技术：零知识证明、环签名、同态加密等
+├── Privacy/          # 隐私技术：零知识证明、环签名、同态加密等
 ├── hacking/          # 攻击与防御
 ├── nft/              # 资产发行与 NFT
 └── chains/           # 有名的区块链项目

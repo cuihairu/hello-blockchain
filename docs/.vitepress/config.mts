@@ -38,7 +38,7 @@ export default defineConfig({
       { text: '公链项目', link: '/chains/Chain' }
     ],
 
-    // sidebar.json 手工维护，结构与 docs/SUMMARY.md 对齐，新增页面需同步两处
+    // sidebar.json 手工维护，结构与 docs/SUMMARY.md 对齐，新增页面需同步两处；npm run docs:check 校验
     sidebar: sidebar as never,
 
     socialLinks: [
