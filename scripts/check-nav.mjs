@@ -8,6 +8,7 @@
 //     or points at a page that is not in the sidebar
 //   - an internal link inside any page that resolves to no page
 //   - a content page that the knowledge digest (/knowledge) never cites
+//   - a headline count in README / home page that drifted from the real data
 // Usage: node scripts/check-nav.mjs
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, posix } from 'node:path';
@@ -160,9 +161,58 @@ for (const page of pages) {
   if (!digest.includes(`(${page})`)) failures.push(`page missing from knowledge digest: ${page}`);
 }
 
-if (failures.length) {
-  console.error(`check-nav: ${failures.length} problem(s)`);
-  for (const f of failures) console.error('  - ' + f);
+// --- headline counts quoted in README / home page must match the real data ---
+// Each site surface advertises totals (article counts, timeline sizes); they
+// silently rot as content grows, so the numbers are derived here and checked
+// against the sentences that quote them.
+function dataRows(md, heading) {
+  const lines = md.split('\n');
+  const start = lines.findIndex((l) => l.trim() === heading);
+  if (start === -1) return -1;
+  let rows = 0;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^#{1,6}\s/.test(lines[i])) break;
+    if (/^\|\s*[^-\s]/.test(lines[i])) rows++;   // pipe rows, separator excluded
+  }
+  return rows - 1;                                // drop the header row
+}
+const consensusArticles = readdirSync(join(ROOT, 'consensus'))
+  .filter((f) => f.endsWith('.md') && f !== 'Consensus.md').length;
+const timelineData = readFileSync(join(ROOT, '.vitepress/theme/data/timeline.ts'), 'utf8');
+const timelineNodes = [...timelineData.matchAll(/^ {4}year: /gm)].length;
+const timelinePeriods = [...timelineData.matchAll(/^ {4}name: /gm)].length;
+const timelineDoc = readFileSync(join(ROOT, 'consensus-timeline.md'), 'utf8');
+const timelineEntries = dataRows(timelineDoc, '## 时间线总表');
+const chainRows = dataRows(timelineDoc, '## 主链与共识对照表');
+
+const claims = [
+  ['README.md', /(\d+) consensus algorithms/, consensusArticles, 'consensus articles'],
+  ['README.md', /# Consensus algorithms:[^\n]*?(\d+) articles/, consensusArticles, 'consensus articles'],
+  ['README.md', /# Development history timeline \((\d+) nodes/, timelineNodes, 'timeline nodes'],
+  ['README.md', /# Consensus algorithm evolution timeline \((\d+) entries\)/, timelineEntries, 'timeline entries'],
+  ['README.zh.md', /(\d+) 种共识算法/, consensusArticles, 'consensus articles'],
+  ['README.zh.md', /# 共识算法：[^\n]*?(\d+) 篇/, consensusArticles, 'consensus articles'],
+  ['README.zh.md', /# 发展史时间线（(\d+) 个节点/, timelineNodes, 'timeline nodes'],
+  ['README.zh.md', /# 共识算法演进时间线（(\d+) 条年表）/, timelineEntries, 'timeline entries'],
+  ['docs/index.md', /(\d+) 种共识的原理/, consensusArticles, 'consensus articles'],
+  ['docs/index.md', /(\d+) 个节点五段分期/, timelineNodes, 'timeline nodes'],
+  ['docs/index.md', /(\d+) 条年表从/, timelineEntries, 'timeline entries'],
+  ['docs/index.md', /(\d+) 行主链映射/, chainRows, 'chain rows'],
+];
+for (const [file, re, expect, label] of claims) {
+  const abs = join(ROOT, '..', file);
+  if (!existsSync(abs)) { failures.push(`${file}: file missing for ${label} claim`); continue; }
+  const m = re.exec(readFileSync(abs, 'utf8'));
+  if (!m) failures.push(`${file}: no ${label} claim found`);
+  else if (Number(m[1]) !== expect) failures.push(`${file}: claims ${m[1]} ${label}, actual ${expect}`);
+}
+if (timelinePeriods !== 5) failures.push(`timeline periods: ${timelinePeriods} (home page says five eras)`);
+
+
+const unique = [...new Set(failures)];
+if (unique.length) {
+  console.error(`check-nav: ${unique.length} problem(s)`);
+  for (const f of unique) console.error('  - ' + f);
   process.exit(1);
 }
 console.log(`check-nav: ok (${pages.size} pages, ${sidebarLinks.length} sidebar links)`);

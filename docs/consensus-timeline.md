@@ -276,7 +276,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 | Spacemesh | 2023 | PoST（Tortoise+Hare） | PoST 首个生产实现 |
 | 蚂蚁链 | 未公开 | HotStuff 系（联盟链） | 原始论文来源未考 |
 
-34 条链，涵盖当前主要共识变体。看得出集中度：出块资源上 PoW 三家、PoS 家族二十余家；投票层上 HotStuff 与 Tendermint 两个名字覆盖了 BFT 公链的大半。
+35 条链，涵盖当前主要共识变体。看得出集中度：出块资源上 PoW 三家、PoS 家族二十余家；投票层上 HotStuff 与 Tendermint 两个名字覆盖了 BFT 公链的大半。
 
 ## 来源清单
 
