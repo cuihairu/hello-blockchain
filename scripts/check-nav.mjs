@@ -72,7 +72,49 @@ for (const raw of summaryPaths) {
   }
 }
 
-// --- internal links inside pages must resolve ---
+// --- heading anchors per page (same slugify as vitepress/markdown-it-anchor) ---
+const rControl = new RegExp('[' + String.fromCharCode(0) + '-' + String.fromCharCode(31) + ']', 'g');
+const rCombining = new RegExp('[' + String.fromCharCode(0x300) + '-' + String.fromCharCode(0x36f) + ']', 'g');
+const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g;
+function slugify(str) {
+  return str.normalize('NFKD')
+    .replace(rCombining, '')
+    .replace(rControl, '')
+    .replace(rSpecial, '-')
+    .replace(/-{2,}/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/^(\d)/, '_$1')
+    .toLowerCase();
+}
+const inlineText = (s) => s
+  .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')   // images -> alt text
+  .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')    // links -> link text
+  .replace(/[*~`]/g, '')                     // emphasis / code markers
+  .replace(/<[^>]+>/g, '')                    // inline html
+  .trim();
+
+const anchors = new Map(); // route -> Set(slug)
+for (const page of pages) {
+  const file = join(ROOT, page === '/' ? 'index.md' : page.slice(1) + '.md');
+  if (!existsSync(file)) continue;
+  const slugs = new Set();
+  const dup = new Map();
+  let inFence = false;
+  for (const line of readFileSync(file, 'utf8').split('\n')) {
+    if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; continue; }
+    if (inFence) continue;
+    const m = /^(#{1,6})\s+(.*?)\s*#*\s*$/.exec(line);
+    if (!m) continue;
+    const base = slugify(inlineText(m[2]));
+    let slug = base;
+    if (dup.has(base)) { dup.set(base, dup.get(base) + 1); slug = `${base}-${dup.get(base)}`; }
+    else dup.set(base, 0);
+    slugs.add(slug);
+  }
+  anchors.set(page, slugs);
+}
+
+// --- internal links inside pages must resolve, anchors must exist ---
 const linkRe = /\]\(([^)\s]+)\)/g;
 for (const page of pages) {
   const file = join(ROOT, page === '/' ? 'index.md' : page.slice(1) + '.md');
@@ -80,22 +122,30 @@ for (const page of pages) {
   const text = readFileSync(file, 'utf8');
   for (const m of text.matchAll(linkRe)) {
     const href = m[1];
-    if (/^(https?:|mailto:|#)/.test(href)) continue;
-    const [path] = href.split('#');
-    if (!path) continue;
+    if (/^(https?:|mailto:)/.test(href)) continue;
+    const [rawPath, frag] = href.split('#');
     let target;
-    if (path.startsWith('/')) target = path.replace(/\/$/, '');
+    if (!rawPath) target = page;                       // same-page anchor
+    else if (rawPath.startsWith('/')) target = rawPath.replace(/\/$/, '');
     else {
       const base = posix.dirname(page === '/' ? '/index' : page);
-      target = posix.normalize(posix.join(base === '.' ? '/' : base, path)).replace(/\/$/, '');
+      target = posix.normalize(posix.join(base === '.' ? '/' : base, rawPath)).replace(/\/$/, '');
     }
     target = target.replace(/\.md$/, '');
-    if (target === '') continue;
-    if (pages.has(target)) continue;
-    // Non-page targets (images, downloads) must exist as real files.
-    const asset = join(ROOT, target.replace(/^\//, ''));
-    if (/\.[a-z0-9]+$/i.test(target) && existsSync(asset)) continue;
-    failures.push(`${page}: dead internal link ${href}`);
+    if (target === '') target = '/';
+    if (!pages.has(target)) {
+      // Non-page targets (images, downloads) must exist as real files.
+      const asset = join(ROOT, target.replace(/^\//, ''));
+      if (/\.[a-z0-9]+$/i.test(target) && existsSync(asset)) continue;
+      failures.push(`${page}: dead internal link ${href}`);
+      continue;
+    }
+    if (frag) {
+      let decoded = frag;
+      try { decoded = decodeURIComponent(frag); } catch { /* keep raw */ }
+      const slugs = anchors.get(target);
+      if (slugs && !slugs.has(decoded)) failures.push(`${page}: dead anchor ${href}`);
+    }
   }
 }
 

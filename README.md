@@ -25,6 +25,7 @@ npm run docs:dev   # Local development
 npm run docs:build # Build output
 npm run docs:preview # Preview the build locally
 npm run docs:check   # Check sidebar / SUMMARY / internal links stay in sync
+npm run docs:links   # Check external paper / doc links are reachable (needs network)
 npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
 ```
 

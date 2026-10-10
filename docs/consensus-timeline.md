@@ -153,7 +153,7 @@ PBFT 的 O(n²) 通信限制节点规模在百级，这决定了它只在许可�
 - Zilliqa（2019，公链例外：PoW 分片内跑 pBFT，算力入网、投票出块）。
 - Quorum/Besu 的 IBFT、IBFT 2.0（以太坊系联盟链）。
 
-来源：[PBFT 论文（OSDI'99）](http://pmg.csail.mit.edu/papers/osdi99.pdf)。
+来源：[PBFT 论文（OSDI'99）存档](https://web.archive.org/web/2020/http://pmg.csail.mit.edu/papers/osdi99.pdf)。
 
 ### HotStuff 系：三阶段协议的线性化
 
@@ -280,7 +280,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 
 ## 来源清单
 
-**白皮书与论文**
+### 白皮书与论文
 
 - Nakamoto《Bitcoin: A Peer-to-Peer Electronic Cash System》（2008）：[bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)
 - King、Nadal《PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake》（2012-08-19）：[decred.org 镜像](https://decred.org/research/king2012.pdf)
@@ -288,7 +288,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - Kwon《Tendermint: Consensus without Mining》（2014）；现由 [CometBFT 文档](https://docs.cometbft.com/) 承接
 - Mazières《The Stellar Consensus Protocol》（2015）：[stellar.org/papers](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)
 - Schwartz、Youngs、Britto《The Ripple Protocol Consensus Algorithm》（2014）
-- Castro、Liskov《Practical Byzantine Fault Tolerance》（OSDI'99）：[MIT 论文页](http://pmg.csail.mit.edu/papers/osdi99.pdf)、[存档镜像](https://web.archive.org/web/2020/http://pmg.csail.mit.edu/papers/osdi99.pdf)
+- Castro、Liskov《Practical Byzantine Fault Tolerance》（OSDI'99）：[Microsoft Research 论文页](https://www.microsoft.com/en-us/research/publication/practical-byzantine-fault-tolerance/)、[存档镜像](https://web.archive.org/web/2020/http://pmg.csail.mit.edu/papers/osdi99.pdf)
 - Ongaro、Ousterhout《In Search of an Understandable Consensus Algorithm》（USENIX ATC 2014）：[raft.github.io](https://raft.github.io/raft.pdf)
 - Kiayias、Russell、David、Oliynykov《Ouroboros》（CRYPTO 2017）：[ePrint 2016/889](https://eprint.iacr.org/2016/889)
 - Buterin、Griffith《Casper the Friendly Finality Gadget》（2017）：[arXiv:1710.09437](https://arxiv.org/abs/1710.09437)
@@ -302,7 +302,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - Micali《ALGORAND: The Efficient and Democratic Ledger》（arXiv:1607.01341）
 - Protocol Labs《Filecoin: A Decentralized Storage Network》（2017；原白皮书 PDF 已从官网下线）：[官方技术规格 spec.filecoin.io](https://spec.filecoin.io/)、[白皮书存档](https://web.archive.org/web/2023/https://filecoin.io/filecoin.pdf)
 
-**官方文档**
+### 官方文档
 
 - [ethereum.org 共识机制（PoA/Gasper 口径）](https://ethereum.org/en/developers/docs/consensus-mechanisms/poa/)
 - [长安链共识算法](https://docs.chainmaker.org.cn/tech/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95.html)（TBFT/MaxBFT/Raft/Solo）
@@ -311,7 +311,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - Aptos、Sui 官方文档（AptosBFT、Narwhal/Mysticeti 口径）
 - Chia 官方文档（PoSpace+PoT）、Decred 文档（混合共识）、Gnosis Chain 文档（POSDAO）
 
-**来源未考**
+### 来源未考
 
 查无权威原始出处、按口头或第三方口径收录的条目如下，引述前先回白皮书核对。
 
