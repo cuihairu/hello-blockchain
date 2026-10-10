@@ -41,6 +41,25 @@ function walk(dir) {
 }
 walk(DIST);
 
+// Routes whose markdown source contains math ($$…$$ or $…$, code fences
+// stripped) must render MathJax output — a silent regression class where the
+// build stays green but formulas end up as raw dollar text.
+const mathRoutes = new Set();
+(function scanMath(dir) {
+  for (const f of readdirSync(dir, { withFileTypes: true })) {
+    const p = join(dir, f.name);
+    if (f.isDirectory()) {
+      if (f.name.startsWith('.') || f.name === 'public' || f.name === 'img') continue;
+      scanMath(p);
+    } else if (f.name.endsWith('.md') && f.name !== 'SUMMARY.md') {
+      const src = readFileSync(p, 'utf8').replace(/```[^\n]*\n[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, '');
+      if (/\$\$[\s\S]+?\$\$|\$(?!\s)[^$\n]+?[^\s]\$(?!\.)/.test(src)) {
+        mathRoutes.add('/' + p.slice(5).replace(/\.md$/, ''));
+      }
+    }
+  }
+})('docs');
+
 // 2. Start preview server — spawn the node entry directly so server.kill()
 // reaches the real process (an npx wrapper would leave it orphaned)
 const server = spawn(process.execPath,
@@ -72,6 +91,7 @@ const routeSet = new Set(routes.map(r => r.replace(/\/$/, '')));
 const badLinks = [];
 let pagesVisited = 0;
 let sidebarChecks = 0;
+let mathChecks = 0;
 const sidebarFailures = [];
 
 for (const route of routes) {
@@ -106,6 +126,13 @@ for (const route of routes) {
     else sidebarChecks++;
     const active = await page.locator('.VPSidebar a[aria-current="page"], .VPSidebar a.active').count();
     if (active === 0) sidebarFailures.push(`${route}: no active sidebar highlight`);
+  }
+
+  // Pages with math in the source must show rendered formulas, not raw $…$.
+  if (mathRoutes.has(route.replace(/\/$/, ''))) {
+    const mathCount = await page.locator('mjx-container').count();
+    if (mathCount === 0) badLinks.push(`PAGE ${route} has math source but no rendered math`);
+    else mathChecks++;
   }
 
   const hrefs = await page.$$eval('a[href]', as => as.map(a => a.getAttribute('href')));
@@ -145,6 +172,7 @@ const timelineOk = !timelineNavError && chips > 0 && periods > 0 && filterClickW
 const report = {
   pagesVisited,
   sidebarChecks,
+  mathChecks,
   consoleErrors: consoleErrors.length,
   pageErrors: pageErrors.length,
   badLinks: badLinks.length,
