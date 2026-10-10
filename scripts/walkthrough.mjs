@@ -92,6 +92,12 @@ for (const route of routes) {
   if (textLen < 200) badLinks.push(`PAGE ${route} content too short (${textLen})`);
 
   const isHome = await page.locator('.VPHome').count() > 0;
+  if (route === '/') {
+    // Every home feature card must be a real link, not a static div.
+    const features = await page.locator('.VPFeature').count();
+    const linked = await page.locator('a.VPFeature').count();
+    if (features > 0 && linked < features) badLinks.push(`HOME feature cards without link: ${features - linked}/${features}`);
+  }
   if (route !== '/404' && !route.startsWith('/404') && !isHome) {
     const sidebarLinks = await page.locator('.VPSidebar a').count();
     if (sidebarLinks < 20) sidebarFailures.push(`${route}: sidebar links=${sidebarLinks}`);
