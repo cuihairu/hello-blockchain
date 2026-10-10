@@ -7,6 +7,7 @@
 //   - a SUMMARY.md entry whose path is missing, differs only by letter case,
 //     or points at a page that is not in the sidebar
 //   - an internal link inside any page that resolves to no page
+//   - a content page that the knowledge digest (/knowledge) never cites
 // Usage: node scripts/check-nav.mjs
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, posix } from 'node:path';
@@ -96,6 +97,17 @@ for (const page of pages) {
     if (/\.[a-z0-9]+$/i.test(target) && existsSync(asset)) continue;
     failures.push(`${page}: dead internal link ${href}`);
   }
+}
+
+// --- every content page must be cited in the knowledge digest ---
+// The digest (/knowledge) is the site's index of concepts; a page that no
+// digest entry links to is invisible from the entry point. Structural pages
+// are exempt: the home page, the intro, the digest itself and the timelines.
+const digest = readFileSync(join(ROOT, 'knowledge.md'), 'utf8');
+const digestExempt = new Set(['/', '/Introduction', '/knowledge', '/timeline', '/consensus-timeline']);
+for (const page of pages) {
+  if (digestExempt.has(page)) continue;
+  if (!digest.includes(`(${page})`)) failures.push(`page missing from knowledge digest: ${page}`);
 }
 
 if (failures.length) {
