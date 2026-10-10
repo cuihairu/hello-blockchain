@@ -89,7 +89,9 @@ for (const route of routes) {
   await page.waitForTimeout(150);
 
   const textLen = (await page.textContent('#app main, #app .VPContent, #app') || '').length;
-  if (textLen < 200) badLinks.push(`PAGE ${route} content too short (${textLen})`);
+  // The 404 route is a deliberately short page (title + hint + two actions).
+  const minLen = route === '/404' || route.startsWith('/404') ? 100 : 200;
+  if (textLen < minLen) badLinks.push(`PAGE ${route} content too short (${textLen})`);
 
   const isHome = await page.locator('.VPHome').count() > 0;
   if (route === '/') {
