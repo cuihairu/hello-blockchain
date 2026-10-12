@@ -2,6 +2,13 @@
 
 历史证明（Proof of History, PoH）是 Solana 的标志性构件：一条**持续运行的可验证延迟哈希序列**，为全网所有事件提供先于共识的、可验证的全局时钟。严格说 PoH 不是共识，而是与 [TowerBFT](/consensus/TowerBFT) 配合的"时间层"。
 
+## 四要素
+
+- **在哪一层**：结算层之上的**时间层** —— 严格说不是共识，是与 [TowerBFT](/consensus/TowerBFT) 配合的全局时钟
+- **解决什么**：为全网事件提供先于共识的、可验证的全局时钟——用持续运行的延迟哈希序列给事件定序，省掉节点间「这事发生在那事之前」的协商
+- **解决得怎么样**：排序通信开销大幅降低，支撑 Solana 的高吞吐与短出块；代价是序列由单个 leader 生成、可验证不等于可信任生成端，抗研磨要靠额外的抽签与罚没设计
+- **出处**：Anatoly Yakovenko《Solana: A new architecture for a high performance blockchain》2017
+
 ## 基本原理
 
 序列按 $h_{n+1} = \text{hash}(h_n)$ 无限迭代。关键性质：

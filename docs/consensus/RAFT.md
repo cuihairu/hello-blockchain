@@ -2,6 +2,13 @@
 
 RAFT 是 Ongaro 与 Ousterhout 于 2014 年提出的**崩溃容错（CFT）共识**，定位是 Paxos 的可理解替代品：以"领导选举 + 日志复制 + 安全性约束"三件事讲清楚多副本状态机复制。它只容忍节点宕机，不容忍拜占庭作恶——因此常见于联盟链、分布式存储（etcd、TiKV、Consul）而非公链。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— 崩溃容错（CFT）共识，只容忍宕机不容忍拜占庭作恶
+- **解决什么**：多副本状态机复制——把 Paxos 的效果用「领导选举 + 日志复制 + 安全性约束」讲得可理解、可教学、可工程化
+- **解决得怎么样**：可理解性是硬指标，工业界事实标准（etcd、TiKV、Consul）；代价是不抗作恶，只能用于身份已知且可追责的环境；入链主要是 Hyperledger Fabric 的排序层
+- **出处**：Diego Ongaro、John Ousterhout《In Search of an Understandable Consensus Algorithm》USENIX ATC 2014
+
 ## 三个子问题
 
 1. **领导选举（Leader Election）**

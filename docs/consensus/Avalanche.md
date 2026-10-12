@@ -2,6 +2,13 @@
 
 Avalanche（雪崩）是一个高吞吐智能合约平台，其共识结合了 **Snowball 族亚采样概率共识**与**质押加权**，由 Ava Labs 于 2018-2020 年推出（白皮书署名 Team Rocket，创始团队 Emin Gün Sirer 等）。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— 亚采样概率共识 + 质押加权，X/P/C 三链分治
+- **解决什么**：既要无许可与高吞吐，又要快确认——用随机亚采样替代全网广播投票，用质押决定权重
+- **解决得怎么样**：出块秒级、交易亚秒级确认，通信量小；代价是最终性是概率性的（安全阈值 1/2 而非 1/3 的例外模型）、质押集中度高、三链架构增加理解与运维成本
+- **出处**：Team Rocket《Scalable and Probabilistic Leaderless BFT Consensus through Metastability》2018；Ava Labs 平台白皮书 2020
+
 ## 共识结构：三链设计
 
 1. **X-Chain（Exchange）**：资产创建与交易，运行 Avalanche 共识（DAG 形态，交易间非线性序）。

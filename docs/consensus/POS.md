@@ -2,6 +2,13 @@
 
 权益证明（Proof of Stake, PoS）用"经济质押"替代"算力竞争"：验证人锁定一定数量的原生代币作为保证金，按质押权重被选中出块或投票；作恶者的质押可被罚没（slashing），诚实参与者获得增发与手续费奖励。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— 按质押权重选人，最终性常与 BFT 投票组合（以太坊 Gasper：LMD-GHOST 出块 + Casper FFG 定案）
+- **解决什么**：用经济质押替代算力竞争来抗女巫，让「作恶者失去保证金」成为安全机制，同时把能耗降下来
+- **解决得怎么样**：以太坊 Merge 后能耗下降约 99.95%，确认更快、罚没可量化；代价是 Nothing-at-Stake 要靠罚没规则约束、长程攻击要靠弱主观性兜底、质押有向大机构集中的趋势
+- **出处**：QuantumMechanic（Bitcointalk 论坛帖）2011；King、Nadal《PPCoin 白皮书》2012-08-19；Kiayias 等《Ouroboros》CRYPTO 2017；Buterin、Griffith《Casper the Friendly Finality Gadget》2017
+
 ## 基本原理
 
 1. **质押准入**：节点提交质押交易锁仓（如 Ethereum 要求每验证人 32 ETH）。

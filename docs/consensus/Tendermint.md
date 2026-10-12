@@ -2,6 +2,13 @@
 
 Tendermint 是把"PoS 质押 + BFT 投票"组合成完整公链引擎的开创性实现，由 Jae Kwon 于 2014 年提出，2017-2019 年由 Tendermint Inc.（后 Interchain GmbH）持续开发，是 Cosmos 生态的共识内核。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— PoS 质押 + BFT 投票组合成完整引擎，确定性最终性
+- **解决什么**：把质押与 BFT 投票焊成一个完整公链引擎——验证人按质押权重投票，1/3 以上作恶才不安全，2/3 达成即最终
+- **解决得怎么样**：确定性最终性、秒级出块、ABCI 接口让应用层复用引擎（Cosmos 生态繁荣）；代价是验证人数量受 O(n²) 限制（百级）、链历史上多次因治理与软件问题停摆（2019-2021 Cosmos Hub 数次）
+- **出处**：Jae Kwon《Tendermint: Consensus without Mining》2014；CometBFT 官方文档
+
 ## 架构分层
 
 - **Tendermint Core**：共识（Tendermint BFT）+ P2P 网络 + 轻客户端。

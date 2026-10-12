@@ -2,6 +2,13 @@
 
 实用拜占庭容错（Practical Byzantine Fault Tolerance, PBFT）由 Castro 与 Liskov 于 1999 年提出，首次把拜占庭容错做到"可工程落地"的性能，是许可链与多数 BFT 公链投票层的直系祖先。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— 部分同步假设下的三阶段投票，2f+1 票达成确定性最终性
+- **解决什么**：把 BFT 从「理论可行」变成「工程可跑」：pre-prepare/prepare/commit 三阶段消息交换、视图切换、检查点垃圾回收
+- **解决得怎么样**：首次做到可落地的 BFT 性能（千级 TPS），是许可链与 BFT 公链投票层的直系祖先；代价是 O(n²) 消息复杂度限制节点规模，超时参数依赖网络配置
+- **出处**：Miguel Castro、Barbara Liskov《Practical Byzantine Fault Tolerance》OSDI 1999
+
 ## 基本设定
 
 - 节点总数 $n \geq 3f + 1$，容忍 $f$ 个拜占庭节点。

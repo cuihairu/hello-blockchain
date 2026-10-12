@@ -2,6 +2,13 @@
 
 容量证明（Proof of Capacity / Proof of Concept of Storage, PoC）是 PoSpace 的早期工程形态：矿工预先在硬盘上生成大量"绘图文件"（plot），出块权由"谁的盘里恰好存着接近挑战值的答案"决定——搜索容量取代算力。Burstcoin（2014）是首创者，Chia 将该思路升级为 PoSpace+PoT（见 [Chia](/chains/Chia)）。
 
+## 四要素
+
+- **在哪一层**：[结算层](/layers/Settlement) —— 按硬盘容量分配出块权，搜索容量替代算力
+- **解决什么**：用存储资源替代算力竞争，降低能耗与专用硬件门槛——出块权由「谁的盘里恰好存着接近挑战值的答案」决定
+- **解决得怎么样**：能耗远低于 PoW、普通硬盘可参与；代价是绘图文件占满磁盘、绘图写入量随网络增长（Chia 曾引发固态硬盘抢购）、容量可被收购导致中心化
+- **出处**：Burstcoin 白皮书 2014（首创者）；Chia 白皮书 2019（升级为 PoSpace+PoT）
+
 ## 基本原理
 
 以 Burstcoin/Shabal-POC 方案为例：
