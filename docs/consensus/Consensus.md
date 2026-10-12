@@ -23,10 +23,13 @@
 | 类别 | 算法 | 代表应用 |
 | --- | --- | --- |
 | 工作量证明 | PoW | Bitcoin、Litecoin |
-| 权益证明 | PoS、DPoS、PoA | Ethereum、EOS、BNB Chain |
-| 拜占庭容错 | PBFT、Tendermint、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Fabric |
+| 权益证明 | PoS、DPoS、PoA、Ouroboros、Algorand | Ethereum、EOS、Cardano、Algorand |
+| 拜占庭容错 | PBFT、Tendermint、HotStuff、DiemBFT、QBFT、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Aptos、Quorum/Besu |
 | 资源/存储类 | PoC、PoET、PoSpace、PoT、PoST、PoH | Chia、Solana |
+| 出块 + 最终性分工 | Gasper、BABE+GRANDPA、Snowman、Lachesis | Ethereum、Polkadot、Avalanche、Fantom |
 | 混合与演进 | TowerBFT、RAFT（CFT） | Solana、联盟链 |
+
+每篇算法页开头是统一的「四要素」区块：**在哪一层**（对应[分层架构](/layers/Layers)的四层模型）、**解决什么**、**解决得怎么样**（优点、缺点与已发生的事故）、**出处**（论文或白皮书）。
 
 ## 选型直觉
 

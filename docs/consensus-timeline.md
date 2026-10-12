@@ -55,12 +55,12 @@ title: 共识算法演进时间线
 | 2017 | EOS.IO 白皮书 | Larimer | EOS（2018-06 主网，DPoS+BFT 不可逆） |
 | 2017 | Filecoin 白皮书 | Protocol Labs | Filecoin（2020-10 主网，PoRep+PoSt） |
 | 2017 | HyperCash 主网 | Hcash 团队 | PoW+PoS 混合；交易所常标「HDPoS」，见下文来源未考 |
-| 2018 | [HotStuff](/consensus/MaxBFT) | Yin、Malkhi 等（[arXiv:1803.05069](https://arxiv.org/abs/1803.05069)，CCS'19） | DiemBFT（Libra，2019）；血脉到 Aptos |
+| 2018 | [HotStuff](/consensus/HotStuff) | Yin、Malkhi 等（[arXiv:1803.05069](https://arxiv.org/abs/1803.05069)，CCS'19） | DiemBFT（Libra，2019）；血脉到 Aptos |
 | 2018 | VDF | Boneh、Bünz、Fisch | Chia 的 [PoT](/consensus/POT)（2021） |
 | 2018 | Avalanche 白皮书 | Team Rocket（Ava Labs 收录） | Avalanche（2020 主网，见[Avalanche](/consensus/Avalanche)） |
 | 2018 | TRON / EOS 主网 | — | DPoS 集中落地年：27 超级代表 / 21 超级节点 |
 | 2019 | Gasper 规格化 | 以太坊研究团队（FFG+LMD GHOST） | Beacon Chain（2020-12-01）→Merge |
-| 2019 | DiemBFT | Libra/Diem 团队 | HotStuff 首次工程化上线 |
+| 2019 | [DiemBFT](/consensus/DiemBFT) | Libra/Diem 团队 | HotStuff 首次工程化上线 |
 | 2019 | Dumbo 系列论文 | 国内异步共识团队 | 联盟链研究采用，见[ABFT](/consensus/ABFT) |
 | 2019 | Cosmos Hub、Algorand 主网 | — | Tendermint 与 BA⋆（VRF 抽签 PoS）上岗 |
 | 2020 | 主网井喷 | — | Solana（3 月）、Near（4 月）、Polkadot（5 月）、BSC（9 月）、Avalanche（9 月）、Filecoin（10 月） |
@@ -68,7 +68,7 @@ title: 共识算法演进时间线
 | 2021 | Chia 主网（3 月 19 日） | Chia Network | PoSpace+VDF 首次大规模落地，见[Chia](/chains/Chia) |
 | 2021 | 长安链开源 | 北京微芯研究院 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT)、RAFT、SOLO 可插拔 |
 | 2021 | TON 主网（5 月） | TON Foundation（社区接续） | Catchain BFT+PoS，主链+工作链原生分片，见 [TON](/chains/TON) |
-| 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/POS) 上岗，能耗降约 99.95% |
+| 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/Gasper) 上岗，能耗降约 99.95% |
 | 2022 | Aptos 主网 | Aptos Labs | AptosBFT（DiemBFT v4/Jolteon 系） |
 | 2023 | Sui 主网（5 月） | Mysten Labs | Narwhal+Bullshark：DAG 内存池与共识解耦 |
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
@@ -110,8 +110,8 @@ Peercoin 开的头，但它是 PoW+PoS 混合：初期靠 PoW 分币，PoS 逐�
 
 **一句话机制**：把「诚实多数下攻击者成功概率可忽略」写成可证明的数学，再以此设计抽签。
 
-- Cardano：Ouroboros 系列（Classic→Praos→Genesis），epoch/slot 制，VRF 选主，主网 2017 年上线即用（见[卡尔达诺](/chains/Cardano)）。
-- Algorand：Micali 的 BA⋆ 协议，VRF 秘密抽签，被抽中前没人知道自己是候选人，抗选择性作恶，主网 2019。
+- Cardano：[Ouroboros](/consensus/Ouroboros) 系列（Classic→Praos→Genesis），epoch/slot 制，VRF 选主，主网 2017 年上线即用（见[卡尔达诺](/chains/Cardano)）。
+- Algorand：Micali 的 BA⋆ 协议，VRF 秘密抽签，被抽中前没人知道自己是候选人，抗选择性作恶，主网 2019（见[Algorand](/consensus/Algorand)）。
 
 来源：[Ouroboros（ePrint 2016/889）](https://eprint.iacr.org/2016/889)；Micali《ALGORAND》（arXiv:1607.01341）。
 
@@ -324,5 +324,5 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 
 - 查某条链用什么共识：直接看[对照表](#主链与共识对照表)。
 - 查某个算法哪年出现、谁先用：看[时间线总表](#时间线总表)。
-- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 23 篇算法详解加一篇总览。
+- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 33 篇算法详解加一篇总览。
 - 时间线总表与[发展史时间线](/timeline)的 30 个节点互为补充：那边看链的历史，这边看算法的历史。

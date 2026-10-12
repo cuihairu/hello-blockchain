@@ -182,6 +182,46 @@
       {
         "text": "TowerBFT",
         "link": "/consensus/TowerBFT"
+      },
+      {
+        "text": "Algorand",
+        "link": "/consensus/Algorand"
+      },
+      {
+        "text": "BABE",
+        "link": "/consensus/BABE"
+      },
+      {
+        "text": "DiemBFT",
+        "link": "/consensus/DiemBFT"
+      },
+      {
+        "text": "Gasper",
+        "link": "/consensus/Gasper"
+      },
+      {
+        "text": "GRANDPA",
+        "link": "/consensus/GRANDPA"
+      },
+      {
+        "text": "HotStuff",
+        "link": "/consensus/HotStuff"
+      },
+      {
+        "text": "Lachesis",
+        "link": "/consensus/Lachesis"
+      },
+      {
+        "text": "Ouroboros",
+        "link": "/consensus/Ouroboros"
+      },
+      {
+        "text": "QBFT",
+        "link": "/consensus/QBFT"
+      },
+      {
+        "text": "Snowman",
+        "link": "/consensus/Snowman"
       }
     ]
   },

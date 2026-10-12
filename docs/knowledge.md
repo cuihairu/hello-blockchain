@@ -51,17 +51,18 @@ title: 知识点总纲
 | 《The Ripple Protocol Consensus Algorithm》 | Schwartz、Youngs、Britto，2014 | UNL 式共识 | [FBA](/consensus/FBA) |
 | 《The Stellar Consensus Protocol》 | Mazières，2015 | 仲裁切片、联邦化准入 | [FBA](/consensus/FBA) |
 | 《The Honey Badger of BFT Protocols》 | Miller 等，CCS'16 | 异步原子广播、阈值加密 | [HoneyBadgerBFT](/consensus/HoneyBadgerBFT) |
-| 《Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol》 | Kiayias 等，CRYPTO 2017 | 首个严格证明 PoS、epoch/slot、VRF | [PoS](/consensus/POS)、[卡尔达诺](/chains/Cardano) |
-| 《Casper the Friendly Finality Gadget》 | Buterin、Griffith，2017 | 最终性 gadget、PoW→PoS 过渡 | [PoS](/consensus/POS) |
-| 《HotStuff: BFT Consensus with Linearity and Responsiveness》 | Yin、Malkhi 等，CCS'19 | 链式流水线、QC、线性视图切换 | [MaxBFT](/consensus/MaxBFT) |
-| 《Scalable and Probabilistic Leaderless BFT Consensus through Metastability》（Avalanche 白皮书） | Team Rocket，2018 | 亚采样、元稳定、无领导共识 | [Snowball](/consensus/Snowball)、[Avalanche](/consensus/Avalanche) |
+| 《Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol》 | Kiayias 等，CRYPTO 2017 | 首个严格证明 PoS、epoch/slot、VRF | [Ouroboros](/consensus/Ouroboros)、[PoS](/consensus/POS)、[卡尔达诺](/chains/Cardano) |
+| 《Casper the Friendly Finality Gadget》 | Buterin、Griffith，2017 | 最终性 gadget、PoW→PoS 过渡 | [Gasper](/consensus/Gasper)、[PoS](/consensus/POS) |
+| 《HotStuff: BFT Consensus with Linearity and Responsiveness》 | Yin、Malkhi 等，CCS'19 | 链式流水线、QC、线性视图切换 | [HotStuff](/consensus/HotStuff)、[MaxBFT](/consensus/MaxBFT)、[DiemBFT](/consensus/DiemBFT) |
+| 《Scalable and Probabilistic Leaderless BFT Consensus through Metastability》（Avalanche 白皮书） | Team Rocket，2018 | 亚采样、元稳定、无领导共识 | [Snowball](/consensus/Snowball)、[Snowman](/consensus/Snowman)、[Avalanche](/consensus/Avalanche) |
 | 《A Survey of Two Verifiable Delay Functions》 | Boneh、Bünz、Fisch，2018 | VDF 构造（重复平方+增量证明） | [PoT](/consensus/POT) |
 | 《Proofs of Space》 | Dziembowski 等，CRYPTO 2015 | 空间证明的形式化 | [PoSpace](/consensus/PoSpace) |
 | 《Solana: A new architecture for a high performance blockchain》 | Yakovenko，2017 | PoH 全局时钟、leader 排序 | [PoH](/consensus/PoH) |
 | 《Filecoin: A Decentralized Storage Network》 | Protocol Labs，2017 | PoRep/PoSt、存储即共识 | [PoST](/consensus/PoST) |
-| 《Polkadot: Vision for a Heterogeneous Multi-Chain Framework》 | Wood，2016 草案 | NPoS、BABE+GRANDPA 分工 | [PoS](/consensus/POS)、[波卡](/chains/Polkadot) |
-| 《ALGORAND: The Efficient and Democratic Ledger》 | Micali，arXiv 2016 | BA⋆、秘密抽签 | [PoS](/consensus/POS) |
+| 《Polkadot: Vision for a Heterogeneous Multi-Chain Framework》 | Wood，2016 草案 | NPoS、BABE+GRANDPA 分工 | [BABE](/consensus/BABE)、[GRANDPA](/consensus/GRANDPA)、[PoS](/consensus/POS)、[波卡](/chains/Polkadot) |
+| 《ALGORAND: The Efficient and Democratic Ledger》 | Micali，arXiv 2016 | BA⋆、秘密抽签 | [Algorand](/consensus/Algorand)、[PoS](/consensus/POS) |
 | 《In Search of an Understandable Consensus Algorithm》（RAFT） | Ongaro、Ousterhout，USENIX ATC 2014 | 领导选举、日志复制、选举约束 | [RAFT](/consensus/RAFT) |
+| 《Lachesis Protocol》 | Fantom 团队，2019 | 异步 DAG 出块、超级检查点最终化 | [Lachesis](/consensus/Lachesis) |
 
 ## 官方文档
 
@@ -73,6 +74,7 @@ title: 知识点总纲
 | [长安链共识算法](https://docs.chainmaker.org.cn/tech/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95.html) | TBFT/MaxBFT/Raft/Solo 可插拔 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT) |
 | Hyperledger Fabric 文档 | Raft ordering、SmartBFT（3.x） | [RAFT](/consensus/RAFT)、[PBFT](/consensus/PBFT) |
 | [CometBFT 文档](https://docs.cosmos.network/cometbft/) | Tendermint 协议现状与参数 | [Tendermint](/consensus/Tendermint) |
+| [Hyperledger Besu 仓库](https://github.com/hyperledger/besu) | QBFT/Clique 许可链实现与参数（docs/ 目录） | [QBFT](/consensus/QBFT)、[PoA](/consensus/POA) |
 | Aptos、Sui 官方文档 | AptosBFT、Narwhal/Mysticeti | [MaxBFT](/consensus/MaxBFT)（同源 HotStuff） |
 | Chia 官方文档 | PoSpace+PoT 工程细节 | [PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
 | Decred 文档 | 混合共识（PoW 出块+PoS 选票） | [PoS](/consensus/POS) |
