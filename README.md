@@ -43,6 +43,7 @@ docs/                 # VitePress site source
 ├── timeline.md           # Development history timeline (30 nodes in five eras)
 ├── consensus-timeline.md  # Consensus algorithm evolution timeline (49 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
+├── layers/           # Layered architecture: compute, storage, settlement, service discovery
 ├── model/            # Ledger models: UTXO, account, DAG
 ├── algo/             # Data structures: Merkle tree
 ├── opcode/           # Scripts and opcodes

@@ -17,6 +17,9 @@ hero:
       link: https://github.com/cuihairu/hello-blockchain
 
 features:
+  - title: 分层架构
+    details: 计算、存储、结算、服务发现四层模型，对标 DNS 的服务发现，每层五要素：定义、问题、现有系统、开源清单、失败模式。
+    link: /layers/Layers
   - title: 记账模型
     details: UTXO、账户模型、DAG 三大范式，Cardano 的 EUTXO 与 Nervos 的 Cell 混合形态，理解账本如何记账。
     link: /model/Models

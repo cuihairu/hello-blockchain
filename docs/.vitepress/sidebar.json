@@ -4,6 +4,29 @@
     "link": "/Introduction"
   },
   {
+    "text": "分层架构",
+    "link": "/layers/Layers",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "计算层",
+        "link": "/layers/Compute"
+      },
+      {
+        "text": "存储层",
+        "link": "/layers/Storage"
+      },
+      {
+        "text": "结算层",
+        "link": "/layers/Settlement"
+      },
+      {
+        "text": "服务发现",
+        "link": "/layers/ServiceDiscovery"
+      }
+    ]
+  },
+  {
     "text": "共识算法演进时间线",
     "link": "/consensus-timeline"
   },

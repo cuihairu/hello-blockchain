@@ -1,6 +1,11 @@
 # Summary
 
 - [简介](./Introduction.md)
+- [分层架构](layers/Layers.md)
+	- [计算层](layers/Compute.md)
+	- [存储层](layers/Storage.md)
+	- [结算层](layers/Settlement.md)
+	- [服务发现](layers/ServiceDiscovery.md)
 - [共识算法演进时间线](./consensus-timeline.md)
 - [记账模型](model/Models.md)
 	- [UTXO](model/UTXO.md)

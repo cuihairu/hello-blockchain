@@ -43,6 +43,7 @@ docs/                 # VitePress 站点源
 ├── timeline.md           # 发展史时间线（30 个节点五段分期）
 ├── consensus-timeline.md  # 共识算法演进时间线（49 条年表）
 ├── knowledge.md           # 知识点总纲：概念、来源、场景、易错点
+├── layers/           # 分层架构：计算、存储、结算、服务发现
 ├── model/            # 记账模型：UTXO、账户、DAG
 ├── algo/             # 数据结构：Merkle 树
 ├── opcode/           # 脚本与操作码

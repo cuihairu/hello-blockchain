@@ -4,10 +4,12 @@
 
 ## hello-blockchain
 
-- [ ] **P1 分层章节：计算层 / 存储层 / 结算层 / 服务发现（对标 DNS）**
+- [x] **P1 分层章节：计算层 / 存储层 / 结算层 / 服务发现（对标 DNS）**
   - 期次：P1
   - 验收口径：新增「分层架构」章节，四层各一页，每页含五要素——定义、解决的问题、现有系统、开源清单、失败模式；四层自顶向下（服务发现 → 计算 → 存储 → 结算）的调用与信任关系写清，结算层为信任锚；每页与共识、记账模型、隐私、公链章节互链；进入 SUMMARY.md 与 sidebar.json，并被知识摘要（/knowledge）收录；`npm run docs:check`、`npm run docs:links`、`npm run docs:build` 全绿，README 目录树同步。
   - 来源：用户 2026-10-12
+  - 进度：已完成。新增 `docs/layers/` 五页——总览（四层模型、层间信任传递、与站内章节映射、选型直觉）+ 计算层 / 存储层 / 结算层 / 服务发现（各含五要素，服务发现附对标 DNS 对照表）。已接入 SUMMARY.md、sidebar.json、knowledge.md（新增「主题：分层架构」并收录五页）、首页 feature 卡、README 与 README.zh 目录树。
+  - 证据：`npm run docs:check` ok（86 pages / 91 sidebar links）；`npm run docs:links` ok（56 external URLs reachable）；`npm run docs:build` complete；`npm run docs:walkthrough` 无 console/page error、无坏链、无侧边栏失败。
 
 - [ ] **P2 共识扩充到尽量全（四要素模板，旧 23 条升模板）**
   - 期次：P2
