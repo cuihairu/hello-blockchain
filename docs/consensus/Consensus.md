@@ -23,9 +23,10 @@
 | 类别 | 算法 | 代表应用 |
 | --- | --- | --- |
 | 工作量证明 | PoW | Bitcoin、Litecoin |
-| 权益证明 | PoS、DPoS、PoA、Ouroboros、Algorand | Ethereum、EOS、Cardano、Algorand |
-| 拜占庭容错 | PBFT、Tendermint、HotStuff、DiemBFT、QBFT、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Aptos、Quorum/Besu |
+| 权益证明 | PoS、DPoS、PoA、Ouroboros、Algorand、SPoS | Ethereum、EOS、Cardano、Algorand、MultiversX |
+| 拜占庭容错 | PBFT、Tendermint、HotStuff、DiemBFT、QBFT、Streamlet、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Aptos、Quorum/Besu |
 | 资源/存储类 | PoC、PoET、PoSpace、PoT、PoST、PoH | Chia、Solana |
+| 分叉选择与 DAG | GHOST、Hashgraph、Narwhal+Bullshark、RPCA | Ethereum（PoW 期）、Hedera、Sui、XRP Ledger |
 | 出块 + 最终性分工 | Gasper、BABE+GRANDPA、Snowman、Lachesis | Ethereum、Polkadot、Avalanche、Fantom |
 | 混合与演进 | TowerBFT、RAFT（CFT） | Solana、联盟链 |
 

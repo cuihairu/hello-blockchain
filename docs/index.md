@@ -24,7 +24,7 @@ features:
     details: UTXO、账户模型、DAG 三大范式，Cardano 的 EUTXO 与 Nervos 的 Cell 混合形态，理解账本如何记账。
     link: /model/Models
   - title: 共识算法
-    details: PoW、PoS、PBFT、Tendermint、Avalanche 等 33 种共识的原理、容错阈值与工程取舍。
+    details: PoW、PoS、PBFT、Tendermint、Avalanche 等 39 种共识的原理、容错阈值与工程取舍。
     link: /consensus/Consensus
   - title: 公链生态
     details: Bitcoin、Ethereum、Solana、Polkadot 等主流公链的设计选型与权衡，理解链与链的差异。

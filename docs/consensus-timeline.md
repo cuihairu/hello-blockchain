@@ -42,7 +42,7 @@ title: 共识算法演进时间线
 | 2014 | [DPoS](/consensus/DPOS) | Larimer，BitShares 白皮书 | BitShares（当年主网） |
 | 2014 | [PoC](/consensus/POC) | Burstcoin | Burstcoin：首个容量证明主网 |
 | 2014 | [RAFT](/consensus/RAFT) | Ongaro、Ousterhout（USENIX ATC） | etcd 等；入链是 Fabric 1.4.1（2019） |
-| 2014 | RPCA 白皮书 | Schwartz、Youngs、Britto | XRP Ledger（已在运行） |
+| 2014 | [RPCA](/consensus/RPCA) 白皮书 | Schwartz、Youngs、Britto | XRP Ledger（已在运行） |
 | 2015 | [FBA/SCP](/consensus/FBA) | Mazières 白皮书 | Stellar（见[恒星币](/chains/Stellar)） |
 | 2016 | [PoET](/consensus/PoET) | Intel；Hyperledger Sawtooth | Sawtooth：TEE 抽签 |
 | 2016 | [HoneyBadgerBFT](/consensus/HoneyBadgerBFT) | Miller 等（CCS'16） | POA Network 实验链，学术为主 |
@@ -59,7 +59,7 @@ title: 共识算法演进时间线
 | 2018 | VDF | Boneh、Bünz、Fisch | Chia 的 [PoT](/consensus/POT)（2021） |
 | 2018 | Avalanche 白皮书 | Team Rocket（Ava Labs 收录） | Avalanche（2020 主网，见[Avalanche](/consensus/Avalanche)） |
 | 2018 | TRON / EOS 主网 | — | DPoS 集中落地年：27 超级代表 / 21 超级节点 |
-| 2019 | Gasper 规格化 | 以太坊研究团队（FFG+LMD GHOST） | Beacon Chain（2020-12-01）→Merge |
+| 2019 | [Gasper](/consensus/Gasper) 规格化 | 以太坊研究团队（FFG+[LMD GHOST](/consensus/GHOST)） | Beacon Chain（2020-12-01）→Merge |
 | 2019 | [DiemBFT](/consensus/DiemBFT) | Libra/Diem 团队 | HotStuff 首次工程化上线 |
 | 2019 | Dumbo 系列论文 | 国内异步共识团队 | 联盟链研究采用，见[ABFT](/consensus/ABFT) |
 | 2019 | Cosmos Hub、Algorand 主网 | — | Tendermint 与 BA⋆（VRF 抽签 PoS）上岗 |
@@ -70,7 +70,7 @@ title: 共识算法演进时间线
 | 2021 | TON 主网（5 月） | TON Foundation（社区接续） | Catchain BFT+PoS，主链+工作链原生分片，见 [TON](/chains/TON) |
 | 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/Gasper) 上岗，能耗降约 99.95% |
 | 2022 | Aptos 主网 | Aptos Labs | AptosBFT（DiemBFT v4/Jolteon 系） |
-| 2023 | Sui 主网（5 月） | Mysten Labs | Narwhal+Bullshark：DAG 内存池与共识解耦 |
+| 2023 | Sui 主网（5 月） | Mysten Labs | [Narwhal+Bullshark](/consensus/NarwhalBullshark)：DAG 内存池与共识解耦 |
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
 | 2024 | Mysticeti | Sui 团队论文 | 无证书（uncertified）DAG-BFT，延迟再降一轮 |
 
@@ -204,7 +204,7 @@ Slush→Snowflake→Snowball→Snowman 四步演进（见[Snowball](/consensus/S
 **一句话机制**：不设全局成员表，每个节点自己声明信谁，信任图自动长出法定人数。
 
 - Stellar：SCP（2015 白皮书），FBA 唯一的大规模生产实现（见[恒星币](/chains/Stellar)）。
-- XRP Ledger（2012 主网）：RPCA，UNL（唯一节点列表）由网络统一指定，去中心化程度常被质疑，是 FBA 的近亲而非同一物。
+- XRP Ledger（2012 主网）：[RPCA](/consensus/RPCA)，UNL（唯一节点列表）由网络统一指定，去中心化程度常被质疑，是 FBA 的近亲而非同一物。
 
 来源：[SCP 白皮书](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)（Mazières，2015）；RPCA 白皮书（Schwartz 等，2014）。
 
@@ -324,5 +324,5 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 
 - 查某条链用什么共识：直接看[对照表](#主链与共识对照表)。
 - 查某个算法哪年出现、谁先用：看[时间线总表](#时间线总表)。
-- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 33 篇算法详解加一篇总览。
+- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 39 篇算法详解加一篇总览。
 - 时间线总表与[发展史时间线](/timeline)的 30 个节点互为补充：那边看链的历史，这边看算法的历史。

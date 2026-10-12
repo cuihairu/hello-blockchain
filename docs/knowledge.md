@@ -21,7 +21,7 @@ title: 知识点总纲
 - PoW 的直系思想源是反垃圾邮件的 Hashcash（1997），比特币的贡献是给哈希预算加了货币与最长链规则；b-money、Bit Gold（1998）是没画完的草图。
 - PoS 的头是 Peercoin（2012-08-19 白皮书）开的，但它是 PoW+PoS 混合；第一个纯 PoS 主网是 Nxt（2013）。有严格安全证明的 PoS 从 Ouroboros（CRYPTO 2017）才开始。
 - DPoS（2014，Larimer）把 PoS 改成代议制：21~101 个代表轮流出块，吞吐上去了，互投联盟与选票交易的担忧也上去了。
-- BFT 在公链上的复兴由 Tendermint（2014）打响，它是第一个把质押与 BFT 投票焊成完整引擎的方案；HotStuff（2018）用流水线+签名聚合把通信复杂度从 O(n²) 压到 O(n)，被视为第三代 BFT。
+- BFT 在公链上的复兴由 Tendermint（2014）打响，它是第一个把质押与 BFT 投票焊成完整引擎的方案；[HotStuff](/consensus/HotStuff)（2018）用流水线+签名聚合把通信复杂度从 O(n²) 压到 O(n)，被视为第三代 BFT。
 - 混合共识（Decred 的 PoW 出块+PoS 选票）没成主流，但论证了一个存活至今的想法：出块权与最终性可以由不同资源分别决定。Polkadot（BABE+GRANDPA）与以太坊（提案+FFG）是这个想法的精致版。
 
 ### 关键构件
@@ -48,7 +48,7 @@ title: 知识点总纲
 | 《PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake》 | King、Nadal，2012-08-19 | PoS 起点、币龄、混合形态 | [PoS](/consensus/POS) |
 | 《Delegated Proof of Stake》（BitShares 白皮书） | Larimer，2014 | DPoS 代议制、代表问责 | [DPoS](/consensus/DPOS) |
 | 《Tendermint: Consensus without Mining》 | Jae Kwon，2014 | 质押+BFT、锁定规则、ABCI | [Tendermint](/consensus/Tendermint) |
-| 《The Ripple Protocol Consensus Algorithm》 | Schwartz、Youngs、Britto，2014 | UNL 式共识 | [FBA](/consensus/FBA) |
+| 《The Ripple Protocol Consensus Algorithm》 | Schwartz、Youngs、Britto，2014 | UNL 式共识 | [RPCA](/consensus/RPCA)、[FBA](/consensus/FBA) |
 | 《The Stellar Consensus Protocol》 | Mazières，2015 | 仲裁切片、联邦化准入 | [FBA](/consensus/FBA) |
 | 《The Honey Badger of BFT Protocols》 | Miller 等，CCS'16 | 异步原子广播、阈值加密 | [HoneyBadgerBFT](/consensus/HoneyBadgerBFT) |
 | 《Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol》 | Kiayias 等，CRYPTO 2017 | 首个严格证明 PoS、epoch/slot、VRF | [Ouroboros](/consensus/Ouroboros)、[PoS](/consensus/POS)、[卡尔达诺](/chains/Cardano) |
@@ -63,6 +63,11 @@ title: 知识点总纲
 | 《ALGORAND: The Efficient and Democratic Ledger》 | Micali，arXiv 2016 | BA⋆、秘密抽签 | [Algorand](/consensus/Algorand)、[PoS](/consensus/POS) |
 | 《In Search of an Understandable Consensus Algorithm》（RAFT） | Ongaro、Ousterhout，USENIX ATC 2014 | 领导选举、日志复制、选举约束 | [RAFT](/consensus/RAFT) |
 | 《Lachesis Protocol》 | Fantom 团队，2019 | 异步 DAG 出块、超级检查点最终化 | [Lachesis](/consensus/Lachesis) |
+| 《Hashgraph Consensus: Fair, Fast, Byzantine Fault Tolerance》 | Baird，2016 | gossip-about-gossip、虚拟投票、公平排序 | [Hashgraph](/consensus/Hashgraph) |
+| 《Secure High-Rate Transaction Processing in Bitcoin》（GHOST） | Sompolinsky、Zohar，2015 | 子树权重分叉选择、叔块利用 | [GHOST](/consensus/GHOST) |
+| 《Streamlet: Textbook Streamlined Blockchains》 | Chan、Shi，2020 | 极简流水线 BFT、三链确认 | [Streamlet](/consensus/Streamlet) |
+| 《Narwhal: A Decentralized, High-Throughput DAG-Based Ledger》 | Danezis、Kokoris-Kogias 等，2021 | DAG 内存池与共识解耦 | [Narwhal 与 Bullshark](/consensus/NarwhalBullshark) |
+| 《Elrond 白皮书》 | Elrond 团队，2019 | 分片内随机共识组、BLS 随机信标 | [SPoS](/consensus/SPOS) |
 
 ## 官方文档
 

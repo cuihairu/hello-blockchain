@@ -222,6 +222,30 @@
       {
         "text": "Snowman",
         "link": "/consensus/Snowman"
+      },
+      {
+        "text": "GHOST",
+        "link": "/consensus/GHOST"
+      },
+      {
+        "text": "Hashgraph",
+        "link": "/consensus/Hashgraph"
+      },
+      {
+        "text": "Narwhal 与 Bullshark",
+        "link": "/consensus/NarwhalBullshark"
+      },
+      {
+        "text": "RPCA",
+        "link": "/consensus/RPCA"
+      },
+      {
+        "text": "SPoS",
+        "link": "/consensus/SPOS"
+      },
+      {
+        "text": "Streamlet",
+        "link": "/consensus/Streamlet"
       }
     ]
   },
