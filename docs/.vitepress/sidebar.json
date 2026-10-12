@@ -31,6 +31,21 @@
     "link": "/consensus-timeline"
   },
   {
+    "text": "知识卡片与术语",
+    "link": "/cards/Cards",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "知识卡片索引",
+        "link": "/cards/Cards"
+      },
+      {
+        "text": "术语表",
+        "link": "/cards/Glossary"
+      }
+    ]
+  },
+  {
     "text": "记账模型",
     "link": "/model/Models",
     "collapsed": true,

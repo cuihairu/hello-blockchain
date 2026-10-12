@@ -7,7 +7,7 @@ Tower BFT 是 Solana 在 PoH（Proof of History）之上的 BFT 投票共识，�
 - **在哪一层**：[结算层](/layers/Settlement) —— 在 [PoH](/consensus/PoH) 全局时钟之上做 BFT 投票，投票是带超时的抵押承诺
 - **解决什么**：利用 PoH 提供的确定时序，把投票变成「抵押后再翻悔要付出代价」的承诺——每次重复投票都锁定更多押注，压缩消息复杂度
 - **解决得怎么样**：消息复杂度显著低于经典 BFT，支撑 Solana 高吞吐与快速确认；代价是强依赖 PoH 时序的正确性、投票超时参数要与网络延迟匹配、分叉选择与乐观确认的规则复杂
-- **出处**：Solana 文档与白皮书附录《Tower BFT》2018（Anatoly Yakovenko 团队）
+- **出处**：《Tower BFT》（Solana 白皮书附录）Laine、Larsson 2018；Solana 开发文档
 
 ## 与 PoH 的配合
 

@@ -59,6 +59,7 @@ title: 共识算法演进时间线
 | 2018 | VDF | Boneh、Bünz、Fisch | Chia 的 [PoT](/consensus/POT)（2021） |
 | 2018 | Avalanche 白皮书 | Team Rocket（Ava Labs 收录） | Avalanche（2020 主网，见[Avalanche](/consensus/Avalanche)） |
 | 2018 | TRON / EOS 主网 | — | DPoS 集中落地年：27 超级代表 / 21 超级节点 |
+| 2018 | [Hashgraph](/consensus/Hashgraph) 白皮书 | Leemon Baird（Swirlds） | Hedera（2019 主网，理事会许可节点） |
 | 2019 | [Gasper](/consensus/Gasper) 规格化 | 以太坊研究团队（FFG+[LMD GHOST](/consensus/GHOST)） | Beacon Chain（2020-12-01）→Merge |
 | 2019 | [DiemBFT](/consensus/DiemBFT) | Libra/Diem 团队 | HotStuff 首次工程化上线 |
 | 2019 | Dumbo 系列论文 | 国内异步共识团队 | 联盟链研究采用，见[ABFT](/consensus/ABFT) |
@@ -68,13 +69,14 @@ title: 共识算法演进时间线
 | 2021 | Chia 主网（3 月 19 日） | Chia Network | PoSpace+VDF 首次大规模落地，见[Chia](/chains/Chia) |
 | 2021 | 长安链开源 | 北京微芯研究院 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT)、RAFT、SOLO 可插拔 |
 | 2021 | TON 主网（5 月） | TON Foundation（社区接续） | Catchain BFT+PoS，主链+工作链原生分片，见 [TON](/chains/TON) |
+| 2021 | Narwhal/Bullshark 论文 | Danezis、Kokoris-Kogias 等（Diem 研究线） | Sui（2023 主网，见[Narwhal+Bullshark](/consensus/NarwhalBullshark)） |
 | 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/Gasper) 上岗，能耗降约 99.95% |
 | 2022 | Aptos 主网 | Aptos Labs | AptosBFT（DiemBFT v4/Jolteon 系） |
 | 2023 | Sui 主网（5 月） | Mysten Labs | [Narwhal+Bullshark](/consensus/NarwhalBullshark)：DAG 内存池与共识解耦 |
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
 | 2024 | Mysticeti | Sui 团队论文 | 无证书（uncertified）DAG-BFT，延迟再降一轮 |
 
-约四十年，49 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
+约四十年，51 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
 
 ## 逐族详解
 
@@ -325,4 +327,4 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - 查某条链用什么共识：直接看[对照表](#主链与共识对照表)。
 - 查某个算法哪年出现、谁先用：看[时间线总表](#时间线总表)。
 - 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 39 篇算法详解加一篇总览。
-- 时间线总表与[发展史时间线](/timeline)的 30 个节点互为补充：那边看链的历史，这边看算法的历史。
+- 时间线总表与[发展史时间线](/timeline)的 34 个节点互为补充：那边看链的历史，这边看算法的历史。

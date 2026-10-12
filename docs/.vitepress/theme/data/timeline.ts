@@ -239,6 +239,14 @@ export const TIMELINE: TimelineEvent[] = [
     link: '/consensus/POS',
   },
   {
+    year: 2012,
+    title: 'XRP Ledger 上线（RPCA）',
+    who: 'OpenCoin（后 Ripple）',
+    field: 'consensus',
+    why: '不要算力也不要质押：一份验证人名单（UNL）多轮投票收敛交易集，三到五秒确定账。它证明「效率优先、信任收窄」能跑十年，代价是名单由谁维护的争议至今未断。白皮书 2014 年才补发。',
+    link: '/consensus/RPCA',
+  },
+  {
     year: 2014,
     title: 'Tendermint 白皮书',
     who: 'Jae Kwon、Ethan Buchman',
@@ -279,6 +287,22 @@ export const TIMELINE: TimelineEvent[] = [
     link: '/consensus/Avalanche',
   },
   {
+    year: 2018,
+    title: 'Hashgraph 白皮书与 Hedera 成立',
+    who: 'Leemon Baird、Mance Harmon',
+    field: 'consensus',
+    why: 'gossip-about-gossip 把全网通信史织成 DAG，投票不再需要发出去——每个节点本地推演别人的票。异步拜占庭容错加上公平排序，性能出色，但理事会许可制也把「去中心化」换成了「可预期」。',
+    link: '/consensus/Hashgraph',
+  },
+  {
+    year: 2020,
+    title: 'Polkadot 主网（5 月）：出块与定案分工',
+    who: 'Parity / Web3 基金会',
+    field: 'consensus',
+    why: 'BABE 用 VRF 盲抽出块、GRANDPA 单独投票定前缀——出块可以快，最终性由独立 gadget 保证。「出块协议与最终性拆开」自此有了完整的公开实现，模块化共识从概念变成工程。',
+    link: '/consensus/GRANDPA',
+  },
+  {
     year: 2022,
     title: 'The Merge（9 月 15 日）',
     who: '以太坊社区',
@@ -293,6 +317,14 @@ export const TIMELINE: TimelineEvent[] = [
     field: 'consensus',
     why: 'Merge 之后质押的 ETH 一直进得去出不来，上海升级开放提款，补上质押生命周期的最后一环。抛压担忧落空后质押率稳步爬升，流动性质押协议同步定型为共识层的事实基础设施。',
     link: '/consensus/POS',
+  },
+  {
+    year: 2023,
+    title: 'Sui 主网（5 月）：DAG 内存池共识上岗',
+    who: 'Mysten Labs',
+    field: 'consensus',
+    why: 'Diem 研究线的 Narwhal 与 Bullshark 把交易传播做成独立 DAG 内存池，共识直接在 DAG 上定序，省掉逐块打包广播。第二年 Mysticeti 再去掉证书，把确认延迟又压掉一轮。',
+    link: '/consensus/NarwhalBullshark',
   },
   {
     year: 2024,
