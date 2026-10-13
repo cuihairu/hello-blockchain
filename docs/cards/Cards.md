@@ -24,6 +24,10 @@
 - **uncertified DAG**：免掉逐轮证书，靠「三轮直接父链」提交规则省一次网络往返 ｜ 相邻：[DAG 共识](/consensus/Lachesis)、[Narwhal 内存池](/consensus/NarwhalBullshark)、[结算层](/layers/Settlement) ｜ 详解：[Mysticeti](/consensus/Mysticeti)
 - **Tangle 与协调器**：tip 批准的 DAG 账本在低流量下不收敛，最终性退给协调器单点 ｜ 相邻：[DAG 账本](/model/DAG)、[概率最终性](/consensus/POW)、[结算层](/layers/Settlement) ｜ 详解：[IOTA](/consensus/IOTA)
 - **共享安全预算**：再质押把同一份罚没威慑租给多个协议，效率与关联失败同源 ｜ 相邻：[罚没（slashing）](/consensus/Gasper)、[最终性](/layers/Settlement)、[长程攻击](/hacking/LongRangeAttack) ｜ 详解：[Restaking](/consensus/Restaking)
+- **随机历史访问**：出块必须能回答「随机位置的旧数据你还有吗」，存储从容量竞争变成可取回性竞争 ｜ 相邻：[PoST 持续持有](/consensus/PoST)、[存储层](/layers/Storage)、[最终性](/layers/Settlement) ｜ 详解：[SPoRA](/consensus/SPORA)
+- **物理声明可证伪**：三方探测 + 物理定律校验（平方反比、光速上界）让「我在这里有覆盖」无法凭空编造 ｜ 相邻：[抗女巫机制](/consensus/POW)、[HoneyBadgerBFT](/consensus/HoneyBadgerBFT)、[结算层](/layers/Settlement) ｜ 详解：[覆盖证明](/consensus/ProofOfCoverage)
+- **两级 BFT**：小委员会投票保吞吐，社区检查点签名保底线——效率与去中心化分层各取一半 ｜ 相邻：[最终性 gadget](/consensus/GRANDPA)、[BFT 投票](/consensus/PBFT)、[结算层](/layers/Settlement) ｜ 详解：[Multi-Level BFT](/consensus/MultiLevelBFT)
+- **主观效用共识**：服务质量不可形式验证时，用质押加权中位数裁剪把「大家怎么评」压成可结算的权重 ｜ 相邻：[概率验证（Livepeer）](/consensus/DPOS)、[女巫攻击](/hacking/SybilAttack)、[结算层](/layers/Settlement) ｜ 详解：[Yuma](/consensus/Yuma)
 
 ## 计算层：同一输入必得同一输出
 

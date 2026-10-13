@@ -32,10 +32,12 @@
   - 进度：已完成。缺口清单：Paxos、Mysticeti、IOTA Tangle、Optimistic/ZK 排序与结算（含 shared sequencing）、restaking 预算五项缺页 → 新增 5 页（consensus/Paxos、Mysticeti、IOTA、Sequencing、Restaking），共识页 39 → 44，五处计数声明同步；IBFT 已由 QBFT 页覆盖（明示"又称 Istanbul BFT"）。抽查 PoET/Snowball/Algorand/TowerBFT/PoST 五条四要素齐全，补齐 Snowball（Avalanche 2023-02 停摆）、TowerBFT（Solana 多次全网停摆）事故记录，Algorand/PoST 标"未找到公开记录"。孤卡脚本统计 16 → 修复后 0（41 卡全部满足同层链 + 同主题链 + 跨章链）。分层章四页各补「设计要点」节。索引/侧栏/术语表(+10)/卡片(+5)/knowledge 论文表(+6 行)同步。
   - 证据：`npm run docs:check` ok、`npm run docs:links` ok、`npm run docs:build` complete、`npm run docs:walkthrough` 无错误（见 commit 记录）。
 
-- [ ] **P5 meshio 调研合并（合并调研单 2026-10-13）**
+- [x] **P5 meshio 调研合并（合并调研单 2026-10-13）**
   - 期次：P5
   - 验收口径：以 meshio docs/research/comparable-chains.md（563 行，十家四节）为源，通用部分按四要素模板落成/并入对应页（不重复造页）；分层章补「服务网络对照」节（标源 meshio research）；知识卡片与时间线同步；条目标「源：meshio research（2026-10-13 合并）」；Grass 白皮书 404 的"不可考"标注保留。
   - 来源：用户 2026-10-13（合并调研单）
+  - 进度：已完成。新增 4 页（consensus/SPORA、ProofOfCoverage、MultiLevelBFT、Yuma，各含四要素 + 机制 + 同族差异，均标「源：meshio research（2026-10-13 合并）」）；并入 3 页（PoST.md 补 Filecoin EC 落地样本、Tendermint.md 补 Akash 落地样本、DPOS.md 补 Livepeer 落地样本）；Layers.md 新增「服务网络对照」表（十家 × 四层，Grass 原白皮书 404 不可考标注保留）；共识页 44 → 48，时间线 +5 节点（39）+5 年表行（56），五处计数声明同步；卡片 41 → 45（孤卡 0）、术语表 80 → 86；knowledge.md 补 6 行出处。
+  - 证据：`npm run docs:check` ok（113 pages）；`npm run docs:links` ok；`npm run docs:build` complete；`npm run docs:walkthrough` 无错误。
 
 - [ ] **P6 著名链章与时间线强化（新增章单 2026-10-13）**
   - 期次：P6

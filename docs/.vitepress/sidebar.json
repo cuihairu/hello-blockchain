@@ -167,6 +167,10 @@
         "link": "/consensus/PoH"
       },
       {
+        "text": "覆盖证明",
+        "link": "/consensus/ProofOfCoverage"
+      },
+      {
         "text": "PoSpace",
         "link": "/consensus/PoSpace"
       },
@@ -255,6 +259,10 @@
         "link": "/consensus/Hashgraph"
       },
       {
+        "text": "Multi-Level BFT",
+        "link": "/consensus/MultiLevelBFT"
+      },
+      {
         "text": "Mysticeti",
         "link": "/consensus/Mysticeti"
       },
@@ -275,12 +283,20 @@
         "link": "/consensus/Sequencing"
       },
       {
+        "text": "SPoRA",
+        "link": "/consensus/SPORA"
+      },
+      {
         "text": "SPoS",
         "link": "/consensus/SPOS"
       },
       {
         "text": "Streamlet",
         "link": "/consensus/Streamlet"
+      },
+      {
+        "text": "Yuma",
+        "link": "/consensus/Yuma"
       }
     ]
   },

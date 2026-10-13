@@ -34,3 +34,14 @@ Tendermint 是把"PoS 质押 + BFT 投票"组合成完整公链引擎的开创�
 ## 生态影响
 
 Cosmos Hub、Binance Chain/BNB Beacon Chain、Terra（经典版）、Kava、Osmosis 等数百条链基于 Tendermint/CometBFT；IBC 跨链协议的轻客户端验证模型也建立在 Tendermint 头部 + +2/3 投票验证之上。
+
+## 落地样本：Akash
+
+> 来源：meshio research（2026-10-13 合并），细节对照 docs.akash.network 与 Akash 经济白皮书。
+
+Akash 是「CometBFT 共识 + 云算力市场」的组装样本，其分层值得注意：
+
+- **市场交易上链**：部署订单、bid、租约全部上链（deployment/market/escrow 模块），租户设最高价、provider 报低价，反向拍卖撮合。
+- **工作负载永不上链**：完整部署 manifest 直接发给 provider（不上区块链），算力正确性不做链上验证——escrow 按块付费（约 6 秒一笔），信任全在托管与事后争议。
+- **验证与调度分级**：provider 可标注「audited」（安全审计过），租户用 SDL `signedBy` 限定只部署到审计过的 provider——验证等级进入调度匹配条件的现成案例。
+- **结算货币演进**：租约费从 AKT 计价演进为 `uact`（烧 AKT 铸出的美元挂钩内部信用），支持 IBC 货币结算——计价稳定与主币需求的解耦样本。

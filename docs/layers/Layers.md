@@ -58,3 +58,22 @@
 - **要人类可用**：服务发现层解决可读性与所有权可验证，但抗审查性只覆盖到链上记录这一截（见[服务发现](/layers/ServiceDiscovery)）。
 
 一个有用的提问顺序：**这个需求落在哪一层？那一层的保证够不够？不够的话，是这一层没做好，还是依赖的下一层先崩了？**
+
+## 服务网络对照
+
+十家「节点提供真实服务并结算」的网络在四层上各选了什么机制。源：meshio research（2026-10-13 合并）——细节出处见各共识页。
+
+| 网络 | 计算层 / 服务 | 存储层 | 结算层（共识与支付） | 服务发现 |
+| --- | --- | --- | --- | --- |
+| Filecoin | 取回矿工链下流式传块、付款凭证结算 | 扇区封存 + [PoRep/PoST](/consensus/PoST) 持续审计 | EC：存储加权秘密选举 + drand 随机 + 最重链 | CID 内容寻址取回（路由键不上链） |
+| Arweave | SmartWeave 惰性求值，执行在客户端 | blockweave + recall chunk + Endowment 基金 | [SPoRA](/consensus/SPORA)：随机历史访问 + VDF 限速 | 网关（ArQL 索引、DNS/TLS）+ bundler |
+| Akash | Kubernetes 容器，manifest 链下直传 | —（无存储市场） | CometBFT（[Tendermint](/consensus/Tendermint)）：订单/bid/租约上链、escrow 按块付费 | 链上 provider 属性 + `signedBy` 审计过滤 |
+| Render | GPU 节点渲染，Creator 审帧 + 争议委员会 | S3/Dropbox 集成（中心化） | 无出块共识：链只做支付托管（burn-and-mint） | 分配按 tier/硬件/声誉/跑分排序 |
+| Grass | 个人节点中转加密 Web 请求 | —（数据集交付机构买家） | 无出块共识：validator 签名测量 + 声誉 + 质押加权¹ | validator 按声誉与地域需求分配流量 |
+| Golem | wasmtime ExeUnit / QEMU VM，不验执行正确性 | —（镜像仓库） | 共识外包 Ethereum；借据→发票两段结算 | Yagna 市场模块撮合 offer/demand |
+| Livepeer | orchestrator/transcoder GPU 转码，[概率抽样验证](/consensus/DPOS) | —（转码即交付） | Arbitrum 上 DPoS 合约 + 概率微支付票据 | gateway 按能力/价格/延迟/可靠性/质押排序 |
+| Helium | —（热点只转发无线包） | — | 自研链（[HoneyBadgerBFT](/consensus/HoneyBadgerBFT)）→ 2023 迁 Solana；[覆盖证明](/consensus/ProofOfCoverage) oracle 化 | LongFi 链上路由（AppEUI 映射热点） |
+| Bittensor | miner 产出子网商品，执行不验证 | —（权重在链上） | subtensor PoA 出块 + [Yuma](/consensus/Yuma) 评价共识 | 验证者 axon 端点发现（serve-axon） |
+| Theta | 边缘节点缓存/中继/GPU 云 | —（视频分发） | [Multi-Level BFT](/consensus/MultiLevelBFT)：委员会出块 + guardian 终局 | 智能播放器选邻居；支付记录定优先级 |
+
+¹ Grass 的原技术白皮书（grass.io/whitepaper）返回 404 不可考，本行机制描述以现行官方文档为准。

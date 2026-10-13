@@ -15,7 +15,7 @@ A blockchain knowledge base · [Read online](https://cuihairu.github.io/hello-bl
 
 ---
 
-A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 44 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain/consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain/knowledge) tie the sections together.
+A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 48 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain/consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain/knowledge) tie the sections together.
 
 ## Local Development
 
@@ -40,8 +40,8 @@ docs/                 # VitePress site source
 ├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
 ├── index.md          # Home page: entry cards for every section
 ├── Introduction.md   # Introduction: what the site covers and how to read it
-├── timeline.md           # Development history timeline (34 nodes in five eras)
-├── consensus-timeline.md  # Consensus algorithm evolution timeline (51 entries)
+├── timeline.md           # Development history timeline (39 nodes in five eras)
+├── consensus-timeline.md  # Consensus algorithm evolution timeline (56 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
 ├── cards/              # Knowledge card index (cross-chapter network) and glossary
 ├── layers/           # Layered architecture: compute, storage, settlement, service discovery
@@ -49,7 +49,7 @@ docs/                 # VitePress site source
 ├── algo/             # Data structures: Merkle tree
 ├── opcode/           # Scripts and opcodes
 ├── btc/              # Bitcoin mechanics: BIP, P2PK
-├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 44 articles
+├── consensus/        # Consensus algorithms: PoW, PoS, PBFT, Tendermint, etc. — 48 articles
 ├── Privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
 ├── hacking/          # Attacks and defenses
 ├── nft/              # Asset issuance and NFTs

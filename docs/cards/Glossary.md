@@ -55,6 +55,12 @@
 | Tangle | IOTA 的 DAG 账本：每笔交易批准两条 tip，靠协调器兜底多年 | [IOTA](/consensus/IOTA) |
 | 再质押（restaking） | 把已质押 ETH 再抵押给 AVS，复用安全预算 | [Restaking](/consensus/Restaking) |
 | AVS | 主动验证服务：用再质押获得经济安全的链下组件 | [Restaking](/consensus/Restaking) |
+| SPoRA | Arweave 共识：随机历史访问 + VDF 限速，存得全才可能赢 | [SPoRA](/consensus/SPORA) |
+| 覆盖证明（PoC） | 无线覆盖声明的物理可证伪挑战：探测方/被测方/旁证三方 | [覆盖证明](/consensus/ProofOfCoverage) |
+| 多级 BFT | 委员会 PBFT 出块 + guardian 检查点 BLS 聚合终局 | [Multi-Level BFT](/consensus/MultiLevelBFT) |
+| Yuma 共识 | 主观效用打分的质押加权中位数裁剪，抗串谋评分 | [Yuma](/consensus/Yuma) |
+| burn-and-mint | 用量烧主币铸稳定单位（DC/uact），计价稳定与通缩并存 | [覆盖证明](/consensus/ProofOfCoverage)、[排序与结算](/consensus/Sequencing) |
+| 概率微支付 | 票据面值×中奖概率=段价，只把中奖票上链兑付 | [DPOS](/consensus/DPOS) |
 
 ## 计算与存储
 

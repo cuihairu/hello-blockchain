@@ -34,3 +34,13 @@
 - **BitShares**：Daniel Larimer 最初提出的 DPoS 实现。
 - **TRON**：27 个超级代表（Super Representative）。
 - **Lisk、Ark** 等也采用 DPoS 变体。
+
+## 落地样本：Livepeer
+
+> 来源：meshio research（2026-10-13 合并），细节对照 docs.livepeer.org 与 Livepeer 白皮书/规范。
+
+Livepeer 把 DPoS 组装成转码服务网络，三个机制是通用教科书：
+
+- **概率验证**：不对每段视频验证，按 `Sha3(N, BlockHash, Seg#) % VerificationRate == 0` 抽样（白皮书示例 1/500）触发检查，验证失败或漏验 slash 质押（5% / 10%）——把作弊期望收益做成负数，同时压低链上验证成本（mainnet 目前罚没未启用）。
+- **概率微支付票据**：broadcaster 每段发一张签名票据（面值 × 中奖概率 = 段价），只有中奖票据上链兑付 ETH——链下高频、链上低频的结算形态。
+- **双旋钮分成**：orchestrator 用 `rewardCut`（自留通胀比例）与 `feeShare`（ETH 费用分给委托人比例）显式定价，通胀奖励按质押比例分池、每轮须主动调用 `reward()` 领取（漏调即放弃）——动态通胀按质押率向目标值调节。

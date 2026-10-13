@@ -31,3 +31,15 @@
 - 诚实多数的空间权重决定安全，攻击需控制过半承诺空间。
 - 无能源军备竞赛，但要求矿工盘长期在线、按时出证明，否则 ATX 失效出局。
 - Spacemesh 主网 2023 年上线，生态规模有限，是 PoST 最完整的生产实现。
+
+## 落地样本：Filecoin
+
+> 来源：meshio research（2026-10-13 合并），细节对照 spec.filecoin.io 与 docs.filecoin.io。
+
+Filecoin 把 PoRep/PoST 组装成完整的生产共识（Expected Consensus，由 Storage Power Consensus 子系统执行）：
+
+- **存储即选票**：原始字节 × Sector Quality Multiplier = 质量加权算力，即秘密选举的票数；Verified Client deal 倍率更高——交易类型反过来影响共识权。
+- **证明压缩**：PoRep 封板经 SDR 编码 + Poseidon Merkle 树，上链前 SNARK 压缩；WindowPoSt 保证每个质押扇区在 24 小时窗口内至少被审计一次（48 个半小时 deadline，挑战随机数提前 20 epoch 公布）。
+- **随机性**：drand beacon 供不可偏置随机数（seal 种子、PoSt 挑战、选举），每块带 VRF ticket 打破分叉选择平局；每 epoch 期望 5 个胜者（Poisson）扩展最重链。
+- **罚没成体系**：PreCommit 过期罚、已声明/未声明故障费、持续故障费、终止费、共识故障罚——未缴罚款转为 Fee Debt 阻塞新封板。
+- **执行环境**：FVM 是 WASM 多语言执行环境，另提供 EVM 兼容的 FEVM 运行时。

@@ -71,6 +71,11 @@ title: 知识点总纲
 | 《The Tangle》 | Popov，2015 | DAG 账本、tip 选择、协调器教训 | [IOTA](/consensus/IOTA)、[DAG 模型](/model/DAG) |
 | 《EigenLayer: The Restaking Collective》 | Kannan 等，2022 | 再质押共享安全预算 | [Restaking](/consensus/Restaking) |
 | 《Don't overload Ethereum's consensus》 | Buterin，2023 | 再质押的关联风险边界 | [Restaking](/consensus/Restaking)、[结算层](/layers/Settlement) |
+| Arweave 黄皮书（SPoRA/PoA） | Williams 等，2018-2023 | 随机历史访问、blockweave、Endowment | [SPoRA](/consensus/SPORA)、[存储层](/layers/Storage) |
+| Helium 白皮书与 HIP-25/51/70 | Helium，2018-2022 | 覆盖证明三方挑战、自研链迁 Solana | [覆盖证明](/consensus/ProofOfCoverage)、[HoneyBadgerBFT](/consensus/HoneyBadgerBFT) |
+| Theta 2.0 / 3.0 白皮书 | Theta Labs，2019-2021 | Multi-Level BFT、Uptime Mining | [Multi-Level BFT](/consensus/MultiLevelBFT) |
+| Bittensor 白皮书与 docs | Opentensor，2021-2025 | Yuma 中位数裁剪、燃烧式注册 | [Yuma](/consensus/Yuma) |
+| meshio comparable-chains 调研 | meshio research，2026-10 | 十家服务网络的白皮书对照（本库合并源） | [服务网络对照](/layers/Layers)、[SPoRA](/consensus/SPORA)、[Yuma](/consensus/Yuma) |
 | 《Narwhal: A Decentralized, High-Throughput DAG-Based Ledger》 | Danezis、Kokoris-Kogias 等，2021 | DAG 内存池与共识解耦 | [Narwhal 与 Bullshark](/consensus/NarwhalBullshark) |
 | 《Elrond 白皮书》 | Elrond 团队，2019 | 分片内随机共识组、BLS 随机信标 | [SPoS](/consensus/SPOS) |
 
