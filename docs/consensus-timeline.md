@@ -62,6 +62,7 @@ title: 共识算法演进时间线
 | 2018 | TRON / EOS 主网 | — | DPoS 集中落地年：27 超级代表 / 21 超级节点 |
 | 2018 | [Hashgraph](/consensus/Hashgraph) 白皮书 | Leemon Baird（Swirlds） | Hedera（2019 主网，理事会许可节点） |
 | 2018 | [SPoRA / Proof of Access](/consensus/SPORA) | Arweave 黄皮书 | Arweave（2018-06-06 主网）：随机历史访问 + blockweave |
+| 2018 | [GHOSTDAG](/consensus/GHOSTDAG) | Sompolinsky、Wyborski、Zohar（[eprint 2018/104](https://eprint.iacr.org/2018/104)） | Kaspa：账本从链到图，并发块全入图再线性化 |
 | 2019 | [Gasper](/consensus/Gasper) 规格化 | 以太坊研究团队（FFG+[LMD GHOST](/consensus/GHOST)） | Beacon Chain（2020-12-01）→Merge |
 | 2019 | [DiemBFT](/consensus/DiemBFT) | Libra/Diem 团队 | HotStuff 首次工程化上线 |
 | 2019 | Dumbo 系列论文 | 国内异步共识团队 | 联盟链研究采用，见[ABFT](/consensus/ABFT) |
@@ -88,7 +89,7 @@ title: 共识算法演进时间线
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
 | 2024 | Mysticeti | Sui 团队论文 | 无证书（uncertified）DAG-BFT，延迟再降一轮 |
 
-约四十年，63 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
+约四十年，64 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
 
 ## 逐族详解
 
@@ -274,7 +275,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 | Gnosis Chain | 2018 | AuRA PoA→POSDAO | 原 xDai 侧链 |
 | Cosmos Hub | 2019 | Tendermint BFT（今 CometBFT） | 同构链：Osmosis、Kava、IRISnet |
 | Terra Classic | 2019 | Tendermint | 2022-05 崩盘停摆，风险样本 |
-| Zilliqa | 2019 | PoW 分片+pBFT | 算力入网、投票出块 |
+| Zilliqa | 2019 | PoW 分片+pBFT | 算力入网、投票出块，[分片](/consensus/Sharding) |
 | Algorand | 2019 | Pure PoS+BA⋆（VRF 抽签） | |
 | Solana | 2020 | PoH+TowerBFT+质押轮换 | [Solana](/chains/Solana) |
 | Near | 2020 | Nightshade 分片+Doomslug（PoS） | |
@@ -282,7 +283,7 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 | BNB Smart Chain | 2020 | PoSA（Parlia，21 验证人） | BNB Beacon Chain（Tendermint）已退役，[BSC](/chains/BinanceSmartChain) |
 | Avalanche | 2020 | Snowball 族（X-Chain DAG / P、C-Chain Snowman） | [Avalanche](/consensus/Avalanche) |
 | Filecoin | 2020 | PoRep+PoSt（Expected Consensus） | 存储证明即共识 |
-| Chia | 2021 | PoSpace+PoT（VDF） | [Chia](/chains/Chia) |
+| Chia | 2021 | PoSpace+PoT（VDF） | [Chia](/chains/Chia)、[PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
 | 长安链 | 2021（开源） | TBFT/MaxBFT/RAFT/SOLO 可插拔 | 联盟链，[ChainMaker 文档](https://docs.chainmaker.org.cn/tech/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95.html) |
 | TON | 2021 | Catchain（BFT+PoS） | 主链+工作链原生分片，[TON](/chains/TON) |
 | Aptos | 2022 | AptosBFT（DiemBFT v4/Jolteon 系 HotStuff） | Diem 血脉 |
@@ -323,7 +324,10 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - Hyperledger Fabric 文档（Raft ordering、SmartBFT）
 - [CometBFT 文档](https://docs.cosmos.network/cometbft/)（Tendermint 后继）
 - Aptos、Sui 官方文档（AptosBFT、Narwhal/Mysticeti 口径）
-- Chia 官方文档（PoSpace+PoT）、Decred 文档（混合共识）、Gnosis Chain 文档（POSDAO）
+- [Chia 官方文档](https://docs.chia.net/proof-of-space/)（PoSpace+PoT）、Decred 文档（混合共识）、Gnosis Chain 文档（POSDAO）
+- [Zilliqa 技术白皮书](https://docs.zilliqa.com/whitepaper.pdf)（分片 + pBFT）
+- [Kaspa 节点实现](https://github.com/kaspanet/rusty-kaspa)（GHOSTDAG 生产实现）
+- [Polkadot 维基百科·Phragmén](https://wiki.polkadot.com/docs/learn-phragmen)、[·质押](https://wiki.polkadot.com/docs/learn-staking)（NPoS 口径）
 
 ### 来源未考
 
@@ -338,5 +342,5 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 
 - 查某条链用什么共识：直接看[对照表](#主链与共识对照表)。
 - 查某个算法哪年出现、谁先用：看[时间线总表](#时间线总表)。
-- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 48 篇算法详解加一篇总览。
-- 时间线总表与[发展史时间线](/timeline)的 46 个节点互为补充：那边看链的历史，这边看算法的历史。
+- 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 52 篇算法详解加一篇总览。
+- 时间线总表与[发展史时间线](/timeline)的 49 个节点互为补充：那边看链的历史，这边看算法的历史。

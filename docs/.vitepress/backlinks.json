@@ -48,11 +48,13 @@
   "/consensus/Avalanche": "Avalanche",
   "/consensus/BABE": "BABE",
   "/consensus/BFT": "BFT",
+  "/consensus/BandwidthProof": "带宽证明（Bandwidth Proof）",
   "/consensus/Consensus": "共识算法",
   "/consensus/DPOS": "DPoS",
   "/consensus/DiemBFT": "DiemBFT",
   "/consensus/FBA": "FBA",
   "/consensus/GHOST": "GHOST",
+  "/consensus/GHOSTDAG": "GHOSTDAG",
   "/consensus/GRANDPA": "GRANDPA",
   "/consensus/Gasper": "Gasper",
   "/consensus/Hashgraph": "Hashgraph",
@@ -63,6 +65,7 @@
   "/consensus/MaxBFT": "MaxBFT",
   "/consensus/MultiLevelBFT": "Multi-Level BFT（Theta）",
   "/consensus/Mysticeti": "Mysticeti",
+  "/consensus/NPoS": "NPoS",
   "/consensus/NarwhalBullshark": "Narwhal 与 Bullshark",
   "/consensus/Ouroboros": "Ouroboros",
   "/consensus/PBFT": "PBFT",
@@ -85,6 +88,7 @@
   "/consensus/SPORA": "SPoRA（Arweave）",
   "/consensus/SPOS": "SPoS",
   "/consensus/Sequencing": "排序与结算（Rollup 侧）",
+  "/consensus/Sharding": "分片（Sharding）",
   "/consensus/Snowball": "Snowball",
   "/consensus/Snowman": "Snowman",
   "/consensus/Streamlet": "Streamlet",
@@ -124,7 +128,8 @@
   "/nft/OAP": "OAP 协议",
   "/nft/TokenizedProtocol": "代币化协议（Tokenized Protocol）",
   "/opcode/OP_CHECKSIG": "OP_CHECKSIG",
-  "/timeline": "发展史时间线"
+  "/timeline": "发展史时间线",
+  "/trends/Trends": "共识趋势展望"
  },
  "backlinks": {
   "/model/Models": [
@@ -181,6 +186,10 @@
    {
     "r": "/timeline",
     "t": "发展史时间线"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/algo/MerkleTree": [
@@ -289,6 +298,10 @@
    {
     "r": "/timeline",
     "t": "发展史时间线"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/knowledge": [
@@ -319,6 +332,10 @@
     "t": "术语表"
    },
    {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
     "r": "/consensus/Consensus",
     "t": "共识算法"
    },
@@ -333,6 +350,10 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/cards/Glossary": [
@@ -375,6 +396,10 @@
    {
     "r": "/chains/Ethereum",
     "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
    },
    {
     "r": "/consensus/SPORA",
@@ -433,6 +458,10 @@
    {
     "r": "/consensus/RPCA",
     "t": "RPCA"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
    },
    {
     "r": "/consensus-timeline",
@@ -527,6 +556,10 @@
     "t": "BFT"
    },
    {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
     "r": "/consensus/DPOS",
     "t": "DPoS"
    },
@@ -541,6 +574,10 @@
    {
     "r": "/consensus/GHOST",
     "t": "GHOST"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
    },
    {
     "r": "/consensus/GRANDPA",
@@ -581,6 +618,10 @@
    {
     "r": "/consensus/Mysticeti",
     "t": "Mysticeti"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
    },
    {
     "r": "/consensus/NarwhalBullshark",
@@ -667,6 +708,10 @@
     "t": "排序与结算（Rollup 侧）"
    },
    {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
     "r": "/consensus/Snowball",
     "t": "Snowball"
    },
@@ -739,6 +784,10 @@
    {
     "r": "/chains/Monero",
     "t": "Monero 门罗币"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
    },
    {
     "r": "/consensus/IOTA",
@@ -889,6 +938,10 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/DiemBFT": [
@@ -931,6 +984,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/MaxBFT": [
@@ -1073,6 +1130,10 @@
     "t": "GRANDPA"
    },
    {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
     "r": "/consensus/Ouroboros",
     "t": "Ouroboros"
    },
@@ -1087,6 +1148,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/GRANDPA": [
@@ -1113,6 +1178,10 @@
    {
     "r": "/consensus/MultiLevelBFT",
     "t": "Multi-Level BFT（Theta）"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
    },
    {
     "r": "/knowledge",
@@ -1245,6 +1314,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/Algorand": [
@@ -1255,6 +1328,10 @@
    {
     "r": "/consensus/Lachesis",
     "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
    },
    {
     "r": "/consensus/Ouroboros",
@@ -1275,6 +1352,10 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/Ouroboros": [
@@ -1299,6 +1380,10 @@
     "t": "BABE"
    },
    {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
     "r": "/consensus/SPOS",
     "t": "SPoS"
    },
@@ -1317,6 +1402,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/Hashgraph": [
@@ -1363,6 +1452,10 @@
     "t": "Sui"
    },
    {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
     "r": "/consensus/IOTA",
     "t": "IOTA Tangle"
    },
@@ -1385,12 +1478,20 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/Lachesis": [
    {
     "r": "/cards/Cards",
     "t": "知识卡片索引"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
    },
    {
     "r": "/consensus/Hashgraph",
@@ -1497,6 +1598,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/model/DAG": [
@@ -1535,6 +1640,10 @@
     "t": "术语表"
    },
    {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
     "r": "/knowledge",
     "t": "知识点总纲"
    },
@@ -1557,12 +1666,20 @@
     "t": "Cosmos 跨链枢纽"
    },
    {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
     "r": "/knowledge",
     "t": "知识点总纲"
    },
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/PoST": [
@@ -1605,6 +1722,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/layers/Storage": [
@@ -1627,6 +1748,10 @@
    {
     "r": "/consensus/SPORA",
     "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
    },
    {
     "r": "/knowledge",
@@ -1681,6 +1806,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/HoneyBadgerBFT": [
@@ -1807,6 +1936,10 @@
     "t": "Multi-Level BFT（Theta）"
    },
    {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
     "r": "/consensus/Yuma",
     "t": "Yuma Consensus（Bittensor）"
    },
@@ -1859,6 +1992,216 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   }
+  ],
+  "/consensus/GHOSTDAG": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/chains/Polkadot": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/chains/Avalanche",
+    "t": "Avalanche 雪崩"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Restaking",
+    "t": "再质押（Restaking）"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/consensus/Sharding": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/consensus/PoSpace": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/chains/Chia",
+    "t": "Chia 奇亚"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/consensus/BandwidthProof": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/consensus/NPoS": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/chains/Chia": [
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/consensus/POC",
+    "t": "PoC"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "按时间导航"
    }
   ],
   "/layers/Compute": [
@@ -2009,6 +2352,10 @@
    {
     "r": "/knowledge",
     "t": "知识点总纲"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/Sequencing": [
@@ -2047,48 +2394,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
-   }
-  ],
-  "/consensus/PoSpace": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
    },
    {
-    "r": "/chains/Chia",
-    "t": "Chia 奇亚"
-   },
-   {
-    "r": "/consensus/POT",
-    "t": "PoT"
-   },
-   {
-    "r": "/consensus/PoET",
-    "t": "PoET"
-   },
-   {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/nft/ColoredCoins": [
@@ -2291,8 +2600,16 @@
     "t": "BSC 币安智能链"
    },
    {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
     "r": "/consensus/GHOST",
     "t": "GHOST"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
    },
    {
     "r": "/consensus-timeline",
@@ -2403,6 +2720,10 @@
     "t": "Avalanche 雪崩"
    },
    {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
     "r": "/consensus/Snowman",
     "t": "Snowman"
    },
@@ -2473,36 +2794,6 @@
     "t": "按共识算法导航"
    }
   ],
-  "/chains/Polkadot": [
-   {
-    "r": "/chains/Avalanche",
-    "t": "Avalanche 雪崩"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/Restaking",
-    "t": "再质押（Restaking）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
   "/chains/Lightning": [
    {
     "r": "/chains/Bitcoin",
@@ -2547,6 +2838,10 @@
    {
     "r": "/chains/Chain",
     "t": "有名的区块链项目"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
    },
    {
     "r": "/consensus-timeline",
@@ -2603,6 +2898,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/chains/zkSync": [
@@ -2625,6 +2924,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/hacking/LightningNetworkAttack": [
@@ -2685,6 +2988,10 @@
    {
     "r": "/chains/Polkadot",
     "t": "Polkadot 波卡"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
    },
    {
     "r": "/knowledge",
@@ -2779,6 +3086,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/chains/Tether": [
@@ -2861,6 +3172,28 @@
     "t": "按共识算法导航"
    }
   ],
+  "/consensus/POC": [
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
   "/chains/Stellar": [
    {
     "r": "/consensus/FBA",
@@ -2881,6 +3214,28 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   }
+  ],
+  "/chains/Sui": [
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/consensus/TBFT": [
@@ -2905,28 +3260,6 @@
     "t": "按共识算法导航"
    }
   ],
-  "/chains/Chia": [
-   {
-    "r": "/consensus/POC",
-    "t": "PoC"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
   "/consensus/PoET": [
    {
     "r": "/consensus/POT",
@@ -2935,24 +3268,6 @@
    {
     "r": "/consensus/ProofOfCoverage",
     "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/POC": [
-   {
-    "r": "/consensus/PoSpace",
-    "t": "PoSpace"
    },
    {
     "r": "/consensus-timeline",
@@ -2983,6 +3298,20 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   }
+  ],
+  "/chains/Near": [
+   {
+    "r": "/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "按时间导航"
    }
   ],
   "/chains/Filecoin": [
@@ -3105,6 +3434,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/chains/Solana": [
@@ -3143,6 +3476,12 @@
    {
     "r": "/nav/ByConsensus",
     "t": "按共识算法导航"
+   }
+  ],
+  "/trends/Trends": [
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
    }
   ],
   "/btc/P2PK": [
@@ -3227,30 +3566,6 @@
     "t": "发展史时间线"
    }
   ],
-  "/chains/Near": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Sui": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
   "/chains/Arweave": [
    {
     "r": "/knowledge",
@@ -3263,6 +3578,10 @@
    {
     "r": "/nav/ByTime",
     "t": "按时间导航"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
    }
   ],
   "/nav/ByConsensus": [

@@ -7,7 +7,7 @@
 - **在哪一层**：[结算层](/layers/Settlement) —— 按存储空间分配记账权，与 [PoT](/consensus/POT) 配对使用（Chia 形态）
 - **解决什么**：用磁盘空间替代算力——证明者预先构造只能靠占用磁盘才能快速应答的挑战-响应数据结构，把作恶成本锚定在存储上
 - **解决得怎么样**：能耗比 PoW 低几个数量级、闲置硬盘可复用；代价是绘图集中化（大农场收购容量）、绘制过程的写入量是真实的环境成本、空间可被快速买卖
-- **出处**：Dziembowski 等《Proofs of Space》CRYPTO 2015；Chia 白皮书 2019
+- **出处**：Dziembowski 等《Proofs of Space》CRYPTO 2015；Chia 白皮书 2019；官方文档 [docs.chia.net/proof-of-space/](https://docs.chia.net/proof-of-space/)、[chia-blockchain 仓库](https://github.com/Chia-Network/chia-blockchain)
 
 ## 基本原理（Chia 实现）
 
@@ -26,3 +26,13 @@
 
 - [PoC](/consensus/POC)（Burstcoin）是先行的工程实现，PoSpace 是其密码学强化版。
 - Filecoin 的 PoRep/PoSt 用存储证明**提供存储服务**（有用的存储），而 PoSpace 只把存储当作抽奖彩票，两者动机不同。
+
+## 农民（farmer）成本结构
+
+PoSpace 的「农民」是绘图与挖矿的参与者，成本分三段（官方文档口径）：
+
+- **绘图（plotting）**：k32 图约 101.4 GiB，绘图时间从高端机器约 5 分钟到慢机器约 12 小时不等；绘图是重写入过程，SSD 磨损是真实成本——这催生了「绘图产业」（专业绘图服务、绘图即服务），大容量 HDD 农场与 SSD 绘图集群分化成两个生态。
+- **挖矿（farming）**：每个挑战只需约 7-9 次磁盘寻道（慢盘约 70-90 ms），plot filter 会排除 512 张图中的 511 张——单盘农民的日常开销接近闲置，但挑战响应延迟决定了出块机会。
+- **时空证明开销**：PoT 的 VDF 由时间之主（timelord）串行计算，农民侧只需验证，开销集中在 [PoT](/consensus/POT) 一侧。
+
+**已知问题**：绘图集中化（大农场收购容量）、replotting 攻击（临时重绘抢跑，依赖 PoT 时序约束防御）、二手硬盘市场被绘图需求扰动、网络总空间增长稀释单图收益。

@@ -28,6 +28,11 @@
 - **物理声明可证伪**：三方探测 + 物理定律校验（平方反比、光速上界）让「我在这里有覆盖」无法凭空编造 ｜ 相邻：[抗女巫机制](/consensus/POW)、[HoneyBadgerBFT](/consensus/HoneyBadgerBFT)、[结算层](/layers/Settlement) ｜ 详解：[覆盖证明](/consensus/ProofOfCoverage)
 - **两级 BFT**：小委员会投票保吞吐，社区检查点签名保底线——效率与去中心化分层各取一半 ｜ 相邻：[最终性 gadget](/consensus/GRANDPA)、[BFT 投票](/consensus/PBFT)、[结算层](/layers/Settlement) ｜ 详解：[Multi-Level BFT](/consensus/MultiLevelBFT)
 - **主观效用共识**：服务质量不可形式验证时，用质押加权中位数裁剪把「大家怎么评」压成可结算的权重 ｜ 相邻：[概率验证（Livepeer）](/consensus/DPOS)、[女巫攻击](/hacking/SybilAttack)、[结算层](/layers/Settlement) ｜ 详解：[Yuma](/consensus/Yuma)
+- **BlockDAG 共识**：并发块全进图再线性化，吞吐随并发度提升，不再靠单链串行 ｜ 相邻：[GHOST 分叉选择](/consensus/GHOST)、[DAG 账本](/model/DAG)、[结算层](/layers/Settlement) ｜ 详解：[GHOSTDAG](/consensus/GHOSTDAG)
+- **分片**：把验证与状态切给多个并行子网络，吞吐随分片数近似线性增长 ｜ 相邻：[PBFT 投票](/consensus/PBFT)、[平行链](/chains/Polkadot)、[结算层](/layers/Settlement) ｜ 详解：[分片](/consensus/Sharding)
+- **带宽证明**：证明「真实贡献了带宽」，验证发生在链下服务网络而非出块共识 ｜ 相邻：[PoSpace](/consensus/PoSpace)、[分层架构](/layers/Layers)、[结算层](/layers/Settlement) ｜ 详解：[带宽证明](/consensus/BandwidthProof)
+- **NPoS**：提名人把质押借给候选验证人，Phragmén 算法把质押在验证人间摊平 ｜ 相邻：[BABE 盲分配](/consensus/BABE)、[波卡](/chains/Polkadot)、[结算层](/layers/Settlement) ｜ 详解：[NPoS](/consensus/NPoS)
+- **空间与时间证明**：PoSpace 用硬盘抽签、PoT 用 VDF 串行耗时保出块节奏，两种共识配合 ｜ 相邻：[PoT 时间证明](/consensus/POT)、[Chia](/chains/Chia)、[结算层](/layers/Settlement) ｜ 详解：[PoSpace](/consensus/PoSpace)
 
 ## 计算层：同一输入必得同一输出
 

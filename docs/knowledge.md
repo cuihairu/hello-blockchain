@@ -78,6 +78,9 @@ title: 知识点总纲
 | meshio comparable-chains 调研 | meshio research，2026-10 | 十家服务网络的白皮书对照（本库合并源） | [服务网络对照](/layers/Layers)、[SPoRA](/consensus/SPORA)、[Yuma](/consensus/Yuma) |
 | 《Narwhal: A Decentralized, High-Throughput DAG-Based Ledger》 | Danezis、Kokoris-Kogias 等，2021 | DAG 内存池与共识解耦 | [Narwhal 与 Bullshark](/consensus/NarwhalBullshark) |
 | 《Elrond 白皮书》 | Elrond 团队，2019 | 分片内随机共识组、BLS 随机信标 | [SPoS](/consensus/SPOS) |
+| 《PHANTOM and GHOSTDAG: A Scalable Generalization of Nakamoto Consensus》 | Sompolinsky、Wyborski、Zohar，2018 | BlockDAG 排序、k 参数容忍并发块 | [GHOSTDAG](/consensus/GHOSTDAG) |
+| 《The ZILLIQA Technical Whitepaper》 | Zilliqa 团队，2017-08-10 | 网络分片 + DS 委员会 + pBFT，PoW 只发身份 | [分片](/consensus/Sharding) |
+| Phragmén 选举算法与 NPoS 口径 | Edvard Phragmén 多赢家选举（1890s）；Polkadot 适配 | 提名质押摊平、era 重选、罚没 | [NPoS](/consensus/NPoS) |
 
 ## 官方文档
 
@@ -93,7 +96,11 @@ title: 知识点总纲
 | [Optimism 排序器文档](https://community.optimism.io/docs/how-sequencers-work/) | Rollup 排序、强制纳入与共享排序机制 | [排序与结算](/consensus/Sequencing)、[计算层](/layers/Compute) |
 | [Sui 共识文档](https://docs.sui.io/concepts/sui-architecture/consensus) | Mysticeti 在主网的参数与流程 | [Mysticeti](/consensus/Mysticeti)、[NarwhalBullshark](/consensus/NarwhalBullshark) |
 | Aptos、Sui 官方文档 | AptosBFT、Narwhal/Mysticeti | [MaxBFT](/consensus/MaxBFT)（同源 HotStuff） |
-| Chia 官方文档 | PoSpace+PoT 工程细节 | [PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
+| [Chia 官方文档](https://docs.chia.net/proof-of-space/) | PoSpace+PoT 工程细节、农民成本结构 | [PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
+| [Zilliqa 技术白皮书](https://docs.zilliqa.com/whitepaper.pdf) | 分片设计、DS 委员会、pBFT 与 EC-Schnorr 多签 | [分片](/consensus/Sharding) |
+| [Kaspa 节点实现](https://github.com/kaspanet/rusty-kaspa) | GHOSTDAG 生产实现、Crescendo 升级 1→10 BPS | [GHOSTDAG](/consensus/GHOSTDAG) |
+| [Polkadot 维基百科·Phragmén](https://wiki.polkadot.com/docs/learn-phragmen)、[·质押](https://wiki.polkadot.com/docs/learn-staking) | NPoS 选举算法、era 周期、罚没口径 | [NPoS](/consensus/NPoS) |
+| Grass 官方站点 | 带宽共享与奖励口径（白皮书 404 不可考） | [带宽证明](/consensus/BandwidthProof) |
 | Decred 文档 | 混合共识（PoW 出块+PoS 选票） | [PoS](/consensus/POS) |
 | Gnosis Chain 文档 | POSDAO（xDai 侧链转 PoS） | [PoA](/consensus/POA) |
 
@@ -105,6 +112,7 @@ title: 知识点总纲
 - **存储与环保叙事**：[PoC](/consensus/POC)/[PoSpace](/consensus/PoSpace) 用硬盘抽签（Burstcoin、Chia），PoSt 把「持续持有」也计入（Filecoin、Spacemesh）。注意绿色成色要打折：绘图写入量与硬盘军备竞赛都是真实成本。
 - **时间敏感场景**：需要不可预知随机数的（出块抽签、leader 选举）用 VDF/VRF 抗研磨；需要全局时钟的（高吞吐排序）用 PoH 式时间层。
 - **异步网络**：节点分布在跨洲网络、延迟无上界时，异步 BFT（HoneyBadger、Dumbo）是理论正确答案，代价是密码学构件的计算开销，生产落地仍少。
+- **共识趋势**：九条趋势各带出处、现状证据与未来 3 年可验证的观察点（不预测收益），见[共识趋势展望](/trends/Trends)。
 
 ## 常见坑
 

@@ -368,6 +368,14 @@ export const TIMELINE: TimelineEvent[] = [
     link: '/consensus/SPORA',
   },
   {
+    year: 2018,
+    title: 'GHOSTDAG 论文：账本从链到图',
+    who: 'Sompolinsky、Wyborski、Zohar',
+    field: 'consensus',
+    why: '把中本聪共识推广到 BlockDAG：并发块不再互相作废，而是全进图再由 k-簇规则线性化。PHANTOM 有形式化安全保证但需解 NP 难问题，GHOSTDAG 是可工程化的贪心算法——Kaspa 成为首个生产实现，亚秒出块与即时确认从此不是纸面指标。',
+    link: '/consensus/GHOSTDAG',
+  },
+  {
     year: 2019,
     title: 'Helium 主网：覆盖证明上岗（7 月）',
     who: 'Helium 基金会、社区',
@@ -384,12 +392,28 @@ export const TIMELINE: TimelineEvent[] = [
     link: '/consensus/MultiLevelBFT',
   },
   {
+    year: 2019,
+    title: 'Zilliqa 主网：分片上岗',
+    who: 'Zilliqa 团队',
+    field: 'consensus',
+    why: '首个把分片做成主网共识骨架的公链：PoW 只发身份防女巫，分片内跑 PBFT，目录服务委员会把分片结果聚合成全局账。白皮书给出的容量模型是「8000 矿工切成 10 个分片，吞吐近似线性」——跨片协调从那时起成了各家分片路线的真正分歧点。',
+    link: '/consensus/Sharding',
+  },
+  {
     year: 2020,
     title: 'Polkadot 主网（5 月）：出块与定案分工',
     who: 'Parity / Web3 基金会',
     field: 'consensus',
     why: 'BABE 用 VRF 盲抽出块、GRANDPA 单独投票定前缀——出块可以快，最终性由独立 gadget 保证。「出块协议与最终性拆开」自此有了完整的公开实现，模块化共识从概念变成工程。',
     link: '/consensus/GRANDPA',
+  },
+  {
+    year: 2021,
+    title: 'Chia 主网：空间证明与时间证明上岗',
+    who: 'Chia Network',
+    field: 'consensus',
+    why: '第一次用「硬盘 + 串行时间」替代算力记账：PoSpace 让农民用绘图换取抽签资格，PoT 用 VDF 保证挑战不可预知，两者交替串成一条线性链。能耗优势换来的是绘图产业与绘图产业集中化——绿色成色需要按写入量与硬件军备打折看。',
+    link: '/consensus/PoSpace',
   },
   {
     year: 2022,

@@ -7,7 +7,7 @@
 - **在哪一层**：[结算层](/layers/Settlement) —— 与 [PoSpace](/consensus/PoSpace) 配对：空间决定谁能抽签，时间证明决定抽签何时揭晓、如何定序
 - **解决什么**：为网络生成不可预知、不可加速的随机源——证明者声明「我串行计算了 T 步」（VDF），任何人都能快速验证，抽签结果无法被提前算出或研磨
 - **解决得怎么样**：VDF 的串行性让 GPU/ASIC 加速基本无效，验证极快；代价是串行计算本身慢、挑战时长需要精心设计、构造对硬件假设敏感
-- **出处**：Boneh、Bünz、Fisch《A Survey of Two Verifiable Delay Functions》2018；Chia 白皮书 2019
+- **出处**：Boneh、Bünz、Fisch《A Survey of Two Verifiable Delay Functions》2018；Chia 白皮书 2019；官方文档 [docs.chia.net/proof-of-time/](https://docs.chia.net/proof-of-time/)、[chia-blockchain 仓库](https://github.com/Chia-Network/chia-blockchain)
 
 ## VDF：可验证延迟函数
 
@@ -29,3 +29,11 @@
 
 - 阻断"研磨"（grinding）：验证人无法尝试多个分叉挑最有利的那个，因为未来挑战已被 VDF 锁定。
 - 提供去偏随机信标，可用于出块人选择、leader 抽签等（与 RANDAO 类方案互补）。
+
+## 时间之主（timelord）成本结构
+
+PoT 的开销集中在时间之主一侧（官方文档口径）：
+
+- **VDF 计算**：Chia 用「未知阶类群上的重复平方」，判别式 1024 比特、无需可信设置；证明用 Wesolowski 方案并拆成 1-64 个阶段并行生成（仅证明生成并行，计算本身严格串行）。
+- **串行耗时**：每个 slot 的时间之主必须串行跑完 T 步 VDF 才能产出 slot 结束值——这要求较强的单线程性能，是时间之主的主要硬件门槛；普通节点做验证则很轻量。
+- **链式结构（infusion）**：空间证明块与 VDF 输出交替串成一条线性链，前一个 VDF 的输出是下一个 VDF 的挑战——随机数在挑战公布前不可预知，从结构上封死「预绘图/预谋出块」。

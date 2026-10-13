@@ -61,6 +61,15 @@
 | Yuma 共识 | 主观效用打分的质押加权中位数裁剪，抗串谋评分 | [Yuma](/consensus/Yuma) |
 | burn-and-mint | 用量烧主币铸稳定单位（DC/uact），计价稳定与通缩并存 | [覆盖证明](/consensus/ProofOfCoverage)、[排序与结算](/consensus/Sequencing) |
 | 概率微支付 | 票据面值×中奖概率=段价，只把中奖票上链兑付 | [DPOS](/consensus/DPOS) |
+| GHOSTDAG | BlockDAG 排序协议：并发块全进图再线性化，避免安全-吞吐权衡 | [GHOSTDAG](/consensus/GHOSTDAG) |
+| BlockDAG | 块的有向无环图，并发块不互相作废（Kaspa 的账本结构） | [GHOSTDAG](/consensus/GHOSTDAG) |
+| NPoS | 提名权益证明：提名人把质押借给候选验证人，Phragmén 选举摊平质押 | [NPoS](/consensus/NPoS) |
+| Phragmén 选举 | 多目标选举算法：总质押最大化、最小验证人质押最大化、方差最小化 | [NPoS](/consensus/NPoS) |
+| 带宽证明 | 证明「真实贡献了带宽」，验证在链下服务网络而非出块共识 | [带宽证明](/consensus/BandwidthProof) |
+| PoSpace | 空间证明：用绘图换抽签资格，证明者只需证明「存着数据」 | [PoSpace](/consensus/PoSpace) |
+| 绘图（plotting） | 生成 Chia plot 文件的过程，重写入是真实环境成本 | [PoSpace](/consensus/PoSpace) |
+| PoT | 时间证明：VDF 串行耗时保证挑战不可预知、出块节奏固定 | [PoT](/consensus/POT) |
+| 时间之主（timelord） | Chia 中跑 VDF 的角色，串行计算是其主要硬件门槛 | [PoT](/consensus/POT) |
 
 ## 计算与存储
 
@@ -118,7 +127,7 @@
 
 | 页面 | 用途 |
 | --- | --- |
-| [发展史时间线](/timeline) | 34 个节点五段分期，回答「为什么是那个时候」 |
-| [共识算法演进时间线](/consensus-timeline) | 51 条年表 + 35 行主链映射，按年份读算法谱系 |
+| [发展史时间线](/timeline) | 49 个节点五段分期，回答「为什么是那个时候」 |
+| [共识算法演进时间线](/consensus-timeline) | 64 条年表 + 35 行主链映射，按年份读算法谱系 |
 | [知识卡片索引](/cards/Cards) | 概念按四层加横切线组织成网，卡片互链 |
 | [知识点总纲](/knowledge) | 概念、论文、官方文档、场景与坑的收拢版 |

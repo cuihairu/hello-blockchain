@@ -215,6 +215,10 @@
         "link": "/consensus/BABE"
       },
       {
+        "text": "带宽证明",
+        "link": "/consensus/BandwidthProof"
+      },
+      {
         "text": "DiemBFT",
         "link": "/consensus/DiemBFT"
       },
@@ -255,6 +259,10 @@
         "link": "/consensus/GHOST"
       },
       {
+        "text": "GHOSTDAG",
+        "link": "/consensus/GHOSTDAG"
+      },
+      {
         "text": "Hashgraph",
         "link": "/consensus/Hashgraph"
       },
@@ -271,6 +279,10 @@
         "link": "/consensus/NarwhalBullshark"
       },
       {
+        "text": "NPoS",
+        "link": "/consensus/NPoS"
+      },
+      {
         "text": "RPCA",
         "link": "/consensus/RPCA"
       },
@@ -281,6 +293,10 @@
       {
         "text": "排序与结算",
         "link": "/consensus/Sequencing"
+      },
+      {
+        "text": "分片",
+        "link": "/consensus/Sharding"
       },
       {
         "text": "SPoRA",
@@ -560,6 +576,17 @@
       {
         "text": "按时间",
         "link": "/nav/ByTime"
+      }
+    ]
+  },
+  {
+    "text": "共识趋势展望",
+    "link": "/trends/Trends",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "共识趋势展望",
+        "link": "/trends/Trends"
       }
     ]
   }

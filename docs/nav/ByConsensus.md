@@ -1,6 +1,6 @@
 # 按共识算法导航
 
-48 种算法一张表：**首次出现 → 所在层 → 解决什么 → 用了它的链**。行按首次出现年份排序；算法列进详解页，链列进链页。按年份读算法演进史见[共识算法演进时间线](/consensus-timeline)，按主网上线时间排链见[按时间导航](/nav/ByTime)，四层归属的展开在[分层架构](/layers/Layers)。
+52 种算法一张表：**首次出现 → 所在层 → 解决什么 → 用了它的链**。行按首次出现年份排序；算法列进详解页，链列进链页。按年份读算法演进史见[共识算法演进时间线](/consensus-timeline)，按主网上线时间排链见[按时间导航](/nav/ByTime)，四层归属的展开在[分层架构](/layers/Layers)。
 
 | 首次出现 | 算法 | 所在层 | 解决什么 | 用了它的链 |
 | --- | --- | --- | --- | --- |
@@ -21,6 +21,7 @@
 | 2016 | [HoneyBadgerBFT](/consensus/HoneyBadgerBFT) | 结算层 | 消息无序、延迟无上界、分区频发的网络里，共识仍然安全且不停摆 | Helium 旧共识组（已退役） |
 | 2016 | [IOTA Tangle](/consensus/IOTA) | 结算层 | IoT 微交易场景下的零手续费记账 | IOTA |
 | 2016 | [PoET](/consensus/PoET) | 结算层 | 在许可网络里公平抽签决定「谁出块」 | Hyperledger Sawtooth |
+| 2016 | [NPoS](/consensus/NPoS) | 结算层 | 让普通持币者通过提名把安全预算借给候选验证人，同时用 Phragmén 选举把质押在验证人之间摊平 | [Polkadot](/chains/Polkadot)（白皮书 2016，主网 2020） |
 | 2017 | [Algorand](/consensus/Algorand) | 结算层 | 让出块权在抽签揭示前不可预知 | Algorand |
 | 2017 | [GRANDPA](/consensus/GRANDPA) | 结算层 | 把「出块」与「最终性」拆成两个独立组件 | [Polkadot](/chains/Polkadot) |
 | 2017 | [Gasper](/consensus/Gasper) | 结算层 | 把 PoW 时代的概率最终性过渡到 PoS，同时保留分叉选择与最终性两条线 | [以太坊](/chains/Ethereum) |
@@ -28,10 +29,12 @@
 | 2017 | [PoA](/consensus/POA) | 结算层 | 把出块资格锚定在可追责的法律实体身份上，换取极高吞吐与近零燃料成本；适合联盟链、测试网与侧链 | [BSC](/chains/BinanceSmartChain)（PoSA 变体） |
 | 2017 | [PoH](/consensus/PoH) | 结算层之上的**时间层** | 为全网事件提供先于共识的、可验证的全局时钟 | [Solana](/chains/Solana) |
 | 2017 | [PoSpace](/consensus/PoSpace) | 结算层 | 证明者预先构造只能靠占用磁盘才能快速应答的挑战-响应数据结构 | [Chia](/chains/Chia) |
+| 2017 | [分片（Zilliqa）](/consensus/Sharding) | 结算层 | 单链全网串行锁死吞吐——把网络切成多个小组并行处理，吞吐随分片数近似线性增长 | Zilliqa（白皮书 2017，主网 2019） |
 | 2018 | [Avalanche](/consensus/Avalanche) | 结算层 | 既要无许可与高吞吐，又要快确认——用随机亚采样替代全网广播投票，用质押决定权重 | [Avalanche](/chains/Avalanche) |
 | 2018 | [BABE](/consensus/BABE) | 结算层 | 用 VRF + 随机槽把出块权分配给验证人，避免可预知的 leader 轮替 | [Polkadot](/chains/Polkadot) |
 | 2018 | [HotStuff](/consensus/HotStuff) | 结算层 | 经典 BFT 稳态下每轮都要全网两两交换消息，节点数一上去吞吐就崩 | [Aptos](/chains/Aptos)（AptosBFT） |
 | 2018 | [PoT](/consensus/POT) | 结算层 | 为网络生成不可预知、不可加速的随机源 | [Chia](/chains/Chia) |
+| 2018 | [GHOSTDAG](/consensus/GHOSTDAG) | 结算层 | 最长链规则下并发块全部作废，吞吐被单链串行锁死——并发块全进图再线性化 | Kaspa |
 | 2018 | [覆盖证明（Helium PoC）](/consensus/ProofOfCoverage) | 结算层的抗女巫扩展 | 让「我在这里、我有覆盖」成为可验证声明——假位置、假覆盖在物理定律与三方探测面前不经济 | Helium（Solana 迁移后由 oracle 承担） |
 | 2018 | [Snowball](/consensus/Snowball) | 结算层 | 替代全网广播投票——每轮只随机询问少量节点，重复询问后个体偏好收敛到全网共识，通信量与节点数解耦 | [Avalanche](/chains/Avalanche) |
 | 2019 | [DiemBFT](/consensus/DiemBFT) | 结算层 | 把 HotStuff 的理论性能工程化到生产级 | [Aptos](/chains/Aptos)（前身 Diem） |
@@ -52,6 +55,7 @@
 | 2022 | [MaxBFT](/consensus/MaxBFT) | 结算层 | 把 HotStuff 的线性通信复杂度（QC 聚合 + 链式流水线）工程化，为联盟链提供高吞吐、低时延的确定性最终性 | 长安链 v2+ |
 | 2022 | [SPoRA（Arweave）](/consensus/SPORA) | 结算层的存储变体 + 存储层的激励闭环 | 一次性付费、永久存储——用「随机挑战历史数据」使存储本身成为出块资源，让矿工自愿长期持有全网数据 | [Arweave](/chains/Arweave) |
 | 2024 | [Mysticeti](/consensus/Mysticeti) | 结算层 | 把 DAG 共识的延迟开销砍掉 | [Sui](/chains/Sui)（2024 起） |
+| 未考 | [带宽证明（Grass）](/consensus/BandwidthProof) | 结算层（资源证明族） | 把分散的闲置带宽聚合成可测量的资源网络，按贡献分配奖励 | Grass（白皮书 404 不可考，首次出现年份未考） |
 
 ## 读法
 
