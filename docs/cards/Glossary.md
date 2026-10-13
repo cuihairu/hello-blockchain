@@ -49,6 +49,12 @@
 | 亚采样投票 | 每轮只随机询问少量节点、重复后收敛（Snowball 族） | [Snowball](/consensus/Snowball) |
 | 分片（sharding） | 把验证与状态切给多个并行子网络 | [SPoS](/consensus/SPOS) |
 | 流水线 BFT | 投票按区块串联推进、通信摊薄的设计（HotStuff 系） | [HotStuff](/consensus/HotStuff) |
+| Paxos | 崩溃容错共识的源头：多数派两阶段，只抗宕机不抗作恶 | [Paxos](/consensus/Paxos) |
+| IBFT | 许可链 BFT：固定验证人单块定案，QBFT 的前身 | [QBFT](/consensus/QBFT) |
+| uncertified DAG | 不发逐轮证书、靠直接父链与提交规则定案的 DAG 共识 | [Mysticeti](/consensus/Mysticeti) |
+| Tangle | IOTA 的 DAG 账本：每笔交易批准两条 tip，靠协调器兜底多年 | [IOTA](/consensus/IOTA) |
+| 再质押（restaking） | 把已质押 ETH 再抵押给 AVS，复用安全预算 | [Restaking](/consensus/Restaking) |
+| AVS | 主动验证服务：用再质押获得经济安全的链下组件 | [Restaking](/consensus/Restaking) |
 
 ## 计算与存储
 
@@ -68,6 +74,11 @@
 | 内容寻址 | 按内容哈希寻址，内容变则地址变 | [存储层](/layers/Storage) |
 | pinning | 让 IPFS 节点长期保留某内容——没人 pin 就消失 | [存储层](/layers/Storage) |
 | 状态爆炸 | 全节点存储持续膨胀导致节点中心化 | [存储层](/layers/Storage) |
+| 排序器（sequencer） | Rollup 上定交易顺序的角色，当前多为单点软确认 | [排序与结算](/consensus/Sequencing) |
+| 共享排序 | 多条 Rollup 共用一套去中心化排序节点 | [排序与结算](/consensus/Sequencing) |
+| based 排序 | 把排序权交给 L1 提议者的路线 | [排序与结算](/consensus/Sequencing) |
+| 欺诈证明 | 乐观结算的挑战机制：窗口期内证伪错误状态根 | [排序与结算](/consensus/Sequencing) |
+| 有效性证明 | ZK 结算：证明先行，L1 验证通过即最终 | [排序与结算](/consensus/Sequencing) |
 
 ## 账本、资产与服务发现
 

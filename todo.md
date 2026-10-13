@@ -24,3 +24,25 @@
   - 来源：用户 2026-10-12
   - 进度：已完成。新增 `docs/cards/Cards.md`（知识卡片索引：36 张卡片按结算层 / 计算层 / 存储层 / 服务发现 + 两条横切线组织，每张含一句话定义、相邻互链、详解出处）与 `docs/cards/Glossary.md`（术语表：70 个术语按六个领域平铺，每条一句话定义 + 站内详解）。已接入 SUMMARY.md、sidebar.json、knowledge.md（头部收录两页）、首页 feature 卡、README 与 README.zh 目录树。
   - 证据：`npm run docs:check` ok（104 pages / 110 sidebar links）；`npm run docs:links` ok（57 external URLs reachable）；`npm run docs:build` complete；`npm run docs:walkthrough` 无 console/page error、无坏链、无侧边栏失败。
+
+- [x] **P4 共识覆盖面补齐与成网核验（续做单 2026-10-13）**
+  - 期次：P4
+  - 验收口径：对照覆盖面清单（PoW/PoS/DPoS/PBFT·RAFT·Paxos/PoH/PoA/PoSpace·PoRep·PoSt/Tendermint/HotStuff/Narwhal·Bullshark/Mysticeti/Optimistic·ZK 排序与结算/PoA 系/DAG 类·IOTA/VRF 系/许可链 IBFT·CFT/shared sequencing/restaking）补齐缺口；抽查 5 条四要素（含公开事故或"未找到公开记录"）；知识卡片孤卡为 0；分层章每层补设计要点卡片；构建绿再推。
+  - 来源：用户 2026-10-13（续做单）
+  - 进度：已完成。缺口清单：Paxos、Mysticeti、IOTA Tangle、Optimistic/ZK 排序与结算（含 shared sequencing）、restaking 预算五项缺页 → 新增 5 页（consensus/Paxos、Mysticeti、IOTA、Sequencing、Restaking），共识页 39 → 44，五处计数声明同步；IBFT 已由 QBFT 页覆盖（明示"又称 Istanbul BFT"）。抽查 PoET/Snowball/Algorand/TowerBFT/PoST 五条四要素齐全，补齐 Snowball（Avalanche 2023-02 停摆）、TowerBFT（Solana 多次全网停摆）事故记录，Algorand/PoST 标"未找到公开记录"。孤卡脚本统计 16 → 修复后 0（41 卡全部满足同层链 + 同主题链 + 跨章链）。分层章四页各补「设计要点」节。索引/侧栏/术语表(+10)/卡片(+5)/knowledge 论文表(+6 行)同步。
+  - 证据：`npm run docs:check` ok、`npm run docs:links` ok、`npm run docs:build` complete、`npm run docs:walkthrough` 无错误（见 commit 记录）。
+
+- [ ] **P5 meshio 调研合并（合并调研单 2026-10-13）**
+  - 期次：P5
+  - 验收口径：以 meshio docs/research/comparable-chains.md（563 行，十家四节）为源，通用部分按四要素模板落成/并入对应页（不重复造页）；分层章补「服务网络对照」节（标源 meshio research）；知识卡片与时间线同步；条目标「源：meshio research（2026-10-13 合并）」；Grass 白皮书 404 的"不可考"标注保留。
+  - 来源：用户 2026-10-13（合并调研单）
+
+- [ ] **P6 著名链章与时间线强化（新增章单 2026-10-13）**
+  - 期次：P6
+  - 验收口径：chains 章补齐代表性链（候选：Avalanche、Near、Sui、Aptos、Filecoin、Arweave、Lightning、Optimism、Arbitrum、zkSync——用户可增删）；每条四节：白皮书出处（只链接与要点讲解，不搬 PDF 全文）/解决什么/技术成果/局限与公开事故；与共识页、分层章交叉链接；时间线按年份强化并带出处、链接到链页与共识页；与知识卡片互通。
+  - 来源：用户 2026-10-13（新增章单）
+
+- [ ] **P7 三个导航维度（导航单 2026-10-13）**
+  - 期次：P7
+  - 验收口径：双向链接（每页底部自动生成反向链接区块 + 检查脚本，孤卡 0、断链 0）；按共识算法导航索引页（算法 → 链/首次出现/所在层/解决什么）；按时间导航（时间轴可点击 + 链按主网上线时间排序表）；三个入口进侧栏/导航栏；构建绿。
+  - 来源：用户 2026-10-13（导航单）

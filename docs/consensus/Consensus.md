@@ -25,10 +25,13 @@
 | 工作量证明 | PoW | Bitcoin、Litecoin |
 | 权益证明 | PoS、DPoS、PoA、Ouroboros、Algorand、SPoS | Ethereum、EOS、Cardano、Algorand、MultiversX |
 | 拜占庭容错 | PBFT、Tendermint、HotStuff、DiemBFT、QBFT、Streamlet、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Aptos、Quorum/Besu |
+| 崩溃容错（CFT） | Paxos、RAFT | Chubby、Spanner、etcd、联盟链排序 |
 | 资源/存储类 | PoC、PoET、PoSpace、PoT、PoST、PoH | Chia、Solana |
-| 分叉选择与 DAG | GHOST、Hashgraph、Narwhal+Bullshark、RPCA | Ethereum（PoW 期）、Hedera、Sui、XRP Ledger |
+| 分叉选择与 DAG | GHOST、Hashgraph、Narwhal+Bullshark、RPCA、Mysticeti、IOTA Tangle | Ethereum（PoW 期）、Hedera、Sui、XRP Ledger、IOTA |
 | 出块 + 最终性分工 | Gasper、BABE+GRANDPA、Snowman、Lachesis | Ethereum、Polkadot、Avalanche、Fantom |
-| 混合与演进 | TowerBFT、RAFT（CFT） | Solana、联盟链 |
+| 混合与演进 | TowerBFT | Solana |
+| Rollup 排序与结算 | 排序器、共享排序、based 排序 | Arbitrum、Optimism、Base、Espresso |
+| 共享安全预算 | 再质押（restaking） | EigenLayer |
 
 每篇算法页开头是统一的「四要素」区块：**在哪一层**（对应[分层架构](/layers/Layers)的四层模型）、**解决什么**、**解决得怎么样**（优点、缺点与已发生的事故）、**出处**（论文或白皮书）。
 

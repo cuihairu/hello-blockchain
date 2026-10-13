@@ -18,7 +18,7 @@ hero:
 
 features:
   - title: 知识卡片与术语
-    details: 36 张概念卡片按四层加两条横切线连成网，互链直达详解页；70 个术语的平铺查询表，附时间线与总纲入口。
+    details: 41 张概念卡片按四层加两条横切线连成网，互链直达详解页；80 个术语的平铺查询表，附时间线与总纲入口。
     link: /cards/Cards
   - title: 分层架构
     details: 计算、存储、结算、服务发现四层模型，对标 DNS 的服务发现，每层五要素：定义、问题、现有系统、开源清单、失败模式。
@@ -27,7 +27,7 @@ features:
     details: UTXO、账户模型、DAG 三大范式，Cardano 的 EUTXO 与 Nervos 的 Cell 混合形态，理解账本如何记账。
     link: /model/Models
   - title: 共识算法
-    details: PoW、PoS、PBFT、Tendermint、Avalanche 等 39 种共识的原理、容错阈值与工程取舍。
+    details: PoW、PoS、PBFT、Tendermint、Avalanche 等 44 种共识的原理、容错阈值与工程取舍。
     link: /consensus/Consensus
   - title: 公链生态
     details: Bitcoin、Ethereum、Solana、Polkadot 等主流公链的设计选型与权衡，理解链与链的差异。

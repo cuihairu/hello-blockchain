@@ -143,6 +143,10 @@
         "link": "/consensus/MaxBFT"
       },
       {
+        "text": "Paxos",
+        "link": "/consensus/Paxos"
+      },
+      {
         "text": "PBFT",
         "link": "/consensus/PBFT"
       },
@@ -223,6 +227,10 @@
         "link": "/consensus/HotStuff"
       },
       {
+        "text": "IOTA",
+        "link": "/consensus/IOTA"
+      },
+      {
         "text": "Lachesis",
         "link": "/consensus/Lachesis"
       },
@@ -247,12 +255,24 @@
         "link": "/consensus/Hashgraph"
       },
       {
+        "text": "Mysticeti",
+        "link": "/consensus/Mysticeti"
+      },
+      {
         "text": "Narwhal 与 Bullshark",
         "link": "/consensus/NarwhalBullshark"
       },
       {
         "text": "RPCA",
         "link": "/consensus/RPCA"
+      },
+      {
+        "text": "Restaking（再质押）",
+        "link": "/consensus/Restaking"
+      },
+      {
+        "text": "排序与结算",
+        "link": "/consensus/Sequencing"
       },
       {
         "text": "SPoS",

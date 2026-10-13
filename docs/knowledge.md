@@ -66,6 +66,11 @@ title: 知识点总纲
 | 《Hashgraph Consensus: Fair, Fast, Byzantine Fault Tolerance》 | Baird，2016 | gossip-about-gossip、虚拟投票、公平排序 | [Hashgraph](/consensus/Hashgraph) |
 | 《Secure High-Rate Transaction Processing in Bitcoin》（GHOST） | Sompolinsky、Zohar，2015 | 子树权重分叉选择、叔块利用 | [GHOST](/consensus/GHOST) |
 | 《Streamlet: Textbook Streamlined Blockchains》 | Chan、Shi，2020 | 极简流水线 BFT、三链确认 | [Streamlet](/consensus/Streamlet) |
+| 《Paxos Made Simple》 | Lamport，2001 | 多数派两阶段、崩溃容错共识源头 | [Paxos](/consensus/Paxos)、[RAFT](/consensus/RAFT) |
+| 《Mysticeti》（arXiv:2404.12257） | Mysten Labs，2024 | uncertified DAG、亚秒最终性 | [Mysticeti](/consensus/Mysticeti)、[NarwhalBullshark](/consensus/NarwhalBullshark) |
+| 《The Tangle》 | Popov，2015 | DAG 账本、tip 选择、协调器教训 | [IOTA](/consensus/IOTA)、[DAG 模型](/model/DAG) |
+| 《EigenLayer: The Restaking Collective》 | Kannan 等，2022 | 再质押共享安全预算 | [Restaking](/consensus/Restaking) |
+| 《Don't overload Ethereum's consensus》 | Buterin，2023 | 再质押的关联风险边界 | [Restaking](/consensus/Restaking)、[结算层](/layers/Settlement) |
 | 《Narwhal: A Decentralized, High-Throughput DAG-Based Ledger》 | Danezis、Kokoris-Kogias 等，2021 | DAG 内存池与共识解耦 | [Narwhal 与 Bullshark](/consensus/NarwhalBullshark) |
 | 《Elrond 白皮书》 | Elrond 团队，2019 | 分片内随机共识组、BLS 随机信标 | [SPoS](/consensus/SPOS) |
 
@@ -80,6 +85,8 @@ title: 知识点总纲
 | Hyperledger Fabric 文档 | Raft ordering、SmartBFT（3.x） | [RAFT](/consensus/RAFT)、[PBFT](/consensus/PBFT) |
 | [CometBFT 文档](https://docs.cosmos.network/cometbft/) | Tendermint 协议现状与参数 | [Tendermint](/consensus/Tendermint) |
 | [Hyperledger Besu 仓库](https://github.com/hyperledger/besu) | QBFT/Clique 许可链实现与参数（docs/ 目录） | [QBFT](/consensus/QBFT)、[PoA](/consensus/POA) |
+| [Optimism 排序器文档](https://community.optimism.io/docs/how-sequencers-work/) | Rollup 排序、强制纳入与共享排序机制 | [排序与结算](/consensus/Sequencing)、[计算层](/layers/Compute) |
+| [Sui 共识文档](https://docs.sui.io/concepts/sui-architecture/consensus) | Mysticeti 在主网的参数与流程 | [Mysticeti](/consensus/Mysticeti)、[NarwhalBullshark](/consensus/NarwhalBullshark) |
 | Aptos、Sui 官方文档 | AptosBFT、Narwhal/Mysticeti | [MaxBFT](/consensus/MaxBFT)（同源 HotStuff） |
 | Chia 官方文档 | PoSpace+PoT 工程细节 | [PoSpace](/consensus/PoSpace)、[PoT](/consensus/POT) |
 | Decred 文档 | 混合共识（PoW 出块+PoS 选票） | [PoS](/consensus/POS) |
