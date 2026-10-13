@@ -70,6 +70,14 @@
 | 绘图（plotting） | 生成 Chia plot 文件的过程，重写入是真实环境成本 | [PoSpace](/consensus/PoSpace) |
 | PoT | 时间证明：VDF 串行耗时保证挑战不可预知、出块节奏固定 | [PoT](/consensus/POT) |
 | 时间之主（timelord） | Chia 中跑 VDF 的角色，串行计算是其主要硬件门槛 | [PoT](/consensus/POT) |
+| 联盟链 | 许可准入的区块链，成员已知身份，共识在受信节点间达成 | [联盟链](/consortium/Consortium) |
+| 通道（channel） | Fabric 中私有子网络，仅成员可见，隔离账本与链码 | [Hyperledger Fabric](/consortium/Fabric) |
+| MSP | 成员服务提供者：颁发证书、管理身份，联盟链的信任根 | [Hyperledger Fabric](/consortium/Fabric) |
+| 背书策略 | 链码执行前需哪些组织背书的规则，决定交易有效性 | [Hyperledger Fabric](/consortium/Fabric) |
+| 群组（group） | FISCO BCOS 中并行执行的子网络，类似分片 | [FISCO BCOS](/consortium/FiscoBcos) |
+| 国密 | SM2/SM3/SM4 中国商用密码算法套件，合规要求 | [FISCO BCOS](/consortium/FiscoBcos) |
+| 公证人（notary） | Corda 中验证交易唯一性与顺序的受信节点 | [R3 Corda](/consortium/Corda) |
+| QBFT | 以太坊许可链 BFT 共识，验证人投票定案 | [Hyperledger Besu](/consortium/Besu) |
 
 ## 计算与存储
 
@@ -109,6 +117,12 @@
 | 解析器 | 把名字翻译成地址/内容的组件，可被劫持 | [服务发现](/layers/ServiceDiscovery) |
 | ccip-read | 跨链/链下解析的签名转发协议，信任链长一截 | [服务发现](/layers/ServiceDiscovery) |
 | 同形字 | unicode 相似字符伪装成目标名字的钓鱼手法 | [服务发现](/layers/ServiceDiscovery) |
+| 数字人民币（e-CNY） | 央行发行的法定数字货币，双层运营、可控匿名 | [数字人民币](/dcny/Dcny) |
+| 双层运营 | 央行对商业银行、商业银行对公众的两层运营体系 | [数字人民币](/dcny/Dcny) |
+| 可控匿名 | 小额匿名、大额可追溯的隐私设计，平衡合规与隐私 | [数字人民币](/dcny/Dcny) |
+| 数字藏品 | 国内合规形态的 NFT，不可二级交易、去金融化 | [区块链游戏](/chain-games/ChainGames) |
+| DApp | 去中心化应用：前端 + 钱包 + 合约 + 索引器的四层架构 | [DApp 架构](/dapp/Dapp) |
+| 索引器（indexer） | 链下索引服务，把链上事件查询变成高效 API | [DApp 架构](/dapp/Dapp) |
 
 ## 攻防
 

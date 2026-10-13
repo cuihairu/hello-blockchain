@@ -113,6 +113,7 @@ title: 知识点总纲
 - **时间敏感场景**：需要不可预知随机数的（出块抽签、leader 选举）用 VDF/VRF 抗研磨；需要全局时钟的（高吞吐排序）用 PoH 式时间层。
 - **异步网络**：节点分布在跨洲网络、延迟无上界时，异步 BFT（HoneyBadger、Dumbo）是理论正确答案，代价是密码学构件的计算开销，生产落地仍少。
 - **共识趋势**：九条趋势各带出处、现状证据与未来 3 年可验证的观察点（不预测收益），见[共识趋势展望](/trends/Trends)。
+- **联盟链与数字人民币**：联盟链四要素与公链对照见[联盟链](/consortium/Consortium)；Fabric 的[通道与背书](/consortium/Fabric)、FISCO BCOS 的[群组与国密](/consortium/FiscoBcos)、Corda 的[公证人与点对点](/consortium/Corda)、Besu 的[QBFT 与隐私](/consortium/Besu)、WeBASE 的[中间件栈](/consortium/Webase)；数字人民币的[双层运营与可控匿名](/dcny/Dcny)与[试点进展](/dcny/Pilot)；链游的[项目与合规](/chain-games/ChainGames)与[经济设计](/chain-games/Economy)；DApp 的[四层架构](/dapp/Dapp)。
 
 ## 常见坑
 

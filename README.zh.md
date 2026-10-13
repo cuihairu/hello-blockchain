@@ -56,7 +56,11 @@ docs/                 # VitePress 站点源
 ├── Privacy/          # 隐私技术：零知识证明、环签名、同态加密等
 ├── hacking/          # 攻击与防御
 ├── nft/              # 资产发行与 NFT
-└── chains/           # 有名的区块链项目
+├── chains/           # 有名的区块链项目
+├── consortium/       # 联盟链：Fabric、FISCO BCOS、Corda、Besu、WeBASE
+├── dcny/             # 数字人民币：e-CNY 架构与试点
+├── chain-games/      # 区块链游戏：项目、经济设计、事故
+└── dapp/             # DApp 架构：前端、钱包、合约、索引器
 ```
 
 ```

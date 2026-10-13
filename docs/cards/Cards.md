@@ -33,6 +33,7 @@
 - **带宽证明**：证明「真实贡献了带宽」，验证发生在链下服务网络而非出块共识 ｜ 相邻：[PoSpace](/consensus/PoSpace)、[分层架构](/layers/Layers)、[结算层](/layers/Settlement) ｜ 详解：[带宽证明](/consensus/BandwidthProof)
 - **NPoS**：提名人把质押借给候选验证人，Phragmén 算法把质押在验证人间摊平 ｜ 相邻：[BABE 盲分配](/consensus/BABE)、[波卡](/chains/Polkadot)、[结算层](/layers/Settlement) ｜ 详解：[NPoS](/consensus/NPoS)
 - **空间与时间证明**：PoSpace 用硬盘抽签、PoT 用 VDF 串行耗时保出块节奏，两种共识配合 ｜ 相邻：[PoT 时间证明](/consensus/POT)、[Chia](/chains/Chia)、[结算层](/layers/Settlement) ｜ 详解：[PoSpace](/consensus/PoSpace)
+- **联盟链**：许可准入把「谁能记账」变成治理问题，用身份换确定性最终性与高吞吐 ｜ 相邻：[PoA](/consensus/POA)、[Fabric 通道](/consortium/Fabric)、[结算层](/layers/Settlement) ｜ 详解：[联盟链](/consortium/Consortium)
 
 ## 计算层：同一输入必得同一输出
 
@@ -44,6 +45,7 @@
 - **资源类型系统**：Move 把资产建模为线性资源，类型系统防复制与重入 ｜ 相邻：[重入](/hacking/SmartContractVulnerabilities)、[EVM 兼容](/chains/BinanceSmartChain) ｜ 详解：[计算层](/layers/Compute)
 - **合约升级与治理**：代理模式、时间锁、多签——「可维护面」就是攻击面 ｜ 相邻：[治理攻击](/consensus/DPOS)、[桥攻击](/hacking/CrossChainBridgeAttack) ｜ 详解：[计算层](/layers/Compute)
 - **排序与软确认**：排序器先给体验、L1 强制纳入兜底抗审查、欺诈/有效性证明定最终 ｜ 相邻：[确定性执行](/layers/Compute)、[结算层](/layers/Settlement)、[预言机](/layers/Compute) ｜ 详解：[排序与结算](/consensus/Sequencing)
+- **DApp 四层**：前端→钱包→合约→索引器，状态在链上、查询走链下索引 ｜ 相邻：[确定性执行](/layers/Compute)、[命名系统](/layers/ServiceDiscovery)、[gas 计量](/layers/Compute) ｜ 详解：[DApp 架构](/dapp/Dapp)
 
 ## 存储层：数据在哪、还在不在
 
@@ -67,6 +69,8 @@
 - **DAG 账本**：交易组织成有向无环图，吞吐与确认并行 ｜ 相邻：[DAG 共识](/consensus/Lachesis)、[DAG 账本](/model/DAG) ｜ 详解：[DAG 模型](/model/DAG)
 - **受限脚本**：非图灵完备换可预测与可审计，Bitcoin Script 是原型 ｜ 相邻：[确定性执行](/layers/Compute)、[EVM](/layers/Compute) ｜ 详解：[OP_CHECKSIG](/opcode/OP_CHECKSIG)
 - **资产发行（NFT）**：token 身份在计算层，元数据在存储层，名字在服务发现 ｜ 相邻：[内容寻址](/layers/Storage)、[命名系统](/layers/ServiceDiscovery) ｜ 详解：[彩色币](/nft/ColoredCoins)
+- **央行数字货币**：央行发行、双层运营、可控匿名，法偿性替代链上共识做信任锚 ｜ 相邻：[联盟链](/consortium/Consortium)、[账户模型](/model/Account) ｜ 详解：[数字人民币](/dcny/Dcny)
+- **链游经济**：代币发行与消耗的设计空间，玩法-经济解耦换可持续性 ｜ 相邻：[资产发行（NFT）](/nft/ColoredCoins)、[重入](/hacking/SmartContractVulnerabilities) ｜ 详解：[链游经济](/chain-games/Economy)
 
 ## 横切线 B：攻防
 

@@ -56,7 +56,11 @@ docs/                 # VitePress site source
 ├── Privacy/          # Privacy techniques: zero-knowledge proofs, ring signatures, homomorphic encryption, etc.
 ├── hacking/          # Attacks and defenses
 ├── nft/              # Asset issuance and NFTs
-└── chains/           # Notable blockchain projects
+├── chains/           # Notable blockchain projects
+├── consortium/       # Consortium chains: Fabric, FISCO BCOS, Corda, Besu, WeBASE
+├── dcny/             # Digital RMB: e-CNY architecture and pilots
+├── chain-games/      # Blockchain games: projects, economy design, incidents
+└── dapp/             # DApp architecture: frontend, wallet, contract, indexer
 ```
 
 ```

@@ -557,6 +557,78 @@
     ]
   },
   {
+    "text": "联盟链",
+    "link": "/consortium/Consortium",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "联盟链总览",
+        "link": "/consortium/Consortium"
+      },
+      {
+        "text": "Hyperledger Fabric",
+        "link": "/consortium/Fabric"
+      },
+      {
+        "text": "FISCO BCOS",
+        "link": "/consortium/FiscoBcos"
+      },
+      {
+        "text": "R3 Corda",
+        "link": "/consortium/Corda"
+      },
+      {
+        "text": "Hyperledger Besu / Quorum",
+        "link": "/consortium/Besu"
+      },
+      {
+        "text": "WeBASE",
+        "link": "/consortium/Webase"
+      }
+    ]
+  },
+  {
+    "text": "数字人民币",
+    "link": "/dcny/Dcny",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "数字人民币",
+        "link": "/dcny/Dcny"
+      },
+      {
+        "text": "试点进展",
+        "link": "/dcny/Pilot"
+      }
+    ]
+  },
+  {
+    "text": "区块链游戏",
+    "link": "/chain-games/ChainGames",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "区块链游戏",
+        "link": "/chain-games/ChainGames"
+      },
+      {
+        "text": "经济设计",
+        "link": "/chain-games/Economy"
+      }
+    ]
+  },
+  {
+    "text": "DApp",
+    "link": "/dapp/Dapp",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "DApp 架构",
+        "link": "/dapp/Dapp"
+      }
+    ]
+  },
+  {
     "text": "发展史时间线",
     "link": "/timeline"
   },
