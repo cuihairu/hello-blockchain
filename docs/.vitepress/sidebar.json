@@ -547,5 +547,20 @@
   {
     "text": "知识点总纲",
     "link": "/knowledge"
+  },
+  {
+    "text": "导航索引",
+    "link": "/nav/ByConsensus",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "按共识算法",
+        "link": "/nav/ByConsensus"
+      },
+      {
+        "text": "按时间",
+        "link": "/nav/ByTime"
+      }
+    ]
   }
 ]

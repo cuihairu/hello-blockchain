@@ -1,7 +1,15 @@
 import { defineConfig } from 'vitepress'
+import { readFileSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import sidebar from './sidebar.json' with { type: 'json' }
 
 const SITE_URL = 'https://cuihairu.github.io/hello-blockchain'
+
+// 反向链接数据由 scripts/build-backlinks.mjs 预计算（npm run docs:build 会先跑它）
+const backlinks = JSON.parse(
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'backlinks.json'), 'utf-8')
+)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -51,7 +59,46 @@ export default defineConfig({
 
   markdown: {
     lineNumbers: false,
-    math: true
+    math: true,
+    // 每页底部自动追加「反向链接」（谁引用了我）：正文 markdown 链接走 VitePress
+    // 的 link 规则渲染，base 前缀自动带上
+    config(md) {
+      md.core.ruler.push('inject-backlinks', (state) => {
+        const rel = state.env?.relativePath
+        if (!rel || !rel.endsWith('.md')) return
+        let route = '/' + rel.slice(0, -3)
+        if (route.endsWith('/index')) route = route.slice(0, -6) || '/'
+        const list = backlinks.backlinks[route]
+        if (!list || !list.length) return
+        const mk = (type, tag, nesting) => new state.Token(type, tag, nesting)
+        const txt = (content) => {
+          const t = mk('text', '', 0)
+          t.content = content
+          return t
+        }
+        const heading = mk('heading_open', 'h2', 1)
+        heading.markup = '##'
+        const headingText = mk('inline', '', 0)
+        headingText.children = [txt('反向链接')]
+        const children = []
+        list.forEach((b, i) => {
+          if (i) children.push(txt(' · '))
+          const open = mk('link_open', 'a', 1)
+          open.attrs = [['href', b.r]]
+          children.push(open, txt(b.t), mk('link_close', 'a', -1))
+        })
+        const inline = mk('inline', '', 0)
+        inline.children = children
+        state.tokens.push(
+          heading,
+          headingText,
+          mk('heading_close', 'h2', -1),
+          mk('paragraph_open', 'p', 1),
+          inline,
+          mk('paragraph_close', 'p', -1)
+        )
+      })
+    }
   },
 
   themeConfig: {
@@ -65,7 +112,8 @@ export default defineConfig({
       { text: '共识算法', link: '/consensus/Consensus' },
       { text: '隐私安全', link: '/Privacy/Privacy' },
       { text: '黑客攻击', link: '/hacking/Attack' },
-      { text: '公链项目', link: '/chains/Chain' }
+      { text: '公链项目', link: '/chains/Chain' },
+      { text: '导航索引', link: '/nav/ByConsensus' }
     ],
 
     // sidebar.json 手工维护，结构与 docs/SUMMARY.md 对齐，新增页面需同步两处；npm run docs:check 校验

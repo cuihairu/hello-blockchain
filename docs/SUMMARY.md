@@ -128,4 +128,6 @@
 	- [Arbitrum 仲裁链](chains/Arbitrum.md)
 	- [zkSync](chains/zkSync.md)
 - [发展史时间线](./timeline.md)
+- [按共识算法导航](./nav/ByConsensus.md)
+- [按时间导航](./nav/ByTime.md)
 - [知识点总纲](./knowledge.md)

@@ -25,6 +25,7 @@ npm run docs:dev   # 本地开发
 npm run docs:build # 构建产物
 npm run docs:preview # 本地预览构建结果
 npm run docs:check   # 校验 sidebar / SUMMARY / 站内链接一致
+npm run docs:backlinks # 重建反向链接索引（docs:build 内部会自动执行）
 npm run docs:links   # 校验站外论文 / 文档链接可达（需要网络）
 npm run docs:og      # 重新生成社交预览图（og-image.png）
 npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页检查）
@@ -45,6 +46,7 @@ docs/                 # VitePress 站点源
 ├── knowledge.md           # 知识点总纲：概念、来源、场景、易错点
 ├── cards/              # 知识卡片索引（跨章成网）与术语表
 ├── layers/           # 分层架构：计算、存储、结算、服务发现
+├── nav/              # 跨章导航：按共识算法、按主网上线时间
 ├── model/            # 记账模型：UTXO、账户、DAG
 ├── algo/             # 数据结构：Merkle 树
 ├── opcode/           # 脚本与操作码
@@ -60,6 +62,7 @@ docs/                 # VitePress 站点源
 scripts/              # 由 npm 脚本与 CI 调用的维护检查
 ├── check-nav.mjs     # sidebar / SUMMARY / 站内链接 / 总纲覆盖 / README 数字与目录树一致
 ├── check-links.mjs   # 站外论文与文档链接可达
+├── build-backlinks.mjs # 收集站内链接生成 backlinks.json，驱动每页底部反向链接区块
 ├── make-og-image.mjs # 重新生成 public/og-image.png
 └── walkthrough.mjs   # 浏览器逐页走查构建产物
 ```

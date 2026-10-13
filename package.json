@@ -4,12 +4,13 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node scripts/build-backlinks.mjs && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:check": "node scripts/check-nav.mjs",
     "docs:links": "node scripts/check-links.mjs",
     "docs:og": "node scripts/make-og-image.mjs",
-    "docs:walkthrough": "node scripts/walkthrough.mjs"
+    "docs:walkthrough": "node scripts/walkthrough.mjs",
+    "docs:backlinks": "node scripts/build-backlinks.mjs"
   },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",

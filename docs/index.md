@@ -41,4 +41,7 @@ features:
   - title: 共识算法演进时间线
     details: 63 条年表从 1982 年拜占庭将军排到 2025 年的 BoLD 验证，35 行主链映射标清谁在用哪个变体。
     link: /consensus-timeline
+  - title: 导航索引
+    details: 按共识算法（算法 → 首次出现、所在层、解决什么、用了它的链）与按主网上线时间两套索引，每页底部自动生成反向链接。
+    link: /nav/ByConsensus
 ---

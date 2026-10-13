@@ -25,6 +25,7 @@ npm run docs:dev   # Local development
 npm run docs:build # Build output
 npm run docs:preview # Preview the build locally
 npm run docs:check   # Check sidebar / SUMMARY / internal links stay in sync
+npm run docs:backlinks # Rebuild the backlinks index (runs automatically inside docs:build)
 npm run docs:links   # Check external paper / doc links are reachable (needs network)
 npm run docs:og      # Regenerate the social preview image (og-image.png)
 npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
@@ -45,6 +46,7 @@ docs/                 # VitePress site source
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
 ├── cards/              # Knowledge card index (cross-chapter network) and glossary
 ├── layers/           # Layered architecture: compute, storage, settlement, service discovery
+├── nav/              # Cross-chapter navigation: by-consensus index, by-launch-time index
 ├── model/            # Ledger models: UTXO, account, DAG
 ├── algo/             # Data structures: Merkle tree
 ├── opcode/           # Scripts and opcodes
@@ -60,6 +62,7 @@ docs/                 # VitePress site source
 scripts/              # Maintenance checks run by npm scripts and in CI
 ├── check-nav.mjs     # Sidebar / SUMMARY / internal links / digest coverage / README numbers and tree
 ├── check-links.mjs   # External paper and doc links reachable
+├── build-backlinks.mjs # Collect internal links into backlinks.json for the per-page block
 ├── make-og-image.mjs # Regenerates public/og-image.png
 └── walkthrough.mjs   # Browser walkthrough over every built route
 ```
