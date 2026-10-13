@@ -188,6 +188,22 @@ export const TIMELINE: TimelineEvent[] = [
   },
   {
     year: 2020,
+    title: 'Near 主网（4 月）：账本分片起步',
+    who: 'NEAR 团队',
+    field: 'consensus',
+    why: '分片是最直接的扩容路线，难在跨片交易与验证人分配。Nightshade 把每个块拆成各分片的 chunk，跨片调用走异步 receipt；Doomslug 先给快速确认再补确定性。「开发与用户不分片、账本与执行分片」成了它的路线标签。',
+    link: '/chains/Near',
+  },
+  {
+    year: 2020,
+    title: 'Avalanche 主网（9 月）：亚采样 BFT',
+    who: 'Ava Labs',
+    field: 'consensus',
+    why: '经典 BFT 两两通信撑不起几千节点。Avalanche 每轮只问一小撮验证者，重复投票让全网偏好概率收敛——无领导、亚秒确认、安全阈值 1/2。子网架构把「自定义虚拟机 + 部分验证」带进主流；2023-02 铭文流量造成的数天停滞是它活性面最重的一次实测。',
+    link: '/chains/Avalanche',
+  },
+  {
+    year: 2020,
     title: 'Filecoin 主网：PoRep/PoST 生产化（10 月）',
     who: 'Protocol Labs',
     field: 'consensus',
@@ -204,6 +220,30 @@ export const TIMELINE: TimelineEvent[] = [
   },
   {
     year: 2021,
+    title: 'Arbitrum One 主网（8 月 31 日）',
+    who: 'Offchain Labs',
+    field: 'ethereum',
+    why: 'Rollup 路线里 optimistic 阵营的关键落地：执行下链、数据回 L1，错误状态靠欺诈证明纠错。它的交互式二分挑战把「在链上证明一种执行」降为「双方对弈单步断言」。2023-02 排序器停写约 10 小时让单排序器中心化成为行业必修课。',
+    link: '/chains/Arbitrum',
+  },
+  {
+    year: 2021,
+    title: 'OP Mainnet 主网（12 月 16 日）',
+    who: 'Optimism（OP Labs）',
+    field: 'ethereum',
+    why: '把 Rollup 做成可 fork 的标准栈（OP Stack）：Base 与 OP Mainnet 同栈异运营，Superchain 叙事自此成型。2024-06 欺诈证明去许可是 optimistic 结算的信任前提补全；排序器去中心化（shared/based）仍在路上。',
+    link: '/chains/Optimism',
+  },
+  {
+    year: 2023,
+    title: 'zkSync Era 主网（3 月 24 日）',
+    who: 'Matter Labs',
+    field: 'ethereum',
+    why: 'ZK 路线的标志性节点：用有效性证明替代 7 天挑战窗口，L1 验证通过即最终。zkEVM 把 EVM 字节码编译进 SNARK 友好 VM，证明成本靠 Boojum 重构再降一个量级——「先正确后便宜」与 optimistic 的「先便宜后证明」自此同台。',
+    link: '/chains/zkSync',
+  },
+  {
+    year: 2021,
     title: 'Bittensor 主网：主观效用共识',
     who: 'Opentensor 基金会',
     field: 'consensus',
@@ -212,6 +252,15 @@ export const TIMELINE: TimelineEvent[] = [
   },
 
   // ---------- 隐私与扩容 ----------
+
+  {
+    year: 2016,
+    title: '闪电网络白皮书（1 月）',
+    who: 'Joseph Poon、Thaddeus Dryja',
+    field: 'bitcoin',
+    why: '比特币 ~7 TPS 与分钟级确认撑不起零售支付。白皮书把交易搬进链下支付通道：开/关通道两笔上链，中间用 HTLC 原子路由，链上只留裁决权。此后 BOLT 规范与三个独立实现把它做成比特币扩容的事实主力，路由流动性与通道监控仍是持续课题。',
+    link: '/chains/Lightning',
+  },
   {
     year: 2014,
     title: '门罗币上线',
@@ -349,6 +398,14 @@ export const TIMELINE: TimelineEvent[] = [
     field: 'consensus',
     why: '运行七年的 PoW 主链与信标链合并，以太坊完成 PoS 转型，能耗下降约 99.95%，出块从算力竞赛变成质押与证明。史上最大规模的共识切换零中断完成，PoS 的工程可行性自此再无争议。',
     link: '/chains/Ethereum',
+  },
+  {
+    year: 2022,
+    title: 'Aptos 主网（10 月 17 日）',
+    who: 'Aptos Labs',
+    field: 'consensus',
+    why: 'Diem 胎死腹中，但其 HotStuff 系 BFT 与 Move 语言被整体搬进无许可公链：亚秒确定性最终性，Block-STM 乐观并行执行把无冲突交易核上并发。2023-10 一次升级缺陷造成约 5 小时停摆——「升级流程即攻击面」的公开样本。',
+    link: '/chains/Aptos',
   },
   {
     year: 2023,

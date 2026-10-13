@@ -2,6 +2,28 @@
 
 Stellar 是一个开源的区块链支付网络，旨在通过降低跨境支付成本和提高交易速度来连接银行、支付系统和人们。以下是对Stellar项目的详细介绍：
 
+
+## 白皮书与规范
+
+《The Stellar Consensus Protocol: A Federated Model for Low-Finality Contracts》——David Mazieres，2015-05/2016（[stellar-consensus-protocol.pdf](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)，FBA 仲裁切片模型）；Stellar 白皮书 2014（Jed McCaleb）。主网 2014-07-31 上线。
+
+## 解决什么问题
+
+跨境结算要快、要便宜、还要让银行与个人都能接——不靠挖矿、不靠全量验证人两两通信。
+
+## 技术成果与贡献
+
+- **SCP/FBA**：仲裁切片（quorum slice）的开放成员制 BFT——节点自选信任组合，全网一致性由切片相交保证，见 [FBA](/consensus/FBA) 与 [RPCA](/consensus/RPCA) 的同族对照。
+- **锚点网关模型**：法币出入金由锚点承兑——把合规外包给专业机构。
+- **固定极低费用 + 3-5 秒终局**：支付级体验，见[结算层](/layers/Settlement)的最终性权衡。
+- **Soroban（2023-24）**：Rust/WASM 合约运行时加入。
+
+## 局限与公开事故
+
+- quorum slice 配置复杂且易错——安全依赖配置正确；生态采用有限。
+- 公开事故：2017-11-27 版本升级缺陷致全网停摆约 2 小时（紧急降级修复并发赏金）；2019-05-14 验证人 bug 致全网停摆约 2 小时。
+
+## 补充说明
 ### Stellar 的基本概述
 
 1. **背景和目标**：

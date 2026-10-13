@@ -2,6 +2,28 @@
 
 Solana 是一个新兴的区块链平台，旨在通过其独特的技术架构提供高性能、低成本的去中心化应用（DApp）解决方案。以下是对 Solana 项目的详细介绍：
 
+
+## 白皮书与规范
+
+《Solana: A new architecture for a high performance blockchain》——Anatoly Yakovenko，2017-11（[solana-whitepaper.pdf](https://solana.com/solana-whitepaper.pdf)）；主网 beta 2020-03-16 上线；节点实现见 GitHub（[anza-xyz/agave](https://github.com/anza-xyz/agave)）。
+
+## 解决什么问题
+
+无全局时钟的区块链难以并行与高吞吐——Solana 用「可验证时钟 + 并行执行」把单链 TPS 推到十万量级。
+
+## 技术成果与贡献
+
+- **PoH 可验证时钟**：把时间编进哈希链，事件排序不再依赖全网消息往返，见 [PoH](/consensus/PoH)。
+- **Tower BFT**：PoH 加持的权益加权 BFT 变体，见 [TowerBFT](/consensus/TowerBFT)。
+- **Sealevel 并行执行**：交易预声明账户集，无冲突交易核上并行（对照 [Block-STM](/chains/Aptos) 的乐观并发）。
+- **Gulf Stream + Turbine**：无内存池转发 + 分片 gossip 传播。
+
+## 局限与公开事故
+
+- 硬件门槛高→验证人集中；长期依赖单一客户端（现已多客户端制衡）；网络稳定性记录差。
+- 公开事故：2021-09-14 全网停摆约 17 小时（IDO 交易过载）；2022-01、2022-05、2022-06、2023-02、2024-02（约 5 小时）多次部分/全量停机——升级缺陷与负载交替触发。
+
+## 补充说明
 ### Solana 的基本原理和技术特点
 
 1. **高性能**：

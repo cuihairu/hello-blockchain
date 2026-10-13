@@ -294,13 +294,14 @@ title: 知识点总纲
 ### 核心概念
 
 - 公链按共识分族（完整列举见[有名的区块链项目](/chains/Chain)）：PoW 系（[比特币](/chains/Bitcoin)、[莱特币](/chains/Litecoin)、[门罗](/chains/Monero)）、PoS 系（[以太坊](/chains/Ethereum) Gasper、[卡尔达诺](/chains/Cardano) Ouroboros）、DPoS 系（[EOS](/chains/EOS) 21 BP、[TRON](/chains/TRON) 27 超级代表）、BFT 系（[Cosmos](/chains/Cosmos) Tendermint、Aptos HotStuff 系）、异构（[波卡](/chains/Polkadot) NPoS 分工、[恒星](/chains/Stellar) SCP/FBA、[Chia](/chains/Chia) PoSpace+PoT、[TON](/chains/TON) Catchain）。
+- **代表性链清单（各页均按「白皮书出处 / 解决什么 / 技术成果 / 局限与公开事故」四节展开）**：[雪崩](/chains/Avalanche)（亚采样 BFT + 子网）、[Near](/chains/Near)（Nightshade 分片）、[Sui](/chains/Sui)（Move 对象 + fastpath）、[Aptos](/chains/Aptos)（Block-STM 并行执行）、[Filecoin 文件币](/chains/Filecoin)（存储即选票）、[Arweave 常青藤](/chains/Arweave)（一次性付费永久存储）、[闪电网络](/chains/Lightning)（链下通道）、[Optimism](/chains/Optimism) 与 [Arbitrum 仲裁链](/chains/Arbitrum)（optimistic rollup 双主线）、[zkSync](/chains/zkSync)（zkEVM 有效性证明）。
 - **稳定币不是链**：[Tether](/chains/Tether) 是发行在多条链上的资产（Omni、ERC-20、TRC-20），发行方、资产、承载轨道三层要分清。
 - **EVM 兼容 ≠ 共识相同**：[BSC](/chains/BinanceSmartChain) 用 PoSA（21 验证人）不是以太坊的 Gasper；[TRON](/chains/TRON) 的 TVM 字节码级兼容 EVM，共识却是 DPoS——虚拟机与共识是两个独立维度。
 - 谁在用什么共识变体，35 行主链映射见[共识算法演进时间线](/consensus-timeline)。
 
 ### 演进逻辑
 
-- 2009 比特币开机 → 2011-2014 山寨与隐私分化（莱特币换 Scrypt、门罗走向环签名）→ 2015 以太坊开出智能合约平台范式 → 2017-2019 DPoS 高吞吐与联盟链并行，国产公链（[比原链](/chains/Bytom)等）也在这一时期起步 → 2020 之后分片、模块化与 DAG（波卡、Near、Sui）。
+- 2009 比特币开机 → 2011-2014 山寨与隐私分化（莱特币换 Scrypt、门罗走向环签名）→ 2015 以太坊开出智能合约平台范式 → 2017-2019 DPoS 高吞吐与联盟链并行，国产公链（[比原链](/chains/Bytom)等）也在这一时期起步 → 2020 之后分片、模块化与 DAG（波卡、[Near](/chains/Near)、[Sui](/chains/Sui)）→ 2021-2023 以太坊 L2 双路线成型（[Arbitrum 仲裁链](/chains/Arbitrum) 的交互式欺诈证明、[Optimism](/chains/Optimism) 的 OP Stack 标准栈、[zkSync](/chains/zkSync) 的 zkEVM）→ 2024-2025 排序器去中心化与 BoLD 多方验证。
 - 链的归属看谁在维护客户端，不看当初谁宣布：TON 被 Telegram 放弃后由社区接续，主网 2021 年才上线（见[TON](/chains/TON)）。
 
 ### 应用场景

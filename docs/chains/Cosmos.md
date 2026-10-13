@@ -2,6 +2,28 @@
 
 Cosmos 是一个面向区块链互联互通的网络，旨在解决区块链之间的互操作性和扩展性问题。以下是对Cosmos项目的详细介绍：
 
+
+## 白皮书与规范
+
+《[Cosmos Whitepaper](https://raw.githubusercontent.com/cosmos/cosmos/master/WHITEPAPER.md)》——Jae Kwon，2016 初版（与 Ethan Buchman 合作，v2 2019 修订）；主网 2019-03-13 上线。
+
+## 解决什么问题
+
+单链路线在主权与互通之间二选一——Cosmos 要「每条链自洽自治，又能 IBC 互通」：应用链范式的源头。
+
+## 技术成果与贡献
+
+- **Tendermint BFT**：阈值投票的确定性终局引擎，见 [Tendermint](/consensus/Tendermint)（CometBFT 为其社区延续）。
+- **Cosmos SDK**：模块化应用链框架——把「造一条链」降为组合标准模块，衍生生态极广。
+- **IBC（2021-03 上线）**：轻客户端证明的通用跨链协议，见[跨链桥攻击](/hacking/CrossChainBridgeAttack)的正面对照。
+- **跨链安全 ICS（2023）**：消费链复用 Hub 验证人——共享安全的另一形态（对照 [Restaking](/consensus/Restaking) 的经济版）。
+
+## 局限与公开事故
+
+- Hub 价值捕获争议、生态碎片化；ICS 采用未达预期。
+- 公开事故：共识层未找到全网级停机记录；生态内 Terra（Cosmos SDK 链）2022-05 崩盘属应用与经济层事故，连带 UST/ANC 巨额损失。
+
+## 补充说明
 ### Cosmos 的基本概述
 
 1. **背景和目标**：

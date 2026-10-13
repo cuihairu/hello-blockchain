@@ -2,6 +2,28 @@
 
 TON 起点是 Telegram 2018 年的 TON 白皮书（Nikolai Durov 主笔）：为十亿级用户设计的「区块链的区块链」——主链管共识与配置，工作链处理交易，原生支持任意数量工作链的分片扩展。Telegram 因 SEC 诉讼于 2020 年退出后，开源社区接续开发，主网 2021 年上线，即今天的 The Open Network。
 
+
+## 白皮书与规范
+
+《The Open Network》白皮书——Dr. Nikolai Durov（Telegram 团队），2019；Telegram 2020-05 弃产后由社区 TON Foundation 接续，主网（Toncoin）2021 上线；现行文档见 [docs.ton.org](https://docs.ton.org)。
+
+## 解决什么问题
+
+亿级即时通讯用户的入口 + 海量并发——用无限分片把 TPS 做到「随用户增长而扩」。
+
+## 技术成果与贡献
+
+- **无限分片架构**：masterchain + workchain + shardchain 动态分裂合并，见 [DAG](/model/DAG) 的异构对照与[计算层](/layers/Compute)的分片执行。
+- **Catchain BFT**：拜占庭容错共识变体，见 [BFT](/consensus/BFT)。
+- **TVM + FunC/Tact**：异步消息驱动的合约模型。
+- **Telegram Wallet 集成**：分发入口的实验场（钱包内嵌 + mini-app 生态）。
+
+## 局限与公开事故
+
+- 生态深度依赖 Telegram 单点；验证人规模有限、去中心化面弱。
+- 公开事故：2024-08-27 全网停摆约 6 小时（DOGS 空投负载触发，验证人协调重启恢复）。
+
+## 补充说明
 ### 基本原理和技术特点
 
 1. **Catchain 共识（BFT）**：

@@ -39,10 +39,12 @@
   - 进度：已完成。新增 4 页（consensus/SPORA、ProofOfCoverage、MultiLevelBFT、Yuma，各含四要素 + 机制 + 同族差异，均标「源：meshio research（2026-10-13 合并）」）；并入 3 页（PoST.md 补 Filecoin EC 落地样本、Tendermint.md 补 Akash 落地样本、DPOS.md 补 Livepeer 落地样本）；Layers.md 新增「服务网络对照」表（十家 × 四层，Grass 原白皮书 404 不可考标注保留）；共识页 44 → 48，时间线 +5 节点（39）+5 年表行（56），五处计数声明同步；卡片 41 → 45（孤卡 0）、术语表 80 → 86；knowledge.md 补 6 行出处。
   - 证据：`npm run docs:check` ok（113 pages）；`npm run docs:links` ok；`npm run docs:build` complete；`npm run docs:walkthrough` 无错误。
 
-- [ ] **P6 著名链章与时间线强化（新增章单 2026-10-13）**
+- [x] **P6 著名链章与时间线强化（新增章单 2026-10-13）**
   - 期次：P6
   - 验收口径：chains 章补齐代表性链（候选：Avalanche、Near、Sui、Aptos、Filecoin、Arweave、Lightning、Optimism、Arbitrum、zkSync——用户可增删）；每条四节：白皮书出处（只链接与要点讲解，不搬 PDF 全文）/解决什么/技术成果/局限与公开事故；与共识页、分层章交叉链接；时间线按年份强化并带出处、链接到链页与共识页；与知识卡片互通。
   - 来源：用户 2026-10-13（新增章单）
+  - 进度：已完成。新增 10 页（chains/Avalanche、Near、Sui、Aptos、Filecoin、Arweave、Lightning、Optimism、Arbitrum、zkSync，各含四节 + 共识页/分层章交叉链接，白皮书只收链接与要点、标注章节，未搬任何 PDF 全文）；旧 16 链页（Bitcoin…TON）全部插入同款四节区块，原内容保留在「补充说明」。白皮书出处共 34 条外链全部 curl 验证 200（7 条失效链接已换源：nearprotocol/nearcore、aptos.dev、ethereum-optimism/specs、matter-labs/zksync-era、cosmos WHITEPAPER.md、anza-xyz/agave 等）。未找到公开事故的条目均标「未找到公开记录」（zkSync、Litecoin、Bytom、Chia、Monero 停机面、Arweave 等）。时间线强化：timeline.ts +7 节点（2016 闪电网络、2020 Near/Avalanche、2021 Arbitrum/OP、2022 Aptos、2023 zkSync Era，每条链链页 + 共识页出处）39 → 46 节点；consensus-timeline.md 总表 +7 行（含 2024 欺诈证明去许可、2025 BoLD）56 → 63 条年表；计数声明六处同步（README×2、index、Introduction、timeline、consensus-timeline）。互通：knowledge.md「有名的公链」新增 10 链清单引用与 L2 演进线（每页以 (/chains/X) 被收录）；卡片索引 45 张未动、孤卡复检 0。SUMMARY.md 与 sidebar.json 各 +10 条（26 链全量入侧栏）。
+  - 证据：`npm run docs:check` ok（123 pages / 129 sidebar links）；`npm run docs:links` ok（98 external URLs reachable）；`npm run docs:build` complete（61s）；`npm run docs:walkthrough` 124 pages visited / 0 consoleErrors / 0 pageErrors / 0 badLinks / 0 sidebarFailures / timeline ok；孤卡 45/0。
 
 - [ ] **P7 三个导航维度（导航单 2026-10-13）**
   - 期次：P7

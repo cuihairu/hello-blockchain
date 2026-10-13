@@ -2,6 +2,28 @@
 
 Cardano 是一个开源的区块链平台，旨在提供更安全、更可扩展和更具可持续性的区块链基础设施。以下是对Cardano项目的详细介绍：
 
+
+## 白皮书与规范
+
+《Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol》——Aggelos Kiayias、Alexander Russell、Bernardo David、Roman Oliynykov，CRYPTO 2017（[eprint.iacr.org/2016/889](https://eprint.iacr.org/2016/889)）；Cardano 白皮书 2017（IOHK）。主网 2017-09-29 上线。
+
+## 解决什么问题
+
+早期 PoS 没有可证明的安全性——Cardano 用同行评审的形式化证明立链，把「学术驱动」当成工程路线本身。
+
+## 技术成果与贡献
+
+- **Ouroboros 系**：VRF 抽签选 slot leader、epoch/slot 双层时钟，历次升级（Praos、Genesis）见 [Ouroboros](/consensus/Ouroboros)。
+- **eUTXO + Plutus**：UTXO 上挂验证脚本，确定性并行验证，见 [UTXO](/model/UTXO)。
+- **可形式化验证取向**：Haskell 全栈、Ledger 规范机检。
+- **Hydra 扩容**：通道化 Isomorphic 状态通道（推进中）。
+
+## 局限与公开事故
+
+- 交付节奏慢（智能合约 2021-09 才上线）、DeFi 生态规模小、吞吐低。
+- 公开事故：2021-09 主网去中心化过渡时出块短暂降速（节点缺陷，数小时内恢复）；未找到其他全网级事故记录。
+
+## 补充说明
 ### Cardano 的基本概述
 
 1. **背景和目标**：

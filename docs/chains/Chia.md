@@ -2,6 +2,27 @@
 
 Chia是一个旨在通过Proof of Space和Proof of Time共识算法实现能源高效的区块链和智能合约平台的项目。它由BitTorrent的创始人Bram Cohen于2017年创建，并于2021年3月发布主网。以下是对Chia项目的详细介绍：
 
+
+## 白皮书与规范
+
+《Chia Network 白皮书》与绿皮书——Bram Cohen，2017-08（BitTorrent 协议作者）；主网 2021-03-19 上线；规范见 [docs.chia.net](https://docs.chia.net) 与 GitHub（[Chia-Network/chia-blockchain](https://github.com/Chia-Network/chia-blockchain)）。
+
+## 解决什么问题
+
+PoW 能耗与矿机集中——用闲置磁盘空间做共识资源，「耕种（farming）」代替「挖矿」。
+
+## 技术成果与贡献
+
+- **PoSpace + PoT（VDF）组合**：空间证明选块、可验证延迟函数抗算力军备，见 [PoSpace](/consensus/PoSpace) 与 [PoT](/consensus/POT)。
+- **Chialisp**：带持久状态的 CLVM 合约语言。
+- **plotting/farming 分离**：制作证明（重）与耕种（轻）解耦的矿工分层。
+
+## 局限与公开事故
+
+- 绘图（plotting）对 SSD 消耗引发 2021 年存储短缺潮争议；币价长期下行，耕种经济未爆量。
+- 公开事故：未找到公开记录（全网级）。
+
+## 补充说明
 ### Chia 的基本原理和技术特点
 
 1. **Proof of Space 和 Proof of Time**：

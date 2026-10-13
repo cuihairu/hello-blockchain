@@ -2,6 +2,28 @@
 
 Polkadot 是一个由 Parity Technologies 开发的区块链平台，旨在实现不同区块链之间的互操作性和扩展性。它的设计目标是通过多链架构和共识算法，实现不同区块链之间的通信和资产传输，从而构建一个多链的区块链生态系统。以下是对 Polkadot 的详细介绍：
 
+
+## 白皮书与规范
+
+《Polkadot: Vision for a Heterogeneous Multi-chain Framework》——Gavin Wood 草案 2016-11，白皮书 v1.0 2019；现行规范以 [Wiki](https://wiki.polkadot.network) 为准。主网 2020-05-26 上线。
+
+## 解决什么问题
+
+链间孤岛 + 每条链自建一套验证人与安全预算太贵——波卡要把「安全」做成中继链的公共品，平行链租用。
+
+## 技术成果与贡献
+
+- **共享安全 + 平行链**：中继链统一验证人池，平行链只带状态转换——异构多链的严格形态（对照 [Avalanche](/chains/Avalanche) 子网）。
+- **BABE 出块 + GRANDPA 终局**：出块与定序分工，见 [BABE](/consensus/BABE) 与 [GRANDPA](/consensus/GRANDPA)。
+- **XCMP/HRMP 跨链消息**：平行链间无需中间代币的消息通道，见[跨链桥攻击](/hacking/CrossChainBridgeAttack)的正面设计。
+- **NPoS + Agile Coretime（2024-25）**：提名质押演进为按块买核，取消槽位拍卖。
+
+## 局限与公开事故
+
+- 模型复杂（槽位/核时间/开放 Gov），生态规模长期不及预期；平行链经济价值捕获争议持续。
+- 公开事故：2021-05-24 升级缺陷致中继链短暂停止出块（快速修复）；未找到其他全网级事故记录。
+
+## 补充说明
 ### Polkadot 的基本原理和技术特点
 
 1. **多链架构**：

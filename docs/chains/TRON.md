@@ -2,6 +2,28 @@
 
 TRON 是 2017 年创立、2018-05-31 主网上线的公链：DPoS 共识由 27 个超级代表（Super Representative, SR）轮流出块，TVM 与 EVM 字节码级兼容，因承载大额 TRC-20 USDT 结算轨道而为人熟知。
 
+
+## 白皮书与规范
+
+TRON 白皮书 2017-12（版本多次修订、引用来源有争议——权威规范以 [developers.tron.network](https://developers.tron.network) 与 GitHub（[tronprotocol/java-tron](https://github.com/tronprotocol/java-tron)）为准）；主网 2018-05-31 上线。
+
+## 解决什么问题
+
+高吞吐 + 零手续费的内容分发与转账——后来实际落点变成 USDT 的最大承载网络。
+
+## 技术成果与贡献
+
+- **DPoS 27 超级代表**：3 秒出块，见 [DPoS](/consensus/DPOS)。
+- **零手续费转账**：带宽/能量抵押模型（对照 EOS 资源模型）。
+- **TVM 字节码级兼容 EVM**：以太坊合约近乎原样迁移。
+- **TRC-20 USDT 主场**：单链承载全市场最大份额的 USDT 结算。
+
+## 局限与公开事故
+
+- 超级代表集中、创始团队影响力大、白皮书学术性问题被反复指出。
+- 公开事故：未找到全网级停机记录（USDT 冻结执法事件属发行方行为，非链故障）。
+
+## 补充说明
 ### 基本原理和技术特点
 
 1. **DPoS 共识**：

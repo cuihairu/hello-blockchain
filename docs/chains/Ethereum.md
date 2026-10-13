@@ -2,6 +2,28 @@
 
 以太坊（Ethereum）是一个开源的区块链平台，允许开发者建立和部署智能合约和去中心化应用（DApp）。以下是对以太坊的详细介绍：
 
+
+## 白皮书与规范
+
+《A Next-Generation Smart Contract and Decentralized Application Platform》——Vitalik Buterin，2013-11；《Ethereum Yellow Paper》——Gavin Wood，2014（[yellowpaper/paper.pdf](https://ethereum.github.io/yellowpaper/paper.pdf)，EVM 与状态转换的形式化规范）。主网 2015-07-30 上线。
+
+## 解决什么问题
+
+比特币脚本只有「钱怎么动」没有「状态怎么变」——要的是一台人人可写、无人可停的世界计算机：图灵完备合约 + 全局状态机。
+
+## 技术成果与贡献
+
+- **EVM + 账户模型**：合约即账户、状态即存储，gas 计量防止停机攻击，见[计算层](/layers/Compute)。
+- **智能合约生态原语**：ERC-20/721 代币标准把资产发行协议化。
+- **The Merge（2022-09）**：从 PoW 切到 [Gasper](/consensus/Gasper)（[Casper FFG](/consensus/Gasper) 终局 + LMD-[GHOST](/consensus/GHOST) 出块），能耗降 ~99.95%。
+- **Rollup-centric 路线图（2020-10 起）**：L1 做结算与[数据可用性](/model/Models)（EIP-4844 blob，2024-03），执行外包给 [Optimism](/chains/Optimism)/[Arbitrum](/chains/Arbitrum)/[zkSync](/chains/zkSync) 等 L2。
+
+## 局限与公开事故
+
+- gas 费波动剧烈、MEV 抢跑、扩容依赖 L2 的安全分层。
+- 公开事故：2016-06 The DAO 被盗 360 万 ETH，硬分叉回滚致 ETH/ETC 永久分裂；2016 年秋连续 DoS 攻击压垮早期客户端；2023-05-11 与 2023-09-21 两次最终性短暂丧失（共识客户端缺陷/负载）。
+
+## 补充说明
 ### 以太坊的基本原理和技术特点
 
 1. **智能合约**：

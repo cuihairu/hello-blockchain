@@ -2,6 +2,29 @@
 
 Monero（缩写为XMR） 门罗币是一个注重隐私和匿名性的加密货币项目，旨在提供更加私密和不可追踪的交易。Monero通过使用隐私技术和加密学原理，致力于保护用户的交易隐私和身份信息。以下是关于Monero的详细解释：
 
+
+## 白皮书与规范
+
+《CryptoNote v2.0》——Nicolas van Saberhagen，2012-10（隐蔽地址与环签名两章是核心）；门罗 2014-04 自 Bytecoin 分叉，现行规范见 [web.getmonero.org](https://web.getmonero.org) 与 [Monero 研究实验室论文页](https://www.getmonero.org/resources/research-lab/)。
+
+## 解决什么问题
+
+比特币账本全透明——金额、双方、历史全部可查。门罗把「默认隐私」做成协议性质而非可选项。
+
+## 技术成果与贡献
+
+- **环签名 + 隐蔽地址 + RingCT（2017）**：发送方模糊、接收方隐蔽、金额隐藏——三件套见[环签名](/Privacy/RingSignature)与[隐蔽地址](/Privacy/StealthAddresses)。
+- **Bulletproofs（2018）**：把 RingCT 的证明尺寸压一个数量级，见 [Bulletproofs](/Privacy/Bulletproofs)。
+- **RandomX（2019）**：面向 CPU 的 PoW 算法，抗 ASIC 集中，见 [PoW](/consensus/POW)。
+- **Dandelion++**：网络层隐藏交易源 IP。
+
+## 局限与公开事故
+
+- 匿名性有研究性进展：2025-08 EAE 攻击论文提出可链接性风险，叠加 Qubic 算力集中争议，社区应对中。
+- 链体积大、验证成本高；主流交易所下架压力（合规面）。
+- 公开事故：未找到全网级停机记录。
+
+## 补充说明
 ### Monero 的特点和设计理念
 
 1. **隐私保护**：

@@ -48,6 +48,7 @@ title: 共识算法演进时间线
 | 2016 | [HoneyBadgerBFT](/consensus/HoneyBadgerBFT) | Miller 等（CCS'16） | POA Network 实验链，学术为主 |
 | 2016 | PoW+PoS 混合出块 | Decred | Decred：PoW 出块、PoS 选票，主网 2016-02 |
 | 2016 | Polkadot 白皮书 | Gavin Wood | Polkadot（2020 主网） |
+| 2016 | [闪电网络](/chains/Lightning) 白皮书 | Poon、Dryja | 比特币链下通道：HTLC 原子路由，见[闪电网络攻击](/hacking/LightningNetworkAttack) |
 | 2017 | Ouroboros | Kiayias 等（[CRYPTO 2017](https://eprint.iacr.org/2016/889)） | Cardano：首个有严格安全证明的 PoS，当年主网即用 |
 | 2017 | Casper FFG | Buterin、Griffith（[arXiv:1710.09437](https://arxiv.org/abs/1710.09437)） | Ethereum Merge（2022） |
 | 2017 | PoA 命名与首用 | Gavin Wood | Kovan 测试网（Aura）；Rinkeby（Clique），见[PoA](/consensus/POA) |
@@ -75,13 +76,19 @@ title: 共识算法演进时间线
 | 2021 | 长安链开源 | 北京微芯研究院 | [TBFT](/consensus/TBFT)、[MaxBFT](/consensus/MaxBFT)、RAFT、SOLO 可插拔 |
 | 2021 | TON 主网（5 月） | TON Foundation（社区接续） | Catchain BFT+PoS，主链+工作链原生分片，见 [TON](/chains/TON) |
 | 2021 | Narwhal/Bullshark 论文 | Danezis、Kokoris-Kogias 等（Diem 研究线） | Sui（2023 主网，见[Narwhal+Bullshark](/consensus/NarwhalBullshark)） |
+| 2021 | Arbitrum One 主网（8-31） | Offchain Labs | 交互式欺诈证明上线，见[Arbitrum](/chains/Arbitrum) |
+| 2021 | OP Mainnet 主网（12-16） | OP Labs | OP Stack 标准栈与 Superchain，见[Optimism](/chains/Optimism) |
 | 2022 | Ethereum Merge（9 月 15 日） | 以太坊 | PoW 退役，[Gasper](/consensus/Gasper) 上岗，能耗降约 99.95% |
 | 2022 | Aptos 主网 | Aptos Labs | AptosBFT（DiemBFT v4/Jolteon 系） |
+| 2023 | FVM/FEVM 上线（3 月） | Filecoin（Protocol Labs） | EVM 兼容执行进入存储网络，见[Filecoin](/chains/Filecoin) |
+| 2023 | zkSync Era 主网（3-24） | Matter Labs | zkEVM：有效性证明替代挑战窗口，见[zkSync](/chains/zkSync) |
+| 2024 | 欺诈证明去许可（6-20） | OP Labs | 任何人可挑战错误状态根，见[排序与结算](/consensus/Sequencing) |
+| 2025 | BoLD 验证上线（2 月） | Offchain Labs | 多方挑战竞赛取代一对一，见[Arbitrum](/chains/Arbitrum) |
 | 2023 | Sui 主网（5 月） | Mysten Labs | [Narwhal+Bullshark](/consensus/NarwhalBullshark)：DAG 内存池与共识解耦 |
 | 2023 | Spacemesh 主网 | Spacemesh | [PoST](/consensus/PoST)（时空证明）首个生产实现 |
 | 2024 | Mysticeti | Sui 团队论文 | 无证书（uncertified）DAG-BFT，延迟再降一轮 |
 
-约四十年，56 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
+约四十年，63 个节点。密集处（2014、2017、2020）读出的是同一批问题被反复重问：不用算力，按什么记账、按什么投票。
 
 ## 逐族详解
 
@@ -332,4 +339,4 @@ RAFT 只容忍宕机不容忍作恶，容忍 f 个故障要 2f+1 节点（BFT �
 - 查某条链用什么共识：直接看[对照表](#主链与共识对照表)。
 - 查某个算法哪年出现、谁先用：看[时间线总表](#时间线总表)。
 - 要读单算法机制：每族详解里有站内链接，[共识算法目录](/consensus/Consensus)收着 48 篇算法详解加一篇总览。
-- 时间线总表与[发展史时间线](/timeline)的 39 个节点互为补充：那边看链的历史，这边看算法的历史。
+- 时间线总表与[发展史时间线](/timeline)的 46 个节点互为补充：那边看链的历史，这边看算法的历史。

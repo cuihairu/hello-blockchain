@@ -40,8 +40,8 @@ docs/                 # VitePress site source
 ├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
 ├── index.md          # Home page: entry cards for every section
 ├── Introduction.md   # Introduction: what the site covers and how to read it
-├── timeline.md           # Development history timeline (39 nodes in five eras)
-├── consensus-timeline.md  # Consensus algorithm evolution timeline (56 entries)
+├── timeline.md           # Development history timeline (46 nodes in five eras)
+├── consensus-timeline.md  # Consensus algorithm evolution timeline (63 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
 ├── cards/              # Knowledge card index (cross-chapter network) and glossary
 ├── layers/           # Layered architecture: compute, storage, settlement, service discovery

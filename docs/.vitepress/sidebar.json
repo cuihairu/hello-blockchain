@@ -497,6 +497,46 @@
       {
         "text": "TON",
         "link": "/chains/TON"
+      },
+      {
+        "text": "Avalanche 雪崩",
+        "link": "/chains/Avalanche"
+      },
+      {
+        "text": "Near",
+        "link": "/chains/Near"
+      },
+      {
+        "text": "Sui",
+        "link": "/chains/Sui"
+      },
+      {
+        "text": "Aptos",
+        "link": "/chains/Aptos"
+      },
+      {
+        "text": "Filecoin 文件币",
+        "link": "/chains/Filecoin"
+      },
+      {
+        "text": "Arweave 常青藤",
+        "link": "/chains/Arweave"
+      },
+      {
+        "text": "Lightning 闪电网络",
+        "link": "/chains/Lightning"
+      },
+      {
+        "text": "Optimism",
+        "link": "/chains/Optimism"
+      },
+      {
+        "text": "Arbitrum 仲裁链",
+        "link": "/chains/Arbitrum"
+      },
+      {
+        "text": "zkSync",
+        "link": "/chains/zkSync"
       }
     ]
   },
