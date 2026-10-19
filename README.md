@@ -35,10 +35,12 @@ npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts previe
 
 ```
 docs/                 # VitePress site source
-├── .vitepress/       # Theme and configuration (sidebar.json is hand-maintained, checked against SUMMARY.md)
+├── .vitepress/       # Theme and configuration (sidebar.json is the single source for the site sidebar)
 ├── public/           # Brand assets (logo.svg / favicon.svg / og-image.png / robots.txt / badges)
 ├── img/              # Images embedded by the pages
-├── SUMMARY.md        # TOC draft (source for the sidebar mapping)
+├── SUMMARY.md        # Retained navigation maintenance note; not a sidebar source
+├── sidebar-maintenance.md # Sidebar source and update rules
+├── review/           # Structure audit reports
 ├── index.md          # Home page: entry cards for every section
 ├── Introduction.md   # Introduction: what the site covers and how to read it
 ├── timeline.md           # Development history timeline (49 nodes in five eras)

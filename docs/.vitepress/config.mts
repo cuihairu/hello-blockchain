@@ -116,7 +116,7 @@ export default defineConfig({
       { text: '导航索引', link: '/nav/ByConsensus' }
     ],
 
-    // sidebar.json 手工维护，结构与 docs/SUMMARY.md 对齐，新增页面需同步两处；npm run docs:check 校验
+    // sidebar.json 是站点导航唯一真源；SUMMARY.md 保留为维护说明；新增页面更新 sidebar 并运行 docs:check
     sidebar: sidebar as never,
 
     socialLinks: [

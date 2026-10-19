@@ -35,10 +35,12 @@ npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页�
 
 ```
 docs/                 # VitePress 站点源
-├── .vitepress/       # 主题与配置（sidebar.json 手工维护，由 docs:check 校验与 SUMMARY.md 对齐）
+├── .vitepress/       # 主题与配置（sidebar.json 是站点侧栏唯一真源）
 ├── public/           # 品牌资产（logo.svg / favicon.svg / og-image.png / robots.txt / badges）
 ├── img/              # 正文引用的图片
-├── SUMMARY.md        # 目录底稿（sidebar 映射来源）
+├── SUMMARY.md        # 保留的导航维护说明，不是侧栏数据源
+├── sidebar-maintenance.md # 侧栏唯一来源与维护规则
+├── review/           # 结构审计报告
 ├── index.md          # 首页：各栏目入口卡片
 ├── Introduction.md   # 简介：站点覆盖范围与阅读顺序
 ├── timeline.md           # 发展史时间线（49 个节点五段分期）

@@ -4,6 +4,10 @@
     "link": "/Introduction"
   },
   {
+    "text": "导航维护",
+    "link": "/sidebar-maintenance"
+  },
+  {
     "text": "分层架构",
     "link": "/layers/Layers",
     "collapsed": true,
@@ -32,7 +36,6 @@
   },
   {
     "text": "知识卡片与术语",
-    "link": "/cards/Cards",
     "collapsed": true,
     "items": [
       {
@@ -66,7 +69,6 @@
   },
   {
     "text": "数据结构",
-    "link": "/algo/MerkleTree",
     "collapsed": true,
     "items": [
       {
@@ -77,7 +79,6 @@
   },
   {
     "text": "脚本与操作码",
-    "link": "/opcode/OP_CHECKSIG",
     "collapsed": true,
     "items": [
       {
@@ -88,7 +89,6 @@
   },
   {
     "text": "比特币机制",
-    "link": "/btc/BIPS",
     "collapsed": true,
     "items": [
       {
@@ -318,7 +318,6 @@
   },
   {
     "text": "隐私安全",
-    "link": "/Privacy/Privacy",
     "collapsed": true,
     "items": [
       {
@@ -365,7 +364,6 @@
   },
   {
     "text": "黑客攻击",
-    "link": "/hacking/Attack",
     "collapsed": true,
     "items": [
       {
@@ -428,7 +426,6 @@
   },
   {
     "text": "资产发行与 NFT",
-    "link": "/nft/TokenizedProtocol",
     "collapsed": true,
     "items": [
       {
@@ -558,7 +555,6 @@
   },
   {
     "text": "联盟链",
-    "link": "/consortium/Consortium",
     "collapsed": true,
     "items": [
       {
@@ -589,7 +585,6 @@
   },
   {
     "text": "数字人民币",
-    "link": "/dcny/Dcny",
     "collapsed": true,
     "items": [
       {
@@ -604,7 +599,6 @@
   },
   {
     "text": "区块链游戏",
-    "link": "/chain-games/ChainGames",
     "collapsed": true,
     "items": [
       {
@@ -619,7 +613,6 @@
   },
   {
     "text": "DApp",
-    "link": "/dapp/Dapp",
     "collapsed": true,
     "items": [
       {
@@ -638,7 +631,6 @@
   },
   {
     "text": "导航索引",
-    "link": "/nav/ByConsensus",
     "collapsed": false,
     "items": [
       {
@@ -653,7 +645,6 @@
   },
   {
     "text": "共识趋势展望",
-    "link": "/trends/Trends",
     "collapsed": false,
     "items": [
       {
@@ -661,5 +652,9 @@
         "link": "/trends/Trends"
       }
     ]
+  },
+  {
+    "text": "审计记录",
+    "link": "/review/structure-audit-2026-10-19"
   }
 ]
