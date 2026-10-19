@@ -139,6 +139,8 @@
   "/nft/OAP": "OAP 协议",
   "/nft/TokenizedProtocol": "代币化协议（Tokenized Protocol）",
   "/opcode/OP_CHECKSIG": "OP_CHECKSIG",
+  "/review/structure-audit-2026-10-19": "hello-blockchain 目录与内容组织审计（2026-10-19）",
+  "/sidebar-maintenance": "站点导航维护",
   "/timeline": "发展史时间线",
   "/trends/Trends": "共识趋势展望"
  },
@@ -167,40 +169,6 @@
    {
     "r": "/layers/Layers",
     "t": "分层架构"
-   }
-  ],
-  "/consensus/Consensus": [
-   {
-    "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/timeline",
-    "t": "发展史时间线"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
    }
   ],
   "/algo/MerkleTree": [
@@ -269,6 +237,42 @@
     "t": "分层架构"
    }
   ],
+  "/chain-games/ChainGames": [
+   {
+    "r": "/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/chain-games/Economy",
+    "t": "链游经济设计"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/knowledge": [
+   {
+    "r": "/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/consensus/Consensus",
+    "t": "共识算法"
+   }
+  ],
   "/consensus-timeline": [
    {
     "r": "/Introduction",
@@ -313,24 +317,6 @@
    {
     "r": "/trends/Trends",
     "t": "共识趋势展望"
-   }
-  ],
-  "/knowledge": [
-   {
-    "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/Consensus",
-    "t": "共识算法"
    }
   ],
   "/layers/Layers": [
@@ -2891,6 +2877,36 @@
     "t": "知识点总纲"
    }
   ],
+  "/consensus/Consensus": [
+   {
+    "r": "/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/timeline",
+    "t": "发展史时间线"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
   "/consensus/BFT": [
    {
     "r": "/cards/Glossary",
@@ -3117,20 +3133,6 @@
    {
     "r": "/consortium/FiscoBcos",
     "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chain-games/ChainGames": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chain-games/Economy",
-    "t": "链游经济设计"
    },
    {
     "r": "/knowledge",
@@ -3855,6 +3857,24 @@
     "t": "按时间导航"
    }
   ],
+  "/nav/ByTime": [
+   {
+    "r": "/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/timeline",
+    "t": "发展史时间线"
+   }
+  ],
   "/consortium/Webase": [
    {
     "r": "/consortium/Consortium",
@@ -4007,14 +4027,16 @@
     "t": "知识点总纲"
    }
   ],
-  "/nav/ByTime": [
+  "/review/structure-audit-2026-10-19": [
    {
     "r": "/knowledge",
     "t": "知识点总纲"
-   },
+   }
+  ],
+  "/sidebar-maintenance": [
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/knowledge",
+    "t": "知识点总纲"
    }
   ]
  }

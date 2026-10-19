@@ -24,7 +24,7 @@ npm install        # Install dependencies
 npm run docs:dev   # Local development
 npm run docs:build # Build output
 npm run docs:preview # Preview the build locally
-npm run docs:check   # Check sidebar / SUMMARY / internal links stay in sync
+npm run docs:check   # Check sidebar routes, page coverage, and internal links
 npm run docs:backlinks # Rebuild the backlinks index (runs automatically inside docs:build)
 npm run docs:links   # Check external paper / doc links are reachable (needs network)
 npm run docs:og      # Regenerate the social preview image (og-image.png)
@@ -42,7 +42,7 @@ docs/                 # VitePress site source
 ├── sidebar-maintenance.md # Sidebar source and update rules
 ├── review/           # Structure audit reports
 ├── index.md          # Home page: entry cards for every section
-├── Introduction.md   # Introduction: what the site covers and how to read it
+├── Introduction.md   # Introduction: topics and the author’s perspective
 ├── timeline.md           # Development history timeline (49 nodes in five eras)
 ├── consensus-timeline.md  # Consensus algorithm evolution timeline (64 entries)
 ├── knowledge.md           # Knowledge digest: concepts, sources, scenarios, pitfalls
@@ -67,7 +67,7 @@ docs/                 # VitePress site source
 
 ```
 scripts/              # Maintenance checks run by npm scripts and in CI
-├── check-nav.mjs     # Sidebar / SUMMARY / internal links / digest coverage / README numbers and tree
+├── check-nav.mjs     # Sidebar routes / internal links / digest coverage / README numbers and tree
 ├── check-links.mjs   # External paper and doc links reachable
 ├── build-backlinks.mjs # Collect internal links into backlinks.json for the per-page block
 ├── make-og-image.mjs # Regenerates public/og-image.png

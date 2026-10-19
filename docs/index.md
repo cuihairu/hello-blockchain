@@ -4,13 +4,13 @@ layout: home
 hero:
   name: Hello Blockchain
   text: 区块链知识体系
-  tagline: 以账本结构与共识协议为纲：UTXO、BFT、零知识证明与公链生态，构成一条系统的区块链学习路线。
+  tagline: 个人区块链学习笔记与开发经验分享：从账本结构、共识协议到零知识证明与公链生态，记录技术脉络与工程取舍。
   image:
     src: /illustrations/hero.png
     alt: hello-blockchain hero illustration
   actions:
     - theme: brand
-      text: 开始阅读
+      text: 浏览笔记
       link: /Introduction
     - theme: alt
       text: GitHub
