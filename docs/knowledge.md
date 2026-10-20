@@ -329,3 +329,4 @@ title: 知识点总纲
 ## 维护记录
 
 - 仓库结构盘点与导航维护背景见[结构审计记录](/review/structure-audit-2026-10-19)；日常侧栏维护规则见[站点导航维护](/sidebar-maintenance)。
+- 最近四次提交的内容改动复核结论见[内容复核记录](/review/content-review-2026-10-19)。
