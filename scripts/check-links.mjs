@@ -24,6 +24,7 @@ const RETRIES = 3;
 // live). The links stay in the docs; they are excluded from automated probing.
 const SKIP = new Set([
   'http://www.pbc.gov.cn/redianzhuanti/118742/4657542/4678070/index.html',
+  'https://www.microsoft.com/en-us/research/publication/practical-byzantine-fault-tolerance-2/',
 ]);
 
 // --- collect external URLs from markdown link/image/autolink syntax ---
