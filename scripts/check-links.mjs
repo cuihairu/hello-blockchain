@@ -19,6 +19,13 @@ const TIMEOUT = opt('--timeout', 15000);
 const CONCURRENCY = opt('--concurrency', 8);
 const RETRIES = 3;
 
+// Hosts that block datacenter fetchers outright (e.g. www.pbc.gov.cn only
+// serves mainland traffic, so probes fail from CI even though the page is
+// live). The links stay in the docs; they are excluded from automated probing.
+const SKIP = new Set([
+  'http://www.pbc.gov.cn/redianzhuanti/118742/4657542/4678070/index.html',
+]);
+
 // --- collect external URLs from markdown link/image/autolink syntax ---
 const urls = new Map(); // url -> Set(pages)
 function walk(dir) {
@@ -34,6 +41,7 @@ function walk(dir) {
       text = text.replace(/```[^\n]*\n[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, '');
       for (const m of text.matchAll(/\]\((https?:\/\/[^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g)) {
         const url = (m[1] || m[2]).replace(/[.,;]+$/, '');
+        if (SKIP.has(url)) continue;
         if (!urls.has(url)) urls.set(url, new Set());
         urls.get(url).add(route);
       }
