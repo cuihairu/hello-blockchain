@@ -137,6 +137,21 @@ for (const loc of LOCALES) {
       }
       target = target.replace(/\.md$/, '');
       if (target === '') target = '/';
+      if (pages.has(target)) {
+        // Each locale links only inside its own tree. While the English tree is
+        // still being translated, a page may point at the Chinese counterpart of
+        // a not-yet-translated page so the link resolves; the moment the English
+        // page exists that pointer has to be rewritten to the root route — this
+        // is what makes every commit enforce the rewrite instead of forgetting it.
+        if (loc.key === 'en' && target.startsWith('/zh')) {
+          const rootRoute = target.slice(3) || '/';
+          if (pages.has(rootRoute)) {
+            failures.push(`${page}: link ${href} points at the Chinese page even though ${rootRoute} exists`);
+          }
+        } else if (loc.key === 'zh' && !target.startsWith('/zh') && target !== '/') {
+          failures.push(`${page}: Chinese page links outside its locale: ${href}`);
+        }
+      }
       if (!pages.has(target)) {
         // Non-page targets (images, downloads) must exist as real files.
         const asset = join(ROOT, target.replace(/^\//, ''));

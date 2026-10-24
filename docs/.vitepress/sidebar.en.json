@@ -4,23 +4,24 @@
     "link": "/Introduction"
   },
   {
+    "text": "Site navigation maintenance",
+    "link": "/sidebar-maintenance"
+  },
+  {
     "text": "Ledger models",
+    "link": "/model/Models",
     "collapsed": true,
     "items": [
       {
-        "text": "Ledger models",
-        "link": "/model/Models"
-      },
-      {
-        "text": "UTXO",
+        "text": "UTXO Model",
         "link": "/model/UTXO"
       },
       {
-        "text": "Account",
+        "text": "Account Model",
         "link": "/model/Account"
       },
       {
-        "text": "DAG",
+        "text": "DAG Ledger Model",
         "link": "/model/DAG"
       }
     ]
@@ -30,7 +31,7 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Merkle tree",
+        "text": "Merkle Tree",
         "link": "/algo/MerkleTree"
       }
     ]
@@ -50,12 +51,138 @@
     "collapsed": true,
     "items": [
       {
-        "text": "BIP improvement proposals",
+        "text": "BIP Improvement Proposals",
         "link": "/btc/BIPS"
       },
       {
         "text": "P2PK transactions",
         "link": "/btc/P2PK"
+      }
+    ]
+  },
+  {
+    "text": "Privacy and security",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Privacy Technology Overview",
+        "link": "/Privacy/Privacy"
+      },
+      {
+        "text": "Differential Privacy",
+        "link": "/Privacy/DifferentialPrivacy"
+      },
+      {
+        "text": "Zero-Knowledge Proof",
+        "link": "/Privacy/ZeroKnowledgeProof"
+      },
+      {
+        "text": "Bulletproofs",
+        "link": "/Privacy/Bulletproofs"
+      },
+      {
+        "text": "Paillier Homomorphic Encryption",
+        "link": "/Privacy/Paillier"
+      },
+      {
+        "text": "Hierarchical Identity-Based Encryption (HIBE)",
+        "link": "/Privacy/HierarchicalIdentityBasedEncryption"
+      },
+      {
+        "text": "Homomorphic Encryption",
+        "link": "/Privacy/HomomorphicEncryption"
+      },
+      {
+        "text": "Mixing Services",
+        "link": "/Privacy/MixingServices"
+      },
+      {
+        "text": "Ring Signature",
+        "link": "/Privacy/RingSignature"
+      },
+      {
+        "text": "Stealth Addresses",
+        "link": "/Privacy/StealthAddresses"
+      }
+    ]
+  },
+  {
+    "text": "Attacks",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Overview of Attack Surfaces",
+        "link": "/hacking/Attack"
+      },
+      {
+        "text": "Hash Power Attack (51% Attack)",
+        "link": "/hacking/51Attack"
+      },
+      {
+        "text": "Finney Attack",
+        "link": "/hacking/FinneyAttack"
+      },
+      {
+        "text": "Double Spend Attack",
+        "link": "/hacking/DoubleSpendAttack"
+      },
+      {
+        "text": "Long-range Attack",
+        "link": "/hacking/LongRangeAttack"
+      },
+      {
+        "text": "Selfish Mining Attack",
+        "link": "/hacking/SelfishMiningAttack"
+      },
+      {
+        "text": "Sybil Attack",
+        "link": "/hacking/SybilAttack"
+      },
+      {
+        "text": "Consensus Fork Attack",
+        "link": "/hacking/ConsensusForkAttack"
+      },
+      {
+        "text": "Dusting Attack",
+        "link": "/hacking/DustingAttack"
+      },
+      {
+        "text": "Transaction DoS Attack",
+        "link": "/hacking/TransactionDoSAttack"
+      },
+      {
+        "text": "Lightning Network Attack",
+        "link": "/hacking/LightningNetworkAttack"
+      },
+      {
+        "text": "Smart Contract Vulnerability Attacks",
+        "link": "/hacking/SmartContractVulnerabilities"
+      },
+      {
+        "text": "Information Leakage Attack",
+        "link": "/hacking/InformationLeakageAttack"
+      },
+      {
+        "text": "Cross-Chain Bridge Attack",
+        "link": "/hacking/CrossChainBridgeAttack"
+      }
+    ]
+  },
+  {
+    "text": "Asset issuance and NFT",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Tokenized Protocol",
+        "link": "/nft/TokenizedProtocol"
+      },
+      {
+        "text": "The OAP Protocol",
+        "link": "/nft/OAP"
+      },
+      {
+        "text": "NFTs and Colored Coins on Bitcoin",
+        "link": "/nft/ColoredCoins"
       }
     ]
   }
