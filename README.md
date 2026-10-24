@@ -6,9 +6,7 @@
 
 # Hello Blockchain
 
-[![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/)
-[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
-
+[![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/) [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
 A blockchain knowledge base · [Read online](https://cuihairu.github.io/hello-blockchain/)
 
 </div>
