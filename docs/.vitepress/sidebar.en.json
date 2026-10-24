@@ -8,6 +8,43 @@
     "link": "/sidebar-maintenance"
   },
   {
+    "text": "Layered architecture",
+    "link": "/layers/Layers",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Compute Layer",
+        "link": "/layers/Compute"
+      },
+      {
+        "text": "Storage Layer",
+        "link": "/layers/Storage"
+      },
+      {
+        "text": "Settlement Layer",
+        "link": "/layers/Settlement"
+      },
+      {
+        "text": "Service Discovery",
+        "link": "/layers/ServiceDiscovery"
+      }
+    ]
+  },
+  {
+    "text": "Knowledge cards and glossary",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Knowledge Card Index",
+        "link": "/cards/Cards"
+      },
+      {
+        "text": "Glossary",
+        "link": "/cards/Glossary"
+      }
+    ]
+  },
+  {
     "text": "Ledger models",
     "link": "/model/Models",
     "collapsed": true,
@@ -57,6 +94,221 @@
       {
         "text": "P2PK transactions",
         "link": "/btc/P2PK"
+      }
+    ]
+  },
+  {
+    "text": "Consensus algorithms",
+    "link": "/consensus/Consensus",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "PoW",
+        "link": "/consensus/POW"
+      },
+      {
+        "text": "PoS",
+        "link": "/consensus/POS"
+      },
+      {
+        "text": "ABFT",
+        "link": "/consensus/ABFT"
+      },
+      {
+        "text": "Avalanche",
+        "link": "/consensus/Avalanche"
+      },
+      {
+        "text": "BFT",
+        "link": "/consensus/BFT"
+      },
+      {
+        "text": "DPoS",
+        "link": "/consensus/DPOS"
+      },
+      {
+        "text": "FBA",
+        "link": "/consensus/FBA"
+      },
+      {
+        "text": "HoneyBadgerBFT",
+        "link": "/consensus/HoneyBadgerBFT"
+      },
+      {
+        "text": "MaxBFT",
+        "link": "/consensus/MaxBFT"
+      },
+      {
+        "text": "Paxos",
+        "link": "/consensus/Paxos"
+      },
+      {
+        "text": "PBFT",
+        "link": "/consensus/PBFT"
+      },
+      {
+        "text": "PoA",
+        "link": "/consensus/POA"
+      },
+      {
+        "text": "PoC",
+        "link": "/consensus/POC"
+      },
+      {
+        "text": "PoET",
+        "link": "/consensus/PoET"
+      },
+      {
+        "text": "PoH",
+        "link": "/consensus/PoH"
+      },
+      {
+        "text": "Proof of Coverage (Helium PoC)",
+        "link": "/consensus/ProofOfCoverage"
+      },
+      {
+        "text": "PoSpace",
+        "link": "/consensus/PoSpace"
+      },
+      {
+        "text": "PoT",
+        "link": "/consensus/POT"
+      },
+      {
+        "text": "PoST",
+        "link": "/consensus/PoST"
+      },
+      {
+        "text": "RAFT",
+        "link": "/consensus/RAFT"
+      },
+      {
+        "text": "Snowball",
+        "link": "/consensus/Snowball"
+      },
+      {
+        "text": "SOLO",
+        "link": "/consensus/SOLO"
+      },
+      {
+        "text": "TBFT",
+        "link": "/consensus/TBFT"
+      },
+      {
+        "text": "Tendermint",
+        "link": "/consensus/Tendermint"
+      },
+      {
+        "text": "TowerBFT",
+        "link": "/consensus/TowerBFT"
+      },
+      {
+        "text": "Algorand",
+        "link": "/consensus/Algorand"
+      },
+      {
+        "text": "BABE",
+        "link": "/consensus/BABE"
+      },
+      {
+        "text": "Bandwidth Proof",
+        "link": "/consensus/BandwidthProof"
+      },
+      {
+        "text": "DiemBFT",
+        "link": "/consensus/DiemBFT"
+      },
+      {
+        "text": "Gasper",
+        "link": "/consensus/Gasper"
+      },
+      {
+        "text": "GRANDPA",
+        "link": "/consensus/GRANDPA"
+      },
+      {
+        "text": "HotStuff",
+        "link": "/consensus/HotStuff"
+      },
+      {
+        "text": "IOTA Tangle",
+        "link": "/consensus/IOTA"
+      },
+      {
+        "text": "Lachesis",
+        "link": "/consensus/Lachesis"
+      },
+      {
+        "text": "Ouroboros",
+        "link": "/consensus/Ouroboros"
+      },
+      {
+        "text": "QBFT",
+        "link": "/consensus/QBFT"
+      },
+      {
+        "text": "Snowman",
+        "link": "/consensus/Snowman"
+      },
+      {
+        "text": "GHOST",
+        "link": "/consensus/GHOST"
+      },
+      {
+        "text": "GHOSTDAG",
+        "link": "/consensus/GHOSTDAG"
+      },
+      {
+        "text": "Hashgraph",
+        "link": "/consensus/Hashgraph"
+      },
+      {
+        "text": "Multi-Level BFT (Theta)",
+        "link": "/consensus/MultiLevelBFT"
+      },
+      {
+        "text": "Mysticeti",
+        "link": "/consensus/Mysticeti"
+      },
+      {
+        "text": "Narwhal and Bullshark",
+        "link": "/consensus/NarwhalBullshark"
+      },
+      {
+        "text": "NPoS",
+        "link": "/consensus/NPoS"
+      },
+      {
+        "text": "RPCA",
+        "link": "/consensus/RPCA"
+      },
+      {
+        "text": "Restaking",
+        "link": "/consensus/Restaking"
+      },
+      {
+        "text": "Sequencing and Settlement (Rollup Side)",
+        "link": "/consensus/Sequencing"
+      },
+      {
+        "text": "Sharding",
+        "link": "/consensus/Sharding"
+      },
+      {
+        "text": "SPoRA (Arweave)",
+        "link": "/consensus/SPORA"
+      },
+      {
+        "text": "SPoS",
+        "link": "/consensus/SPOS"
+      },
+      {
+        "text": "Streamlet",
+        "link": "/consensus/Streamlet"
+      },
+      {
+        "text": "Yuma Consensus (Bittensor)",
+        "link": "/consensus/Yuma"
       }
     ]
   },
@@ -183,6 +435,227 @@
       {
         "text": "NFTs and Colored Coins on Bitcoin",
         "link": "/nft/ColoredCoins"
+      }
+    ]
+  },
+  {
+    "text": "Notable blockchains",
+    "link": "/chains/Chain",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Bitcoin",
+        "link": "/chains/Bitcoin"
+      },
+      {
+        "text": "Ethereum",
+        "link": "/chains/Ethereum"
+      },
+      {
+        "text": "BSC Binance Smart Chain",
+        "link": "/chains/BinanceSmartChain"
+      },
+      {
+        "text": "Polkadot",
+        "link": "/chains/Polkadot"
+      },
+      {
+        "text": "Monero",
+        "link": "/chains/Monero"
+      },
+      {
+        "text": "Cardano",
+        "link": "/chains/Cardano"
+      },
+      {
+        "text": "Tether",
+        "link": "/chains/Tether"
+      },
+      {
+        "text": "Litecoin",
+        "link": "/chains/Litecoin"
+      },
+      {
+        "text": "Bytom",
+        "link": "/chains/Bytom"
+      },
+      {
+        "text": "Cosmos Inter-Blockchain Hub",
+        "link": "/chains/Cosmos"
+      },
+      {
+        "text": "EOS",
+        "link": "/chains/EOS"
+      },
+      {
+        "text": "Stellar",
+        "link": "/chains/Stellar"
+      },
+      {
+        "text": "Solana",
+        "link": "/chains/Solana"
+      },
+      {
+        "text": "Chia",
+        "link": "/chains/Chia"
+      },
+      {
+        "text": "TRON",
+        "link": "/chains/TRON"
+      },
+      {
+        "text": "TON (The Open Network)",
+        "link": "/chains/TON"
+      },
+      {
+        "text": "Avalanche",
+        "link": "/chains/Avalanche"
+      },
+      {
+        "text": "Near",
+        "link": "/chains/Near"
+      },
+      {
+        "text": "Sui",
+        "link": "/chains/Sui"
+      },
+      {
+        "text": "Aptos",
+        "link": "/chains/Aptos"
+      },
+      {
+        "text": "Filecoin",
+        "link": "/chains/Filecoin"
+      },
+      {
+        "text": "Arweave",
+        "link": "/chains/Arweave"
+      },
+      {
+        "text": "Lightning Network",
+        "link": "/chains/Lightning"
+      },
+      {
+        "text": "Optimism",
+        "link": "/chains/Optimism"
+      },
+      {
+        "text": "Arbitrum",
+        "link": "/chains/Arbitrum"
+      },
+      {
+        "text": "zkSync",
+        "link": "/chains/zkSync"
+      }
+    ]
+  },
+  {
+    "text": "Consortium chains",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Consortium Chains",
+        "link": "/consortium/Consortium"
+      },
+      {
+        "text": "Hyperledger Fabric",
+        "link": "/consortium/Fabric"
+      },
+      {
+        "text": "FISCO BCOS",
+        "link": "/consortium/FiscoBcos"
+      },
+      {
+        "text": "R3 Corda",
+        "link": "/consortium/Corda"
+      },
+      {
+        "text": "Hyperledger Besu / Quorum",
+        "link": "/consortium/Besu"
+      },
+      {
+        "text": "WeBASE",
+        "link": "/consortium/Webase"
+      }
+    ]
+  },
+  {
+    "text": "Digital RMB",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "The Digital Renminbi (e-CNY)",
+        "link": "/dcny/Dcny"
+      },
+      {
+        "text": "e-CNY Pilots",
+        "link": "/dcny/Pilot"
+      }
+    ]
+  },
+  {
+    "text": "Blockchain games",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Blockchain Games",
+        "link": "/chain-games/ChainGames"
+      },
+      {
+        "text": "Blockchain Game Economy Design",
+        "link": "/chain-games/Economy"
+      }
+    ]
+  },
+  {
+    "text": "DApps",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "DApp Architecture",
+        "link": "/dapp/Dapp"
+      }
+    ]
+  },
+  {
+    "text": "Development Timeline",
+    "link": "/timeline"
+  },
+  {
+    "text": "Navigation indexes",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Navigate by consensus algorithm",
+        "link": "/nav/ByConsensus"
+      },
+      {
+        "text": "Navigate by time",
+        "link": "/nav/ByTime"
+      }
+    ]
+  },
+  {
+    "text": "Consensus trends",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Outlook on consensus trends",
+        "link": "/trends/Trends"
+      }
+    ]
+  },
+  {
+    "text": "Audit reports",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "hello-blockchain Directory and Content Organization Audit (2026-10-19)",
+        "link": "/review/structure-audit-2026-10-19"
+      },
+      {
+        "text": "Content-Structure Change Review (2026-10-19)",
+        "link": "/review/content-review-2026-10-19"
       }
     ]
   }

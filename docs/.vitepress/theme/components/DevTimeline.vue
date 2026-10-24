@@ -2,10 +2,18 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { FIELD_LABELS, PERIODS, TIMELINE, type TimelineEvent } from '../data/timeline'
+import { FIELD_LABELS_EN, PERIODS_EN, TIMELINE_EN } from '../data/timeline.en'
 
 // 数据里的 link 是英文侧的规范路由（根语言包）；简体中文页要补 /zh 前缀
 const { localeIndex } = useData()
 const hrefOf = (l: string) => withBase(localeIndex.value === 'zh' ? '/zh' + l : l)
+
+// 两套数据集按语言取用；UI 文案走 t()，中文分支留在参数里原样输出
+const isZh = computed(() => localeIndex.value === 'zh')
+const t = (en: string, zh: string) => (isZh.value ? zh : en)
+const LABELS = computed(() => (isZh.value ? FIELD_LABELS : FIELD_LABELS_EN))
+const PERIODS_V = computed(() => (isZh.value ? PERIODS : PERIODS_EN))
+const EVENTS = computed(() => (isZh.value ? TIMELINE : TIMELINE_EN))
 
 // 发展史时间线：按时期分组的竖排编年。
 //   · 顶部 chips 按分类筛选（带计数），分期与事件联动显隐
@@ -19,16 +27,16 @@ type Filter = 'all' | Field
 const filter = ref<Filter>('all')
 const expanded = reactive(new Set<number>())
 
-const fields = Object.keys(FIELD_LABELS) as Field[]
-const filterOptions: Filter[] = ['all', ...fields]
-const labelOf = (f: Filter) => (f === 'all' ? '全部' : FIELD_LABELS[f as Field])
+const fields = computed(() => Object.keys(LABELS.value) as Field[])
+const filterOptions = computed<Filter[]>(() => ['all', ...fields.value])
+const labelOf = (f: Filter) => (f === 'all' ? t('All', '全部') : LABELS.value[f as Field])
 const countOf = (f: Filter) =>
-  f === 'all' ? TIMELINE.length : TIMELINE.filter((e) => e.field === f).length
+  f === 'all' ? EVENTS.value.length : EVENTS.value.filter((e) => e.field === f).length
 
 const groups = computed(() =>
-  PERIODS.map((p) => ({
+  PERIODS_V.value.map((p) => ({
     ...p,
-    events: TIMELINE.map((e, i) => ({ e, i })).filter(
+    events: EVENTS.value.map((e, i) => ({ e, i })).filter(
       ({ e }) => e.field === p.field && (filter.value === 'all' || e.field === filter.value),
     ),
   })).filter((g) => g.events.length > 0),
@@ -83,16 +91,16 @@ watch(filter, schedule)
 /* ---------- 通读段 ---------- */
 
 const allGroups = computed(() =>
-  PERIODS.map((p) => ({
+  PERIODS_V.value.map((p) => ({
     ...p,
-    events: TIMELINE.map((e, i) => ({ e, i })).filter(({ e }) => e.field === p.field),
+    events: EVENTS.value.map((e, i) => ({ e, i })).filter(({ e }) => e.field === p.field),
   })),
 )
 </script>
 
 <template>
   <div class="dt">
-    <div class="dt-controls" role="group" aria-label="按分类筛选">
+    <div class="dt-controls" role="group" :aria-label="t('Filter by category', '按分类筛选')">
       <button
         v-for="f in filterOptions"
         :key="f"
@@ -144,16 +152,16 @@ const allGroups = computed(() =>
             <span class="ev-mark" aria-hidden="true" />
           </button>
           <div v-show="expanded.has(i)" class="ev-detail">
-            <p class="ev-label">{{ FIELD_LABELS[e.field] }}</p>
+            <p class="ev-label">{{ LABELS[e.field] }}</p>
             <p class="ev-why">{{ e.why }}</p>
-            <a v-if="e.link" class="ev-more" :href="hrefOf(e.link)">进入相关章节</a>
+            <a v-if="e.link" class="ev-more" :href="hrefOf(e.link)">{{ t('Related section', '进入相关章节') }}</a>
           </div>
         </li>
       </ol>
     </section>
 
     <details class="dt-list">
-      <summary>按时期通读全部 {{ TIMELINE.length }} 个节点</summary>
+      <summary>{{ t('Read all', '按时期通读全部') }} {{ EVENTS.length }} {{ t('nodes by period', '个节点') }}</summary>
       <section v-for="g in allGroups" :key="'L' + g.name" class="l-era">
         <header class="l-head">
           <h2>{{ g.name }}</h2>
@@ -167,10 +175,10 @@ const allGroups = computed(() =>
             <div class="l-body">
               <h3>{{ e.title }}</h3>
               <p class="l-who">
-                {{ e.who }}<span class="l-tag">{{ FIELD_LABELS[e.field] }}</span>
+                {{ e.who }}<span class="l-tag">{{ LABELS[e.field] }}</span>
               </p>
               <p class="l-why">{{ e.why }}</p>
-              <a v-if="e.link" class="l-more" :href="hrefOf(e.link)">进入相关章节</a>
+              <a v-if="e.link" class="l-more" :href="hrefOf(e.link)">{{ t('Related section', '进入相关章节') }}</a>
             </div>
           </li>
         </ol>

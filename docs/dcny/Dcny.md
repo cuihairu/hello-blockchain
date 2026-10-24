@@ -1,0 +1,47 @@
+# The Digital Renminbi (e-CNY)
+
+The digital renminbi (e-CNY, development codename DC/EP) is the legal tender of the People's Bank of China in digital form: designated operating institutions (commercial banks) take part in its operation; it is built on a broad account system and supports loose coupling with bank accounts; it is equivalent to physical renminbi and carries value characteristics and legal-tender status. The official white paper, *Progress of R&D of E-CNY in China* (2021-07-16, PBoC e-CNY R&D working group), gives the qualifiers: **centrally managed, two-tier operated, positioned as cash (M0), payment is settlement, controllable anonymity**. Pilot progress is in [the e-CNY pilots](/dcny/Pilot).
+
+It is often filed under "blockchain" teaching material, but architecturally it is **not a public chain, and it is not built on a blockchain** — see the dedicated section below for the [official position](#official-position-not-built-on-a-blockchain) and its technical meaning.
+
+## The Four Essentials
+
+- **Which layer**: an application across layers — currency issuance and clearing/settlement sit in the centralized systems of the central bank and the operating institutions (the permissioned form of the [settlement layer](/layers/Settlement)), while wallets and merchant terminals are at the application layer
+- **What it solves**: the absence of cash in the digital age — mobile payments are transfers of commercial-bank deposit money (M1/M2), so digitizing cash (M0) must be both "point-to-point, payment is settlement, usable offline" and preserve central-bank issuance and legal-tender status
+- **How well it solves it**: two-tier operation trades issuance efficiency for the account systems and customer reach of commercial banks; controllable anonymity is a compromise between privacy and anti-money-laundering; dual offline and tap-to-pay cover scenarios with no network; the price is interconnection costs, since each operating institution builds its own wallet ecosystem in a two-tier architecture, anonymity strength depends on how the operating institutions enforce it, and cross-border scenarios remain at the multilateral-bridge trial stage
+- **Source**: PBoC e-CNY R&D working group, [*Progress of R&D of E-CNY in China* white paper PDF](http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/4293590/2021071614200022055.pdf) (2021-07-16, official full text), and the PBoC [e-CNY R&D pilot topic page](http://www.pbc.gov.cn/redianzhuanti/118742/4657542/4678070/index.html)
+
+## Core Mechanisms
+
+- **Two-tier operation**: the central bank does not issue currency directly to the public — the PBoC sits at the centre, issuing e-CNY to designated operating institutions and managing the full life cycle (issuance, cancellation, cross-institution interconnection, wallet ecosystem management); the operating institutions provide exchange and circulation services to the general public. The PBoC explains the design's purpose on the pilot topic page: central-bank centralization preserves the ability to regulate money issuance and monetary policy, while leveraging commercial institutions' resources, market-driven competition selects the best, and risk resolution is decentralized to avoid "financial disintermediation".
+- **M0 positioning and payment is settlement**: the digital renminbi is the digital form of cash (M0), not a deposit, and **earns no interest**; "payment is settlement" — once the payee receives e-CNY the settlement is complete, with no interbank clearing step behind a deposit-money transfer.
+- **Controllable anonymity**: the white paper phrases it as "small-amount anonymity, traceable by law for large amounts" — low-value transactions are anonymous to merchants and operating institutions (only the operating institution collects the minimum necessary data), while large and suspicious transactions are traceable by law. The anonymity is "anonymity controllable with respect to the counterparty", not the uniform anonymity toward the whole network that cryptocurrencies have.
+- **Accounts and wallets, dual track**: built on a broad account system and supporting loose coupling with bank accounts — wallets are tiered by identity-verification strength (from anonymous small-value wallets that require no identity information to strongly real-name wallets), with quotas and permissions increasing by tier. Wallet carriers include the app, chip cards and visual cards ("hard wallets").
+- **Programmability**: load smart contracts without affecting the functions of money — preset conditions trigger payment (designated use, time of arrival). What is programmable is the "condition of payment", not the money itself.
+- **Dual offline transactions**: when both payer and payee devices have no network, the payment still completes ("tap to pay"); the transaction is linked up and booked on-chain afterwards — offline quotas are limited and settled later, with risk controlled by quota caps and device binding.
+- **One currency, two repositories, three centres (the R&D-era architecture framing)**: the issuance repository on the central-bank side and the bank repository on the commercial-bank side (the two repositories), plus the certification centre, the registration centre and the big-data analysis centre (the three centres) — the registration centre records the flow of funds and ownership, the technical support for the "traceable" side of "controllable anonymity".
+
+## Official Position: Not Built on a Blockchain
+
+- **The white paper's own wording (technical route)**: the e-CNY system "combines the characteristics of centralized and distributed architectures, forming a hybrid technical architecture in which a stable state and an agile state coexist, and centralized and distributed approaches develop together", and explicitly does not preset a single technical route — evolution is assessed against market demand, and operating institutions may choose an implementation route according to their own technical strengths.
+- **Stated faithfully**: the white paper nowhere contains the literal phrase "not dependent on blockchain"; that claim is a summary paraphrase of official statements (centralized management, hybrid architecture, blockchain being only one of the technologies evaluated), common in media coverage and officials' public speeches. This site has not found a stably linkable official source for "not dependent on blockchain", so the white paper's own wording governs — **the centrally managed two-tier operating system is the definite official position, and "not dependent on blockchain" is its colloquial corollary**.
+- **Relation to blockchain**: e-CNY needs no permissionless consensus — issuance power lies with the central bank and admission with the operating institutions, so Sybil resistance comes from real-name identity and permissioning rather than [hashing power](/consensus/POW) or [stake](/consensus/POS); ledger consistency is guaranteed by centralized systems and two-repository synchronization, not by BFT voting. What it borrows are blockchain's components (digital signatures, the encrypted-string form, a traceable ledger), not blockchain's trust model. Against [consortium chains](/consortium/Consortium) (permissioned but still with decentralized consensus) and public chains (permissionless), e-CNY is a third shape: "single-point issuance by the central bank + two-tier operation".
+
+## Comparison with Cryptocurrencies
+
+| Dimension | Digital renminbi | Stablecoin ([USDT](/chains/Tether)) | Native coin of a public chain ([BTC](/chains/Bitcoin)) |
+| --- | --- | --- | --- |
+| Issuer | PBoC (legal-tender status) | Commercial institution (backed by reserve assets) | No issuer (produced by consensus) |
+| Bookkeeping | Centralized registration by the central bank | Issuer mints and burns on-chain | Distributed ledger ([PoW](/consensus/POW)) |
+| Anonymity | Controllable anonymity (small amounts anonymous, large amounts traceable) | Pseudonymous (traceable on-chain) | Pseudonymous |
+| Interest | Not paid | Not paid | No notion of interest |
+| Programmable | Conditional payment (restricted smart contracts) | Depends on the underlying chain | Turing-complete (Ethereum family) |
+| Cross-border | mCBDC bridge in trial | Natively cross-border | Natively cross-border |
+
+## Failure Modes
+
+- **Interconnection cost of the two-tier architecture**: each operating institution's wallet system is independent, so "wallet interoperability, account binding, merchant-terminal retrofitting" are all ongoing engineering — the more operating institutions, the higher the cost of interface and experience consistency.
+- **The tension between anonymity and compliance**: anonymity strength is enforced through the operating institutions' collection policies, and the boundary of "small-amount anonymity" (quota, scenario) shifts dynamically with anti-money-laundering requirements — managing user expectations is a policy risk.
+- **The dual-offline quota window**: offline transactions are booked first and settled later, so double-payment risk during the offline window is backstopped by quota caps and device security — a high cap means a large risk exposure, a low cap constrains the scenarios.
+- **Centralized single points**: the registration and certification centres are global single points, so system resilience and disaster recovery determine payment availability directly (retail availability requirements are far higher than for public-chain block production).
+- **Major security incidents**: no public record found.
