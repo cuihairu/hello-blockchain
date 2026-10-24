@@ -20,7 +20,13 @@ const backlinks = JSON.parse(
 const enThemeConfig = {
   nav: [
     { text: 'Home', link: '/' },
-    { text: 'Introduction', link: '/Introduction' }
+    { text: 'Introduction', link: '/Introduction' },
+    { text: 'Ledger models', link: '/model/Models' },
+    { text: 'Consensus algorithms', link: '/consensus/Consensus' },
+    { text: 'Privacy and security', link: '/Privacy/Privacy' },
+    { text: 'Attacks', link: '/hacking/Attack' },
+    { text: 'Notable blockchains', link: '/chains/Chain' },
+    { text: 'Navigation indexes', link: '/nav/ByConsensus' }
   ],
   sidebar: sidebarEn as never,
   outline: { label: 'On this page', level: [2, 3] },

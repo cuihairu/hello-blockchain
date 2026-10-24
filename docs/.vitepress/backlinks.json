@@ -1,15 +1,149 @@
 {
  "titles": {
   "/Introduction": "Introduction",
+  "/Privacy/Bulletproofs": "Bulletproofs",
+  "/Privacy/DifferentialPrivacy": "Differential Privacy",
+  "/Privacy/HierarchicalIdentityBasedEncryption": "Hierarchical Identity-Based Encryption (HIBE)",
+  "/Privacy/HomomorphicEncryption": "Homomorphic Encryption",
+  "/Privacy/MixingServices": "Mixing Services",
+  "/Privacy/Paillier": "Paillier Homomorphic Encryption",
+  "/Privacy/Privacy": "Privacy Technology Overview",
+  "/Privacy/RingSignature": "Ring Signature",
+  "/Privacy/StealthAddresses": "Stealth Addresses",
+  "/Privacy/ZeroKnowledgeProof": "Zero-Knowledge Proof",
   "/algo/MerkleTree": "Merkle Tree",
   "/btc/BIPS": "BIP Improvement Proposals",
   "/btc/P2PK": "P2PK transactions",
+  "/cards/Cards": "Knowledge Card Index",
+  "/cards/Glossary": "Glossary",
+  "/chain-games/ChainGames": "Blockchain Games",
+  "/chain-games/Economy": "Blockchain Game Economy Design",
+  "/chains/Aptos": "Aptos",
+  "/chains/Arbitrum": "Arbitrum",
+  "/chains/Arweave": "Arweave",
+  "/chains/Avalanche": "Avalanche",
+  "/chains/BinanceSmartChain": "BSC Binance Smart Chain",
+  "/chains/Bitcoin": "Bitcoin",
+  "/chains/Bytom": "Bytom",
+  "/chains/Cardano": "Cardano",
+  "/chains/Chain": "Well-Known Blockchain Projects",
+  "/chains/Chia": "Chia",
+  "/chains/Cosmos": "Cosmos Inter-Blockchain Hub",
+  "/chains/EOS": "EOS",
+  "/chains/Ethereum": "Ethereum",
+  "/chains/Filecoin": "Filecoin",
+  "/chains/Lightning": "Lightning Network",
+  "/chains/Litecoin": "Litecoin",
+  "/chains/Monero": "Monero",
+  "/chains/Near": "Near",
+  "/chains/Optimism": "Optimism",
+  "/chains/Polkadot": "Polkadot",
+  "/chains/Solana": "Solana",
+  "/chains/Stellar": "Stellar",
+  "/chains/Sui": "Sui",
+  "/chains/TON": "TON (The Open Network)",
+  "/chains/TRON": "TRON",
+  "/chains/Tether": "Tether",
+  "/chains/zkSync": "zkSync",
+  "/consensus/ABFT": "ABFT",
+  "/consensus/Algorand": "Algorand",
+  "/consensus/Avalanche": "Avalanche",
+  "/consensus/BABE": "BABE",
+  "/consensus/BFT": "BFT",
+  "/consensus/BandwidthProof": "Bandwidth Proof",
+  "/consensus/Consensus": "Consensus Algorithms",
+  "/consensus/DPOS": "DPoS",
+  "/consensus/DiemBFT": "DiemBFT",
+  "/consensus/FBA": "FBA",
+  "/consensus/GHOST": "GHOST",
+  "/consensus/GHOSTDAG": "GHOSTDAG",
+  "/consensus/GRANDPA": "GRANDPA",
+  "/consensus/Gasper": "Gasper",
+  "/consensus/Hashgraph": "Hashgraph",
+  "/consensus/HoneyBadgerBFT": "HoneyBadgerBFT",
+  "/consensus/HotStuff": "HotStuff",
+  "/consensus/IOTA": "IOTA Tangle",
+  "/consensus/Lachesis": "Lachesis",
+  "/consensus/MaxBFT": "MaxBFT",
+  "/consensus/MultiLevelBFT": "Multi-Level BFT (Theta)",
+  "/consensus/Mysticeti": "Mysticeti",
+  "/consensus/NPoS": "NPoS",
+  "/consensus/NarwhalBullshark": "Narwhal and Bullshark",
+  "/consensus/Ouroboros": "Ouroboros",
+  "/consensus/PBFT": "PBFT",
+  "/consensus/POA": "PoA",
+  "/consensus/POC": "PoC",
+  "/consensus/POS": "PoS",
+  "/consensus/POT": "PoT",
+  "/consensus/POW": "PoW",
+  "/consensus/Paxos": "Paxos",
+  "/consensus/PoET": "PoET",
+  "/consensus/PoH": "PoH",
+  "/consensus/PoST": "PoST",
+  "/consensus/PoSpace": "PoSpace",
+  "/consensus/ProofOfCoverage": "Proof of Coverage (Helium PoC)",
+  "/consensus/QBFT": "QBFT",
+  "/consensus/RAFT": "RAFT",
+  "/consensus/RPCA": "RPCA",
+  "/consensus/Restaking": "Restaking",
+  "/consensus/SOLO": "SOLO",
+  "/consensus/SPORA": "SPoRA (Arweave)",
+  "/consensus/SPOS": "SPoS",
+  "/consensus/Sequencing": "Sequencing and Settlement (Rollup Side)",
+  "/consensus/Sharding": "Sharding",
+  "/consensus/Snowball": "Snowball",
+  "/consensus/Snowman": "Snowman",
+  "/consensus/Streamlet": "Streamlet",
+  "/consensus/TBFT": "TBFT",
+  "/consensus/Tendermint": "Tendermint",
+  "/consensus/TowerBFT": "TowerBFT",
+  "/consensus/Yuma": "Yuma Consensus (Bittensor)",
+  "/consensus-timeline": "Consensus Algorithm Evolution Timeline",
+  "/consortium/Besu": "Hyperledger Besu / Quorum",
+  "/consortium/Consortium": "Consortium Chains",
+  "/consortium/Corda": "R3 Corda",
+  "/consortium/Fabric": "Hyperledger Fabric",
+  "/consortium/FiscoBcos": "FISCO BCOS",
+  "/consortium/Webase": "WeBASE",
+  "/dapp/Dapp": "DApp Architecture",
+  "/dcny/Dcny": "The Digital Renminbi (e-CNY)",
+  "/dcny/Pilot": "e-CNY Pilots",
+  "/hacking/51Attack": "Hash Power Attack (51% Attack)",
+  "/hacking/Attack": "Overview of Attack Surfaces",
+  "/hacking/ConsensusForkAttack": "Consensus Fork Attack",
+  "/hacking/CrossChainBridgeAttack": "Cross-Chain Bridge Attack",
+  "/hacking/DoubleSpendAttack": "Double Spend Attack",
+  "/hacking/DustingAttack": "Dusting Attack",
+  "/hacking/FinneyAttack": "Finney Attack",
+  "/hacking/InformationLeakageAttack": "Information Leakage Attack",
+  "/hacking/LightningNetworkAttack": "Lightning Network Attack",
+  "/hacking/LongRangeAttack": "Long-range Attack",
+  "/hacking/SelfishMiningAttack": "Selfish Mining Attack",
+  "/hacking/SmartContractVulnerabilities": "Smart Contract Vulnerability Attacks",
+  "/hacking/SybilAttack": "Sybil Attack",
+  "/hacking/TransactionDoSAttack": "Transaction DoS Attack",
   "/": "/..",
+  "/knowledge": "Knowledge Point Master Outline",
+  "/layers/Compute": "Compute Layer",
+  "/layers/Layers": "Layered Architecture",
+  "/layers/ServiceDiscovery": "Service Discovery",
+  "/layers/Settlement": "Settlement Layer",
+  "/layers/Storage": "Storage Layer",
   "/model/Account": "Account Model",
   "/model/DAG": "DAG Ledger Model",
   "/model/Models": "Ledger Models",
   "/model/UTXO": "UTXO Model",
+  "/nav/ByConsensus": "Navigate by consensus algorithm",
+  "/nav/ByTime": "Navigate by time",
+  "/nft/ColoredCoins": "NFTs and Colored Coins on Bitcoin",
+  "/nft/OAP": "The OAP Protocol",
+  "/nft/TokenizedProtocol": "Tokenized Protocol",
   "/opcode/OP_CHECKSIG": "OP_CHECKSIG",
+  "/review/content-review-2026-10-19": "Content-Structure Change Review (2026-10-19)",
+  "/review/structure-audit-2026-10-19": "hello-blockchain Directory and Content Organization Audit (2026-10-19)",
+  "/sidebar-maintenance": "Site navigation maintenance",
+  "/timeline": "Development Timeline",
+  "/trends/Trends": "Outlook on consensus trends",
   "/zh/Introduction": "简介",
   "/zh/Privacy/Bulletproofs": "Bulletproofs",
   "/zh/Privacy/DifferentialPrivacy": "差分隐私",
@@ -160,24 +294,3900 @@
    {
     "r": "/Introduction",
     "t": "Introduction"
+   },
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/consensus/POA",
+    "t": "PoA"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
    }
   ],
   "/algo/MerkleTree": [
    {
     "r": "/Introduction",
     "t": "Introduction"
+   },
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Bitcoin",
+    "t": "Bitcoin"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
    }
   ],
   "/opcode/OP_CHECKSIG": [
    {
     "r": "/Introduction",
     "t": "Introduction"
+   },
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
    }
   ],
   "/btc/BIPS": [
    {
     "r": "/Introduction",
     "t": "Introduction"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   }
+  ],
+  "/chain-games/ChainGames": [
+   {
+    "r": "/Introduction",
+    "t": "Introduction"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chain-games/Economy",
+    "t": "Blockchain Game Economy Design"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/knowledge": [
+   {
+    "r": "/Introduction",
+    "t": "Introduction"
+   },
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/Consensus",
+    "t": "Consensus Algorithms"
+   }
+  ],
+  "/consensus-timeline": [
+   {
+    "r": "/Introduction",
+    "t": "Introduction"
+   },
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/chains/TRON",
+    "t": "TRON"
+   },
+   {
+    "r": "/consensus/Consensus",
+    "t": "Consensus Algorithms"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/timeline",
+    "t": "Development Timeline"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/layers/Layers": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/Consensus",
+    "t": "Consensus Algorithms"
+   },
+   {
+    "r": "/consensus/POW",
+    "t": "PoW"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/cards/Glossary": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/timeline": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/GHOST": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consensus/Yuma",
+    "t": "Yuma Consensus (Bittensor)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/PBFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT (Theta)"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/POS": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/layers/Settlement": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Stellar",
+    "t": "Stellar"
+   },
+   {
+    "r": "/chains/Tether",
+    "t": "Tether"
+   },
+   {
+    "r": "/consensus/ABFT",
+    "t": "ABFT"
+   },
+   {
+    "r": "/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/consensus/Avalanche",
+    "t": "Avalanche"
+   },
+   {
+    "r": "/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/consensus/BFT",
+    "t": "BFT"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/DPOS",
+    "t": "DPoS"
+   },
+   {
+    "r": "/consensus/DiemBFT",
+    "t": "DiemBFT"
+   },
+   {
+    "r": "/consensus/FBA",
+    "t": "FBA"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/consensus/Gasper",
+    "t": "Gasper"
+   },
+   {
+    "r": "/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/consensus/HoneyBadgerBFT",
+    "t": "HoneyBadgerBFT"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/MaxBFT",
+    "t": "MaxBFT"
+   },
+   {
+    "r": "/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT (Theta)"
+   },
+   {
+    "r": "/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/consensus/PBFT",
+    "t": "PBFT"
+   },
+   {
+    "r": "/consensus/POA",
+    "t": "PoA"
+   },
+   {
+    "r": "/consensus/POC",
+    "t": "PoC"
+   },
+   {
+    "r": "/consensus/POS",
+    "t": "PoS"
+   },
+   {
+    "r": "/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/consensus/POW",
+    "t": "PoW"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/consensus/PoST",
+    "t": "PoST"
+   },
+   {
+    "r": "/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus/RAFT",
+    "t": "RAFT"
+   },
+   {
+    "r": "/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/consensus/Restaking",
+    "t": "Restaking"
+   },
+   {
+    "r": "/consensus/SOLO",
+    "t": "SOLO"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/consensus/Sequencing",
+    "t": "Sequencing and Settlement (Rollup Side)"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/consensus/Snowball",
+    "t": "Snowball"
+   },
+   {
+    "r": "/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/consensus/TBFT",
+    "t": "TBFT"
+   },
+   {
+    "r": "/consensus/Tendermint",
+    "t": "Tendermint"
+   },
+   {
+    "r": "/consensus/TowerBFT",
+    "t": "TowerBFT"
+   },
+   {
+    "r": "/consensus/Yuma",
+    "t": "Yuma Consensus (Bittensor)"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/dcny/Pilot",
+    "t": "e-CNY Pilots"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Compute",
+    "t": "Compute Layer"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/ServiceDiscovery",
+    "t": "Service Discovery"
+   },
+   {
+    "r": "/layers/Storage",
+    "t": "Storage Layer"
+   }
+  ],
+  "/consensus/POW": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Bitcoin",
+    "t": "Bitcoin"
+   },
+   {
+    "r": "/chains/Lightning",
+    "t": "Lightning Network"
+   },
+   {
+    "r": "/chains/Litecoin",
+    "t": "Litecoin"
+   },
+   {
+    "r": "/chains/Monero",
+    "t": "Monero"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/hacking/SybilAttack",
+    "t": "Sybil Attack"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/Gasper": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT (Theta)"
+   },
+   {
+    "r": "/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/hacking/SelfishMiningAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/HotStuff": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/consensus/DiemBFT",
+    "t": "DiemBFT"
+   },
+   {
+    "r": "/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/DiemBFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/MaxBFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/PBFT",
+    "t": "PBFT"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/hacking/LongRangeAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/BFT",
+    "t": "BFT"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/Tendermint": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chains/Cosmos",
+    "t": "Cosmos Inter-Blockchain Hub"
+   },
+   {
+    "r": "/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/BABE": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chains/Polkadot",
+    "t": "Polkadot"
+   },
+   {
+    "r": "/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/GRANDPA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Polkadot",
+    "t": "Polkadot"
+   },
+   {
+    "r": "/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT (Theta)"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/RPCA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Stellar",
+    "t": "Stellar"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/FBA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Stellar",
+    "t": "Stellar"
+   },
+   {
+    "r": "/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/hacking/SybilAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/BFT",
+    "t": "BFT"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/POT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Chia",
+    "t": "Chia"
+   },
+   {
+    "r": "/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Algorand": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Ouroboros": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Cardano",
+    "t": "Cardano"
+   },
+   {
+    "r": "/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Hashgraph": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/NarwhalBullshark": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Lachesis": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/RAFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/SOLO",
+    "t": "SOLO"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/Paxos": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/Mysticeti": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/model/DAG": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/consensus/Consensus",
+    "t": "Consensus Algorithms"
+   },
+   {
+    "r": "/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/IOTA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/Restaking": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Cosmos",
+    "t": "Cosmos Inter-Blockchain Hub"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/PoST": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Filecoin",
+    "t": "Filecoin"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/layers/Storage": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/chains/Filecoin",
+    "t": "Filecoin"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Compute",
+    "t": "Compute Layer"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/ServiceDiscovery",
+    "t": "Service Discovery"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   }
+  ],
+  "/consensus/SPORA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/HoneyBadgerBFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus/ABFT",
+    "t": "ABFT"
+   },
+   {
+    "r": "/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/NarwhalBullshark",
+    "t": "Narwhal and Bullshark"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/ProofOfCoverage": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/MultiLevelBFT": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/DPOS": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/BinanceSmartChain",
+    "t": "BSC Binance Smart Chain"
+   },
+   {
+    "r": "/chains/EOS",
+    "t": "EOS"
+   },
+   {
+    "r": "/chains/TRON",
+    "t": "TRON"
+   },
+   {
+    "r": "/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT (Theta)"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Yuma",
+    "t": "Yuma Consensus (Bittensor)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/Yuma": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/GHOSTDAG": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/chains/Polkadot": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chains/Avalanche",
+    "t": "Avalanche"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Restaking",
+    "t": "Restaking"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Sharding": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/PoSpace": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Chia",
+    "t": "Chia"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus/SPORA",
+    "t": "SPoRA (Arweave)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/BandwidthProof": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/NPoS": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/chains/Chia": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus/POC",
+    "t": "PoC"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/POA": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chains/BinanceSmartChain",
+    "t": "BSC Binance Smart Chain"
+   },
+   {
+    "r": "/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consortium/Fabric": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chain-games/ChainGames",
+    "t": "Blockchain Games"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consortium/Consortium": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/layers/Compute": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chain-games/Economy",
+    "t": "Blockchain Game Economy Design"
+   },
+   {
+    "r": "/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/chains/Arbitrum",
+    "t": "Arbitrum"
+   },
+   {
+    "r": "/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/chains/Bitcoin",
+    "t": "Bitcoin"
+   },
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/consensus/Sequencing",
+    "t": "Sequencing and Settlement (Rollup Side)"
+   },
+   {
+    "r": "/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/ServiceDiscovery",
+    "t": "Service Discovery"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/layers/Storage",
+    "t": "Storage Layer"
+   }
+  ],
+  "/hacking/SmartContractVulnerabilities": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/consensus/Sequencing",
+    "t": "Sequencing and Settlement (Rollup Side)"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/hacking/DustingAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chains/BinanceSmartChain": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/hacking/CrossChainBridgeAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Cosmos",
+    "t": "Cosmos Inter-Blockchain Hub"
+   },
+   {
+    "r": "/chains/Polkadot",
+    "t": "Polkadot"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/hacking/SybilAttack",
+    "t": "Sybil Attack"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/Sequencing": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Arbitrum",
+    "t": "Arbitrum"
+   },
+   {
+    "r": "/chains/Optimism",
+    "t": "Optimism"
+   },
+   {
+    "r": "/chains/zkSync",
+    "t": "zkSync"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/layers/ServiceDiscovery": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chain-games/Economy",
+    "t": "Blockchain Game Economy Design"
+   },
+   {
+    "r": "/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/layers/Storage",
+    "t": "Storage Layer"
+   }
+  ],
+  "/dapp/Dapp": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/nft/ColoredCoins": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   }
+  ],
+  "/nft/TokenizedProtocol": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chain-games/ChainGames",
+    "t": "Blockchain Games"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/model/Account": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/TRON",
+    "t": "TRON"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/model/UTXO": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Bitcoin",
+    "t": "Bitcoin"
+   },
+   {
+    "r": "/chains/Bytom",
+    "t": "Bytom"
+   },
+   {
+    "r": "/chains/Cardano",
+    "t": "Cardano"
+   },
+   {
+    "r": "/chains/Lightning",
+    "t": "Lightning Network"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/dcny/Dcny": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/dcny/Pilot",
+    "t": "e-CNY Pilots"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chain-games/Economy": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chain-games/ChainGames",
+    "t": "Blockchain Games"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/hacking/51Attack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/POW",
+    "t": "PoW"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   }
+  ],
+  "/hacking/FinneyAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/hacking/DoubleSpendAttack": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chains/Bitcoin": [
+   {
+    "r": "/cards/Cards",
+    "t": "Knowledge Card Index"
+   },
+   {
+    "r": "/chains/BinanceSmartChain",
+    "t": "BSC Binance Smart Chain"
+   },
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/cards/Cards": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/Consensus": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/timeline",
+    "t": "Development Timeline"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/BFT": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/chains/TON",
+    "t": "TON (The Open Network)"
+   },
+   {
+    "r": "/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/consensus/RAFT",
+    "t": "RAFT"
+   },
+   {
+    "r": "/consensus/SOLO",
+    "t": "SOLO"
+   },
+   {
+    "r": "/consensus/Tendermint",
+    "t": "Tendermint"
+   },
+   {
+    "r": "/consensus/Yuma",
+    "t": "Yuma Consensus (Bittensor)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/ABFT": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/Snowball": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/chains/Avalanche",
+    "t": "Avalanche"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/SPOS": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/QBFT": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consortium/FiscoBcos": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consortium/Corda": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consortium/Besu": [
+   {
+    "r": "/cards/Glossary",
+    "t": "Glossary"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chains/Bytom": [
+   {
+    "r": "/chain-games/ChainGames",
+    "t": "Blockchain Games"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/Snowman": [
+   {
+    "r": "/chains/Avalanche",
+    "t": "Avalanche"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/chains/Lightning": [
+   {
+    "r": "/chains/Bitcoin",
+    "t": "Bitcoin"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/TRON": [
+   {
+    "r": "/chains/Chain",
+    "t": "Well-Known Blockchain Projects"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/TON": [
+   {
+    "r": "/chains/Chain",
+    "t": "Well-Known Blockchain Projects"
+   },
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Optimism": [
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Arbitrum": [
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/chains/zkSync": [
+   {
+    "r": "/chains/Ethereum",
+    "t": "Ethereum"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/hacking/LightningNetworkAttack": [
+   {
+    "r": "/chains/Lightning",
+    "t": "Lightning Network"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/MixingServices": [
+   {
+    "r": "/chains/Litecoin",
+    "t": "Litecoin"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/RingSignature": [
+   {
+    "r": "/chains/Monero",
+    "t": "Monero"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/StealthAddresses": [
+   {
+    "r": "/chains/Monero",
+    "t": "Monero"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/Bulletproofs": [
+   {
+    "r": "/chains/Monero",
+    "t": "Monero"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chains/Avalanche": [
+   {
+    "r": "/chains/Polkadot",
+    "t": "Polkadot"
+   },
+   {
+    "r": "/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/PoH": [
+   {
+    "r": "/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/consensus/TowerBFT",
+    "t": "TowerBFT"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/TowerBFT": [
+   {
+    "r": "/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/consensus/PoH",
+    "t": "PoH"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Aptos": [
+   {
+    "r": "/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/chains/Tether": [
+   {
+    "r": "/chains/TRON",
+    "t": "TRON"
+   },
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/EOS": [
+   {
+    "r": "/chains/TRON",
+    "t": "TRON"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/Privacy/ZeroKnowledgeProof": [
+   {
+    "r": "/chains/zkSync",
+    "t": "zkSync"
+   },
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/consensus/Avalanche": [
+   {
+    "r": "/consensus/ABFT",
+    "t": "ABFT"
+   },
+   {
+    "r": "/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Settlement",
+    "t": "Settlement Layer"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/POC": [
+   {
+    "r": "/consensus/BandwidthProof",
+    "t": "Bandwidth Proof"
+   },
+   {
+    "r": "/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/chains/Stellar": [
+   {
+    "r": "/consensus/FBA",
+    "t": "FBA"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Sui": [
+   {
+    "r": "/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/consensus/TBFT": [
+   {
+    "r": "/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/consensus/PBFT",
+    "t": "PBFT"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/PoET": [
+   {
+    "r": "/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/consensus/ProofOfCoverage",
+    "t": "Proof of Coverage (Helium PoC)"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/consensus/SOLO": [
+   {
+    "r": "/consensus/RAFT",
+    "t": "RAFT"
+   },
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/chains/Near": [
+   {
+    "r": "/consensus/Sharding",
+    "t": "Sharding"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Filecoin": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Litecoin": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Monero": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Cardano": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Cosmos": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/chains/Ethereum": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/chains/Solana": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/dapp/Dapp",
+    "t": "DApp Architecture"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   }
+  ],
+  "/nav/ByTime": [
+   {
+    "r": "/consensus-timeline",
+    "t": "Consensus Algorithm Evolution Timeline"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/timeline",
+    "t": "Development Timeline"
+   }
+  ],
+  "/consortium/Webase": [
+   {
+    "r": "/consortium/Consortium",
+    "t": "Consortium Chains"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/dcny/Pilot": [
+   {
+    "r": "/dcny/Dcny",
+    "t": "The Digital Renminbi (e-CNY)"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/hacking/ConsensusForkAttack": [
+   {
+    "r": "/hacking/SybilAttack",
+    "t": "Sybil Attack"
+   },
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/consensus/Streamlet": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   }
+  ],
+  "/trends/Trends": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/btc/P2PK": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/HomomorphicEncryption": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/DifferentialPrivacy": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/HierarchicalIdentityBasedEncryption": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/Paillier": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/Privacy/Privacy": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   }
+  ],
+  "/hacking/Attack": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   }
+  ],
+  "/hacking/InformationLeakageAttack": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/hacking/TransactionDoSAttack": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/nft/OAP": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/chains/Chain": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/layers/Layers",
+    "t": "Layered Architecture"
+   },
+   {
+    "r": "/timeline",
+    "t": "Development Timeline"
+   }
+  ],
+  "/chains/Arweave": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   },
+   {
+    "r": "/nav/ByConsensus",
+    "t": "Navigate by consensus algorithm"
+   },
+   {
+    "r": "/nav/ByTime",
+    "t": "Navigate by time"
+   },
+   {
+    "r": "/trends/Trends",
+    "t": "Outlook on consensus trends"
+   }
+  ],
+  "/nav/ByConsensus": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/review/structure-audit-2026-10-19": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/sidebar-maintenance": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
+   }
+  ],
+  "/review/content-review-2026-10-19": [
+   {
+    "r": "/knowledge",
+    "t": "Knowledge Point Master Outline"
    }
   ],
   "/zh/model/Models": [

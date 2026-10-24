@@ -48,4 +48,4 @@ An entry point for hundreds of millions of instant-messaging users plus massive 
 
 ### Summary
 
-TON's technical core is Catchain consensus built on BFT+PoS, layered over native multi-chain sharding; its historical note is a rare case of "the project sponsor withdrew and the community carried on." For its place in the consensus genealogy, see the [consensus algorithm evolution timeline](/zh/consensus-timeline).
+TON's technical core is Catchain consensus built on BFT+PoS, layered over native multi-chain sharding; its historical note is a rare case of "the project sponsor withdrew and the community carried on." For its place in the consensus genealogy, see the [consensus algorithm evolution timeline](/consensus-timeline).

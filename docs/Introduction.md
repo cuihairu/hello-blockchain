@@ -20,8 +20,8 @@ These pages are personal blockchain study notes and engineering experience, focu
 ## A Few Ways to Start
 
 - To understand how a ledger organizes state, start with [Ledger Models](/model/Models) and [Data Structures](/algo/MerkleTree), then follow the page links to see consensus and per-chain trade-offs.
-- For developer implementation, start with notes on [Scripts and Opcodes](/opcode/OP_CHECKSIG), [Bitcoin Mechanics](/btc/BIPS), or **Blockchain Games**.
-- To look up concept origins and algorithm evolution, see the **Knowledge Outline** and the **Consensus Algorithm Evolution Timeline** (64 timeline entries, 35 main-chain mapping rows).
+- For developer implementation, start with notes on [Scripts and Opcodes](/opcode/OP_CHECKSIG), [Bitcoin Mechanics](/btc/BIPS), or [Blockchain Games](/chain-games/ChainGames).
+- To look up concept origins and algorithm evolution, see the [Knowledge Outline](/knowledge) and the [Consensus Algorithm Evolution Timeline](/consensus-timeline) (64 timeline entries, 35 main-chain mapping rows).
 - For quick reference, browse the **Knowledge Cards** (54 concept cards arranged in a four-layer network) and the **Glossary** (114 terms with a flat lookup table).
 
 ## Prerequisites

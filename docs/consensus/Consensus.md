@@ -43,4 +43,4 @@ Each algorithm page opens with a uniform "Four Essentials" block: **which layer*
 - **Consortium chain, permissioned**: node identities are known, so PBFT-class algorithms can be used directly in exchange for deterministic finality and high throughput.
 - **High concurrency, short forks tolerable**: DAG-class structures (see [ledger model · DAG](/model/DAG)).
 
-For the order in which these algorithms appeared and which variant each main chain uses, see the [consensus algorithm timeline](/zh/consensus-timeline); a condensed reference of concepts and sources is in the [knowledge compendium](/zh/knowledge).
+For the order in which these algorithms appeared and which variant each main chain uses, see the [consensus algorithm timeline](/consensus-timeline); a condensed reference of concepts and sources is in the [knowledge compendium](/knowledge).

@@ -49,4 +49,4 @@ High throughput plus zero-fee content distribution and transfers — the actual 
 
 ### Summary
 
-TRON trades decentralization for low fees and fast confirmation via DPoS, uses EVM compatibility to lower migration costs, and then secured its ecosystem niche with the stablecoin rail. Its trade-offs are in the same family as [EOS](/chains/EOS): sacrificing some decentralization for throughput — see the DPoS thread in the [consensus algorithm evolution timeline](/zh/consensus-timeline).
+TRON trades decentralization for low fees and fast confirmation via DPoS, uses EVM compatibility to lower migration costs, and then secured its ecosystem niche with the stablecoin rail. Its trade-offs are in the same family as [EOS](/chains/EOS): sacrificing some decentralization for throughput — see the DPoS thread in the [consensus algorithm evolution timeline](/consensus-timeline).

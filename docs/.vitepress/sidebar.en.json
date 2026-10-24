@@ -31,6 +31,10 @@
     ]
   },
   {
+    "text": "Consensus Algorithm Evolution Timeline",
+    "link": "/consensus-timeline"
+  },
+  {
     "text": "Knowledge cards and glossary",
     "collapsed": true,
     "items": [
@@ -620,6 +624,10 @@
   {
     "text": "Development Timeline",
     "link": "/timeline"
+  },
+  {
+    "text": "Knowledge Point Master Outline",
+    "link": "/knowledge"
   },
   {
     "text": "Navigation indexes",

@@ -18,7 +18,7 @@ The Sybil Attack takes its name from the multiple-personality protagonist of the
 
 | Mechanism | Idea | Representative |
 | --- | --- | --- |
-| Proof of Work | Identity = electricity-burning hash power | Bitcoin (see [PoW](/zh/consensus/POW)) |
+| Proof of Work | Identity = electricity-burning hash power | Bitcoin (see [PoW](/consensus/POW)) |
 | Stake Locking | Identity = locked collateral, slashed for misbehavior | Ethereum, Avalanche |
 | Identity Authentication | Permissioned sets, PKI certificates | Consortium chains, FISCO BCOS |
 | Resource Validation | Real resource thresholds such as storage / bandwidth | IPFS DHT, Filecoin |

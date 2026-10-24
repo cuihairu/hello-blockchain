@@ -15,10 +15,9 @@ const t = computed(() => localeIndex.value === 'zh' ? {
   title: 'Page not found',
   desc: 'The link may be out of date, or the page has moved to a different address.',
   home: 'Back to home',
-  search: 'Start from the introduction',
-  // /knowledge once the English knowledge digest has been translated
+  search: 'Search from the knowledge digest',
   homeHref: '/',
-  searchHref: '/Introduction'
+  searchHref: '/knowledge'
 })
 </script>
 
