@@ -1,28 +1,29 @@
-# 简介
+# Introduction
 
-区块链（Blockchain）本质上是一个**分布式、只追加、由密码学保证完整性的账本**：交易被打包进区块，区块通过哈希指针逐个相连，网络中的节点按同一套共识规则各自验证并存储账本副本，从而在没有可信第三方的情况下达成"同一本账"的一致。
+A blockchain is, at its core, a **distributed, append-only, cryptographically integrity-protected ledger**: transactions are packed into blocks, blocks are chained together one by one through hash pointers, and every node in the network independently validates and stores a copy of the ledger under the same consensus rules, thereby reaching agreement on "a single shared ledger" without any trusted third party.
 
-这些页面是个人区块链学习笔记与开发经验整理，关注技术脉络、设计取舍和实践中的疑问。内容按主题归档，共十个部分，适合沿着站内互链横向查阅：
+These pages are personal blockchain study notes and engineering experience, focused on technical lineages, design trade-offs, and questions encountered in practice. The content is organized into ten sections and is best read horizontally by following the cross-links between pages:
 
-| 部分 | 内容 |
+| Section | Content |
 | --- | --- |
-| 记账模型 | UTXO、账户模型、DAG 三大记账范式，以及 Cardano 的 EUTXO、Nervos 的 Cell 等混合形态 |
-| 数据结构 | Merkle 树——区块内交易的组织方式与轻节点证明的基础 |
-| 脚本与操作码 | 以比特币 Script 为例，理解 `OP_CHECKSIG` 等验证原语 |
-| 比特币机制 | BIP 改进提案体系与 P2PK 交易脚本 |
-| 共识算法 | PoW、PoS、PBFT、Tendermint、Avalanche 等 52 种共识的原理与取舍 |
-| 隐私安全 | 零知识证明、环签名、同态加密等隐私技术 |
-| 黑客攻击 | 51% 攻击、女巫攻击、跨链桥攻击等攻击面与防御 |
-| 资产发行与 NFT | 彩色币、Open Assets 等代币化协议 |
-| 有名的区块链项目 | Bitcoin、Ethereum、Polkadot、Solana 等公链的设计与共识选型 |
-| 发展史时间线 | 从 1976 年密码学前史到今天的 49 个节点五段分期，每条回答为什么是那个时候 |
+| Ledger Models | The three bookkeeping paradigms — UTXO, account model, and DAG — plus hybrid forms such as Cardano's EUTXO and Nervos's Cell |
+| Data Structures | The Merkle tree: how transactions within a block are organized and the basis for light-client proofs |
+| Scripts and Opcodes | Taking Bitcoin Script as an example, understanding verification primitives such as `OP_CHECKSIG` |
+| Bitcoin Mechanics | The BIP improvement-proposal system and P2PK transaction scripts |
+| Consensus Algorithms | The principles and trade-offs of 52 consensus algorithms including PoW, PoS, PBFT, Tendermint, and Avalanche |
+| Privacy and Security | Privacy technologies such as zero-knowledge proofs, ring signatures, and homomorphic encryption |
+| Hacker Attacks | Attack surfaces such as 51% attacks, Sybil attacks, and cross-chain bridge attacks, and their defenses |
+| Asset Issuance and NFT | Tokenization protocols such as Colored Coins and Open Assets |
+| Notable Blockchain Projects | Design and consensus choices of public chains such as Bitcoin, Ethereum, Polkadot, and Solana |
+| Development Timeline | From the cryptographic prehistory of 1976 to today: 49 timeline nodes across 5 periods, each entry answering why it happened when it did |
 
-## 几个切入角度
+## A Few Ways to Start
 
-- 想理解账本如何组织状态，可从[记账模型](/model/Models)和[数据结构](/algo/MerkleTree)切入，再顺着页面链接看共识与具体链的取舍。
-- 关注开发实现时，可从[脚本与操作码](/opcode/OP_CHECKSIG)、[比特币机制](/btc/BIPS)或[区块链游戏](/chain-games/ChainGames)相关笔记开始。
-- 查概念来源与算法演进，可看[知识点总纲](/knowledge)和[共识算法演进时间线](/consensus-timeline)（64 条年表、35 行主链映射）。
+- To understand how a ledger organizes state, start with [Ledger Models](/model/Models) and [Data Structures](/algo/MerkleTree), then follow the page links to see consensus and per-chain trade-offs.
+- For developer implementation, start with notes on [Scripts and Opcodes](/opcode/OP_CHECKSIG), [Bitcoin Mechanics](/btc/BIPS), or **Blockchain Games**.
+- To look up concept origins and algorithm evolution, see the **Knowledge Outline** and the **Consensus Algorithm Evolution Timeline** (64 timeline entries, 35 main-chain mapping rows).
+- For quick reference, browse the **Knowledge Cards** (54 concept cards arranged in a four-layer network) and the **Glossary** (114 terms with a flat lookup table).
 
-## 前置知识
+## Prerequisites
 
-涉及计算机网络与密码学基础时，相关页面会补充必要背景；配对密码学、零知识证明等主题也会在对应笔记中附上概念说明与来源。
+Where networking and cryptography fundamentals are involved, the relevant pages supply the necessary background; pairing-based cryptography, zero-knowledge proofs, and similar topics likewise include concept explanations and sources in their notes.

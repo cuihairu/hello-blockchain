@@ -3,48 +3,30 @@ layout: home
 
 hero:
   name: Hello Blockchain
-  text: 区块链知识体系
-  tagline: 个人区块链学习笔记与开发经验分享：从账本结构、共识协议到零知识证明与公链生态，记录技术脉络与工程取舍。
+  text: Blockchain knowledge base
+  tagline: Personal blockchain notes and engineering experience — ledger models, 52 consensus algorithms, zero-knowledge proofs, the public-chain ecosystem, and the timelines that tie it together (64 timeline entries, 49 timeline nodes across five periods, 35 main-chain mapping rows).
   image:
     src: /illustrations/hero.png
     alt: hello-blockchain hero illustration
   actions:
     - theme: brand
-      text: 浏览笔记
+      text: Browse the notes
       link: /Introduction
     - theme: alt
       text: GitHub
       link: https://github.com/cuihairu/hello-blockchain
 
 features:
-  - title: 知识卡片与术语
-    details: 54 张概念卡片按四层加两条横切线连成网，互链直达详解页；114 个术语的平铺查询表，附时间线与总纲入口。
-    link: /cards/Cards
-  - title: 分层架构
-    details: 计算、存储、结算、服务发现四层模型，对标 DNS 的服务发现，每层五要素：定义、问题、现有系统、开源清单、失败模式。
-    link: /layers/Layers
-  - title: 记账模型
-    details: UTXO、账户模型、DAG 三大范式，Cardano 的 EUTXO 与 Nervos 的 Cell 混合形态，理解账本如何记账。
+  - title: Ledger Models
+    details: "UTXO, account model, and DAG — three bookkeeping paradigms, plus the hybrid forms of Cardano's EUTXO and Nervos's Cell. Understand how a ledger actually records state."
     link: /model/Models
-  - title: 共识算法
-    details: PoW、PoS、PBFT、Tendermint、Avalanche 等 52 种共识的原理、容错阈值与工程取舍。
-    link: /consensus/Consensus
-  - title: 公链生态
-    details: Bitcoin、Ethereum、Solana、Polkadot 等主流公链的设计选型与权衡，理解链与链的差异。
-    link: /chains/Chain
-  - title: 安全隐私
-    details: 零知识证明、环签名、同态加密等隐私技术，51% 与跨链桥等攻击面及防御实践。
-    link: /Privacy/Privacy
-  - title: 发展史时间线
-    details: 从 1976 年密码学前史到今天的共识演进，49 个节点五段分期，每条回答为什么是那个时候。
-    link: /timeline
-  - title: 共识算法演进时间线
-    details: 64 条年表从 1982 年拜占庭将军排到 2025 年的 BoLD 验证，35 行主链映射标清谁在用哪个变体。
-    link: /consensus-timeline
-  - title: 导航索引
-    details: 按共识算法（算法 → 首次出现、所在层、解决什么、用了它的链）与按主网上线时间两套索引，每页底部自动生成反向链接。
-    link: /nav/ByConsensus
-  - title: 共识趋势展望
-    details: 九条共识趋势各带出处、现状证据与未来 3 年可验证的观察点——从模块化 DA 到跨链互操作。
-    link: /trends/Trends
+  - title: Merkle Tree
+    details: "The binary hash tree that compresses a block's entire transaction set into a single 32-byte root — the foundation for SPV proofs and cross-node synchronization."
+    link: /algo/MerkleTree
+  - title: OP_CHECKSIG
+    details: "The core opcode of Bitcoin Script: stack semantics, sighash types, and how every standard payment method from P2PK through P2TR builds on it."
+    link: /opcode/OP_CHECKSIG
+  - title: Bitcoin Mechanics
+    details: "The BIP improvement-proposal system that governs protocol change, and the P2PK transaction script that started it all."
+    link: /btc/BIPS
 ---

@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
-import { withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { FIELD_LABELS, PERIODS, TIMELINE, type TimelineEvent } from '../data/timeline'
+
+// 数据里的 link 是英文侧的规范路由（根语言包）；简体中文页要补 /zh 前缀
+const { localeIndex } = useData()
+const hrefOf = (l: string) => withBase(localeIndex.value === 'zh' ? '/zh' + l : l)
 
 // 发展史时间线：按时期分组的竖排编年。
 //   · 顶部 chips 按分类筛选（带计数），分期与事件联动显隐
@@ -142,7 +146,7 @@ const allGroups = computed(() =>
           <div v-show="expanded.has(i)" class="ev-detail">
             <p class="ev-label">{{ FIELD_LABELS[e.field] }}</p>
             <p class="ev-why">{{ e.why }}</p>
-            <a v-if="e.link" class="ev-more" :href="withBase(e.link)">进入相关章节</a>
+            <a v-if="e.link" class="ev-more" :href="hrefOf(e.link)">进入相关章节</a>
           </div>
         </li>
       </ol>
@@ -166,7 +170,7 @@ const allGroups = computed(() =>
                 {{ e.who }}<span class="l-tag">{{ FIELD_LABELS[e.field] }}</span>
               </p>
               <p class="l-why">{{ e.why }}</p>
-              <a v-if="e.link" class="l-more" :href="withBase(e.link)">进入相关章节</a>
+              <a v-if="e.link" class="l-more" :href="hrefOf(e.link)">进入相关章节</a>
             </div>
           </li>
         </ol>

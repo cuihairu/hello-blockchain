@@ -1,8 +1,8 @@
-# Merkle 树
+# Merkle Tree
 
-Merkle 树（默克尔树，Hash Tree）由 Ralph Merkle 于 1979 年提出，是一种自底向上构建的二叉哈希树：叶子节点是数据的哈希，中间节点是其两个子节点哈希的再哈希，树根（Merkle Root）唯一概括了全部叶子数据。区块链用 Merkle 树组织区块内的交易，使"整块交易集合"被压缩为区块头中的 32 字节。
+The Merkle tree (also known as a hash tree) was proposed by Ralph Merkle in 1979. It is a binary hash tree constructed bottom-up: leaf nodes are hashes of data, internal nodes are hashes of their two children's hashes, and the tree root (Merkle root) uniquely summarizes all leaf data. Blockchains use Merkle trees to organize transactions within a block, compressing the "entire set of transactions" into 32 bytes in the block header.
 
-## 结构
+## Structure
 
 ```
               Root = H(H01 + H23)
@@ -12,46 +12,46 @@ Merkle 树（默克尔树，Hash Tree）由 Ralph Merkle 于 1979 年提出，�
   H0=H(tx1)   H1=H(tx2)   H2=H(tx3)   H3=H(tx4)
 ```
 
-- **叶子节点**：对每笔交易计算哈希（比特币中对交易头做双重 SHA-256）。
-- **中间节点**：将左右子节点的哈希拼接后再哈希；若某层节点数为奇数，末尾节点与自己配对（比特币的做法）。
-- **根节点**：唯一一层节点，即 Merkle Root，写入区块头。
+- **Leaf Nodes**: Compute the hash of each transaction (in Bitcoin, double SHA-256 is applied to the transaction header).
+- **Internal Nodes**: Concatenate the hashes of the left and right children, then hash the result; if the number of nodes at a level is odd, the last node is paired with itself (Bitcoin's approach).
+- **Root Node**: The single node at the top level, i.e., the Merkle root, which is written into the block header.
 
-## 为什么区块链需要 Merkle 树
+## Why Blockchains Need Merkle Trees
 
-1. **完整性聚合**：区块头只需 32 字节的 Merkle Root，任何一笔交易被篡改都会导致根值变化，全节点由此快速校验区块内容。
-2. **轻节点验证（SPV）**：轻客户端只保存区块头。要验证某笔交易是否在区块中，无需下载全部交易，只需一条 **Merkle 路径**（该交易到根沿途的兄弟哈希，约 $log_2(N)$ 个），即可重算出根值与区块头比对。一万个交易的区块，证明只需约 14 个哈希。
-3. **快速比对与同步**：两棵树的根相同即认为交易集合一致，这是节点间高效同步的前提。
+1. **Integrity Aggregation**: The block header only needs a 32-byte Merkle root; tampering with any transaction changes the root value, allowing full nodes to quickly verify block contents.
+2. **Light Client Verification (SPV)**: Light clients only store block headers. To verify whether a transaction is in a block, there is no need to download all transactions — only a **Merkle path** (the sibling hashes from the transaction to the root, approximately $log_2(N)$ of them) is needed to recompute the root and compare it with the block header. For a block with ten thousand transactions, a proof requires only about 14 hashes.
+3. **Fast Comparison and Synchronization**: If two trees have the same root, the transaction sets are considered consistent — this is the prerequisite for efficient synchronization between nodes.
 
-## 代码示例
+## Code Example
 
 ```python
 import hashlib
 
 
 def dhash(data: bytes) -> bytes:
-    """比特币风格双重 SHA-256"""
+    """Bitcoin-style double SHA-256"""
     return hashlib.sha256(hashlib.sha256(data).digest()).digest()
 
 
 def merkle_root(txids: list[bytes]) -> bytes:
-    """txids: 交易哈希（小端字节序）列表，返回 Merkle 根"""
+    """txids: list of transaction hashes (little-endian byte order); returns the Merkle root"""
     if not txids:
         raise ValueError("no transactions")
     level = txids[:]
     while len(level) > 1:
-        if len(level) % 2 == 1:          # 奇数个节点：复制末尾配对
+        if len(level) % 2 == 1:          # odd number of nodes: duplicate the last one to pair
             level.append(level[-1])
         level = [dhash(level[i] + level[i + 1]) for i in range(0, len(level), 2)]
     return level[0]
 
 
 def merkle_path(txids: list[bytes], index: int) -> list[bytes]:
-    """返回第 index 笔交易的 Merkle 路径（兄弟哈希列表）"""
+    """Return the Merkle path (list of sibling hashes) for the transaction at index"""
     path, level, i = [], txids[:], index
     while len(level) > 1:
         if len(level) % 2 == 1:
             level.append(level[-1])
-        sibling = i ^ 1                   # 配对伙伴
+        sibling = i ^ 1                   # the paired sibling
         path.append(level[sibling])
         level = [dhash(level[j] + level[j + 1]) for j in range(0, len(level), 2)]
         i //= 2
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     root = merkle_root(txs)
     proof = merkle_path(txs, 2)
 
-    # 用路径重算根，验证第 2 笔交易
+    # Recompute the root from the path, verifying transaction 2
     idx, h = 2, txs[2]
     for sibling in proof:
         h = dhash(h + sibling) if idx % 2 == 0 else dhash(sibling + h)
@@ -73,14 +73,14 @@ if __name__ == "__main__":
     print("proof :", [x.hex()[:12] for x in proof])
 ```
 
-> 演示中为保持配对顺序做了简化；真实实现（如 Bitcoin Core）在重算路径时按原始索引的左右位置决定拼接顺序，`i` 为偶数时当前节点在左，否则在右。
+> The demonstration simplifies pairing order; a real implementation (such as Bitcoin Core) determines concatenation order during path recomputation based on the original index's left/right position — when `i` is even the current node is on the left, otherwise on the right.
 
-## 变体
+## Variants
 
-- **Merkle Patricia Trie**：以太坊状态树，键值对形式，支持单键证明与增量更新，用于世界状态与存储。
-- **Merkle Mountain Range（MMR）**：支持追加式场景（如 Portal/Bytom、Grin），无需预知叶子总数。
-- **Merkle DAG**：IPFS/Posy 使用的有向无环版本，子节点可被多个父节点共享。
+- **Merkle Patricia Trie**: Ethereum's state tree, in key-value pair form, supporting single-key proofs and incremental updates, used for world state and storage.
+- **Merkle Mountain Range (MMR)**: Supports append-only scenarios (such as Portal/Bytom, Grin), without needing to know the total number of leaves in advance.
+- **Merkle DAG**: The directed acyclic version used by IPFS/Posy, where children can be shared by multiple parents.
 
-## 小结
+## Summary
 
-Merkle 树把"信任全部数据"压缩为"信任一个根哈希"，是区块链实现轻量验证、跨节点同步与各类证明（SPV、状态证明、跨链证明）的公共底座。
+The Merkle tree compresses "trusting all data" into "trusting a single root hash," serving as the common foundation for blockchains to achieve lightweight verification, cross-node synchronization, and various types of proofs (SPV, state proofs, cross-chain proofs).

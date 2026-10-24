@@ -1,15 +1,35 @@
 <script setup>
-import { withBase } from 'vitepress'
+import { computed } from 'vue'
+import { useData, withBase } from 'vitepress'
+
+// 页面本身没有语言，跟随所在语言包（localeIndex: root = 英文, zh = 简体中文）
+const { localeIndex } = useData()
+const t = computed(() => localeIndex.value === 'zh' ? {
+  title: '页面不存在',
+  desc: '链接可能已失效，或页面被移动到了别的地址。',
+  home: '返回首页',
+  search: '从知识总纲重新找',
+  homeHref: '/zh/',
+  searchHref: '/zh/knowledge'
+} : {
+  title: 'Page not found',
+  desc: 'The link may be out of date, or the page has moved to a different address.',
+  home: 'Back to home',
+  search: 'Start from the introduction',
+  // /knowledge once the English knowledge digest has been translated
+  homeHref: '/',
+  searchHref: '/Introduction'
+})
 </script>
 
 <template>
   <div class="NotFound">
     <p class="code">404</p>
-    <h1 class="title">页面不存在</h1>
-    <p class="desc">链接可能已失效，或页面被移动到了别的地址。</p>
+    <h1 class="title">{{ t.title }}</h1>
+    <p class="desc">{{ t.desc }}</p>
     <div class="actions">
-      <a class="home" :href="withBase('/')">返回首页</a>
-      <a class="search" :href="withBase('/knowledge')">从知识总纲重新找</a>
+      <a class="home" :href="withBase(t.homeHref)">{{ t.home }}</a>
+      <a class="search" :href="withBase(t.searchHref)">{{ t.search }}</a>
     </div>
   </div>
 </template>

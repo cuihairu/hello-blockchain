@@ -1,52 +1,52 @@
 # OP_CHECKSIG
 
-`OP_CHECKSIG` 是比特币 Script 中最核心的操作码之一：它从栈中取出公钥与签名，验证签名对当前交易（的指定部分）是否有效，并把布尔结果压回栈中。所有的标准支付方式——P2PK、P2PKH、P2SH、P2WPKH、P2TR——最终都建立在这个操作码之上。
+`OP_CHECKSIG` is one of the most core opcodes in Bitcoin Script: it pops the public key and signature from the stack, verifies whether the signature is valid for the current transaction (or a specified part of it), and pushes the boolean result back onto the stack. All standard payment methods — P2PK, P2PKH, P2SH, P2WPKH, P2TR — ultimately build on top of this opcode.
 
-## 执行语义
+## Execution Semantics
 
-锁定脚本和解锁脚本拼接后，栈顶状态为（自底向上）：
+After the locking script and unlocking script are concatenated, the stack state is (bottom to top):
 
 ```
 <signature> <pubkey> OP_CHECKSIG
 ```
 
-执行时：
+During execution:
 
-1. 弹出栈顶 `pubkey` 与 `signature`。
-2. 从当前交易的副本中**移除解锁脚本**（避免签名验证自身），并按签名哈希类型（sighash type）选取交易序列化范围，计算其双重 SHA-256 摘要（sighash）。
-3. 用 `pubkey` 对 sighash 做 ECDSA（Taproot 下为 Schnorr）验证。
-4. 有效则压入 `1`（真），否则压入 `0`（假）并使脚本失败——**验证失败即交易无效**，这与 `OP_EQUAL` 之类的可继续执行的假值不同。
+1. Pop the top-of-stack `pubkey` and `signature`.
+2. **Remove the unlocking script** from a copy of the current transaction (to avoid signing over itself), and select the transaction serialization scope according to the sighash type, computing its double SHA-256 digest (sighash).
+3. Verify the sighash against the `pubkey` using ECDSA (Schnorr under Taproot).
+4. If valid, push `1` (true); otherwise push `0` (false) and fail the script — **verification failure makes the transaction invalid**, unlike a false value from `OP_EQUAL` which can continue executing.
 
-## Sighash 类型
+## Sighash Types
 
-签名末尾的单字节声明了"这笔签名认可交易的哪些部分"：
+The single byte at the end of the signature declares "which parts of the transaction this signature commits to":
 
-| 类型 | 认可范围 |
+| Type | Scope |
 | --- | --- |
-| `SIGHASH_ALL`（默认） | 全部输入与全部输出 |
-| `SIGHASH_NONE` | 全部输入，不承诺任何输出（可任意改收款方） |
-| `SIGHASH_SINGLE` | 全部输入，仅承诺同序号的那个输出 |
-| `ANYONECANPAY` 修饰位 | 只承诺当前输入，其他输入可由他人追加（常用于众筹凑款） |
+| `SIGHASH_ALL` (default) | All inputs and all outputs |
+| `SIGHASH_NONE` | All inputs, but makes no commitment to any outputs (payee can be changed arbitrarily) |
+| `SIGHASH_SINGLE` | All inputs, but commits only to the output at the same index |
+| `ANYONECANPAY` modifier | Commits only to the current input; other inputs can be appended by others (commonly used for crowdfunded payments) |
 
-## 在 P2PK 与 P2PKH 中的使用
+## Usage in P2PK and P2PKH
 
 ```
-P2PK  锁定:  <pubkey> OP_CHECKSIG
-      解锁:  <signature>
+P2PK  locking:  <pubkey> OP_CHECKSIG
+       unlocking:  <signature>
 
-P2PKH 锁定:  OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
-      解锁:  <signature> <pubkey>
+P2PKH locking:  OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
+       unlocking:  <signature> <pubkey>
 ```
 
-P2PKH 中 `OP_CHECKSIG` 之前先用哈希比对确认公钥正确，公钥只在花费时才披露——这正是 P2PKH 相比 P2PK 更省空间、更保护公钥隐私的原因。
+In P2PKH, before `OP_CHECKSIG` the hash comparison first confirms the public key is correct, so the public key is only disclosed when the output is spent — this is precisely why P2PKH is more space-efficient than P2PK and better protects public key privacy.
 
-## 与 SegWit / Taproot
+## With SegWit / Taproot
 
-- **SegWit（BIP 141/143）**：见证脚本中的 `OP_CHECKSIG` 改用 BIP 143 定义的新摘要算法，把见证数据排除在 txid 之外，修复交易延展性。
-- **Taproot（BIP 340/341/342）**：引入 64 字节的 Schnorr 签名与新的 `TapSighash` 摘要；`OP_CHECKSIG` 在 Tapscript 语义下验证 Schnorr 签名，支持密钥聚合与更灵活的脚本承诺。
+- **SegWit (BIP 141/143)**: The `OP_CHECKSIG` in witness scripts uses a new digest algorithm defined by BIP 143, excluding witness data from the txid and fixing transaction malleability.
+- **Taproot (BIP 340/341/342)**: Introduces 64-byte Schnorr signatures and a new `TapSighash` digest; `OP_CHECKSIG` verifies Schnorr signatures under Tapscript semantics, supporting key aggregation and more flexible script commitments.
 
-## 注意事项
+## Caveats
 
-- `OP_CHECKSIG` 不是"比较两个字符串"，它验证的是**当前交易本身的签名**，所以脚本无法直接在链上做任意消息签名验证（这正是 Elements/Liquid 引入 `OP_CHECKSIGFROMSTACK` 等操作码要解决的问题）。
-- BIP 66 之后，传给它的签名必须是严格 DER 编码，否则脚本立即失败。
-- 签名中的 sighash 字节不参与 ECDSA 计算本体，但参与摘要构造。
+- `OP_CHECKSIG` does not "compare two strings" — it verifies **a signature over the current transaction itself**, so scripts cannot directly perform arbitrary message signature verification on-chain (this is precisely the problem that opcodes like `OP_CHECKSIGFROMSTACK`, introduced by Elements/Liquid, aim to solve).
+- After BIP 66, the signature passed to it must be strictly DER-encoded, or the script fails immediately.
+- The sighash byte in the signature does not participate in the ECDSA computation proper, but does participate in digest construction.

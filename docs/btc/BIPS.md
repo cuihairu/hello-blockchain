@@ -1,62 +1,62 @@
-# BIP 改进提案
+# BIP Improvement Proposals
 
-Bitcoin Improvement Proposals (BIPs) 是改进比特币协议和功能的提案文档。每个 BIP 提案都详细描述了比特币的一个新的功能或改进，目的是促进比特币生态系统的不断发展。以下是一些常见的 BIPs 及其主要功能：
+Bitcoin Improvement Proposals (BIPs) are proposal documents for improving the Bitcoin protocol and its features. Each BIP proposal describes a new feature or improvement to Bitcoin in detail, with the goal of promoting the continuous development of the Bitcoin ecosystem. Below are some common BIPs and their main features:
 
-### BIP 主要类型
-- **BIP 1**: BIP Purpose and Guidelines，规定 BIP 的目的、类型与提案流程。
-- **BIP 2**: BIP process changes，修订提案处理与编号分配的细则。
+### Main Types of BIPs
+- **BIP 1**: BIP Purpose and Guidelines, defining the purpose, types, and proposal process for BIPs.
+- **BIP 2**: BIP process changes, revising the details of proposal handling and number assignment.
 
-### 常见 BIP 列表及说明
+### Common BIP List and Descriptions
 
 1. **BIP 11 - M-of-N Standard Transactions**
-   - **功能**: 定义了一种多重签名的标准交易格式，使得需要多个签名才能执行某个交易。这种机制增加了交易的安全性和灵活性。
+   - **Feature**: Defines a standard multi-signature transaction format that requires multiple signatures to execute a transaction. This mechanism increases the security and flexibility of transactions.
 
 2. **BIP 16 - Pay to Script Hash (P2SH)**
-   - **功能**: 允许将交易发送到脚本的哈希值，使得复杂的脚本只在赎回时提供，从而减少了链上数据存储量，提升了隐私性和可扩展性。
+   - **Feature**: Allows sending transactions to a script's hash, so that complex scripts are only provided at redemption time, reducing on-chain data storage and improving privacy and scalability.
 
 3. **BIP 32 - Hierarchical Deterministic Wallets (HD Wallets)**
-   - **功能**: 引入了分层确定性钱包，使得用户可以从一个种子生成树状结构的密钥对，方便管理和备份多个地址及其私钥。
+   - **Feature**: Introduces hierarchical deterministic wallets, allowing users to derive a tree of key pairs from a single seed, making it easier to manage and back up multiple addresses and their private keys.
 
 4. **BIP 39 - Mnemonic Code for Generating Deterministic Keys**
-   - **功能**: 提供了一种将私钥转换成助记词短语的标准方法，使得备份和恢复私钥更加简便和人性化。
+   - **Feature**: Provides a standard method for converting private keys into mnemonic phrases, making backup and recovery of private keys simpler and more human-friendly.
 
 5. **BIP 44 - Multi-Account Hierarchy for Deterministic Wallets**
-   - **功能**: 扩展了 BIP 32，定义了多账户分层结构，进一步规范了确定性钱包的路径管理，使得不同的加密货币账户可以共存于同一钱包中。
+   - **Feature**: Extends BIP 32 by defining a multi-account hierarchy, further standardizing path management for deterministic wallets so that accounts for different cryptocurrencies can coexist in the same wallet.
 
 6. **BIP 65 - OP_CHECKLOCKTIMEVERIFY (CLTV)**
-   - **功能**: 引入了一种脚本操作码，使得交易只能在特定时间之后被花费，增加了时间锁功能，提升了合约的灵活性。
+   - **Feature**: Introduces a script opcode that allows transactions to only be spent after a specific time, adding time-lock functionality and increasing contract flexibility.
 
 7. **BIP 66 - Strict DER Encoding of Signatures**
-   - **功能**: 强制要求使用严格的 DER 编码格式签名，提高了交易验证的一致性和安全性。
+   - **Feature**: Mandates the use of strict DER encoding for signatures, improving the consistency and security of transaction verification.
 
 8. **BIP 68 - Relative Lock-Time Using Consensus Enforced Sequence Numbers**
-   - **功能**: 引入了相对时间锁，使得交易可以在一定时间范围内被花费，提高了支付通道和链下解决方案的灵活性。
+   - **Feature**: Introduces relative time-locks, allowing transactions to be spent within a certain time range, increasing the flexibility of payment channels and off-chain solutions.
 
 9. **BIP 112 - CHECKSEQUENCEVERIFY (CSV)**
-   - **功能**: 提供了一种相对锁定时间的机制，使得智能合约和链下解决方案更加多样化和灵活。
+   - **Feature**: Provides a mechanism for relative lock-time, making smart contracts and off-chain solutions more diverse and flexible.
 
 10. **BIP 125 - Opt-in Full Replace-by-Fee (RBF) Signaling**
-    - **功能**: 允许发送方通过增加交易费用来替换未确认的交易，提高了交易的灵活性和确认的速度。
+    - **Feature**: Allows the sender to replace an unconfirmed transaction by increasing the transaction fee, improving transaction flexibility and confirmation speed.
 
 11. **BIP 141 - Segregated Witness (SegWit)**
-    - **功能**: 引入了隔离见证技术，通过将签名数据与交易数据分离，减少了交易数据大小，提高了区块的可扩展性和效率，解决了交易延展性问题。
+    - **Feature**: Introduces Segregated Witness technology, separating signature data from transaction data, reducing transaction data size, improving block scalability and efficiency, and solving the transaction malleability problem.
 
 12. **BIP 143 - Transaction Signature Verification for Version 0 Witness Program**
-    - **功能**: 定义了 SegWit 交易的签名验证机制，进一步增强了 SegWit 的安全性和效率。
+    - **Feature**: Defines the signature verification mechanism for SegWit transactions, further enhancing the security and efficiency of SegWit.
 
 13. **BIP 147 - Dealing with Malleability (NULLDUMMY)**
-    - **功能**: 强制要求 CHECKMULTISIG 操作码的 dummy 栈元素必须为空（NULLDUMMY），进一步压缩交易延展性的空间，为 SegWit 之外的延展性问题补上规则约束。
+    - **Feature**: Mandates that the dummy stack element for the CHECKMULTISIG opcode must be empty (NULLDUMMY), further reducing transaction malleability and adding rule constraints to malleability issues outside of SegWit.
 
 14. **BIP 174 - Partially Signed Bitcoin Transaction (PSBT)**
-    - **功能**: 定义了一个标准格式，用于创建和传输部分签名的比特币交易，提高了硬件钱包和冷钱包的安全性和可用性。
+    - **Feature**: Defines a standard format for creating and transferring partially signed Bitcoin transactions, improving the security and usability of hardware wallets and cold wallets.
 
 15. **BIP 340 - Schnorr Signatures for Secp256k1**
-    - **功能**: 引入了 Schnorr 签名算法，提供了一种更简单、更高效的签名机制，提高了隐私性和安全性，并支持多重签名聚合。
+    - **Feature**: Introduces the Schnorr signature algorithm, providing a simpler and more efficient signing mechanism, improving privacy and security, and supporting multi-signature aggregation.
 
 16. **BIP 341 - Taproot: SegWit Version 1 Spending Rules**
-    - **功能**: 结合 Schnorr 签名和 Merkle 树，将所有可能的支付条件压缩成一个单一的公共密钥，提高了隐私性和智能合约的灵活性。
+    - **Feature**: Combines Schnorr signatures with Merkle trees to compress all possible spending conditions into a single public key, improving privacy and smart contract flexibility.
 
 17. **BIP 342 - Validation of Taproot Scripts**
-    - **功能**: 详细说明了 Taproot 脚本的验证规则，确保其在比特币网络中的正确执行。
+    - **Feature**: Details the validation rules for Taproot scripts, ensuring their correct execution on the Bitcoin network.
 
-这些 BIPs 代表了比特币协议的持续改进和演变，目的是提升比特币的安全性、隐私性、可扩展性和灵活性。通过这些提案，比特币能够不断适应新的技术需求和使用场景。
+These BIPs represent the continuous improvement and evolution of the Bitcoin protocol, aimed at enhancing Bitcoin's security, privacy, scalability, and flexibility. Through these proposals, Bitcoin can continuously adapt to new technical requirements and use cases.

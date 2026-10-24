@@ -14,6 +14,16 @@ import { createServer } from 'node:net';
 
 const DIST = 'docs/.vitepress/dist';
 
+// Two locales share one build: English routes at /, Chinese under /zh/. Each
+// locale's sidebar is its own file; the "did the sidebar render at all" floor
+// is its top-level entry count (a group label is itself a link, so every
+// top-level item contributes at least one rendered anchor).
+const sidebarFloor = {
+  en: JSON.parse(readFileSync('docs/.vitepress/sidebar.en.json', 'utf8')).length,
+  zh: JSON.parse(readFileSync('docs/.vitepress/sidebar.zh.json', 'utf8')).length
+};
+const localeOf = (route) => (route.startsWith('/zh') ? 'zh' : 'en');
+
 // Pick a free port to avoid colliding with preview servers from other
 // sessions/repos (a fixed port once collided with a parallel vitepress run).
 const PORT = process.env.WALKTHROUGH_PORT || String(await new Promise((resolve, reject) => {
@@ -92,7 +102,17 @@ const badLinks = [];
 let pagesVisited = 0;
 let sidebarChecks = 0;
 let mathChecks = 0;
+let switcherMissing = 0;
 const sidebarFailures = [];
+
+// The two locales are mirrors of one another. While the English tree is being
+// translated page by page, the switcher's links to not-yet-translated pages
+// are tolerated (counted as translation debt); once both trees hold the same
+// number of pages the invariant becomes a hard failure.
+const pageRoutes = routes.filter(r => !r.startsWith('/404'));
+const enPages = pageRoutes.filter(r => !r.startsWith('/zh')).length;
+const zhPages = pageRoutes.filter(r => r.startsWith('/zh')).length;
+const localesMirrored = enPages === zhPages;
 
 for (const route of routes) {
   const url = BASE + '/hello-blockchain' + (route === '/' ? '/' : route);
@@ -114,15 +134,18 @@ for (const route of routes) {
   if (textLen < minLen) badLinks.push(`PAGE ${route} content too short (${textLen})`);
 
   const isHome = await page.locator('.VPHome').count() > 0;
-  if (route === '/') {
+  if (isHome) {
     // Every home feature card must be a real link, not a static div.
     const features = await page.locator('.VPFeature').count();
     const linked = await page.locator('a.VPFeature').count();
-    if (features > 0 && linked < features) badLinks.push(`HOME feature cards without link: ${features - linked}/${features}`);
+    if (features > 0 && linked < features) {
+      badLinks.push(`HOME ${route} feature cards without link: ${features - linked}/${features}`);
+    }
   }
-  if (route !== '/404' && !route.startsWith('/404') && !isHome) {
+  if (!isHome && !route.startsWith('/404')) {
     const sidebarLinks = await page.locator('.VPSidebar a').count();
-    if (sidebarLinks < 20) sidebarFailures.push(`${route}: sidebar links=${sidebarLinks}`);
+    const floor = sidebarFloor[localeOf(route)];
+    if (sidebarLinks < floor) sidebarFailures.push(`${route}: sidebar links=${sidebarLinks} (floor ${floor})`);
     else sidebarChecks++;
     const active = await page.locator('.VPSidebar a[aria-current="page"], .VPSidebar a.active').count();
     if (active === 0) sidebarFailures.push(`${route}: no active sidebar highlight`);
@@ -135,49 +158,83 @@ for (const route of routes) {
     else mathChecks++;
   }
 
-  const hrefs = await page.$$eval('a[href]', as => as.map(a => a.getAttribute('href')));
-  for (const h of new Set(hrefs)) {
+  const hrefs = await page.$$eval('a[href]', as =>
+    as.map(a => ({ h: a.getAttribute('href'), alt: a.getAttribute('rel') === 'alternate' }))
+  );
+  const hrefMap = new Map();
+  for (const { h, alt } of hrefs) hrefMap.set(h, (hrefMap.get(h) || false) || alt);
+  for (const [h, alt] of hrefMap) {
     if (!h || !h.startsWith('/')) continue;
     if (h.startsWith('/hello-blockchain/assets')) continue;
     const clean = h.replace(/^\/hello-blockchain/, '').split('#')[0].replace(/\/$/, '');
     if (clean === '') { if (!routeSet.has('')) badLinks.push(`${route} -> ${h}`); continue; }
-    if (!routeSet.has(clean)) badLinks.push(`${route} -> ${h}`);
+    if (!routeSet.has(clean)) {
+      // The official language switcher links every page to its counterpart in the
+      // other locale. While the English locale is being translated page by page
+      // those targets legitimately do not exist yet, so they are counted as
+      // translation debt instead of failing the run.
+      if (alt) {
+        // the 404 route is synthetic (one html for both locales), its switcher
+        // counterpart can never exist as a route
+        if (!route.startsWith('/404')) switcherMissing++;
+        continue;
+      }
+      badLinks.push(`${route} -> ${h}`);
+    }
   }
 }
 
-// DevTimeline interactive check on /timeline — retry: the preview server can
-// briefly refuse a connection right after the crawl, same class of flake as
-// the per-page goto retries above.
-let timelineNavError = '';
-for (let attempt = 0; attempt < 3; attempt++) {
-  try {
-    await page.goto(BASE + '/hello-blockchain/timeline', { waitUntil: 'domcontentloaded', timeout: 20000 });
-    timelineNavError = '';
-    break;
-  } catch (e) {
-    timelineNavError = e.message.split('\n')[0];
-    await page.waitForTimeout(500);
+// DevTimeline interactive check on the timeline pages of every locale that has
+// one. Retry: the preview server can briefly refuse a connection right after
+// the crawl, same class of flake as the per-page goto retries above.
+const timelineResults = [];
+let timelineOk = false;
+for (const route of ['/timeline', '/zh/timeline']) {
+  if (!routeSet.has(route)) continue;
+  let navError = '';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      await page.goto(BASE + '/hello-blockchain' + route, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      break;
+    } catch (e) {
+      navError = e.message.split('\n')[0];
+      await page.waitForTimeout(500);
+    }
   }
+  if (navError) { badLinks.push(`PAGE ${route} goto failed: ${navError}`); continue; }
+  await page.waitForTimeout(300);
+  const chips = await page.locator('.dt-controls .chip').count();
+  const periods = await page.locator('.dt .period').count();
+  if (chips > 0) {
+    await page.locator('.dt-controls .chip').first().click();
+  }
+  const filterClickWorks = chips > 0 && (await page.locator('.dt-controls .chip.is-active').count()) === 1;
+  const ok = chips > 0 && periods > 0 && filterClickWorks;
+  if (!ok) {
+    badLinks.push(`PAGE ${route} DevTimeline chips=${chips} periods=${periods} filterClick=${filterClickWorks}`);
+  } else {
+    timelineOk = true;
+  }
+  timelineResults.push({ route, chips, periods, filterClickWorks, ok });
 }
-if (timelineNavError) badLinks.push(`PAGE /timeline goto failed: ${timelineNavError}`);
-await page.waitForTimeout(300);
-const chips = await page.locator('.dt-controls .chip').count();
-const periods = await page.locator('.dt .period').count();
-if (chips > 0) {
-  await page.locator('.dt-controls .chip').first().click();
+
+if (switcherMissing > 0 && localesMirrored) {
+  badLinks.push(`${switcherMissing} language switcher links have no counterpart page`);
 }
-const filterClickWorks = chips > 0 && (await page.locator('.dt-controls .chip.is-active').count()) === 1;
-const timelineOk = !timelineNavError && chips > 0 && periods > 0 && filterClickWorks;
 
 const report = {
   pagesVisited,
   sidebarChecks,
   mathChecks,
+  enPages,
+  zhPages,
+  localesMirrored,
+  switcherMissing,
   consoleErrors: consoleErrors.length,
   pageErrors: pageErrors.length,
   badLinks: badLinks.length,
   sidebarFailures: sidebarFailures.length,
-  timeline: { chips, periods, filterClickWorks, ok: timelineOk },
+  timeline: timelineResults,
   samples: {
     consoleErrors: consoleErrors.slice(0, 5),
     pageErrors: pageErrors.slice(0, 5),

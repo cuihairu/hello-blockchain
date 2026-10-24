@@ -32,8 +32,8 @@ npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页�
 ## 目录结构
 
 ```
-docs/                 # VitePress 站点源
-├── .vitepress/       # 主题与配置（sidebar.json 是站点侧栏唯一真源）
+docs/                 # VitePress 站点源：英文在根目录，中文在 zh/
+├── .vitepress/       # 主题与配置（sidebar.en.json / sidebar.zh.json 各自是两种语言的侧栏真源）
 ├── public/           # 品牌资产（logo.svg / favicon.svg / og-image.png / robots.txt / badges）
 ├── img/              # 正文引用的图片
 ├── SUMMARY.md        # 保留的导航维护说明，不是侧栏数据源
@@ -60,7 +60,8 @@ docs/                 # VitePress 站点源
 ├── consortium/       # 联盟链：Fabric、FISCO BCOS、Corda、Besu、WeBASE
 ├── dcny/             # 数字人民币：e-CNY 架构与试点
 ├── chain-games/      # 区块链游戏：项目、经济设计、事故
-└── dapp/             # DApp 架构：前端、钱包、合约、索引器
+├── dapp/             # DApp 架构：前端、钱包、合约、索引器
+└── zh/               # 简体中文语言包：同样这套目录在 /zh/ 下，中文正文
 ```
 
 ```

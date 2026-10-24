@@ -1,0 +1,670 @@
+[
+  {
+    "text": "简介",
+    "link": "/zh/Introduction"
+  },
+  {
+    "text": "导航维护",
+    "link": "/zh/sidebar-maintenance"
+  },
+  {
+    "text": "分层架构",
+    "link": "/zh/layers/Layers",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "计算层",
+        "link": "/zh/layers/Compute"
+      },
+      {
+        "text": "存储层",
+        "link": "/zh/layers/Storage"
+      },
+      {
+        "text": "结算层",
+        "link": "/zh/layers/Settlement"
+      },
+      {
+        "text": "服务发现",
+        "link": "/zh/layers/ServiceDiscovery"
+      }
+    ]
+  },
+  {
+    "text": "共识算法演进时间线",
+    "link": "/zh/consensus-timeline"
+  },
+  {
+    "text": "知识卡片与术语",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "知识卡片索引",
+        "link": "/zh/cards/Cards"
+      },
+      {
+        "text": "术语表",
+        "link": "/zh/cards/Glossary"
+      }
+    ]
+  },
+  {
+    "text": "记账模型",
+    "link": "/zh/model/Models",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "UTXO",
+        "link": "/zh/model/UTXO"
+      },
+      {
+        "text": "Account",
+        "link": "/zh/model/Account"
+      },
+      {
+        "text": "DAG",
+        "link": "/zh/model/DAG"
+      }
+    ]
+  },
+  {
+    "text": "数据结构",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Merkle 树",
+        "link": "/zh/algo/MerkleTree"
+      }
+    ]
+  },
+  {
+    "text": "脚本与操作码",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "OP_CHECKSIG",
+        "link": "/zh/opcode/OP_CHECKSIG"
+      }
+    ]
+  },
+  {
+    "text": "比特币机制",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "BIP 改进提案",
+        "link": "/zh/btc/BIPS"
+      },
+      {
+        "text": "P2PK 交易",
+        "link": "/zh/btc/P2PK"
+      }
+    ]
+  },
+  {
+    "text": "共识算法",
+    "link": "/zh/consensus/Consensus",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "PoW",
+        "link": "/zh/consensus/POW"
+      },
+      {
+        "text": "PoS",
+        "link": "/zh/consensus/POS"
+      },
+      {
+        "text": "ABFT",
+        "link": "/zh/consensus/ABFT"
+      },
+      {
+        "text": "Avalanche",
+        "link": "/zh/consensus/Avalanche"
+      },
+      {
+        "text": "BFT",
+        "link": "/zh/consensus/BFT"
+      },
+      {
+        "text": "DPoS",
+        "link": "/zh/consensus/DPOS"
+      },
+      {
+        "text": "FBA",
+        "link": "/zh/consensus/FBA"
+      },
+      {
+        "text": "HoneyBadgerBFT",
+        "link": "/zh/consensus/HoneyBadgerBFT"
+      },
+      {
+        "text": "MaxBFT",
+        "link": "/zh/consensus/MaxBFT"
+      },
+      {
+        "text": "Paxos",
+        "link": "/zh/consensus/Paxos"
+      },
+      {
+        "text": "PBFT",
+        "link": "/zh/consensus/PBFT"
+      },
+      {
+        "text": "PoA",
+        "link": "/zh/consensus/POA"
+      },
+      {
+        "text": "PoC",
+        "link": "/zh/consensus/POC"
+      },
+      {
+        "text": "PoET",
+        "link": "/zh/consensus/PoET"
+      },
+      {
+        "text": "PoH",
+        "link": "/zh/consensus/PoH"
+      },
+      {
+        "text": "覆盖证明",
+        "link": "/zh/consensus/ProofOfCoverage"
+      },
+      {
+        "text": "PoSpace",
+        "link": "/zh/consensus/PoSpace"
+      },
+      {
+        "text": "PoT",
+        "link": "/zh/consensus/POT"
+      },
+      {
+        "text": "PoST",
+        "link": "/zh/consensus/PoST"
+      },
+      {
+        "text": "RAFT",
+        "link": "/zh/consensus/RAFT"
+      },
+      {
+        "text": "Snowball",
+        "link": "/zh/consensus/Snowball"
+      },
+      {
+        "text": "SOLO",
+        "link": "/zh/consensus/SOLO"
+      },
+      {
+        "text": "TBFT",
+        "link": "/zh/consensus/TBFT"
+      },
+      {
+        "text": "Tendermint",
+        "link": "/zh/consensus/Tendermint"
+      },
+      {
+        "text": "TowerBFT",
+        "link": "/zh/consensus/TowerBFT"
+      },
+      {
+        "text": "Algorand",
+        "link": "/zh/consensus/Algorand"
+      },
+      {
+        "text": "BABE",
+        "link": "/zh/consensus/BABE"
+      },
+      {
+        "text": "带宽证明",
+        "link": "/zh/consensus/BandwidthProof"
+      },
+      {
+        "text": "DiemBFT",
+        "link": "/zh/consensus/DiemBFT"
+      },
+      {
+        "text": "Gasper",
+        "link": "/zh/consensus/Gasper"
+      },
+      {
+        "text": "GRANDPA",
+        "link": "/zh/consensus/GRANDPA"
+      },
+      {
+        "text": "HotStuff",
+        "link": "/zh/consensus/HotStuff"
+      },
+      {
+        "text": "IOTA",
+        "link": "/zh/consensus/IOTA"
+      },
+      {
+        "text": "Lachesis",
+        "link": "/zh/consensus/Lachesis"
+      },
+      {
+        "text": "Ouroboros",
+        "link": "/zh/consensus/Ouroboros"
+      },
+      {
+        "text": "QBFT",
+        "link": "/zh/consensus/QBFT"
+      },
+      {
+        "text": "Snowman",
+        "link": "/zh/consensus/Snowman"
+      },
+      {
+        "text": "GHOST",
+        "link": "/zh/consensus/GHOST"
+      },
+      {
+        "text": "GHOSTDAG",
+        "link": "/zh/consensus/GHOSTDAG"
+      },
+      {
+        "text": "Hashgraph",
+        "link": "/zh/consensus/Hashgraph"
+      },
+      {
+        "text": "Multi-Level BFT",
+        "link": "/zh/consensus/MultiLevelBFT"
+      },
+      {
+        "text": "Mysticeti",
+        "link": "/zh/consensus/Mysticeti"
+      },
+      {
+        "text": "Narwhal 与 Bullshark",
+        "link": "/zh/consensus/NarwhalBullshark"
+      },
+      {
+        "text": "NPoS",
+        "link": "/zh/consensus/NPoS"
+      },
+      {
+        "text": "RPCA",
+        "link": "/zh/consensus/RPCA"
+      },
+      {
+        "text": "Restaking（再质押）",
+        "link": "/zh/consensus/Restaking"
+      },
+      {
+        "text": "排序与结算",
+        "link": "/zh/consensus/Sequencing"
+      },
+      {
+        "text": "分片",
+        "link": "/zh/consensus/Sharding"
+      },
+      {
+        "text": "SPoRA",
+        "link": "/zh/consensus/SPORA"
+      },
+      {
+        "text": "SPoS",
+        "link": "/zh/consensus/SPOS"
+      },
+      {
+        "text": "Streamlet",
+        "link": "/zh/consensus/Streamlet"
+      },
+      {
+        "text": "Yuma",
+        "link": "/zh/consensus/Yuma"
+      }
+    ]
+  },
+  {
+    "text": "隐私安全",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "隐私技术总览",
+        "link": "/zh/Privacy/Privacy"
+      },
+      {
+        "text": "差分隐私",
+        "link": "/zh/Privacy/DifferentialPrivacy"
+      },
+      {
+        "text": "零知识证明",
+        "link": "/zh/Privacy/ZeroKnowledgeProof"
+      },
+      {
+        "text": "Bulletproofs",
+        "link": "/zh/Privacy/Bulletproofs"
+      },
+      {
+        "text": "Paillier",
+        "link": "/zh/Privacy/Paillier"
+      },
+      {
+        "text": "层级身份加密",
+        "link": "/zh/Privacy/HierarchicalIdentityBasedEncryption"
+      },
+      {
+        "text": "同态加密",
+        "link": "/zh/Privacy/HomomorphicEncryption"
+      },
+      {
+        "text": "混币服务",
+        "link": "/zh/Privacy/MixingServices"
+      },
+      {
+        "text": "环签名",
+        "link": "/zh/Privacy/RingSignature"
+      },
+      {
+        "text": "隐匿地址",
+        "link": "/zh/Privacy/StealthAddresses"
+      }
+    ]
+  },
+  {
+    "text": "黑客攻击",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "攻击面总览",
+        "link": "/zh/hacking/Attack"
+      },
+      {
+        "text": "大算力攻击",
+        "link": "/zh/hacking/51Attack"
+      },
+      {
+        "text": "Finney 攻击",
+        "link": "/zh/hacking/FinneyAttack"
+      },
+      {
+        "text": "双重花费攻击",
+        "link": "/zh/hacking/DoubleSpendAttack"
+      },
+      {
+        "text": "长程攻击",
+        "link": "/zh/hacking/LongRangeAttack"
+      },
+      {
+        "text": "自私挖矿攻击",
+        "link": "/zh/hacking/SelfishMiningAttack"
+      },
+      {
+        "text": "女巫攻击",
+        "link": "/zh/hacking/SybilAttack"
+      },
+      {
+        "text": "共识分叉攻击",
+        "link": "/zh/hacking/ConsensusForkAttack"
+      },
+      {
+        "text": "粉尘攻击",
+        "link": "/zh/hacking/DustingAttack"
+      },
+      {
+        "text": "交易拒绝服务攻击",
+        "link": "/zh/hacking/TransactionDoSAttack"
+      },
+      {
+        "text": "闪电网络攻击",
+        "link": "/zh/hacking/LightningNetworkAttack"
+      },
+      {
+        "text": "智能合约漏洞攻击",
+        "link": "/zh/hacking/SmartContractVulnerabilities"
+      },
+      {
+        "text": "信息泄露攻击",
+        "link": "/zh/hacking/InformationLeakageAttack"
+      },
+      {
+        "text": "跨链桥攻击",
+        "link": "/zh/hacking/CrossChainBridgeAttack"
+      }
+    ]
+  },
+  {
+    "text": "资产发行与 NFT",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "代币化协议",
+        "link": "/zh/nft/TokenizedProtocol"
+      },
+      {
+        "text": "OAP 协议",
+        "link": "/zh/nft/OAP"
+      },
+      {
+        "text": "Colored Coins 彩色币",
+        "link": "/zh/nft/ColoredCoins"
+      }
+    ]
+  },
+  {
+    "text": "有名的区块链项目",
+    "link": "/zh/chains/Chain",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Bitcoin 比特币",
+        "link": "/zh/chains/Bitcoin"
+      },
+      {
+        "text": "Ethereum 以太坊",
+        "link": "/zh/chains/Ethereum"
+      },
+      {
+        "text": "BSC 币安智能链",
+        "link": "/zh/chains/BinanceSmartChain"
+      },
+      {
+        "text": "Polkadot 波卡",
+        "link": "/zh/chains/Polkadot"
+      },
+      {
+        "text": "Monero 门罗币",
+        "link": "/zh/chains/Monero"
+      },
+      {
+        "text": "Cardano 卡尔达诺",
+        "link": "/zh/chains/Cardano"
+      },
+      {
+        "text": "Tether 泰达币",
+        "link": "/zh/chains/Tether"
+      },
+      {
+        "text": "Litecoin 莱特币",
+        "link": "/zh/chains/Litecoin"
+      },
+      {
+        "text": "Bytom 比原链",
+        "link": "/zh/chains/Bytom"
+      },
+      {
+        "text": "Cosmos 跨链枢纽",
+        "link": "/zh/chains/Cosmos"
+      },
+      {
+        "text": "EOS",
+        "link": "/zh/chains/EOS"
+      },
+      {
+        "text": "Stellar 恒星币",
+        "link": "/zh/chains/Stellar"
+      },
+      {
+        "text": "Solana",
+        "link": "/zh/chains/Solana"
+      },
+      {
+        "text": "Chia 奇亚",
+        "link": "/zh/chains/Chia"
+      },
+      {
+        "text": "TRON 波场",
+        "link": "/zh/chains/TRON"
+      },
+      {
+        "text": "TON",
+        "link": "/zh/chains/TON"
+      },
+      {
+        "text": "Avalanche 雪崩",
+        "link": "/zh/chains/Avalanche"
+      },
+      {
+        "text": "Near",
+        "link": "/zh/chains/Near"
+      },
+      {
+        "text": "Sui",
+        "link": "/zh/chains/Sui"
+      },
+      {
+        "text": "Aptos",
+        "link": "/zh/chains/Aptos"
+      },
+      {
+        "text": "Filecoin 文件币",
+        "link": "/zh/chains/Filecoin"
+      },
+      {
+        "text": "Arweave 常青藤",
+        "link": "/zh/chains/Arweave"
+      },
+      {
+        "text": "Lightning 闪电网络",
+        "link": "/zh/chains/Lightning"
+      },
+      {
+        "text": "Optimism",
+        "link": "/zh/chains/Optimism"
+      },
+      {
+        "text": "Arbitrum 仲裁链",
+        "link": "/zh/chains/Arbitrum"
+      },
+      {
+        "text": "zkSync",
+        "link": "/zh/chains/zkSync"
+      }
+    ]
+  },
+  {
+    "text": "联盟链",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "联盟链总览",
+        "link": "/zh/consortium/Consortium"
+      },
+      {
+        "text": "Hyperledger Fabric",
+        "link": "/zh/consortium/Fabric"
+      },
+      {
+        "text": "FISCO BCOS",
+        "link": "/zh/consortium/FiscoBcos"
+      },
+      {
+        "text": "R3 Corda",
+        "link": "/zh/consortium/Corda"
+      },
+      {
+        "text": "Hyperledger Besu / Quorum",
+        "link": "/zh/consortium/Besu"
+      },
+      {
+        "text": "WeBASE",
+        "link": "/zh/consortium/Webase"
+      }
+    ]
+  },
+  {
+    "text": "数字人民币",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "数字人民币",
+        "link": "/zh/dcny/Dcny"
+      },
+      {
+        "text": "试点进展",
+        "link": "/zh/dcny/Pilot"
+      }
+    ]
+  },
+  {
+    "text": "区块链游戏",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "区块链游戏",
+        "link": "/zh/chain-games/ChainGames"
+      },
+      {
+        "text": "经济设计",
+        "link": "/zh/chain-games/Economy"
+      }
+    ]
+  },
+  {
+    "text": "DApp",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "DApp 架构",
+        "link": "/zh/dapp/Dapp"
+      }
+    ]
+  },
+  {
+    "text": "发展史时间线",
+    "link": "/zh/timeline"
+  },
+  {
+    "text": "知识点总纲",
+    "link": "/zh/knowledge"
+  },
+  {
+    "text": "导航索引",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "按共识算法",
+        "link": "/zh/nav/ByConsensus"
+      },
+      {
+        "text": "按时间",
+        "link": "/zh/nav/ByTime"
+      }
+    ]
+  },
+  {
+    "text": "共识趋势展望",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "共识趋势展望",
+        "link": "/zh/trends/Trends"
+      }
+    ]
+  },
+  {
+    "text": "审计记录",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "结构审计（2026-10-19）",
+        "link": "/zh/review/structure-audit-2026-10-19"
+      },
+      {
+        "text": "内容复核（2026-10-19）",
+        "link": "/zh/review/content-review-2026-10-19"
+      }
+    ]
+  }
+]

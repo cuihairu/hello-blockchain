@@ -1,37 +1,37 @@
-# UTXO 模型
+# UTXO Model
 
-UTXO（Unspent Transaction Output，未花费交易输出）模型是比特币和许多其他区块链系统中使用的一种交易模型。在UTXO模型中，每个交易输出都作为一个未花费的输出存在，只有这些未花费的输出可以被后续的交易引用和消费。以下是对UTXO模型的详细解释：
+The UTXO (Unspent Transaction Output) model is a transaction model used in Bitcoin and many other blockchain systems. In the UTXO model, each transaction output exists as an unspent output, and only these unspent outputs can be referenced and consumed by subsequent transactions. The following is a detailed explanation of the UTXO model:
 
-### UTXO 模型基础
+### Fundamentals of the UTXO Model
 
-1. **交易输出 (Transaction Output)**：
-   - 在比特币和其他UTXO模型的区块链中，每一笔交易（Transaction）都会产生一个或多个输出（Output），称为交易输出。每个交易输出包括一个金额和一个锁定脚本（Locking Script），脚本规定了后续交易必须满足的条件才能消费这个输出。
+1. **Transaction Output**:
+   - In Bitcoin and other UTXO-model blockchains, each transaction produces one or more outputs, called transaction outputs. Each transaction output includes an amount and a locking script that specifies the conditions that must be met before the output can be consumed.
 
-2. **未花费交易输出 (UTXO)**：
-   - 当一个交易输出被创建时，它会被添加到UTXO集合中，作为一个未花费的交易输出。只有这些UTXO可以被后续的交易引用和消费。UTXO的状态是动态变化的，一旦被引用和消费，就会从UTXO集合中移除。
+2. **Unspent Transaction Output (UTXO)**:
+   - When a transaction output is created, it is added to the UTXO set as an unspent transaction output. Only these UTXOs can be referenced and consumed by subsequent transactions. The state of UTXOs is dynamic — once referenced and consumed, a UTXO is removed from the UTXO set.
 
-3. **交易输入 (Transaction Input)**：
-   - 每笔消费交易（比如支付或转账）必须引用一个或多个之前的UTXO作为输入。交易输入指定了要消费的UTXO的引用，以及一个解锁脚本（Unlocking Script），用于验证这笔交易的合法性。
+3. **Transaction Input**:
+   - Every spending transaction (such as a payment or transfer) must reference one or more previous UTXOs as inputs. A transaction input specifies the reference to the UTXO being consumed, along with an unlocking script used to verify the validity of the transaction.
 
-4. **交易的结构**：
-   - 每笔交易包括一个或多个输入和一个或多个输出。输入引用了之前的UTXO，并提供了满足锁定脚本条件的解锁脚本；输出定义了新的UTXO，指定了金额和锁定脚本。
+4. **Transaction Structure**:
+   - Each transaction includes one or more inputs and one or more outputs. Inputs reference previous UTXOs and provide unlocking scripts that satisfy the locking script conditions; outputs define new UTXOs, specifying an amount and a locking script.
 
-### UTXO 模型的优势和特点
+### Advantages and Characteristics of the UTXO Model
 
-- **去中心化和安全性**：UTXO模型支持去中心化的交易验证和双重支付检测。每笔交易都必须独立验证，消费UTXO的所有权转移是不可逆转的。
+- **Decentralization and Security**: The UTXO model supports decentralized transaction verification and double-spending detection. Every transaction must be verified independently, and the transfer of ownership of consumed UTXOs is irreversible.
 
-- **隐私保护**：由于每笔交易可以选择消费之前交易中的任意UTXO，而不是整个账户的余额，UTXO模型提供了一定程度的交易隐私。
+- **Privacy Protection**: Because each transaction can choose to consume any UTXO from a previous transaction rather than the entire account balance, the UTXO model provides a degree of transaction privacy.
 
-- **扩展性**：UTXO模型可以更容易地并行化和优化，因为每个UTXO可以独立验证和处理。
+- **Scalability**: The UTXO model can be more easily parallelized and optimized, because each UTXO can be verified and processed independently.
 
-### UTXO 模型的实现细节
+### Implementation Details of the UTXO Model
 
-- **数据结构**：区块链系统会维护一个UTXO集合，其中包含所有未花费的交易输出的状态信息。
+- **Data Structure**: The blockchain system maintains a UTXO set containing the state information of all unspent transaction outputs.
 
-- **交易验证**：每笔交易在被验证时，系统会检查交易输入引用的UTXO是否存在、未被花费，并且解锁脚本能够成功验证锁定脚本的条件。
+- **Transaction Verification**: When a transaction is verified, the system checks whether the UTXOs referenced by the transaction inputs exist, are unspent, and whether the unlocking script can successfully verify the locking script conditions.
 
-- **双重支付检测**：系统通过检查UTXO集合来防止同一UTXO被多次消费，从而避免双重支付。
+- **Double-Spending Detection**: The system prevents the same UTXO from being consumed multiple times by checking the UTXO set, thereby avoiding double-spending.
 
-### 总结
+### Summary
 
-UTXO模型是一种在比特币和其他区块链系统中广泛使用的交易模型，通过管理未花费的交易输出集合来实现交易的有效性验证和状态跟踪。它的设计支持去中心化、安全性和隐私保护，是区块链系统的核心组成部分之一。
+The UTXO model is a widely used transaction model in Bitcoin and other blockchain systems. It achieves transaction validity verification and state tracking by managing a set of unspent transaction outputs. Its design supports decentralization, security, and privacy protection, making it one of the core components of a blockchain system.

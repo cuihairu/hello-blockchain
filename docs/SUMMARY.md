@@ -1,5 +1,8 @@
-# 导航维护说明
+# Navigation maintenance note
 
-本文件因历史兼容保留，不再维护手写目录副本。站点导航的唯一权威源是 `docs/.vitepress/sidebar.json`，VitePress 从该文件生成侧栏。
+This file is kept for historical compatibility; no hand-written table of contents is maintained any more. VitePress builds the sidebars from two files, one per locale:
 
-新增、移除或调整站点页面时，只修改 `sidebar.json`，并运行 `npm run docs:check` 检查侧栏目标、页面覆盖和站内链接。不要在本文件重建目录；此处手写的导航条目不会驱动站点侧栏。仓库根 README 中的目录树只描述源目录，不是导航数据源。
+- `docs/.vitepress/sidebar.en.json` — the English tree at the docs root (`/`)
+- `docs/.vitepress/sidebar.zh.json` — the Chinese tree under `docs/zh/` (`/zh/`)
+
+Adding, removing or restructuring a page means editing the sidebar of the locale that owns the page, then running `npm run docs:check` to verify sidebar targets, page coverage, internal links, the knowledge digest and the headline counts. Do not rebuild a table of contents here: entries written in this file do not drive the site sidebar. The directory trees in the root README describe source directories only, not navigation data.

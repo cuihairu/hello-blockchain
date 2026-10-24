@@ -1,59 +1,50 @@
-# P2PK 交易
+# P2PK transactions
 
-P2PK（Pay-to-PubKey）是比特币网络中最简单的一种交易类型之一。下面是对P2PK的详细解释：
+P2PK (Pay-to-PubKey) is one of the simplest transaction types on the Bitcoin network. It pays directly to a public key rather than to a hash of one, which makes the script small but exposes the full public key the moment the output is created.
 
-### P2PK 基础知识
+### P2PK basics
 
-1. **公钥（PubKey）**：在比特币中，每个用户都有一对密钥：一个私钥（必须保密）和一个公钥（可以公开）。公钥用于验证用对应的私钥生成的签名。
+1. **Public key (PubKey)** — In Bitcoin every user holds a key pair: a private key that must stay secret, and a public key that may be published. The public key verifies signatures produced with the matching private key.
+2. **Transaction output** — A P2PK output embeds a public key and states that the coins can only be spent by presenting a signature the key accepts.
+3. **Unlocking script (ScriptSig)** — To spend coins sent to a P2PK output, the spender supplies a signature that matches the public key stored in the output. That signature is checked against the public key to confirm it is valid.
 
-2. **交易输出**：P2PK交易输出包含一个公钥，指定比特币只能通过提供对应私钥生成的签名来使用。
+### The scripts
 
-3. **解锁脚本（ScriptSig）**：当有人想要使用发送到P2PK地址的比特币时，他们必须提供一个与交易输出中的公钥匹配的签名。这个签名使用公钥进行检查，以确保其有效性。
-
-### 脚本组成
-
-- **锁定脚本（ScriptPubKey）**：锁定输出到特定公钥的脚本。一个典型的P2PK ScriptPubKey如下：
+- **Locking script (ScriptPubKey)** — locks the output to one specific public key. A typical P2PK ScriptPubKey is:
   ```
   <PubKey> OP_CHECKSIG
   ```
-  这里的`<PubKey>`是接收者的公钥，`OP_CHECKSIG`是一个操作码，用于检查解锁脚本中提供的签名是否有效。
-
-- **解锁脚本（ScriptSig）**：通过提供有效签名解锁输出的脚本。一个典型的P2PK ScriptSig如下：
+  `<PubKey>` is the receiver's public key, and `OP_CHECKSIG` is the opcode that checks the signature supplied by the unlocking script.
+- **Unlocking script (ScriptSig)** — unlocks the output by presenting a valid signature. A typical P2PK ScriptSig is:
   ```
   <Signature>
   ```
-  这里的`<Signature>`是由发送者的私钥生成的签名。
+  `<Signature>` was produced with the sender's private key.
 
-### 过程
+### How it runs
 
-1. **创建P2PK交易**：创建交易时，发送者在交易输出的锁定脚本中指定接收者的公钥。
+1. **Creating a P2PK transaction** — when the transaction is built, the sender puts the receiver's public key into the output's locking script.
+2. **Spending a P2PK output** — to use the coins, the spender builds a transaction whose unlocking script supplies the signature generated with the corresponding private key.
+3. **Verification** — the Bitcoin network executes the two scripts together. It takes the public key from the locking script, takes the signature from the unlocking script, and verifies the signature with that key. If the signature checks out, the transaction is accepted.
 
-2. **使用P2PK交易**：为了使用该输出中的比特币，使用者必须创建一个解锁脚本，提供由对应私钥生成的签名。
+### A worked example
 
-3. **验证**：比特币网络通过一起运行这些脚本来验证交易。它从锁定脚本中获取公钥，从解锁脚本中获取签名，然后使用公钥验证签名。如果签名有效，交易就会被接受。
+1. **Transaction creation**
+   - Alice wants to send Bob 1 BTC.
+   - Bob provides his public key.
+   - Alice creates an output containing Bob's public key and the `OP_CHECKSIG` opcode.
+2. **Spending the transaction**
+   - Bob wants to spend the 1 BTC he received.
+   - Bob builds a new transaction and supplies a signature (made with his private key) as the unlocking script.
+   - The Bitcoin network checks the signature against the public key from the original transaction. If it matches, Bob's transaction is valid.
 
-### 示例
+### Trade-offs
 
-以下是P2PK工作的一个简化示例：
+- **Advantages**
+  - Simple and direct.
+  - Binds the transaction output to one specific public key.
+- **Drawbacks**
+  - Weaker privacy, because the public key is exposed before the coins are spent.
+  - Larger transactions than newer approaches such as P2PKH, which stores only the hash of the public key and thereby reduces exposure while improving both privacy and security.
 
-1. **交易创建**：
-   - Alice 想给 Bob 发送 1 BTC。
-   - Bob 提供他的公钥。
-   - Alice 创建一个包含 Bob 的公钥和`OP_CHECKSIG`操作的交易输出。
-
-2. **交易使用**：
-   - Bob 想要使用他收到的 1 BTC。
-   - Bob 创建一个新交易并提供一个签名（使用他的私钥）作为解锁脚本。
-   - 比特币网络使用原始交易中的公钥检查签名。如果匹配，Bob 的交易有效。
-
-### 优点和缺点
-
-- **优点**：
-  - 简单直接。
-  - 直接将交易输出与特定的公钥绑定。
-
-- **缺点**：
-  - 隐私性较差，因为公钥在使用前就暴露了。
-  - 与更现代的方法（如P2PKH）相比，交易体积较大。P2PKH使用公钥的哈希来减少暴露，提高隐私和安全性。
-
-P2PK在早期比特币交易中较为常见，但现在大多已被P2PKH和其他更高级的脚本方法取代，这些方法提供了更好的安全性和隐私性。
+P2PK was common in early Bitcoin transactions. It has since been largely replaced by P2PKH and more advanced script patterns that offer better security and privacy.

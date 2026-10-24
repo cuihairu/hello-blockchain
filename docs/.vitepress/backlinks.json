@@ -1,4041 +1,4082 @@
 {
  "titles": {
-  "/Introduction": "简介",
-  "/Privacy/Bulletproofs": "Bulletproofs",
-  "/Privacy/DifferentialPrivacy": "差分隐私",
-  "/Privacy/HierarchicalIdentityBasedEncryption": "层级身份加密（HIBE）",
-  "/Privacy/HomomorphicEncryption": "同态加密",
-  "/Privacy/MixingServices": "混币服务",
-  "/Privacy/Paillier": "Paillier 同态加密",
-  "/Privacy/Privacy": "隐私技术总览",
-  "/Privacy/RingSignature": "环签名",
-  "/Privacy/StealthAddresses": "隐匿地址",
-  "/Privacy/ZeroKnowledgeProof": "零知识证明",
-  "/algo/MerkleTree": "Merkle 树",
-  "/btc/BIPS": "BIP 改进提案",
-  "/btc/P2PK": "P2PK 交易",
-  "/cards/Cards": "知识卡片索引",
-  "/cards/Glossary": "术语表",
-  "/chain-games/ChainGames": "区块链游戏",
-  "/chain-games/Economy": "链游经济设计",
-  "/chains/Aptos": "Aptos",
-  "/chains/Arbitrum": "Arbitrum",
-  "/chains/Arweave": "Arweave",
-  "/chains/Avalanche": "Avalanche 雪崩",
-  "/chains/BinanceSmartChain": "BSC 币安智能链",
-  "/chains/Bitcoin": "Bitcoin 比特币",
-  "/chains/Bytom": "Bytom 比原链",
-  "/chains/Cardano": "Cardano 卡尔达诺",
-  "/chains/Chain": "有名的区块链项目",
-  "/chains/Chia": "Chia 奇亚",
-  "/chains/Cosmos": "Cosmos 跨链枢纽",
-  "/chains/EOS": "EOS",
-  "/chains/Ethereum": "Ethereum 以太坊",
-  "/chains/Filecoin": "Filecoin",
-  "/chains/Lightning": "Lightning 闪电网络",
-  "/chains/Litecoin": "Litecoin 莱特币",
-  "/chains/Monero": "Monero 门罗币",
-  "/chains/Near": "Near",
-  "/chains/Optimism": "Optimism",
-  "/chains/Polkadot": "Polkadot 波卡",
-  "/chains/Solana": "Solana",
-  "/chains/Stellar": "Stellar 恒星币",
-  "/chains/Sui": "Sui",
-  "/chains/TON": "TON（The Open Network）",
-  "/chains/TRON": "TRON 波场",
-  "/chains/Tether": "Tether 泰达币",
-  "/chains/zkSync": "zkSync",
-  "/consensus/ABFT": "ABFT",
-  "/consensus/Algorand": "Algorand",
-  "/consensus/Avalanche": "Avalanche",
-  "/consensus/BABE": "BABE",
-  "/consensus/BFT": "BFT",
-  "/consensus/BandwidthProof": "带宽证明（Bandwidth Proof）",
-  "/consensus/Consensus": "共识算法",
-  "/consensus/DPOS": "DPoS",
-  "/consensus/DiemBFT": "DiemBFT",
-  "/consensus/FBA": "FBA",
-  "/consensus/GHOST": "GHOST",
-  "/consensus/GHOSTDAG": "GHOSTDAG",
-  "/consensus/GRANDPA": "GRANDPA",
-  "/consensus/Gasper": "Gasper",
-  "/consensus/Hashgraph": "Hashgraph",
-  "/consensus/HoneyBadgerBFT": "HoneyBadgerBFT",
-  "/consensus/HotStuff": "HotStuff",
-  "/consensus/IOTA": "IOTA Tangle",
-  "/consensus/Lachesis": "Lachesis",
-  "/consensus/MaxBFT": "MaxBFT",
-  "/consensus/MultiLevelBFT": "Multi-Level BFT（Theta）",
-  "/consensus/Mysticeti": "Mysticeti",
-  "/consensus/NPoS": "NPoS",
-  "/consensus/NarwhalBullshark": "Narwhal 与 Bullshark",
-  "/consensus/Ouroboros": "Ouroboros",
-  "/consensus/PBFT": "PBFT",
-  "/consensus/POA": "PoA",
-  "/consensus/POC": "PoC",
-  "/consensus/POS": "PoS",
-  "/consensus/POT": "PoT",
-  "/consensus/POW": "PoW",
-  "/consensus/Paxos": "Paxos",
-  "/consensus/PoET": "PoET",
-  "/consensus/PoH": "PoH",
-  "/consensus/PoST": "PoST",
-  "/consensus/PoSpace": "PoSpace",
-  "/consensus/ProofOfCoverage": "覆盖证明（Helium PoC）",
-  "/consensus/QBFT": "QBFT",
-  "/consensus/RAFT": "RAFT",
-  "/consensus/RPCA": "RPCA",
-  "/consensus/Restaking": "再质押（Restaking）",
-  "/consensus/SOLO": "SOLO",
-  "/consensus/SPORA": "SPoRA（Arweave）",
-  "/consensus/SPOS": "SPoS",
-  "/consensus/Sequencing": "排序与结算（Rollup 侧）",
-  "/consensus/Sharding": "分片（Sharding）",
-  "/consensus/Snowball": "Snowball",
-  "/consensus/Snowman": "Snowman",
-  "/consensus/Streamlet": "Streamlet",
-  "/consensus/TBFT": "TBFT",
-  "/consensus/Tendermint": "Tendermint",
-  "/consensus/TowerBFT": "TowerBFT",
-  "/consensus/Yuma": "Yuma Consensus（Bittensor）",
-  "/consensus-timeline": "共识算法演进时间线",
-  "/consortium/Besu": "Hyperledger Besu / Quorum",
-  "/consortium/Consortium": "联盟链",
-  "/consortium/Corda": "R3 Corda",
-  "/consortium/Fabric": "Hyperledger Fabric",
-  "/consortium/FiscoBcos": "FISCO BCOS",
-  "/consortium/Webase": "WeBASE",
-  "/dapp/Dapp": "DApp 架构",
-  "/dcny/Dcny": "数字人民币（e-CNY）",
-  "/dcny/Pilot": "数字人民币试点",
-  "/hacking/51Attack": "大算力攻击（51% 攻击）",
-  "/hacking/Attack": "攻击面总览",
-  "/hacking/ConsensusForkAttack": "共识分叉攻击",
-  "/hacking/CrossChainBridgeAttack": "跨链桥攻击",
-  "/hacking/DoubleSpendAttack": "双重花费攻击",
-  "/hacking/DustingAttack": "粉尘攻击",
-  "/hacking/FinneyAttack": "Finney 攻击",
-  "/hacking/InformationLeakageAttack": "信息泄露攻击",
-  "/hacking/LightningNetworkAttack": "闪电网络攻击",
-  "/hacking/LongRangeAttack": "长程攻击",
-  "/hacking/SelfishMiningAttack": "自私挖矿攻击",
-  "/hacking/SmartContractVulnerabilities": "智能合约漏洞攻击",
-  "/hacking/SybilAttack": "女巫攻击",
-  "/hacking/TransactionDoSAttack": "交易拒绝服务攻击",
+  "/Introduction": "Introduction",
+  "/algo/MerkleTree": "Merkle Tree",
+  "/btc/BIPS": "BIP Improvement Proposals",
+  "/btc/P2PK": "P2PK transactions",
   "/": "/..",
-  "/knowledge": "知识点总纲",
-  "/layers/Compute": "计算层",
-  "/layers/Layers": "分层架构",
-  "/layers/ServiceDiscovery": "服务发现",
-  "/layers/Settlement": "结算层",
-  "/layers/Storage": "存储层",
-  "/model/Account": "账户模型",
-  "/model/DAG": "DAG 记账模型",
-  "/model/Models": "记账模型",
-  "/model/UTXO": "UTXO 模型",
-  "/nav/ByConsensus": "按共识算法导航",
-  "/nav/ByTime": "按时间导航",
-  "/nft/ColoredCoins": "比特币上的 NFT 与彩色币",
-  "/nft/OAP": "OAP 协议",
-  "/nft/TokenizedProtocol": "代币化协议（Tokenized Protocol）",
+  "/model/Account": "Account Model",
+  "/model/DAG": "DAG Ledger Model",
+  "/model/Models": "Ledger Models",
+  "/model/UTXO": "UTXO Model",
   "/opcode/OP_CHECKSIG": "OP_CHECKSIG",
-  "/review/structure-audit-2026-10-19": "hello-blockchain 目录与内容组织审计（2026-10-19）",
-  "/sidebar-maintenance": "站点导航维护",
-  "/timeline": "发展史时间线",
-  "/trends/Trends": "共识趋势展望"
+  "/zh/Introduction": "简介",
+  "/zh/Privacy/Bulletproofs": "Bulletproofs",
+  "/zh/Privacy/DifferentialPrivacy": "差分隐私",
+  "/zh/Privacy/HierarchicalIdentityBasedEncryption": "层级身份加密（HIBE）",
+  "/zh/Privacy/HomomorphicEncryption": "同态加密",
+  "/zh/Privacy/MixingServices": "混币服务",
+  "/zh/Privacy/Paillier": "Paillier 同态加密",
+  "/zh/Privacy/Privacy": "隐私技术总览",
+  "/zh/Privacy/RingSignature": "环签名",
+  "/zh/Privacy/StealthAddresses": "隐匿地址",
+  "/zh/Privacy/ZeroKnowledgeProof": "零知识证明",
+  "/zh/algo/MerkleTree": "Merkle 树",
+  "/zh/btc/BIPS": "BIP 改进提案",
+  "/zh/btc/P2PK": "P2PK 交易",
+  "/zh/cards/Cards": "知识卡片索引",
+  "/zh/cards/Glossary": "术语表",
+  "/zh/chain-games/ChainGames": "区块链游戏",
+  "/zh/chain-games/Economy": "链游经济设计",
+  "/zh/chains/Aptos": "Aptos",
+  "/zh/chains/Arbitrum": "Arbitrum",
+  "/zh/chains/Arweave": "Arweave",
+  "/zh/chains/Avalanche": "Avalanche 雪崩",
+  "/zh/chains/BinanceSmartChain": "BSC 币安智能链",
+  "/zh/chains/Bitcoin": "Bitcoin 比特币",
+  "/zh/chains/Bytom": "Bytom 比原链",
+  "/zh/chains/Cardano": "Cardano 卡尔达诺",
+  "/zh/chains/Chain": "有名的区块链项目",
+  "/zh/chains/Chia": "Chia 奇亚",
+  "/zh/chains/Cosmos": "Cosmos 跨链枢纽",
+  "/zh/chains/EOS": "EOS",
+  "/zh/chains/Ethereum": "Ethereum 以太坊",
+  "/zh/chains/Filecoin": "Filecoin",
+  "/zh/chains/Lightning": "Lightning 闪电网络",
+  "/zh/chains/Litecoin": "Litecoin 莱特币",
+  "/zh/chains/Monero": "Monero 门罗币",
+  "/zh/chains/Near": "Near",
+  "/zh/chains/Optimism": "Optimism",
+  "/zh/chains/Polkadot": "Polkadot 波卡",
+  "/zh/chains/Solana": "Solana",
+  "/zh/chains/Stellar": "Stellar 恒星币",
+  "/zh/chains/Sui": "Sui",
+  "/zh/chains/TON": "TON（The Open Network）",
+  "/zh/chains/TRON": "TRON 波场",
+  "/zh/chains/Tether": "Tether 泰达币",
+  "/zh/chains/zkSync": "zkSync",
+  "/zh/consensus/ABFT": "ABFT",
+  "/zh/consensus/Algorand": "Algorand",
+  "/zh/consensus/Avalanche": "Avalanche",
+  "/zh/consensus/BABE": "BABE",
+  "/zh/consensus/BFT": "BFT",
+  "/zh/consensus/BandwidthProof": "带宽证明（Bandwidth Proof）",
+  "/zh/consensus/Consensus": "共识算法",
+  "/zh/consensus/DPOS": "DPoS",
+  "/zh/consensus/DiemBFT": "DiemBFT",
+  "/zh/consensus/FBA": "FBA",
+  "/zh/consensus/GHOST": "GHOST",
+  "/zh/consensus/GHOSTDAG": "GHOSTDAG",
+  "/zh/consensus/GRANDPA": "GRANDPA",
+  "/zh/consensus/Gasper": "Gasper",
+  "/zh/consensus/Hashgraph": "Hashgraph",
+  "/zh/consensus/HoneyBadgerBFT": "HoneyBadgerBFT",
+  "/zh/consensus/HotStuff": "HotStuff",
+  "/zh/consensus/IOTA": "IOTA Tangle",
+  "/zh/consensus/Lachesis": "Lachesis",
+  "/zh/consensus/MaxBFT": "MaxBFT",
+  "/zh/consensus/MultiLevelBFT": "Multi-Level BFT（Theta）",
+  "/zh/consensus/Mysticeti": "Mysticeti",
+  "/zh/consensus/NPoS": "NPoS",
+  "/zh/consensus/NarwhalBullshark": "Narwhal 与 Bullshark",
+  "/zh/consensus/Ouroboros": "Ouroboros",
+  "/zh/consensus/PBFT": "PBFT",
+  "/zh/consensus/POA": "PoA",
+  "/zh/consensus/POC": "PoC",
+  "/zh/consensus/POS": "PoS",
+  "/zh/consensus/POT": "PoT",
+  "/zh/consensus/POW": "PoW",
+  "/zh/consensus/Paxos": "Paxos",
+  "/zh/consensus/PoET": "PoET",
+  "/zh/consensus/PoH": "PoH",
+  "/zh/consensus/PoST": "PoST",
+  "/zh/consensus/PoSpace": "PoSpace",
+  "/zh/consensus/ProofOfCoverage": "覆盖证明（Helium PoC）",
+  "/zh/consensus/QBFT": "QBFT",
+  "/zh/consensus/RAFT": "RAFT",
+  "/zh/consensus/RPCA": "RPCA",
+  "/zh/consensus/Restaking": "再质押（Restaking）",
+  "/zh/consensus/SOLO": "SOLO",
+  "/zh/consensus/SPORA": "SPoRA（Arweave）",
+  "/zh/consensus/SPOS": "SPoS",
+  "/zh/consensus/Sequencing": "排序与结算（Rollup 侧）",
+  "/zh/consensus/Sharding": "分片（Sharding）",
+  "/zh/consensus/Snowball": "Snowball",
+  "/zh/consensus/Snowman": "Snowman",
+  "/zh/consensus/Streamlet": "Streamlet",
+  "/zh/consensus/TBFT": "TBFT",
+  "/zh/consensus/Tendermint": "Tendermint",
+  "/zh/consensus/TowerBFT": "TowerBFT",
+  "/zh/consensus/Yuma": "Yuma Consensus（Bittensor）",
+  "/zh/consensus-timeline": "共识算法演进时间线",
+  "/zh/consortium/Besu": "Hyperledger Besu / Quorum",
+  "/zh/consortium/Consortium": "联盟链",
+  "/zh/consortium/Corda": "R3 Corda",
+  "/zh/consortium/Fabric": "Hyperledger Fabric",
+  "/zh/consortium/FiscoBcos": "FISCO BCOS",
+  "/zh/consortium/Webase": "WeBASE",
+  "/zh/dapp/Dapp": "DApp 架构",
+  "/zh/dcny/Dcny": "数字人民币（e-CNY）",
+  "/zh/dcny/Pilot": "数字人民币试点",
+  "/zh/hacking/51Attack": "大算力攻击（51% 攻击）",
+  "/zh/hacking/Attack": "攻击面总览",
+  "/zh/hacking/ConsensusForkAttack": "共识分叉攻击",
+  "/zh/hacking/CrossChainBridgeAttack": "跨链桥攻击",
+  "/zh/hacking/DoubleSpendAttack": "双重花费攻击",
+  "/zh/hacking/DustingAttack": "粉尘攻击",
+  "/zh/hacking/FinneyAttack": "Finney 攻击",
+  "/zh/hacking/InformationLeakageAttack": "信息泄露攻击",
+  "/zh/hacking/LightningNetworkAttack": "闪电网络攻击",
+  "/zh/hacking/LongRangeAttack": "长程攻击",
+  "/zh/hacking/SelfishMiningAttack": "自私挖矿攻击",
+  "/zh/hacking/SmartContractVulnerabilities": "智能合约漏洞攻击",
+  "/zh/hacking/SybilAttack": "女巫攻击",
+  "/zh/hacking/TransactionDoSAttack": "交易拒绝服务攻击",
+  "/zh": "/..",
+  "/zh/knowledge": "知识点总纲",
+  "/zh/layers/Compute": "计算层",
+  "/zh/layers/Layers": "分层架构",
+  "/zh/layers/ServiceDiscovery": "服务发现",
+  "/zh/layers/Settlement": "结算层",
+  "/zh/layers/Storage": "存储层",
+  "/zh/model/Account": "账户模型",
+  "/zh/model/DAG": "DAG 记账模型",
+  "/zh/model/Models": "记账模型",
+  "/zh/model/UTXO": "UTXO 模型",
+  "/zh/nav/ByConsensus": "按共识算法导航",
+  "/zh/nav/ByTime": "按时间导航",
+  "/zh/nft/ColoredCoins": "比特币上的 NFT 与彩色币",
+  "/zh/nft/OAP": "OAP 协议",
+  "/zh/nft/TokenizedProtocol": "代币化协议（Tokenized Protocol）",
+  "/zh/opcode/OP_CHECKSIG": "OP_CHECKSIG",
+  "/zh/review/content-review-2026-10-19": "内容结构改动复核（2026-10-19）",
+  "/zh/review/structure-audit-2026-10-19": "hello-blockchain 目录与内容组织审计（2026-10-19）",
+  "/zh/sidebar-maintenance": "站点导航维护",
+  "/zh/timeline": "发展史时间线",
+  "/zh/trends/Trends": "共识趋势展望"
  },
  "backlinks": {
   "/model/Models": [
    {
     "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/chains/TON",
-    "t": "TON（The Open Network）"
-   },
-   {
-    "r": "/consensus/POA",
-    "t": "PoA"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
+    "t": "Introduction"
    }
   ],
   "/algo/MerkleTree": [
    {
     "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Bitcoin",
-    "t": "Bitcoin 比特币"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
+    "t": "Introduction"
    }
   ],
   "/opcode/OP_CHECKSIG": [
    {
     "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
+    "t": "Introduction"
    }
   ],
   "/btc/BIPS": [
    {
     "r": "/Introduction",
+    "t": "Introduction"
+   }
+  ],
+  "/zh/model/Models": [
+   {
+    "r": "/zh/Introduction",
     "t": "简介"
    },
    {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   }
-  ],
-  "/chain-games/ChainGames": [
-   {
-    "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chain-games/Economy",
-    "t": "链游经济设计"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/knowledge": [
-   {
-    "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/Consensus",
-    "t": "共识算法"
-   }
-  ],
-  "/consensus-timeline": [
-   {
-    "r": "/Introduction",
-    "t": "简介"
-   },
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/TON",
-    "t": "TON（The Open Network）"
-   },
-   {
-    "r": "/chains/TRON",
-    "t": "TRON 波场"
-   },
-   {
-    "r": "/consensus/Consensus",
-    "t": "共识算法"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/timeline",
-    "t": "发展史时间线"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/layers/Layers": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/BandwidthProof",
-    "t": "带宽证明（Bandwidth Proof）"
-   },
-   {
-    "r": "/consensus/Consensus",
-    "t": "共识算法"
-   },
-   {
-    "r": "/consensus/POW",
-    "t": "PoW"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/cards/Glossary": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/timeline": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/GHOST": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Ethereum",
+    "r": "/zh/chains/Ethereum",
     "t": "Ethereum 以太坊"
    },
    {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consensus/Yuma",
-    "t": "Yuma Consensus（Bittensor）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/PBFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/HotStuff",
-    "t": "HotStuff"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/consensus/MultiLevelBFT",
-    "t": "Multi-Level BFT（Theta）"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus/RPCA",
-    "t": "RPCA"
-   },
-   {
-    "r": "/consensus/Sharding",
-    "t": "分片（Sharding）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/POS": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/TON",
+    "r": "/zh/chains/TON",
     "t": "TON（The Open Network）"
    },
    {
-    "r": "/consensus/Ouroboros",
-    "t": "Ouroboros"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/layers/Settlement": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Stellar",
-    "t": "Stellar 恒星币"
-   },
-   {
-    "r": "/chains/Tether",
-    "t": "Tether 泰达币"
-   },
-   {
-    "r": "/consensus/ABFT",
-    "t": "ABFT"
-   },
-   {
-    "r": "/consensus/Algorand",
-    "t": "Algorand"
-   },
-   {
-    "r": "/consensus/Avalanche",
-    "t": "Avalanche"
-   },
-   {
-    "r": "/consensus/BABE",
-    "t": "BABE"
-   },
-   {
-    "r": "/consensus/BFT",
-    "t": "BFT"
-   },
-   {
-    "r": "/consensus/BandwidthProof",
-    "t": "带宽证明（Bandwidth Proof）"
-   },
-   {
-    "r": "/consensus/DPOS",
-    "t": "DPoS"
-   },
-   {
-    "r": "/consensus/DiemBFT",
-    "t": "DiemBFT"
-   },
-   {
-    "r": "/consensus/FBA",
-    "t": "FBA"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/consensus/GRANDPA",
-    "t": "GRANDPA"
-   },
-   {
-    "r": "/consensus/Gasper",
-    "t": "Gasper"
-   },
-   {
-    "r": "/consensus/Hashgraph",
-    "t": "Hashgraph"
-   },
-   {
-    "r": "/consensus/HoneyBadgerBFT",
-    "t": "HoneyBadgerBFT"
-   },
-   {
-    "r": "/consensus/HotStuff",
-    "t": "HotStuff"
-   },
-   {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/consensus/MaxBFT",
-    "t": "MaxBFT"
-   },
-   {
-    "r": "/consensus/MultiLevelBFT",
-    "t": "Multi-Level BFT（Theta）"
-   },
-   {
-    "r": "/consensus/Mysticeti",
-    "t": "Mysticeti"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Ouroboros",
-    "t": "Ouroboros"
-   },
-   {
-    "r": "/consensus/PBFT",
-    "t": "PBFT"
-   },
-   {
-    "r": "/consensus/POA",
+    "r": "/zh/consensus/POA",
     "t": "PoA"
    },
    {
-    "r": "/consensus/POC",
-    "t": "PoC"
-   },
-   {
-    "r": "/consensus/POS",
-    "t": "PoS"
-   },
-   {
-    "r": "/consensus/POT",
-    "t": "PoT"
-   },
-   {
-    "r": "/consensus/POW",
-    "t": "PoW"
-   },
-   {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
-   },
-   {
-    "r": "/consensus/PoET",
-    "t": "PoET"
-   },
-   {
-    "r": "/consensus/PoST",
-    "t": "PoST"
-   },
-   {
-    "r": "/consensus/PoSpace",
-    "t": "PoSpace"
-   },
-   {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus/RAFT",
-    "t": "RAFT"
-   },
-   {
-    "r": "/consensus/RPCA",
-    "t": "RPCA"
-   },
-   {
-    "r": "/consensus/Restaking",
-    "t": "再质押（Restaking）"
-   },
-   {
-    "r": "/consensus/SOLO",
-    "t": "SOLO"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consensus/SPOS",
-    "t": "SPoS"
-   },
-   {
-    "r": "/consensus/Sequencing",
-    "t": "排序与结算（Rollup 侧）"
-   },
-   {
-    "r": "/consensus/Sharding",
-    "t": "分片（Sharding）"
-   },
-   {
-    "r": "/consensus/Snowball",
-    "t": "Snowball"
-   },
-   {
-    "r": "/consensus/Snowman",
-    "t": "Snowman"
-   },
-   {
-    "r": "/consensus/Streamlet",
-    "t": "Streamlet"
-   },
-   {
-    "r": "/consensus/TBFT",
-    "t": "TBFT"
-   },
-   {
-    "r": "/consensus/Tendermint",
-    "t": "Tendermint"
-   },
-   {
-    "r": "/consensus/TowerBFT",
-    "t": "TowerBFT"
-   },
-   {
-    "r": "/consensus/Yuma",
-    "t": "Yuma Consensus（Bittensor）"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/dcny/Pilot",
-    "t": "数字人民币试点"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/layers/Compute",
-    "t": "计算层"
-   },
-   {
-    "r": "/layers/Layers",
+    "r": "/zh/layers/Layers",
     "t": "分层架构"
-   },
-   {
-    "r": "/layers/ServiceDiscovery",
-    "t": "服务发现"
-   },
-   {
-    "r": "/layers/Storage",
-    "t": "存储层"
    }
   ],
-  "/consensus/POW": [
+  "/zh/algo/MerkleTree": [
    {
-    "r": "/cards/Cards",
+    "r": "/zh/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/zh/cards/Cards",
     "t": "知识卡片索引"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Bitcoin",
+    "r": "/zh/chains/Bitcoin",
     "t": "Bitcoin 比特币"
    },
    {
-    "r": "/chains/Lightning",
-    "t": "Lightning 闪电网络"
-   },
-   {
-    "r": "/chains/Litecoin",
-    "t": "Litecoin 莱特币"
-   },
-   {
-    "r": "/chains/Monero",
-    "t": "Monero 门罗币"
-   },
-   {
-    "r": "/consensus/BandwidthProof",
-    "t": "带宽证明（Bandwidth Proof）"
-   },
-   {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/hacking/SybilAttack",
-    "t": "女巫攻击"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/Gasper": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/consensus/BABE",
-    "t": "BABE"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/GRANDPA",
-    "t": "GRANDPA"
-   },
-   {
-    "r": "/consensus/MultiLevelBFT",
-    "t": "Multi-Level BFT（Theta）"
-   },
-   {
-    "r": "/consensus/Ouroboros",
-    "t": "Ouroboros"
-   },
-   {
-    "r": "/consensus/SPOS",
-    "t": "SPoS"
-   },
-   {
-    "r": "/consensus/Snowman",
-    "t": "Snowman"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/hacking/SelfishMiningAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consensus/HotStuff": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Aptos",
-    "t": "Aptos"
-   },
-   {
-    "r": "/consensus/DiemBFT",
-    "t": "DiemBFT"
-   },
-   {
-    "r": "/consensus/Mysticeti",
-    "t": "Mysticeti"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
-   },
-   {
-    "r": "/consensus/Streamlet",
-    "t": "Streamlet"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/DiemBFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Aptos",
-    "t": "Aptos"
-   },
-   {
-    "r": "/consensus/HotStuff",
-    "t": "HotStuff"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Streamlet",
-    "t": "Streamlet"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/MaxBFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus/HotStuff",
-    "t": "HotStuff"
-   },
-   {
-    "r": "/consensus/PBFT",
-    "t": "PBFT"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/hacking/LongRangeAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/BFT",
-    "t": "BFT"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consensus/Tendermint": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chains/Cosmos",
-    "t": "Cosmos 跨链枢纽"
-   },
-   {
-    "r": "/consensus/GRANDPA",
-    "t": "GRANDPA"
-   },
-   {
-    "r": "/consensus/Hashgraph",
-    "t": "Hashgraph"
-   },
-   {
-    "r": "/consensus/HotStuff",
-    "t": "HotStuff"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus/RPCA",
-    "t": "RPCA"
-   },
-   {
-    "r": "/consensus/SPOS",
-    "t": "SPoS"
-   },
-   {
-    "r": "/consensus/Streamlet",
-    "t": "Streamlet"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
+    "r": "/zh/layers/Layers",
     "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
    }
   ],
-  "/consensus/BABE": [
+  "/zh/opcode/OP_CHECKSIG": [
    {
-    "r": "/cards/Cards",
+    "r": "/zh/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/zh/cards/Cards",
     "t": "知识卡片索引"
    },
    {
-    "r": "/chains/Polkadot",
-    "t": "Polkadot 波卡"
-   },
-   {
-    "r": "/consensus/Algorand",
-    "t": "Algorand"
-   },
-   {
-    "r": "/consensus/GRANDPA",
-    "t": "GRANDPA"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/Ouroboros",
-    "t": "Ouroboros"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/GRANDPA": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Polkadot",
-    "t": "Polkadot 波卡"
-   },
-   {
-    "r": "/consensus/BABE",
-    "t": "BABE"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/MultiLevelBFT",
-    "t": "Multi-Level BFT（Theta）"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
    }
   ],
-  "/consensus/RPCA": [
+  "/zh/btc/BIPS": [
    {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
+    "r": "/zh/Introduction",
+    "t": "简介"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Stellar",
-    "t": "Stellar 恒星币"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
    }
   ],
-  "/consensus/FBA": [
+  "/zh/chain-games/ChainGames": [
    {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
+    "r": "/zh/Introduction",
+    "t": "简介"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Stellar",
-    "t": "Stellar 恒星币"
+    "r": "/zh/chain-games/Economy",
+    "t": "链游经济设计"
    },
    {
-    "r": "/consensus/RPCA",
-    "t": "RPCA"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
    }
   ],
-  "/hacking/SybilAttack": [
+  "/zh/knowledge": [
    {
-    "r": "/cards/Cards",
+    "r": "/zh/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/zh/cards/Cards",
     "t": "知识卡片索引"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/consensus/BFT",
-    "t": "BFT"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/Consensus",
+    "t": "共识算法"
    }
   ],
-  "/consensus/POT": [
+  "/zh/consensus-timeline": [
    {
-    "r": "/cards/Cards",
+    "r": "/zh/Introduction",
+    "t": "简介"
+   },
+   {
+    "r": "/zh/cards/Cards",
     "t": "知识卡片索引"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Chia",
-    "t": "Chia 奇亚"
-   },
-   {
-    "r": "/consensus/PoET",
-    "t": "PoET"
-   },
-   {
-    "r": "/consensus/PoSpace",
-    "t": "PoSpace"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Algorand": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/Ouroboros",
-    "t": "Ouroboros"
-   },
-   {
-    "r": "/consensus/SPOS",
-    "t": "SPoS"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Ouroboros": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Cardano",
-    "t": "Cardano 卡尔达诺"
-   },
-   {
-    "r": "/consensus/Algorand",
-    "t": "Algorand"
-   },
-   {
-    "r": "/consensus/BABE",
-    "t": "BABE"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/SPOS",
-    "t": "SPoS"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Hashgraph": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/consensus/Mysticeti",
-    "t": "Mysticeti"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/NarwhalBullshark": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Sui",
-    "t": "Sui"
-   },
-   {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/consensus/Mysticeti",
-    "t": "Mysticeti"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Lachesis": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/consensus/Hashgraph",
-    "t": "Hashgraph"
-   },
-   {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/Snowman",
-    "t": "Snowman"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/RAFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
-   },
-   {
-    "r": "/consensus/SOLO",
-    "t": "SOLO"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/Paxos": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/Mysticeti": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Sui",
-    "t": "Sui"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/model/DAG": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/TON",
+    "r": "/zh/chains/TON",
     "t": "TON（The Open Network）"
    },
    {
-    "r": "/consensus/Consensus",
+    "r": "/zh/chains/TRON",
+    "t": "TRON 波场"
+   },
+   {
+    "r": "/zh/consensus/Consensus",
     "t": "共识算法"
    },
    {
-    "r": "/consensus/IOTA",
-    "t": "IOTA Tangle"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consensus/IOTA": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/Restaking": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Cosmos",
-    "t": "Cosmos 跨链枢纽"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
+    "r": "/zh/nav/ByConsensus",
     "t": "按共识算法导航"
    },
    {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/PoST": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Filecoin",
-    "t": "Filecoin"
-   },
-   {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
+    "r": "/zh/nav/ByTime",
     "t": "按时间导航"
    },
    {
-    "r": "/trends/Trends",
+    "r": "/zh/timeline",
+    "t": "发展史时间线"
+   },
+   {
+    "r": "/zh/trends/Trends",
     "t": "共识趋势展望"
    }
   ],
-  "/layers/Storage": [
+  "/zh/layers/Layers": [
    {
-    "r": "/cards/Cards",
+    "r": "/zh/cards/Cards",
     "t": "知识卡片索引"
    },
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Arweave",
-    "t": "Arweave"
-   },
-   {
-    "r": "/chains/Filecoin",
-    "t": "Filecoin"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consensus/Sharding",
-    "t": "分片（Sharding）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Compute",
-    "t": "计算层"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/ServiceDiscovery",
-    "t": "服务发现"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   }
-  ],
-  "/consensus/SPORA": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Arweave",
-    "t": "Arweave"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/HoneyBadgerBFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus/ABFT",
-    "t": "ABFT"
-   },
-   {
-    "r": "/consensus/Hashgraph",
-    "t": "Hashgraph"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/consensus/NarwhalBullshark",
-    "t": "Narwhal 与 Bullshark"
-   },
-   {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/ProofOfCoverage": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/MultiLevelBFT": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/DPOS": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/BinanceSmartChain",
-    "t": "BSC 币安智能链"
-   },
-   {
-    "r": "/chains/EOS",
-    "t": "EOS"
-   },
-   {
-    "r": "/chains/TRON",
-    "t": "TRON 波场"
-   },
-   {
-    "r": "/consensus/MultiLevelBFT",
-    "t": "Multi-Level BFT（Theta）"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/Yuma",
-    "t": "Yuma Consensus（Bittensor）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/Yuma": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/GHOSTDAG": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/chains/Polkadot": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chains/Avalanche",
-    "t": "Avalanche 雪崩"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/Restaking",
-    "t": "再质押（Restaking）"
-   },
-   {
-    "r": "/consensus/Sharding",
-    "t": "分片（Sharding）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Sharding": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/PoSpace": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Chia",
-    "t": "Chia 奇亚"
-   },
-   {
-    "r": "/consensus/BandwidthProof",
+    "r": "/zh/consensus/BandwidthProof",
     "t": "带宽证明（Bandwidth Proof）"
    },
    {
-    "r": "/consensus/POT",
-    "t": "PoT"
+    "r": "/zh/consensus/Consensus",
+    "t": "共识算法"
    },
    {
-    "r": "/consensus/PoET",
-    "t": "PoET"
-   },
-   {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus/SPORA",
-    "t": "SPoRA（Arweave）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/BandwidthProof": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/NPoS": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/chains/Chia": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus/POC",
-    "t": "PoC"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/POA": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chains/BinanceSmartChain",
-    "t": "BSC 币安智能链"
-   },
-   {
-    "r": "/consensus/QBFT",
-    "t": "QBFT"
-   },
-   {
-    "r": "/consensus/RPCA",
-    "t": "RPCA"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consortium/Fabric": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chain-games/ChainGames",
-    "t": "区块链游戏"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consortium/Consortium": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/layers/Compute": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chain-games/Economy",
-    "t": "链游经济设计"
-   },
-   {
-    "r": "/chains/Aptos",
-    "t": "Aptos"
-   },
-   {
-    "r": "/chains/Arbitrum",
-    "t": "Arbitrum"
-   },
-   {
-    "r": "/chains/Arweave",
-    "t": "Arweave"
-   },
-   {
-    "r": "/chains/Bitcoin",
-    "t": "Bitcoin 比特币"
-   },
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/chains/Near",
-    "t": "Near"
-   },
-   {
-    "r": "/chains/Sui",
-    "t": "Sui"
-   },
-   {
-    "r": "/chains/TON",
-    "t": "TON（The Open Network）"
-   },
-   {
-    "r": "/consensus/Sequencing",
-    "t": "排序与结算（Rollup 侧）"
-   },
-   {
-    "r": "/consortium/Webase",
-    "t": "WeBASE"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/ServiceDiscovery",
-    "t": "服务发现"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/layers/Storage",
-    "t": "存储层"
-   }
-  ],
-  "/hacking/SmartContractVulnerabilities": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Aptos",
-    "t": "Aptos"
-   },
-   {
-    "r": "/consensus/Sequencing",
-    "t": "排序与结算（Rollup 侧）"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/hacking/DustingAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chains/BinanceSmartChain": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/hacking/CrossChainBridgeAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Cosmos",
-    "t": "Cosmos 跨链枢纽"
-   },
-   {
-    "r": "/chains/Polkadot",
-    "t": "Polkadot 波卡"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/hacking/SybilAttack",
-    "t": "女巫攻击"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/Sequencing": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Arbitrum",
-    "t": "Arbitrum"
-   },
-   {
-    "r": "/chains/Optimism",
-    "t": "Optimism"
-   },
-   {
-    "r": "/chains/zkSync",
-    "t": "zkSync"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/layers/ServiceDiscovery": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chain-games/Economy",
-    "t": "链游经济设计"
-   },
-   {
-    "r": "/chains/Near",
-    "t": "Near"
-   },
-   {
-    "r": "/consortium/Webase",
-    "t": "WeBASE"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/layers/Storage",
-    "t": "存储层"
-   }
-  ],
-  "/dapp/Dapp": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/nft/ColoredCoins": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   }
-  ],
-  "/nft/TokenizedProtocol": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chain-games/ChainGames",
-    "t": "区块链游戏"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/model/Account": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/TRON",
-    "t": "TRON 波场"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/model/UTXO": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Bitcoin",
-    "t": "Bitcoin 比特币"
-   },
-   {
-    "r": "/chains/Bytom",
-    "t": "Bytom 比原链"
-   },
-   {
-    "r": "/chains/Cardano",
-    "t": "Cardano 卡尔达诺"
-   },
-   {
-    "r": "/chains/Lightning",
-    "t": "Lightning 闪电网络"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/dcny/Dcny": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/dcny/Pilot",
-    "t": "数字人民币试点"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chain-games/Economy": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chain-games/ChainGames",
-    "t": "区块链游戏"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/hacking/51Attack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus/POW",
+    "r": "/zh/consensus/POW",
     "t": "PoW"
    },
    {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   }
-  ],
-  "/hacking/FinneyAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/hacking/DoubleSpendAttack": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chains/Bitcoin": [
-   {
-    "r": "/cards/Cards",
-    "t": "知识卡片索引"
-   },
-   {
-    "r": "/chains/BinanceSmartChain",
-    "t": "BSC 币安智能链"
-   },
-   {
-    "r": "/consensus/BandwidthProof",
-    "t": "带宽证明（Bandwidth Proof）"
-   },
-   {
-    "r": "/consensus/GHOST",
-    "t": "GHOST"
-   },
-   {
-    "r": "/consensus/GHOSTDAG",
-    "t": "GHOSTDAG"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
+    "r": "/zh/nav/ByConsensus",
     "t": "按共识算法导航"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/cards/Cards": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consensus/Consensus": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/timeline",
-    "t": "发展史时间线"
-   },
-   {
-    "r": "/trends/Trends",
+    "r": "/zh/trends/Trends",
     "t": "共识趋势展望"
    }
   ],
-  "/consensus/BFT": [
+  "/zh/cards/Glossary": [
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/timeline": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/chains/Near",
-    "t": "Near"
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
    },
    {
-    "r": "/chains/TON",
-    "t": "TON（The Open Network）"
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/GHOST": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
    },
    {
-    "r": "/consensus/Paxos",
-    "t": "Paxos"
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
    },
    {
-    "r": "/consensus/RAFT",
-    "t": "RAFT"
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
    },
    {
-    "r": "/consensus/SOLO",
-    "t": "SOLO"
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
    },
    {
-    "r": "/consensus/Tendermint",
-    "t": "Tendermint"
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
    },
    {
-    "r": "/consensus/Yuma",
+    "r": "/zh/consensus/Yuma",
     "t": "Yuma Consensus（Bittensor）"
    },
    {
-    "r": "/consensus-timeline",
+    "r": "/zh/consensus-timeline",
     "t": "共识算法演进时间线"
    },
    {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByConsensus",
+    "r": "/zh/nav/ByConsensus",
     "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
    }
   ],
-  "/consensus/ABFT": [
+  "/zh/consensus/PBFT": [
    {
-    "r": "/cards/Glossary",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
     "t": "术语表"
    },
    {
-    "r": "/consensus/ProofOfCoverage",
-    "t": "覆盖证明（Helium PoC）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/Snowball": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/chains/Avalanche",
-    "t": "Avalanche 雪崩"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/consensus/Snowman",
-    "t": "Snowman"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/SPOS": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/QBFT": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consortium/FiscoBcos": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/consortium/Webase",
-    "t": "WeBASE"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consortium/Corda": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Besu",
-    "t": "Hyperledger Besu / Quorum"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consortium/Besu": [
-   {
-    "r": "/cards/Glossary",
-    "t": "术语表"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/consortium/Corda",
-    "t": "R3 Corda"
-   },
-   {
-    "r": "/consortium/Fabric",
-    "t": "Hyperledger Fabric"
-   },
-   {
-    "r": "/consortium/FiscoBcos",
-    "t": "FISCO BCOS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chains/Bytom": [
-   {
-    "r": "/chain-games/ChainGames",
-    "t": "区块链游戏"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/Snowman": [
-   {
-    "r": "/chains/Avalanche",
-    "t": "Avalanche 雪崩"
-   },
-   {
-    "r": "/consensus/Lachesis",
-    "t": "Lachesis"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/chains/Lightning": [
-   {
-    "r": "/chains/Bitcoin",
-    "t": "Bitcoin 比特币"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/TRON": [
-   {
-    "r": "/chains/Chain",
-    "t": "有名的区块链项目"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/TON": [
-   {
-    "r": "/chains/Chain",
-    "t": "有名的区块链项目"
-   },
-   {
-    "r": "/consensus/Sharding",
-    "t": "分片（Sharding）"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Optimism": [
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Arbitrum": [
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/chains/zkSync": [
-   {
-    "r": "/chains/Ethereum",
-    "t": "Ethereum 以太坊"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/hacking/LightningNetworkAttack": [
-   {
-    "r": "/chains/Lightning",
-    "t": "Lightning 闪电网络"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/MixingServices": [
-   {
-    "r": "/chains/Litecoin",
-    "t": "Litecoin 莱特币"
-   },
-   {
-    "r": "/consortium/Consortium",
-    "t": "联盟链"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/RingSignature": [
-   {
-    "r": "/chains/Monero",
-    "t": "Monero 门罗币"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/StealthAddresses": [
-   {
-    "r": "/chains/Monero",
-    "t": "Monero 门罗币"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/Bulletproofs": [
-   {
-    "r": "/chains/Monero",
-    "t": "Monero 门罗币"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chains/Avalanche": [
-   {
-    "r": "/chains/Polkadot",
-    "t": "Polkadot 波卡"
-   },
-   {
-    "r": "/consensus/NPoS",
-    "t": "NPoS"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/PoH": [
-   {
-    "r": "/chains/Solana",
-    "t": "Solana"
-   },
-   {
-    "r": "/consensus/TowerBFT",
-    "t": "TowerBFT"
-   },
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/consensus/TowerBFT": [
-   {
-    "r": "/chains/Solana",
-    "t": "Solana"
-   },
-   {
-    "r": "/consensus/Algorand",
-    "t": "Algorand"
-   },
-   {
-    "r": "/consensus/BABE",
-    "t": "BABE"
-   },
-   {
-    "r": "/consensus/HotStuff",
+    "r": "/zh/consensus/HotStuff",
     "t": "HotStuff"
    },
    {
-    "r": "/consensus/Lachesis",
+    "r": "/zh/consensus/Lachesis",
     "t": "Lachesis"
    },
    {
-    "r": "/consensus/PoH",
-    "t": "PoH"
+    "r": "/zh/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT（Theta）"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Aptos": [
-   {
-    "r": "/chains/Solana",
-    "t": "Solana"
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/RPCA",
+    "t": "RPCA"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/consensus/Sharding",
+    "t": "分片（Sharding）"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/chains/Tether": [
-   {
-    "r": "/chains/TRON",
-    "t": "TRON 波场"
-   },
-   {
-    "r": "/dcny/Dcny",
-    "t": "数字人民币（e-CNY）"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/EOS": [
-   {
-    "r": "/chains/TRON",
-    "t": "TRON 波场"
-   },
-   {
-    "r": "/consensus-timeline",
+    "r": "/zh/consensus-timeline",
     "t": "共识算法演进时间线"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/Privacy/ZeroKnowledgeProof": [
-   {
-    "r": "/chains/zkSync",
-    "t": "zkSync"
-   },
-   {
-    "r": "/consortium/Consortium",
+    "r": "/zh/consortium/Consortium",
     "t": "联盟链"
    },
    {
-    "r": "/knowledge",
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
    }
   ],
-  "/consensus/Avalanche": [
+  "/zh/consensus/POS": [
    {
-    "r": "/consensus/ABFT",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/TON",
+    "t": "TON（The Open Network）"
+   },
+   {
+    "r": "/zh/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/layers/Settlement": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Stellar",
+    "t": "Stellar 恒星币"
+   },
+   {
+    "r": "/zh/chains/Tether",
+    "t": "Tether 泰达币"
+   },
+   {
+    "r": "/zh/consensus/ABFT",
     "t": "ABFT"
    },
    {
-    "r": "/consensus/Algorand",
+    "r": "/zh/consensus/Algorand",
     "t": "Algorand"
    },
    {
-    "r": "/consensus/Snowman",
-    "t": "Snowman"
+    "r": "/zh/consensus/Avalanche",
+    "t": "Avalanche"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/BABE",
+    "t": "BABE"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/BFT",
+    "t": "BFT"
    },
    {
-    "r": "/layers/Settlement",
-    "t": "结算层"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/POC": [
-   {
-    "r": "/consensus/BandwidthProof",
+    "r": "/zh/consensus/BandwidthProof",
     "t": "带宽证明（Bandwidth Proof）"
    },
    {
-    "r": "/consensus/PoSpace",
-    "t": "PoSpace"
+    "r": "/zh/consensus/DPOS",
+    "t": "DPoS"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/DiemBFT",
+    "t": "DiemBFT"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/chains/Stellar": [
-   {
-    "r": "/consensus/FBA",
+    "r": "/zh/consensus/FBA",
     "t": "FBA"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/GHOST",
+    "t": "GHOST"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Sui": [
-   {
-    "r": "/consensus/GHOSTDAG",
+    "r": "/zh/consensus/GHOSTDAG",
     "t": "GHOSTDAG"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/GRANDPA",
+    "t": "GRANDPA"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/consensus/Gasper",
+    "t": "Gasper"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
+    "r": "/zh/consensus/Hashgraph",
+    "t": "Hashgraph"
    },
    {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/consensus/TBFT": [
+    "r": "/zh/consensus/HoneyBadgerBFT",
+    "t": "HoneyBadgerBFT"
+   },
    {
-    "r": "/consensus/HotStuff",
+    "r": "/zh/consensus/HotStuff",
     "t": "HotStuff"
    },
    {
-    "r": "/consensus/PBFT",
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/consensus/MaxBFT",
+    "t": "MaxBFT"
+   },
+   {
+    "r": "/zh/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT（Theta）"
+   },
+   {
+    "r": "/zh/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/zh/consensus/PBFT",
     "t": "PBFT"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/POA",
+    "t": "PoA"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/POC",
+    "t": "PoC"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/PoET": [
+    "r": "/zh/consensus/POS",
+    "t": "PoS"
+   },
    {
-    "r": "/consensus/POT",
+    "r": "/zh/consensus/POT",
     "t": "PoT"
    },
    {
-    "r": "/consensus/ProofOfCoverage",
+    "r": "/zh/consensus/POW",
+    "t": "PoW"
+   },
+   {
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/zh/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/zh/consensus/PoST",
+    "t": "PoST"
+   },
+   {
+    "r": "/zh/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
     "t": "覆盖证明（Helium PoC）"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/consensus/SOLO": [
-   {
-    "r": "/consensus/RAFT",
+    "r": "/zh/consensus/RAFT",
     "t": "RAFT"
    },
    {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/RPCA",
+    "t": "RPCA"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/Restaking",
+    "t": "再质押（Restaking）"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/chains/Near": [
+    "r": "/zh/consensus/SOLO",
+    "t": "SOLO"
+   },
    {
-    "r": "/consensus/Sharding",
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/zh/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/zh/consensus/Sequencing",
+    "t": "排序与结算（Rollup 侧）"
+   },
+   {
+    "r": "/zh/consensus/Sharding",
     "t": "分片（Sharding）"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/Snowball",
+    "t": "Snowball"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Filecoin": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/Snowman",
+    "t": "Snowman"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/Streamlet",
+    "t": "Streamlet"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/consensus/TBFT",
+    "t": "TBFT"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Litecoin": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
+    "r": "/zh/consensus/Tendermint",
+    "t": "Tendermint"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/consensus/TowerBFT",
+    "t": "TowerBFT"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
+    "r": "/zh/consensus/Yuma",
+    "t": "Yuma Consensus（Bittensor）"
    },
    {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Monero": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Cardano": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Cosmos": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/chains/Ethereum": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/consortium/Besu",
+    "r": "/zh/consortium/Besu",
     "t": "Hyperledger Besu / Quorum"
    },
    {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   },
-   {
-    "r": "/trends/Trends",
-    "t": "共识趋势展望"
-   }
-  ],
-  "/chains/Solana": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/dapp/Dapp",
-    "t": "DApp 架构"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/nav/ByTime",
-    "t": "按时间导航"
-   }
-  ],
-  "/nav/ByTime": [
-   {
-    "r": "/consensus-timeline",
-    "t": "共识算法演进时间线"
-   },
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   },
-   {
-    "r": "/timeline",
-    "t": "发展史时间线"
-   }
-  ],
-  "/consortium/Webase": [
-   {
-    "r": "/consortium/Consortium",
+    "r": "/zh/consortium/Consortium",
     "t": "联盟链"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/dcny/Pilot": [
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
    {
-    "r": "/dcny/Dcny",
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
     "t": "数字人民币（e-CNY）"
    },
    {
-    "r": "/knowledge",
+    "r": "/zh/dcny/Pilot",
+    "t": "数字人民币试点"
+   },
+   {
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Compute",
+    "t": "计算层"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/ServiceDiscovery",
+    "t": "服务发现"
+   },
+   {
+    "r": "/zh/layers/Storage",
+    "t": "存储层"
    }
   ],
-  "/hacking/ConsensusForkAttack": [
+  "/zh/consensus/POW": [
    {
-    "r": "/hacking/SybilAttack",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Bitcoin",
+    "t": "Bitcoin 比特币"
+   },
+   {
+    "r": "/zh/chains/Lightning",
+    "t": "Lightning 闪电网络"
+   },
+   {
+    "r": "/zh/chains/Litecoin",
+    "t": "Litecoin 莱特币"
+   },
+   {
+    "r": "/zh/chains/Monero",
+    "t": "Monero 门罗币"
+   },
+   {
+    "r": "/zh/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/hacking/SybilAttack",
     "t": "女巫攻击"
    },
    {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/consensus/Streamlet": [
-   {
-    "r": "/knowledge",
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    },
    {
-    "r": "/nav/ByConsensus",
-    "t": "按共识算法导航"
-   }
-  ],
-  "/trends/Trends": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/btc/P2PK": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/HomomorphicEncryption": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/DifferentialPrivacy": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/HierarchicalIdentityBasedEncryption": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/Paillier": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/Privacy/Privacy": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
    },
    {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   }
-  ],
-  "/hacking/Attack": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   }
-  ],
-  "/hacking/InformationLeakageAttack": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/hacking/TransactionDoSAttack": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/nft/OAP": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   }
-  ],
-  "/chains/Chain": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/layers/Layers",
-    "t": "分层架构"
-   },
-   {
-    "r": "/timeline",
-    "t": "发展史时间线"
-   }
-  ],
-  "/chains/Arweave": [
-   {
-    "r": "/knowledge",
-    "t": "知识点总纲"
-   },
-   {
-    "r": "/nav/ByConsensus",
+    "r": "/zh/nav/ByConsensus",
     "t": "按共识算法导航"
    },
    {
-    "r": "/nav/ByTime",
+    "r": "/zh/nav/ByTime",
     "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/Gasper": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
    },
    {
-    "r": "/trends/Trends",
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/zh/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/zh/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/zh/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/zh/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT（Theta）"
+   },
+   {
+    "r": "/zh/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/zh/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/zh/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/hacking/SelfishMiningAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consensus/HotStuff": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/zh/consensus/DiemBFT",
+    "t": "DiemBFT"
+   },
+   {
+    "r": "/zh/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/zh/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
     "t": "共识趋势展望"
    }
   ],
-  "/nav/ByConsensus": [
+  "/zh/consensus/DiemBFT": [
    {
-    "r": "/knowledge",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/zh/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/MaxBFT": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/zh/consensus/PBFT",
+    "t": "PBFT"
+   },
+   {
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/hacking/LongRangeAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/BFT",
+    "t": "BFT"
+   },
+   {
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    }
   ],
-  "/review/structure-audit-2026-10-19": [
+  "/zh/consensus/Tendermint": [
    {
-    "r": "/knowledge",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chains/Cosmos",
+    "t": "Cosmos 跨链枢纽"
+   },
+   {
+    "r": "/zh/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/zh/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/zh/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/zh/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/zh/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/zh/consensus/Streamlet",
+    "t": "Streamlet"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/BABE": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chains/Polkadot",
+    "t": "Polkadot 波卡"
+   },
+   {
+    "r": "/zh/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/zh/consensus/GRANDPA",
+    "t": "GRANDPA"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/GRANDPA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Polkadot",
+    "t": "Polkadot 波卡"
+   },
+   {
+    "r": "/zh/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/zh/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/zh/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT（Theta）"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/RPCA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Stellar",
+    "t": "Stellar 恒星币"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/FBA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Stellar",
+    "t": "Stellar 恒星币"
+   },
+   {
+    "r": "/zh/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/hacking/SybilAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/BFT",
+    "t": "BFT"
+   },
+   {
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    }
   ],
-  "/sidebar-maintenance": [
+  "/zh/consensus/POT": [
    {
-    "r": "/knowledge",
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Chia",
+    "t": "Chia 奇亚"
+   },
+   {
+    "r": "/zh/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/zh/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Algorand": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/Ouroboros",
+    "t": "Ouroboros"
+   },
+   {
+    "r": "/zh/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Ouroboros": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Cardano",
+    "t": "Cardano 卡尔达诺"
+   },
+   {
+    "r": "/zh/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/zh/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/SPOS",
+    "t": "SPoS"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Hashgraph": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/NarwhalBullshark": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/consensus/Mysticeti",
+    "t": "Mysticeti"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Lachesis": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/zh/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/RAFT": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/zh/consensus/SOLO",
+    "t": "SOLO"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/Paxos": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/Mysticeti": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/model/DAG": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/TON",
+    "t": "TON（The Open Network）"
+   },
+   {
+    "r": "/zh/consensus/Consensus",
+    "t": "共识算法"
+   },
+   {
+    "r": "/zh/consensus/IOTA",
+    "t": "IOTA Tangle"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consensus/IOTA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/Restaking": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Cosmos",
+    "t": "Cosmos 跨链枢纽"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/PoST": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Filecoin",
+    "t": "Filecoin"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/layers/Storage": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/zh/chains/Filecoin",
+    "t": "Filecoin"
+   },
+   {
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/zh/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Compute",
+    "t": "计算层"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/ServiceDiscovery",
+    "t": "服务发现"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   }
+  ],
+  "/zh/consensus/SPORA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/HoneyBadgerBFT": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus/ABFT",
+    "t": "ABFT"
+   },
+   {
+    "r": "/zh/consensus/Hashgraph",
+    "t": "Hashgraph"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/consensus/NarwhalBullshark",
+    "t": "Narwhal 与 Bullshark"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/ProofOfCoverage": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/MultiLevelBFT": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/DPOS": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/BinanceSmartChain",
+    "t": "BSC 币安智能链"
+   },
+   {
+    "r": "/zh/chains/EOS",
+    "t": "EOS"
+   },
+   {
+    "r": "/zh/chains/TRON",
+    "t": "TRON 波场"
+   },
+   {
+    "r": "/zh/consensus/MultiLevelBFT",
+    "t": "Multi-Level BFT（Theta）"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/Yuma",
+    "t": "Yuma Consensus（Bittensor）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/Yuma": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/GHOSTDAG": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/chains/Polkadot": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chains/Avalanche",
+    "t": "Avalanche 雪崩"
+   },
+   {
+    "r": "/zh/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/Restaking",
+    "t": "再质押（Restaking）"
+   },
+   {
+    "r": "/zh/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Sharding": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/PoSpace": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Chia",
+    "t": "Chia 奇亚"
+   },
+   {
+    "r": "/zh/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/zh/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/zh/consensus/PoET",
+    "t": "PoET"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/zh/consensus/SPORA",
+    "t": "SPoRA（Arweave）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/BandwidthProof": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/NPoS": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/chains/Chia": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus/POC",
+    "t": "PoC"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/POA": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chains/BinanceSmartChain",
+    "t": "BSC 币安智能链"
+   },
+   {
+    "r": "/zh/consensus/QBFT",
+    "t": "QBFT"
+   },
+   {
+    "r": "/zh/consensus/RPCA",
+    "t": "RPCA"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consortium/Fabric": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chain-games/ChainGames",
+    "t": "区块链游戏"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consortium/Consortium": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/layers/Compute": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chain-games/Economy",
+    "t": "链游经济设计"
+   },
+   {
+    "r": "/zh/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/zh/chains/Arbitrum",
+    "t": "Arbitrum"
+   },
+   {
+    "r": "/zh/chains/Arweave",
+    "t": "Arweave"
+   },
+   {
+    "r": "/zh/chains/Bitcoin",
+    "t": "Bitcoin 比特币"
+   },
+   {
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/zh/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/zh/chains/Sui",
+    "t": "Sui"
+   },
+   {
+    "r": "/zh/chains/TON",
+    "t": "TON（The Open Network）"
+   },
+   {
+    "r": "/zh/consensus/Sequencing",
+    "t": "排序与结算（Rollup 侧）"
+   },
+   {
+    "r": "/zh/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/ServiceDiscovery",
+    "t": "服务发现"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/layers/Storage",
+    "t": "存储层"
+   }
+  ],
+  "/zh/hacking/SmartContractVulnerabilities": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Aptos",
+    "t": "Aptos"
+   },
+   {
+    "r": "/zh/consensus/Sequencing",
+    "t": "排序与结算（Rollup 侧）"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/hacking/DustingAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chains/BinanceSmartChain": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/hacking/CrossChainBridgeAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Cosmos",
+    "t": "Cosmos 跨链枢纽"
+   },
+   {
+    "r": "/zh/chains/Polkadot",
+    "t": "Polkadot 波卡"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/hacking/SybilAttack",
+    "t": "女巫攻击"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/Sequencing": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Arbitrum",
+    "t": "Arbitrum"
+   },
+   {
+    "r": "/zh/chains/Optimism",
+    "t": "Optimism"
+   },
+   {
+    "r": "/zh/chains/zkSync",
+    "t": "zkSync"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/layers/ServiceDiscovery": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chain-games/Economy",
+    "t": "链游经济设计"
+   },
+   {
+    "r": "/zh/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/zh/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/layers/Storage",
+    "t": "存储层"
+   }
+  ],
+  "/zh/dapp/Dapp": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/nft/ColoredCoins": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   }
+  ],
+  "/zh/nft/TokenizedProtocol": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chain-games/ChainGames",
+    "t": "区块链游戏"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/model/Account": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/TRON",
+    "t": "TRON 波场"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/model/UTXO": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Bitcoin",
+    "t": "Bitcoin 比特币"
+   },
+   {
+    "r": "/zh/chains/Bytom",
+    "t": "Bytom 比原链"
+   },
+   {
+    "r": "/zh/chains/Cardano",
+    "t": "Cardano 卡尔达诺"
+   },
+   {
+    "r": "/zh/chains/Lightning",
+    "t": "Lightning 闪电网络"
+   },
+   {
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/dcny/Dcny": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/dcny/Pilot",
+    "t": "数字人民币试点"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chain-games/Economy": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chain-games/ChainGames",
+    "t": "区块链游戏"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/hacking/51Attack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/POW",
+    "t": "PoW"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   }
+  ],
+  "/zh/hacking/FinneyAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/hacking/DoubleSpendAttack": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chains/Bitcoin": [
+   {
+    "r": "/zh/cards/Cards",
+    "t": "知识卡片索引"
+   },
+   {
+    "r": "/zh/chains/BinanceSmartChain",
+    "t": "BSC 币安智能链"
+   },
+   {
+    "r": "/zh/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/zh/consensus/GHOST",
+    "t": "GHOST"
+   },
+   {
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/cards/Cards": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consensus/Consensus": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/timeline",
+    "t": "发展史时间线"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/BFT": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Near",
+    "t": "Near"
+   },
+   {
+    "r": "/zh/chains/TON",
+    "t": "TON（The Open Network）"
+   },
+   {
+    "r": "/zh/consensus/Paxos",
+    "t": "Paxos"
+   },
+   {
+    "r": "/zh/consensus/RAFT",
+    "t": "RAFT"
+   },
+   {
+    "r": "/zh/consensus/SOLO",
+    "t": "SOLO"
+   },
+   {
+    "r": "/zh/consensus/Tendermint",
+    "t": "Tendermint"
+   },
+   {
+    "r": "/zh/consensus/Yuma",
+    "t": "Yuma Consensus（Bittensor）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/ABFT": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/Snowball": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/chains/Avalanche",
+    "t": "Avalanche 雪崩"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/SPOS": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/QBFT": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consortium/FiscoBcos": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/consortium/Webase",
+    "t": "WeBASE"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consortium/Corda": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consortium/Besu": [
+   {
+    "r": "/zh/cards/Glossary",
+    "t": "术语表"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/consortium/Corda",
+    "t": "R3 Corda"
+   },
+   {
+    "r": "/zh/consortium/Fabric",
+    "t": "Hyperledger Fabric"
+   },
+   {
+    "r": "/zh/consortium/FiscoBcos",
+    "t": "FISCO BCOS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chains/Bytom": [
+   {
+    "r": "/zh/chain-games/ChainGames",
+    "t": "区块链游戏"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/Snowman": [
+   {
+    "r": "/zh/chains/Avalanche",
+    "t": "Avalanche 雪崩"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/chains/Lightning": [
+   {
+    "r": "/zh/chains/Bitcoin",
+    "t": "Bitcoin 比特币"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/TRON": [
+   {
+    "r": "/zh/chains/Chain",
+    "t": "有名的区块链项目"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/TON": [
+   {
+    "r": "/zh/chains/Chain",
+    "t": "有名的区块链项目"
+   },
+   {
+    "r": "/zh/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Optimism": [
+   {
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Arbitrum": [
+   {
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/chains/zkSync": [
+   {
+    "r": "/zh/chains/Ethereum",
+    "t": "Ethereum 以太坊"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/hacking/LightningNetworkAttack": [
+   {
+    "r": "/zh/chains/Lightning",
+    "t": "Lightning 闪电网络"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/MixingServices": [
+   {
+    "r": "/zh/chains/Litecoin",
+    "t": "Litecoin 莱特币"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/RingSignature": [
+   {
+    "r": "/zh/chains/Monero",
+    "t": "Monero 门罗币"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/StealthAddresses": [
+   {
+    "r": "/zh/chains/Monero",
+    "t": "Monero 门罗币"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/Bulletproofs": [
+   {
+    "r": "/zh/chains/Monero",
+    "t": "Monero 门罗币"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chains/Avalanche": [
+   {
+    "r": "/zh/chains/Polkadot",
+    "t": "Polkadot 波卡"
+   },
+   {
+    "r": "/zh/consensus/NPoS",
+    "t": "NPoS"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/PoH": [
+   {
+    "r": "/zh/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/zh/consensus/TowerBFT",
+    "t": "TowerBFT"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/TowerBFT": [
+   {
+    "r": "/zh/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/zh/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/zh/consensus/BABE",
+    "t": "BABE"
+   },
+   {
+    "r": "/zh/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/zh/consensus/Lachesis",
+    "t": "Lachesis"
+   },
+   {
+    "r": "/zh/consensus/PoH",
+    "t": "PoH"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Aptos": [
+   {
+    "r": "/zh/chains/Solana",
+    "t": "Solana"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/chains/Tether": [
+   {
+    "r": "/zh/chains/TRON",
+    "t": "TRON 波场"
+   },
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/EOS": [
+   {
+    "r": "/zh/chains/TRON",
+    "t": "TRON 波场"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/Privacy/ZeroKnowledgeProof": [
+   {
+    "r": "/zh/chains/zkSync",
+    "t": "zkSync"
+   },
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/consensus/Avalanche": [
+   {
+    "r": "/zh/consensus/ABFT",
+    "t": "ABFT"
+   },
+   {
+    "r": "/zh/consensus/Algorand",
+    "t": "Algorand"
+   },
+   {
+    "r": "/zh/consensus/Snowman",
+    "t": "Snowman"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Settlement",
+    "t": "结算层"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/POC": [
+   {
+    "r": "/zh/consensus/BandwidthProof",
+    "t": "带宽证明（Bandwidth Proof）"
+   },
+   {
+    "r": "/zh/consensus/PoSpace",
+    "t": "PoSpace"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/chains/Stellar": [
+   {
+    "r": "/zh/consensus/FBA",
+    "t": "FBA"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Sui": [
+   {
+    "r": "/zh/consensus/GHOSTDAG",
+    "t": "GHOSTDAG"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/consensus/TBFT": [
+   {
+    "r": "/zh/consensus/HotStuff",
+    "t": "HotStuff"
+   },
+   {
+    "r": "/zh/consensus/PBFT",
+    "t": "PBFT"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/PoET": [
+   {
+    "r": "/zh/consensus/POT",
+    "t": "PoT"
+   },
+   {
+    "r": "/zh/consensus/ProofOfCoverage",
+    "t": "覆盖证明（Helium PoC）"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/consensus/SOLO": [
+   {
+    "r": "/zh/consensus/RAFT",
+    "t": "RAFT"
+   },
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/chains/Near": [
+   {
+    "r": "/zh/consensus/Sharding",
+    "t": "分片（Sharding）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Filecoin": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Litecoin": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Monero": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Cardano": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Cosmos": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/chains/Ethereum": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/consortium/Besu",
+    "t": "Hyperledger Besu / Quorum"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/chains/Solana": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/dapp/Dapp",
+    "t": "DApp 架构"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   }
+  ],
+  "/zh/nav/ByTime": [
+   {
+    "r": "/zh/consensus-timeline",
+    "t": "共识算法演进时间线"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/timeline",
+    "t": "发展史时间线"
+   }
+  ],
+  "/zh/consortium/Webase": [
+   {
+    "r": "/zh/consortium/Consortium",
+    "t": "联盟链"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/dcny/Pilot": [
+   {
+    "r": "/zh/dcny/Dcny",
+    "t": "数字人民币（e-CNY）"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/hacking/ConsensusForkAttack": [
+   {
+    "r": "/zh/hacking/SybilAttack",
+    "t": "女巫攻击"
+   },
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/consensus/Streamlet": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   }
+  ],
+  "/zh/trends/Trends": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/btc/P2PK": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/HomomorphicEncryption": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/DifferentialPrivacy": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/HierarchicalIdentityBasedEncryption": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/Paillier": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/Privacy/Privacy": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   }
+  ],
+  "/zh/hacking/Attack": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   }
+  ],
+  "/zh/hacking/InformationLeakageAttack": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/hacking/TransactionDoSAttack": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/nft/OAP": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/chains/Chain": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/layers/Layers",
+    "t": "分层架构"
+   },
+   {
+    "r": "/zh/timeline",
+    "t": "发展史时间线"
+   }
+  ],
+  "/zh/chains/Arweave": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   },
+   {
+    "r": "/zh/nav/ByConsensus",
+    "t": "按共识算法导航"
+   },
+   {
+    "r": "/zh/nav/ByTime",
+    "t": "按时间导航"
+   },
+   {
+    "r": "/zh/trends/Trends",
+    "t": "共识趋势展望"
+   }
+  ],
+  "/zh/nav/ByConsensus": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/review/structure-audit-2026-10-19": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/sidebar-maintenance": [
+   {
+    "r": "/zh/knowledge",
+    "t": "知识点总纲"
+   }
+  ],
+  "/zh/review/content-review-2026-10-19": [
+   {
+    "r": "/zh/knowledge",
     "t": "知识点总纲"
    }
   ]

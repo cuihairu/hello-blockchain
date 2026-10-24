@@ -32,8 +32,8 @@ npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts previe
 ## Directory Structure
 
 ```
-docs/                 # VitePress site source
-├── .vitepress/       # Theme and configuration (sidebar.json is the single source for the site sidebar)
+docs/                 # VitePress site source: English pages at the root, Chinese under zh/
+├── .vitepress/       # Theme and configuration (sidebar.en.json / sidebar.zh.json are the sidebar sources)
 ├── public/           # Brand assets (logo.svg / favicon.svg / og-image.png / robots.txt / badges)
 ├── img/              # Images embedded by the pages
 ├── SUMMARY.md        # Retained navigation maintenance note; not a sidebar source
@@ -60,7 +60,8 @@ docs/                 # VitePress site source
 ├── consortium/       # Consortium chains: Fabric, FISCO BCOS, Corda, Besu, WeBASE
 ├── dcny/             # Digital RMB: e-CNY architecture and pilots
 ├── chain-games/      # Blockchain games: projects, economy design, incidents
-└── dapp/             # DApp architecture: frontend, wallet, contract, indexer
+├── dapp/             # DApp architecture: frontend, wallet, contract, indexer
+└── zh/               # Chinese locale: this tree under /zh/, Chinese prose
 ```
 
 ```

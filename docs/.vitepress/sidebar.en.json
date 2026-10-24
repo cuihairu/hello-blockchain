@@ -1,0 +1,62 @@
+[
+  {
+    "text": "Introduction",
+    "link": "/Introduction"
+  },
+  {
+    "text": "Ledger models",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Ledger models",
+        "link": "/model/Models"
+      },
+      {
+        "text": "UTXO",
+        "link": "/model/UTXO"
+      },
+      {
+        "text": "Account",
+        "link": "/model/Account"
+      },
+      {
+        "text": "DAG",
+        "link": "/model/DAG"
+      }
+    ]
+  },
+  {
+    "text": "Data structures",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Merkle tree",
+        "link": "/algo/MerkleTree"
+      }
+    ]
+  },
+  {
+    "text": "Scripts and opcodes",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "OP_CHECKSIG",
+        "link": "/opcode/OP_CHECKSIG"
+      }
+    ]
+  },
+  {
+    "text": "Bitcoin mechanics",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "BIP improvement proposals",
+        "link": "/btc/BIPS"
+      },
+      {
+        "text": "P2PK transactions",
+        "link": "/btc/P2PK"
+      }
+    ]
+  }
+]

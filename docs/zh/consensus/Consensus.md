@@ -1,0 +1,46 @@
+# 共识算法
+
+共识算法（Consensus Algorithm）解决的是分布式系统的核心问题：**多个互不完全信任的节点，如何在有故障、有作恶者的环境下，对同一份账本的状态达成一致**。区块链的所有性能、安全与去中心化权衡，几乎都源于共识算法的设计选择。
+
+## 需要解决的问题
+
+1. **一致性（Safety）**：所有诚实节点最终认可同一条链/状态，账本不会分叉出互相矛盾的"事实"。
+2. **活性（Liveness）**：新的合法交易能够持续被打包确认，系统不会永久停摆。
+3. **容错性**：在部分节点宕机（Crash Fault）或作恶（Byzantine Fault）时仍能运转。经典结论是：拜占庭环境下需要 $n \geq 3f+1$ 个节点才能容忍 $f$ 个作恶节点。
+
+## 两大技术路线
+
+### 概率最终性：中本聪共识
+
+以 PoW 为代表，配合"最长链/最重链规则"：节点总是扩展自己见到的累积难度最高的链。分叉是常态，但被更长的链取代的概率随确认数指数下降——**最终性是概率性的**。优点是无许可、任何人可随时加入；代价是确认慢、能源消耗大。
+
+### 确定性最终性：BFT 共识
+
+以 PBFT、Tendermint 为代表，由固定/动态的验证人集合通过多轮投票对每个区块达成绝对多数（>2/3）确认，**一旦最终确认就不可回滚**。优点是确认快、能耗低；代价是验证人集合需要身份/质押管理，节点数量受通信复杂度 $O(n^2)$ 限制。
+
+## 本目录收录的算法
+
+| 类别 | 算法 | 代表应用 |
+| --- | --- | --- |
+| 工作量证明 | PoW | Bitcoin、Litecoin |
+| 权益证明 | PoS、DPoS、PoA、Ouroboros、Algorand、SPoS | Ethereum、EOS、Cardano、Algorand、MultiversX |
+| 拜占庭容错 | PBFT、Tendermint、HotStuff、DiemBFT、QBFT、Streamlet、ABFT、MaxBFT、TBFT、FBA、Snowball、HoneyBadgerBFT、SOLO | Hyperledger 系列、Cosmos、Aptos、Quorum/Besu |
+| 崩溃容错（CFT） | Paxos、RAFT | Chubby、Spanner、etcd、联盟链排序 |
+| 资源/存储类 | PoC、PoET、PoSpace、PoT、PoST、PoH、SPoRA | Chia、Solana、Arweave |
+| 分叉选择与 DAG | GHOST、Hashgraph、Narwhal+Bullshark、RPCA、Mysticeti、IOTA Tangle | Ethereum（PoW 期）、Hedera、Sui、XRP Ledger、IOTA |
+| 出块 + 最终性分工 | Gasper、BABE+GRANDPA、Snowman、Lachesis、Multi-Level BFT | Ethereum、Polkadot、Avalanche、Fantom、Theta |
+| 物理世界证明 | 覆盖证明（PoC） | Helium |
+| 主观效用共识 | Yuma Consensus | Bittensor |
+| 混合与演进 | TowerBFT | Solana |
+| Rollup 排序与结算 | 排序器、共享排序、based 排序 | Arbitrum、Optimism、Base、Espresso |
+| 共享安全预算 | 再质押（restaking） | EigenLayer |
+
+每篇算法页开头是统一的「四要素」区块：**在哪一层**（对应[分层架构](/zh/layers/Layers)的四层模型）、**解决什么**、**解决得怎么样**（优点、缺点与已发生的事故）、**出处**（论文或白皮书）。
+
+## 选型直觉
+
+- **公链、无许可**：优先抗女巫机制（算力或质押）+ 概率最终性，或 PoS + BFT 投票。
+- **联盟链、有许可**：节点身份已知，直接使用 PBFT 类算法换取确定性最终性与高吞吐。
+- **高并发、可容忍短暂分叉**：DAG 类结构（见[记账模型 · DAG](/zh/model/DAG)）。
+
+这些算法按什么顺序出现、每条主链用哪个变体，见[共识算法演进时间线](/zh/consensus-timeline)；概念与来源的收拢版在[知识点总纲](/zh/knowledge)。
