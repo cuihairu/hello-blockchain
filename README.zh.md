@@ -6,13 +6,14 @@
 
 # Hello Blockchain
 
-[![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/zh//) [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
-区块链知识体系 · [在线阅读](https://cuihairu.github.io/hello-blockchain/zh//) <a href="https://cuihairu.github.io/hello-blockchain/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="docs"></a>
+[![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/zh/) [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE) <a href="https://cuihairu.github.io/hello-blockchain/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="文档"></a>
+区块链知识体系 · [在线阅读](https://cuihairu.github.io/hello-blockchain/zh/)
+
 </div>
 
 ---
 
-从记账模型到共识算法、从隐私技术到攻防实践的区块链知识站点，覆盖 UTXO 与账户模型、52 种共识算法、零知识证明等隐私技术、主流公链设计与 NFT 资产发行。[共识算法演进时间线](https://cuihairu.github.io/hello-blockchain/zh//consensus-timeline)与[知识点总纲](https://cuihairu.github.io/hello-blockchain/zh//knowledge)两页把各主题收拢串联。
+从记账模型到共识算法、从隐私技术到攻防实践的区块链知识站点，覆盖 UTXO 与账户模型、52 种共识算法、零知识证明等隐私技术、主流公链设计与 NFT 资产发行。[共识算法演进时间线](https://cuihairu.github.io/hello-blockchain/consensus-timeline)与[知识点总纲](https://cuihairu.github.io/hello-blockchain/knowledge)两页把各主题收拢串联。
 
 ## 本地开发
 
@@ -31,8 +32,8 @@ npm run docs:walkthrough # 全站交互走查（自动起预览服务，逐页�
 ## 目录结构
 
 ```
-docs/                 # VitePress 站点源
-├── .vitepress/       # 主题与配置（sidebar.json 是站点侧栏唯一真源）
+docs/                 # VitePress 站点源：英文在根目录，中文在 zh/
+├── .vitepress/       # 主题与配置（sidebar.en.json / sidebar.zh.json 各自是两种语言的侧栏真源）
 ├── public/           # 品牌资产（logo.svg / favicon.svg / og-image.png / robots.txt / badges）
 ├── img/              # 正文引用的图片
 ├── SUMMARY.md        # 保留的导航维护说明，不是侧栏数据源
@@ -59,7 +60,8 @@ docs/                 # VitePress 站点源
 ├── consortium/       # 联盟链：Fabric、FISCO BCOS、Corda、Besu、WeBASE
 ├── dcny/             # 数字人民币：e-CNY 架构与试点
 ├── chain-games/      # 区块链游戏：项目、经济设计、事故
-└── dapp/             # DApp 架构：前端、钱包、合约、索引器
+├── dapp/             # DApp 架构：前端、钱包、合约、索引器
+└── zh/               # 简体中文语言包：同样这套目录在 /zh/ 下，中文正文
 ```
 
 ```
