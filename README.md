@@ -1,4 +1,6 @@
-<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain//"><img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"></a> <a href="https://cuihairu.github.io/hello-blockchain/"><img src="https://img.shields.io/badge/docs-blue" alt="docs"></a>
+<div align="center">
+  <img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain//"></a> <a href="https://cuihairu.github.io/hello-blockchain/"></a>
+  <img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"> <img src="https://img.shields.io/badge/docs-blue" alt="docs">
 </div>
 
 ---
