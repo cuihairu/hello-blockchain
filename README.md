@@ -1,8 +1,9 @@
-<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain/"><img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"></a></div>
+<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain//"><img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"></a> <a href="https://cuihairu.github.io/hello-blockchain/"><img src="https://img.shields.io/badge/docs-blue" alt="docs"></a>
+</div>
 
 ---
 
-A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 52 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain//consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain//knowledge) tie the sections together.
+A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 52 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain///consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain///knowledge) tie the sections together.
 
 ## Local Development
 
