@@ -1,19 +1,8 @@
-<div align="center">
-
-[English](README.md) | [中文](README.zh.md)
-
-<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
-
-# Hello Blockchain
-
-[![Docs](https://github.com/cuihairu/hello-blockchain/actions/workflows/deploy-docs.yml/badge.svg)](https://cuihairu.github.io/hello-blockchain/) [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
-区块链知识体系 · [在线阅读](https://cuihairu.github.io/hello-blockchain/)
-
-</div>
+<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain/zh/"><img src="https://img.shields.io/badge/docs-文档-blue" alt="docs"></a></div>
 
 ---
 
-从记账模型到共识算法、从隐私技术到攻防实践的区块链知识站点，覆盖 UTXO 与账户模型、52 种共识算法、零知识证明等隐私技术、主流公链设计与 NFT 资产发行。[共识算法演进时间线](https://cuihairu.github.io/hello-blockchain/consensus-timeline)与[知识点总纲](https://cuihairu.github.io/hello-blockchain/knowledge)两页把各主题收拢串联。
+从记账模型到共识算法、从隐私技术到攻防实践的区块链知识站点，覆盖 UTXO 与账户模型、52 种共识算法、零知识证明等隐私技术、主流公链设计与 NFT 资产发行。[共识算法演进时间线](https://cuihairu.github.io/hello-blockchain/zh/consensus-timeline)与[知识点总纲](https://cuihairu.github.io/hello-blockchain/zh/knowledge)两页把各主题收拢串联。
 
 ## 本地开发
 
