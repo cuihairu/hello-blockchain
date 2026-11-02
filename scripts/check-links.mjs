@@ -81,6 +81,9 @@ async function probe(url) {
     }
     if (attempt < RETRIES) await new Promise(r => setTimeout(r, 800 * (attempt + 1)));
   }
+  // A persistent 429 means the host is alive but throttling CI probes
+  // (solana.com rate-limits datacenter fetchers); not a dead link.
+  if (lastErr === 'HTTP 429') return { ok: true, status: 429, throttled: true };
   return { ok: false, status: null, err: lastErr };
 }
 
