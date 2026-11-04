@@ -1,24 +1,31 @@
 <div align="center">
-  <img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <a href="https://cuihairu.github.io/hello-blockchain//"></a> <a href="https://cuihairu.github.io/hello-blockchain/"></a>
-  <img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"> <img src="https://img.shields.io/badge/docs-blue" alt="docs">
+
+[English](README.md) | [中文](README.zh.md)
+
+<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
+
+# Hello Blockchain
+
+<p align="center"><a href="https://cuihairu.github.io/hello-blockchain/"><img src="https://img.shields.io/badge/docs-blue" alt="docs"></a></p>
+
 </div>
 
 ---
 
-A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 52 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain///consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain///knowledge) tie the sections together.
+A blockchain knowledge site covering everything from ledger models to consensus algorithms, and from privacy techniques to attack-and-defense practice — including UTXO and account models, 52 consensus algorithms, privacy technologies such as zero-knowledge proofs, the design of major public blockchains, and NFT asset issuance. A [consensus-algorithm evolution timeline](https://cuihairu.github.io/hello-blockchain/consensus-timeline) and a [knowledge digest](https://cuihairu.github.io/hello-blockchain/knowledge) tie the sections together.
 
 ## Local Development
 
 ```bash
-npm install        # Install dependencies
-npm run docs:dev   # Local development
-npm run docs:build # Build output
-npm run docs:preview # Preview the build locally
-npm run docs:check   # Check sidebar routes, page coverage, and internal links
-npm run docs:backlinks # Rebuild the backlinks index (runs automatically inside docs:build)
-npm run docs:links   # Check external paper / doc links are reachable (needs network)
-npm run docs:og      # Regenerate the social preview image (og-image.png)
-npm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
+pnpm install        # Install dependencies
+pnpm run docs:dev   # Local development
+pnpm run docs:build # Build output
+pnpm run docs:preview # Preview the build locally
+pnpm run docs:check   # Check sidebar routes, page coverage, and internal links
+pnpm run docs:backlinks # Rebuild the backlinks index (runs automatically inside docs:build)
+pnpm run docs:links   # Check external paper / doc links are reachable (needs network)
+pnpm run docs:og      # Regenerate the social preview image (og-image.png)
+pnpm run docs:walkthrough # Full-site interactive walkthrough (auto-starts preview)
 ```
 
 ## Directory Structure
@@ -57,7 +64,7 @@ docs/                 # VitePress site source: English pages at the root, Chines
 ```
 
 ```
-scripts/              # Maintenance checks run by npm scripts and in CI
+scripts/              # Maintenance checks run by pnpm scripts and in CI
 ├── check-nav.mjs     # Sidebar routes / internal links / digest coverage / README numbers and tree
 ├── check-links.mjs   # External paper and doc links reachable
 ├── build-backlinks.mjs # Collect internal links into backlinks.json for the per-page block
